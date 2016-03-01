@@ -1,5 +1,3 @@
-# Source dependencies
-
 Besides base [Eclipse](https://www.eclipse.org/) platform DBeaver uses following components:
 
 - [JSch](http://www.jcraft.com/jsch/) – Java Secure Channel library (SSH tunnels support)
