@@ -5,7 +5,7 @@ Besides base [Eclipse](https://www.eclipse.org/) platform DBeaver uses following
 - [JSqlParser](https://github.com/JSQLParser/JSqlParser) – SQL parser for SQL injections
 - [H2](http://h2database.com/) – embedded database engine for Query Manager (EE version)
 - [ASM](http://asm.ow2.org/) – Java byte-code manipulations
-- [OpenCSV](http://opencsv.sourceforge.net/) – Simple CSV reading/writing library
+- [OpenCSV](http://opencsv.sourceforge.net/) – simple CSV reading/writing library
 - [Silk](http://www.famfamfam.com/lab/icons/silk/) icon set
 
 Windows installer created by [NSIS](http://nsis.sourceforge.net/).
