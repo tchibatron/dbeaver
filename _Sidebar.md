@@ -4,4 +4,6 @@
 
 ##### Development
 
-##### Contribute
+##### Troubleshooting
+- [[Log files|Log-files]]
+- [[Thread dump|Making-a-thread-dump]]
