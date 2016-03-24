@@ -18,7 +18,7 @@ Then execute `dbeaver &`.
 ### RPM package
 Run `sudo rpm -ivh dbeaver-<version>.rpm`.  
 Then execute `dbeaver &`.  
-Note: to upgrade use “-Uvh” parameter.
+Note: to upgrade use `sudo rpm -Uvh dbeaver-<version>.rpm` parameter.
 
 ### MacoOS
 Just drag-and-drop dmg archive to your disk.  
