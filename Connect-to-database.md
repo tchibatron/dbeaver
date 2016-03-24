@@ -1,0 +1,2 @@
+If you run DBeaver for the first time (standalone version) then new connection wizard will appear automatically.
+Otherwise click on "New Connection" item in the main toolbar or in the Database Navigator view toolbar or in the main menu "Database".
