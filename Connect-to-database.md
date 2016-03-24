@@ -26,7 +26,12 @@ On the final page you may set connection name, type and initial settings (such a
 [[images/connect-wizard-general.png]]  
 
 #### Extra configuration
+For advanced users.
+
 ##### Driver properties
+Each driver has it's own set of additional properties. Refer to the driver documentation to get information about available properties and their values.  
 [[images/connect-wizard-settings-driver.png]]  
+
 ##### Network settings (SSH, SOCKS, SSL)
+If your database cannot be accessed directly you can use SSH tunnel.  
 [[images/connect-wizard-ssh.png]]  
