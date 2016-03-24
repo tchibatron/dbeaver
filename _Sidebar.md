@@ -1,6 +1,6 @@
 ##### User Guide
-- [Installation] ()
-- [Connecting to a database] ()
+- [[Installation|Installation]]
+- [[Connecting to a database|Connect-to-database]]
 
 ##### Development
 
