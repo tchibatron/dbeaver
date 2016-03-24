@@ -17,4 +17,16 @@ For most drivers required fields are:
 - port
 - database name 
 - user name and password
+
 However number and type of connection properties are very dependent on driver.
+Embedded drivers requires only the path to a database.
+
+#### Finish
+On the final page you may set connection name, type and initial settings (such as bootstrap queries, transaction state, global filters, etc).
+[[images/connect-wizard-general.png]]  
+
+#### Extra configuration
+##### Driver properties
+[[images/connect-wizard-settings-driver.png]]  
+##### Network settings (SSH, SOCKS, SSL)
+[[images/connect-wizard-ssh.png]]  
