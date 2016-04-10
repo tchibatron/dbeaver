@@ -1,6 +1,8 @@
 ##### User Guide
 - [[Installation|Installation]]
 - [[Connecting to a database|Connect-to-database]]
+- SQL Editor
+  - [[SQL Templates|SQL-Editor-Templates]]
 
 ##### Development
 
