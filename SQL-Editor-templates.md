@@ -1,4 +1,4 @@
-Templates can be activated by pressing `TAB` key.  
+Templates can be activated by typing template name and pressing `TAB` key.  
 To see available templates press `CTRL+SHIFT+TAB`.  
 To edit/add/remove tamplates got to preferences `General->Editor->SQL Editor->Templates`.  
 Additional information can be found on the [Eclipse Website](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Fconcepts%2Fconcept-editor-templates.htm)
