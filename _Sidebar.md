@@ -7,5 +7,6 @@
 ##### Development
 
 ##### Troubleshooting
+- [[Posting issues|Posting-issues]]
 - [[Log files|Log-files]]
 - [[Thread dump|Making-a-thread-dump]]
