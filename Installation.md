@@ -20,6 +20,6 @@ Run `sudo rpm -ivh dbeaver-<version>.rpm`.
 Then execute `dbeaver &`.  
 Note: to upgrade use `sudo rpm -Uvh dbeaver-<version>.rpm` parameter.
 
-### MacoOS
+### MacOS
 Just drag-and-drop dmg archive to your disk.  
 Note: Recent MacOS versions may reject to install unsigned software.  DBeaver don’t have a signed certificate so you may need [this workaround](http://www.tech-recipes.com/rx/45404/mac-downloaded-app-is-damaged-and-cant-be-opened-error-solved/) to install.
