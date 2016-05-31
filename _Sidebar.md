@@ -3,6 +3,13 @@
 - [[Connecting to a database|Connect-to-database]]
 - SQL Editor
   - [[SQL Templates|SQL-Editor-Templates]]
+- SQL databases
+  - MySQL (MariaDB)
+  - PostgreSQL
+  - Oracle
+  - SQL Server
+  - DB2
+  - Generic (JDBC)
 - NoSQL databases
   - [[MongoDB|NoSQL-MongoDB]]
   - [[Cassandra|NoSQL-Cassandra]]
