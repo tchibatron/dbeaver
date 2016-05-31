@@ -3,6 +3,10 @@
 - [[Connecting to a database|Connect-to-database]]
 - SQL Editor
   - [[SQL Templates|SQL-Editor-Templates]]
+- NoSQL databases
+  - [[MongoDB|NoSQL-MongoDB]]
+  - [[Cassandra|NoSQL-Cassandra]]
+  - [[Redis|NoSQL-Redis]]
 
 ##### Development
 
