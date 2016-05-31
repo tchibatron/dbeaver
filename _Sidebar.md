@@ -1,7 +1,12 @@
 ##### User Guide
 - [[Installation|Installation]]
 - [[Connecting to a database|Connect-to-database]]
+- Database navigator
+- Data editor
+  - Filters
+  - FK navigation
 - SQL Editor
+  - Script management
   - [[SQL Templates|SQL-Editor-Templates]]
 - SQL databases
   - MySQL (MariaDB)
@@ -14,6 +19,10 @@
   - [[MongoDB|NoSQL-MongoDB]]
   - [[Cassandra|NoSQL-Cassandra]]
   - [[Redis|NoSQL-Redis]]
+- Tools
+  - Data transfer (export/import)
+  - Data/metadata search
+  - Database compare
 
 ##### Development
 
