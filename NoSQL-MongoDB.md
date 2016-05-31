@@ -1,6 +1,6 @@
 ### Browsing Mongo collections
-You can view/edit Mongo collections content as standard relational tables (grid/plain text presentations) or as JSON documents.
-Presentation can be switched in the Results Viewer toolbar.
+You can view/edit Mongo collections content as standard relational tables (grid/plain text presentations) or as JSON documents.  
+Presentation can be switched in the Results Viewer toolbar.  
 In grid DBeaver will try to unify all documents in some particular collection (as they have the same structure/the same set of properties).
 
 ### Executing JS
