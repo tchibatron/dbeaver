@@ -18,4 +18,17 @@ This example returns all documents in collection 'test_col':
 ```js
 db.test_col.find().toArray()
 ```
+Note: script will be executed in the current database. You can not set explicit database name in your query.
+Current database can be changed in SQL Editor toolbar or in Database Navigator.
+
 ### Executing SQL
+You can use standard SQL statements (SELECT, INSERT, UPDATE, DELETE) to manipulate Mongo data.
+```sql
+SELECT * FROM test_col 
+WHERE propName.subProp='value';
+
+UPDATE FROM test_col 
+SET propsName.val1=123
+WHERE propName.subProp='value'
+```
+Nested JSON properties can be divided by dot.
