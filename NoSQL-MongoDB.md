@@ -4,14 +4,16 @@ Presentation can be switched in the Results Viewer toolbar.
 In grid DBeaver will try to unify all documents in some particular collection (as they have the same structure/the same set of properties).
 
 ### Executing JS
-JS statements can be executed in SQL editor as usual.
+JS statements can be executed in SQL editor as usual.  
+[Mongo scripting reference](https://docs.mongodb.com/v3.0/administration/scripting/)  
 Following example creates a user in the current database.
 ```js
 db.createUser(
-{ user: "testuser",
-  pwd: "test",
-  roles: []
-}
+  {
+    user: "testuser",
+    pwd: "test",
+    roles: []
+  }
 )
 ```
 This example returns all documents in collection 'test_col':
