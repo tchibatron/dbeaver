@@ -21,9 +21,15 @@ Also you may select any part of text - it will be executed as a single query.
 Query execution usually produces some result set - it will be printed in the "Results" tab. 
 Read more about <a href="Data-Editor">Data Editor</a>
 
+By default all results are placed into the single "Results" tab. If query produces multiple results then each of them will be opened in a separate results tab.
+
+If you want to place results into the separate tab explicitly then you can execute query using `CTRL+/` command.
+
 ### Scripts execution
 Script executes the entire content of the SQL editor or selected text. This command is accessible from the menu, toolbar or with shortcut `ALT+X`.
 SQL editor parses content using the ";" character as a delimiter (it is configurable in preferences) between statements and then executes these statements consequently.
+
+If your script consists from a series of SELECT statements then you can place their results in separate tabs. To achieve that execute script using `CTRL+ALT+X` command. Note that in this mode queries will be executed simultaneously. Be careful with this command - you won't be able to interrupt script execution in the middle.
 
 ###Execution plan
 You may automatically build an execution plan for the current query. This command is accessible from the toolbar or with the shortcut `CTRL+SHIFT+E`.
