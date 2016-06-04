@@ -2,11 +2,11 @@ In results viewer you can view and edit data. Results are produced by some custo
 
 **Record mode**
 
-To toggle record/grid mode press TAB key. In record model columns becomes rows and you see just on record. Convenient if your table has big number of columns.
+To toggle record/grid mode press `TAB` key. In record model columns becomes rows and you see just on record. Convenient if your table has big number of columns.
 
 **Data presentations**
 
-To switch between different presentation use combo box in status bar or press CTRL+TAB.
+To switch between different presentation use combo box in status bar or press `CTRL+TAB`.
 - Grid: standard presentation. Looks like a spreadsheet.
 - Plain-text: similar to Grid but all values are presented as plain-text (like in console applications).
 - JSON: represents documents in JSON format (available in EE version for document-oriented tables).
@@ -17,19 +17,23 @@ To switch between different presentation use combo box in status bar or press CT
 If you work with complex types (structures, arrays) or long text data or BLOBs then it is convenient to toggle single cell value viewer/editor by pressing F7.
 
 **Value inline edit**
-To edit single cell value select it and press Enter. To open dialog with value editor press SHIFT+Enter.
+To edit single cell value select it and press Enter or double-click on it.  
+To open dialog with value editor press `SHIFT+Enter`.
 
 **Scrolling**
 
-If resultset has many rows then you can scroll it. By default DBeaver limits number of fetched rows by 200 (you can change this value in main toolbar or in preferences). Once you scroll to the last row of results DBeaver will fetch next segment (next 200 rows). You can disable this behaviour in preferences. Also you can manually fetch next segment or fetch whole resultset (be careful, in case of huge resultset it may lead to program hanging or out-of-memory errors).
+If resultset has many rows then you can scroll it. 
+By default DBeaver limits number of fetched rows by 200 (you can change this value in main toolbar or in preferences). Once you scroll to the last row of results DBeaver will fetch next segment (next 200 rows). 
+You can disable this behaviour in preferences. Also you can manually fetch next segment or fetch whole resultset (be careful, in case of huge resultset it may lead to program hanging or out-of-memory errors).
+You can navigate thru resultset using standard shortcuts `HOME`, `END`, `PgUp`, `PgDown`, `CTRL+HOME`, `CTRL+END`.
 
 **BLOB/CLOB support**
 
-DBeaver has full support of CLOB/BLOB data types. You view values, edit them and save back to database. You can open CLOB/BLOB value in a separate editor (SHIFT+ENTER on selected cell value). You can save/load LOB value to/from regular files.
+DBeaver has full support of CLOB/BLOB data types. You view values, edit them and save back to database. You can open CLOB/BLOB value in a separate editor (`SHIFT+ENTER` on selected cell value). You can save/load LOB value to/from regular files.
 
 **Images**
 
-DBeaver can recognize that some BLOB column keeps images (gif, png, jpeg, bmp). In that case DBeaver will show LOB contents as image. It is convenient to open value view panel (F7) and browse images.
+DBeaver can recognize that some BLOB column keeps images (gif, png, jpeg, bmp). In that case DBeaver will show LOB contents as image. It is convenient to open value view panel (`F7`) and browse images.
 
 **Virtual keys**
 
@@ -49,11 +53,11 @@ You can order results by some column(s) – just click on the arrows icon after 
 
 **Data search**
 
-CTRL+F shows standard search dialog. It will search only in already fetched rows. Also you can use find/replace feature.
+`CTRL+F` shows standard search dialog. It will search only in already fetched rows. Also you can use find/replace feature.
 
 **Copy/paste**
 
-CTRL+C on selected cells will copy these cells into clipboard in TAB-delimited format. Then you can paste this selection in some spreadsheet editor (like Excel). CTRL+SHIFT+C shows “Advanced Copy” dialog where you can configure additional copy settings (copy with column names/row numbers, configure delimiter and choose values format). Pressing CTRL+V on a cell will set cell value (with appropriate data type conversion).
+`CTRL+C` on selected cells will copy these cells into clipboard in TAB-delimited format. Then you can paste this selection in some spreadsheet editor (like Excel). `CTRL+SHIFT+C` shows “Advanced Copy” dialog where you can configure additional copy settings (copy with column names/row numbers, configure delimiter and choose values format). Pressing `CTRL+V` on a cell will set cell value (with appropriate data type conversion).
 
 **Data export**
 
