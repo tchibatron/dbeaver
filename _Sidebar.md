@@ -2,7 +2,7 @@
 - [[Installation|Installation]]
 - [[Connecting to a database|Connect-to-database]]
 - Database navigator
-- Data editor
+- [[Data editor|Data-Editor]]
   - Filters
   - FK navigation
 - [[SQL Editor|SQL-Editor]]
