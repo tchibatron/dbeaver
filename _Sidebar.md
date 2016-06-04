@@ -20,6 +20,7 @@
   - [[Cassandra|NoSQL-Cassandra]]
   - [[Redis|NoSQL-Redis]]
 - Tools
+  - [[Query Manager|Query-Manager]]
   - Data transfer (export/import)
   - Data/metadata search
   - Database compare
