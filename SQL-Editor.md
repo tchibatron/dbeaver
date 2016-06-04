@@ -1,41 +1,54 @@
-###Overview
-SQL editor allows editing and execution of SQL queries and scripts.  
+***Scripts***
 
-There are several ways to open SQL editor 
-- "SQL Editor" command (`F3` or `CTRL+L`) command opens a popup dialog where you can choose existing script or create a new one (for current connection)
-- "New SQL Editor" creates new SQL script
-- "Recent SQL Editor" (`CTRL+Enter`) opens SQL script with the most recent update time (for current connection). This command available only in Database Navigator view.
-- Also you can find a script in Project Explorer view and open it (by pressing `Enter` or using double-click).
+To open SQL editor for some connection select this connection in the Database Navigator view and press F3 (you can do the same from context menu or main menu). DBeaver opens popup window with SQL scripts linked to this connection. If you need to create new SQL script press "New Script" in that popup or click on "New SQL Editor" on the main toolbar. 
 
-SQL editor highlights SQL syntax depending on the current database SQL dialect. When you open SQL editor for some connection, DBeaver will try to connect to underlying database. If the database is inaccessible then you won't be able to execute queries.
+You can open the most recent SQL editor using `CTRL+Enter` shortcut in the Database Navigator view.
 
-You may change the active database of current SQL editor by using the main toolbar.
+You can see all your SQL scripts in the Project Explorer view folder “Scripts”. You can organize your scripts in folders, reassign database connections for particular scripts in the same Project Explorer view. 
+DBeaver uses SQL syntax highlighting which depends on database associated with a script. Different databases have different sets of reserved keywords, system functions. 
 
-There are two SQL execution modes: query and script.
+***Import/export scripts***
 
-###Query execution
-The query execution command is accessible from the toolbar, context menu, main menu or with shortcut `CTRL+Enter`.
-SQL editor extract current query - the SQL statement under the cursor limited by empty lines or statement delimiter (";" symbol by default).
+***Execute queries***
 
-Also you may select any part of text - it will be executed as a single query.
-Query execution usually produces some result set - it will be printed in the "Results" tab. 
-Read more about <a href="Data-Editor">Data Editor</a>
+There are a few ways to execute a query:
+- Standard query execute (`CTRL+ENTER`). Executes SQL query under cursor or selected text and fills results panel with query results.
+- Execute in a separate tab (`CTRL+\`). Similar to standard but creates new results tab.
+- Execute a script (`ALT+X`). Executes all queries in current editor (or selected queries) as a script. DBeaver parses queries one by one using statements delimiter (“;” by default) and execute them consequently. Script execution behaviour can be configured in SQL editor preferences.
+- Execute a script opening each query results in a separate tab (`CTRL+ALT+X`). The same as script execution but opens multiple result tabs. Each script query will be executed in a separate thread (i.e. all queries are executed simultaneously). Be careful with this feature – if you’ll execute a huge script with big number of queries it may lead to unexpected problems. 
 
-By default all results are placed into the single "Results" tab. If query produces multiple results then each of them will be opened in a separate results tab.
+***Execution plan***
 
-If you want to place results into the separate tab explicitly then you can execute query using `CTRL+/` command.
+If database driver supports execution plan visualization then you can see execution plan of current query (under cursor) by pressing `CTRL+SHIFT+E` (or clicking on “Explain execution plan” in context menu or editor toolbar).  
 
-### Scripts execution
-Script executes the entire content of the SQL editor or selected text. This command is accessible from the menu, toolbar or with shortcut `ALT+X`.
-SQL editor parses content using the ";" character as a delimiter (it is configurable in preferences) between statements and then executes these statements consequently.
+***Query Parameters***
 
-If your script consists from a series of SELECT statements then you can place their results in separate tabs. To achieve that execute script using `CTRL+ALT+X` command. Note that in this mode queries will be executed simultaneously. Be careful with this command - you won't be able to interrupt script execution in the middle.
+Dynamic parameters bindings. You can use dynamic parameters in your SQL queries. Parameter format :name. When you execute a query which contains dynamic parameters DBeaver will popup dialog where you can fill parameters’ values. Also you can use anonymous parameters (?) but you will need to enable them in SQL editor preferences.  
 
-###Execution plan
-You may automatically build an execution plan for the current query. This command is accessible from the toolbar or with the shortcut `CTRL+SHIFT+E`.
+***Auto-complete***
 
-Driver provider must support execution plan extraction.
+To perform some object name auto-complete press `CTRL+SPACE`. DBeaver searches for possible completions objects in already loaded database metadata and in database system tables. Also DBeaver completes SQL keywords. Another auto-complete function is `CTRL+SHIFT+SPACE`, it searches for completion only within already entered identifiers.  
 
-###Execution log
-Execution log tab contains history of all command executed in the current SQL editor.
-Read more information about <a href="Query-Manager">Query Manager</a>.
+***Miscellaneous***
+
+Select of current query row count can be performed by pressing `CTRL+ALT+C`.  
+
+You can directly export current query results to a file/table by clicking on “Export From Query” in the context menu. This feature is useful if you have some very long-running query and you don’t need to see it’s results in results panel.  
+
+Execution Log tab contains all queries executed in current SQL editor. You can configure Query Manager settings in global preferences.
+
+Output tab contains all server-side database messages/warnings generated by a database when you execute queries. This feature supported only by a few database engines (Oracle, SQL Server and some other). 
+
+To open current object (under cursor) definition press `F4`.  
+Hyperlinks: you can press CTRL and move mouse over SQL text. If DBeaver will recognize some identifier as a table/view name then it will be presented as a hyperlink which will navigate to an object editor.  
+SQL formatting. To format SQL text select it and press `CTRL+ALT+F`.
+
+SQL editor preferences can be opened by pressing `ALT+ENTER`.
+
+To toggle (hide/show) results panel press `F6`.
+
+To maximize/restore results panel double-click on results tab name.
+
+Active database/schema selection. To change connection associated with current SQL editor or change active database/schema use combo boxes in the main toolbar.
+
+Transactions management. You can toggle auto-commit mode and transactions isolation level in the main toolbar or main menu “Database”. 
