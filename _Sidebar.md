@@ -5,7 +5,7 @@
 - Data editor
   - Filters
   - FK navigation
-- SQL Editor
+- [[SQL Editor|SQL-Editor]]
   - Script management
   - [[SQL Templates|SQL-Editor-Templates]]
 - SQL databases
