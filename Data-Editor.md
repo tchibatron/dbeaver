@@ -1,0 +1,1 @@
+Shows contents of a table or results of SQL query execution
