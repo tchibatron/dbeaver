@@ -19,7 +19,8 @@
   - [[MongoDB|NoSQL-MongoDB]]
   - [[Cassandra|NoSQL-Cassandra]]
   - [[Redis|NoSQL-Redis]]
-- Tools
+- Miscellaneous
+  - [[Diagrams (ERD)|ER-Diagrams]]
   - [[Query Manager|Query-Manager]]
   - Data transfer (export/import)
   - Data/metadata search
