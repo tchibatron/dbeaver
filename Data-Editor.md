@@ -14,11 +14,12 @@ To switch between different presentation use combo box in status bar or press `C
 
 **Value view panel**
 
-If you work with complex types (structures, arrays) or long text data or BLOBs then it is convenient to toggle single cell value viewer/editor by pressing F7.
+If you work with complex types (structures, arrays) or long text data or BLOBs then it is convenient to toggle single cell value viewer/editor by pressing `F7`. This panel will also open if you will try to open inline editor for complex data type.
 
 **Value inline edit**
+
 To edit single cell value select it and press Enter or double-click on it.  
-To open dialog with value editor press `SHIFT+Enter`.
+To open dialog with value editor press `SHIFT+Enter`. For LOB types special data editor will be opened instead of dialog.
 
 **Scrolling**
 
