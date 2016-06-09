@@ -29,6 +29,7 @@
 ##### Development
 
 ##### Troubleshooting
+- [[Reset workspace|Reset-workspace]]
 - [[Posting issues|Posting-issues]]
 - [[Log files|Log-files]]
 - [[Thread dump|Making-a-thread-dump]]
