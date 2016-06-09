@@ -46,7 +46,8 @@ To be able to persist column value change table must have some unique key (prima
 
 **Data filtering**
 
-You can apply custom filters to any table contents or query results. Type filter criteria in the input field above results panel. Criteria could be any SQL expression operating with any number of columns/values. Also you can apply per-field filters in filter settings dialog. Or you can make filter from cell value – choose Order/Filter in the context menu and then some field criteria.
+You can apply custom filters to any table contents or query results. Type filter criteria in the input field above results panel. Criteria could be any SQL expression operating with any number of columns/values. Also you can apply per-field filters in filter settings dialog. Or you can make filter from cell value – choose Order/Filter in the context menu and then some field criteria.  
+Filters context menu can be activated with shortcut `CTRL+F11`.
 
 **Data ordering**
 
