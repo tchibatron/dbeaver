@@ -1,4 +1,4 @@
-Sometimes (especially after multiple DBeaver version upgrade) workspace become messy. 
+Sometimes (especially after multiple DBeaver versions upgrade) workspace become messy. 
 Some keyboard shortcuts may stop working, toolbars layout may be broken, etc, etc.
 To reset all UI settings (this includes menus, shortcuts, view and toolbar layouts):
 - Shutdown DBeaver
