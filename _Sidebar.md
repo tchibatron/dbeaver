@@ -3,7 +3,7 @@
 - [[Connecting to a database|Connect-to-database]]
 - Database navigator
 - [[Data editor|Data-Editor]]
-  - Filters
+  - [[Filters|Data-filter]]
   - FK navigation
 - [[SQL Editor|SQL-Editor]]
   - Script management
