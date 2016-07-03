@@ -1,4 +1,4 @@
-DBeaver is an [Eclipse RCP](https://wiki.eclipse.org/Rich_Client_Platform) application.
+DBeaver is an [Eclipse RCP](https://wiki.eclipse.org/Rich_Client_Platform) application.  
 It consists from a set of Eclipse plugins, features and products.
 
 ##### Sources structure:
@@ -15,12 +15,21 @@ It consists from a set of Eclipse plugins, features and products.
 
 ##### Opening workspace in Eclipse
 
-You will need to setup Eclipse for RCP and RAP developers.
+You will need to setup "Eclipse for RCP and RAP developers". Currently default Eclipse version is Mars (4.5). Build may fail on newer or older versions.  
 Then you will need to install a few additional Eclipse plugins which DBeaver depends on (and which are not included in the standard Eclipse distribution):
 - Open main menu Help -> Install New Software
 - Copy `http://dbeaver.jkiss.org/eclipse-repo/` into "Work with" field and press enter
 [[images/eclipse-deps-install.png]]
 - Check all plugins and finish the installation process
-Then just checkout DBeaver repository and open
+
+Now you need to checkout DBeaver repository with `git clone https://github.com/serge-rider/dbeaver.git` command.  
+In Eclipse create a new workspace and run Import wizard. Choose "General->Existing projects into Workspace".  
+Select DBeaver checkout directory as root a directory. Check all plugins and features Eclipse will find and finish the wizard.  
+
+Now you can build DBeaver (`Ctrl+B`).
+To run the standalone version find file `DBeaver.product` (it is located in `product/standalone` directory). Open it and click on "Launch an Eclipse application" or "Launch an Eclipse application in Debug mode".
+That's it.
 
 ##### Notes:
+Everything above covers Community Edition version.  
+EE version has extra sources which are not (yet?) open source.
