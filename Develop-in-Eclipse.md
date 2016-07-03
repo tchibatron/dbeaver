@@ -19,7 +19,8 @@ You will need to setup Eclipse for RCP and RAP developers.
 Then you will need to install a few additional Eclipse plugins which DBeaver depends on (and which are not included in the standard Eclipse distribution):
 - Open main menu Help -> Install New Software
 - Copy `http://dbeaver.jkiss.org/eclipse-repo/` into "Work with" field and press enter
-
+[[images/eclipse-deps-install.png]]
+- Check all plugins and finish the installation process
 Then just checkout DBeaver repository and open
 
 ##### Notes:
