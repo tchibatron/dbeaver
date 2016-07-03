@@ -27,6 +27,7 @@
   - Database compare
 
 ##### Development
+- [[Develop in Eclipse|Develop-in-Eclipse]]
 
 ##### Troubleshooting
 - [[Reset workspace|Reset-workspace]]
