@@ -3,7 +3,7 @@ It consists from a set of Eclipse plugins, features and products.
 
 ##### Sources structure:
 - `docs` - some documentations (mostly outdated)
-- `features` - feature descriptors. Doesn't contains any source code. Used to structurize product plugins/dependencies.
+- `features` - feature descriptors. Doesn't contain any source code. Used to structurize product plugins/dependencies.
 - `modules` - very base plugins (like utils)
 - `plugins` - main sources location
   - `org.jkiss.dbeaver.model` - model API and base classes. Doesn't contain any UI dependencies, just pure data model.
@@ -27,7 +27,7 @@ In Eclipse create a new workspace and run Import wizard. Choose "General->Existi
 Select DBeaver checkout directory as root a directory. Check all plugins and features Eclipse will find and finish the wizard.  
 
 Now you can build DBeaver (`Ctrl+B`).
-To run the standalone version find file `DBeaver.product` (it is located in `product/standalone` directory). Open it and click on "Launch an Eclipse application" or "Launch an Eclipse application in Debug mode".
+To run the standalone version find file `DBeaver.product` (it is located in `product/standalone` directory). Open it and click on "Launch an Eclipse application" or "Launch an Eclipse application in Debug mode".  
 That's it.
 
 ##### Notes:
