@@ -3,4 +3,6 @@ It is designed for System administrators. Regular users should check [[this|Conn
 
 ### Provide predefined connections
 
+### Importing connections from CSV/XML
+
 ### Secure connections from editing
