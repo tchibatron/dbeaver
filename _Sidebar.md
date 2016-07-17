@@ -26,6 +26,9 @@
   - Data/metadata search
   - Database compare
 
+##### Admin Guide
+- [[Managing connections|Admin-Manage-Connections]]
+
 ##### Development
 - [[Develop in Eclipse|Develop-in-Eclipse]]
 
