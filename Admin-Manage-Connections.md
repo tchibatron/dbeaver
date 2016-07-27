@@ -22,5 +22,39 @@ XML file should contain top-level element and a set of nested elements. Connecti
 |Database|Database name|
 |user|User name|
 |password|User password|
+You can specify just URL or set host/port/etc setting.  
+User name/password are options.
+
+#### Sample CSV
+```csv
+name,host,port,server,database,url,user,password,type
+Postgre Import XML 1,localhost,5432,,postgres,jdbc:postgresql://localhost:5432/postgres,postgres,postgres,dev
+Postgre Import XML 2,localhost,5432,,postgres2,jdbc:postgresql://localhost:5432/postgres2,postgres2,postgres2,prod
+```
+#### Sample XML
+```xml
+<connections>
+	<connection name="Postgre Import XML 1" host="localhost" port="5432" server="" database="postgres" url="jdbc:postgresql://localhost:5432/postgres" user="postgres" password="postgres" type="dev"/>
+	<connection name="Postgre Import XML 2" host="localhost" port="5432" server="" database="postgres" url="jdbc:postgresql://localhost:5432/postgres2" user="postgres2" password="postgres2" type="prod"/>
+</connections>
+```
 
 ### Secure connections from editing
+It is possible to make connection settings read-only (protected by password)"
+- Generate MD5 hash of your password. You can do it from command line using Linux utility md5sum (md5sum <<<"you password") or you can do it online - just google "MD5 hash online".
+- Add attribute `lockPassword' in connection descriptor (in `.dbeaver-data-sources.xml` file in `<dataSource>` tag. So it will look like this:
+```
+<data-source 
+  id="postgresql-1294077257514--1782558860" 
+  provider="postgresql" 
+  driver="postgres-jdbc" 
+  name="Postgre - sample" 
+  create-date="1294077257524" 
+  update-date="1468749632751" 
+  login-date="1469021247956" 
+  save-password="true" 
+  show-system-objects="true" 
+  read-only="false" 
+  lockPassword="2ba81a47c5512d9e23c435c1f29373cb">
+```
+- Now if user will try to change connection settings he/she will be asked for password
