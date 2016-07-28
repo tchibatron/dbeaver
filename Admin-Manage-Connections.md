@@ -19,7 +19,7 @@ XML file should contain top-level element and a set of nested elements. Connecti
 |url|JDBC URL|
 |host|Database server host name|
 |port|Database server port|
-|Database|Database name|
+|database|Database/schema name|
 |user|User name|
 |password|User password|
 You can specify just URL or set host/port/etc setting.  
