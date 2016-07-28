@@ -40,9 +40,9 @@ Postgre Import XML 2,localhost,5432,,postgres2,jdbc:postgresql://localhost:5432/
 ```
 
 ### Secure connections from editing
-It is possible to make connection settings read-only (protected by password)"
-- Generate MD5 hash of your password. You can do it from command line using Linux utility md5sum (md5sum <<<"you password") or you can do it online - just google "MD5 hash online".
-- Add attribute `lockPassword' in connection descriptor (in `.dbeaver-data-sources.xml` file in `<dataSource>` tag. So it will look like this:
+It is possible to make connection settings read-only (protected by password)
+- Generate MD5 hash of your password. You can do it from command line using Linux utility md5sum (`md5sum <<<"your password"`) or you can do it online - just google "MD5 hash online".
+- Add attribute `lockPassword` in connection descriptor (in `.dbeaver-data-sources.xml` file in `<dataSource>` tag. So it will look like this:
 ```
 <data-source 
   id="postgresql-1294077257514--1782558860" 
