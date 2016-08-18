@@ -1,7 +1,7 @@
 ##### User Guide
 - [[Installation|Installation]]
 - [[Connecting to a database|Connect-to-database]]
-- Database navigator
+- [[Database navigator]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
