@@ -9,4 +9,7 @@ To reset all UI settings (this includes menus, shortcuts, view and toolbar layou
 3. Delete file `workbench.xmi`
 4. Start DBeaver
 
+If that doesn't help then you can try to remove `%HOMEPATH%\.dbeaver\.metadata\` folder. 
+This will erase all your UI settings and all downloaded drivers (but all connections and scripts will remain). Do it only if nothing else helps!
+
 That's it.
