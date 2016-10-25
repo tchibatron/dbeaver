@@ -17,3 +17,17 @@ BTW: To tick checkbox (e.g. "Not Null") click the field and select "yes" from th
 [[images/tutorial_images/6_AddMoreColumns.png]]
 7. Create the second table: right click menu on 'Tables' in Navigator -> Create New Table
 [[images/tutorial_images/7_CreateTheSecondTable.png]], [[images/tutorial_images/7a_TheSecondTable.png]]
+
+### Primary Key creation
+1. Move to 'Constraints' tab of the corresponding table, right click on the screen -> 'Create New Constraint'
+[[images/tutorial_images/8_NewConstraint.png]]
+   
+2. Select the column (1)and save (2)
+[[images/tutorial_images/9_PrimaryKey.png]], [[images/tutorial_images/9a_PrimaryKey.png]]
+
+3. Save the tables: select the table in Navigation pane (1) an press 'Ctrl+S' (or Top menu -> File -> Save, 'Persist' the changes (2).
+[[images/tutorial_images/10_Table_Save.png]], [[images/tutorial_images/10a_TableAfterSaving.png]]
+
+### Foreign Key creation
+1.Go to 'employees' table, 'Foreign Keys' tab. Right click on the screen -> Create New Foreign Key 
+[[images/tutorial_images/11_CreateNewForeignKey.png]], [[images/tutorial_images/11a_ForeignKey.png]]
