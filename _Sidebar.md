@@ -6,6 +6,7 @@
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
+  - [[Working with XML|Working with XML]]
 - [[SQL Editor|SQL-Editor]]
   - Script management
   - [[SQL Templates|SQL-Editor-Templates]]
