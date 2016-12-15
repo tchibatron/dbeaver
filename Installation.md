@@ -9,7 +9,7 @@ Java 1.7+ must be installed separately.
 Run installer executable. It will automatically upgrade version (if needed).  
 Installer doesn’t change any system settings or Java installation.  
 Included JRE will be accessible only for DBeaver.  
-Windows installer distribution is the recommended way to install DBeaver. Besides other benefits it is the smallest (don't be surprised - this is because of advanced archiving technology which is not available in case of plain zip archive).
+Windows installer distribution is the recommended way to install DBeaver. Besides other benefits it is the smallest (because of advanced archiving technology which is not available in case of plain zip archive).
 
 ### Debian package
 Run `sudo dpkg -i dbeaver-<version>.deb`.  
