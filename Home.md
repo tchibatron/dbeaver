@@ -1,9 +1,9 @@
 # Overview
 
-DBeaver is free and open source (GPL 2) universal database tool for developers and database administrators.
+DBeaver is free and open source (Apache License 2) universal database tool for developers and database administrators.
 
 - Usability is the main goal of this project, program UI is carefully designed and implemented.
-- It is free and open-source (GPL).
+- It is free and open-source (ASL).
 - It is multiplatform.
 - It is based on opensource framework and allows writing of various extensions (plugins).
 - It supports any database having a JDBC driver.
@@ -13,9 +13,9 @@ DBeaver is free and open source (GPL 2) universal database tool for developers a
 
 # License
 
-DBeaver is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation.
+DBeaver is free software; you can redistribute it and/or modify it under the terms of the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0).
 
-DBeaver is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Unless required by applicable law or agreed to in writing, DBeaver is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 # Contacts
 
