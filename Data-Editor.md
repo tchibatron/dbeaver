@@ -6,7 +6,7 @@ To toggle record/grid mode press `TAB` key. In record model columns becomes rows
 
 **Data presentations**
 
-To switch between different presentation use combo box in status bar or press `CTRL+TAB`.
+To switch between different presentation use combo box in status bar or press `CTRL+~`.
 - Grid: standard presentation. Looks like a spreadsheet.
 - Plain-text: similar to Grid but all values are presented as plain-text (like in console applications).
 - JSON: represents documents in JSON format (available in EE version for document-oriented tables).
