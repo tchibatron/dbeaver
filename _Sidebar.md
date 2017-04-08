@@ -9,6 +9,7 @@
   - [[Working with XML|Working with XML]]
 - [[SQL Editor|SQL-Editor]]
   - Script management
+  - [[Client side commands|Client-side-scripting]]
   - [[SQL Templates|SQL-Editor-Templates]]
 - SQL databases
   - MySQL (MariaDB)
