@@ -31,6 +31,7 @@
 
 ##### Admin Guide
 - [[Managing connections|Admin-Manage-Connections]]
+- [[Managing drivers|Admin-Manage-Drivers]]
 
 ##### Development
 - [[Develop in Eclipse|Develop-in-Eclipse]]
