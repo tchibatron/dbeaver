@@ -2,7 +2,7 @@ This guide describes how to manage/secure DBeaver database connections.
 It is designed for System administrators. Regular users should check [[this|Connect-to-database]] guide.
 
 ### Provide predefined connections
-DBeaver keep information about project connections in file `.dbeaver-data-sources.xml`. You can find it in project folder (by default all projects reside in workspace, default workspace location is `%HOMEPATH%\.dbeaver` (or ${HOME}/.dbeaver).  
+DBeaver keep information about project connections in file `.dbeaver-data-sources.xml`. You can find it in project folder (by default all projects reside in workspace, default workspace location is `%HOMEPATH%\.dbeaver4` (or ${HOME}/.dbeaver4).  
 
 DBeaver can load multiple connection files. Any files matching `.dbeaver-data-sources*.xml` pattern will be loaded on startup. So you can create a file, say, `.dbeaver-data-sources-2.xml` in the project and DBeaver will see it.
 
@@ -60,7 +60,7 @@ It is possible to make connection settings read-only (protected by password)
 - Now if user will try to change connection settings he/she will be asked for password
 
 ### Configure drivers with pre-installed jars
-You can customize drivers configuration in `${HOME}/.dbeaver/.metadata/.plugins/org.jkiss.dbeaver.core/drivers.xml` file.
+You can customize drivers configuration in `${HOME}/.dbeaver4/.metadata/.plugins/org.jkiss.dbeaver.core/drivers.xml` file.
 If you have some pre-installed jar files you can reference them in drivers.xml. 
 Example:
 ```xml
