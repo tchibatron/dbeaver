@@ -28,6 +28,7 @@
   - Data transfer (export/import)
   - Data/metadata search
   - Database compare
+- [[Command-Line]]
 
 ##### Admin Guide
 - [[Managing connections|Admin-Manage-Connections]]
