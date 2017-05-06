@@ -19,12 +19,23 @@ Name|Value|Example
 -nl|Locale|en_US
 -data|Workspace path|c:\ProgramData\MyWorkspace
 -nosplash|Omits splash screen|true
+-clean|Clears all Eclipse caches. Use it if DBeaver fails to start after version upgrade.
 -vmargs|VM parameters|See [VM arguments table](#vm-arguments)
 
 ### VM arguments
 
+You can pass any advanced Java parameters supported by your local JVM (Oracle, OpenJDK, IBM, etc).  
+Parameters supported by Oracle JVM (1.8): https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html
+
+Parameters supported by all JVMs:
+
+Name|Value|Example
+----|-----|-------
+-Xms|Sets initial memory available for DBeaver|`-Xmx1000m`
+-Xmx|Sets maximum memory available for DBeaver|`-Xmx4000m`
+
 ### Connection parameters
-All connection parameters must be supplied as a single command line argument, parameters are divided by pipe (`|`). Parameter name and value are divided by `=`.
+All connection parameters must be supplied as a single command line argument, parameters are divided by pipe (`|`). Parameter name and value are divided by `=`.  
 Example: `-con driver=sqlite|database=C:\db\SQLite\Chinook.db|name=SQLiteChin|openConsole=true|folder=SQLite`
 
 Name|Value|Example
