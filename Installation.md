@@ -3,7 +3,7 @@ Installation process depends on distribution type and OS.
 ### ZIP archive
 Extract archive and run “dbeaver” executable.  
 Do not extract archive over the previous version. If you have previous version just remove it before install. All configurations, scripts, etc are stored in a separate place (usually in user home) so you won't loose anything.  
-Java 1.7+ must be installed separately.
+Java 1.8+ must be installed separately.
 
 ### Windows installer
 Run installer executable. It will automatically upgrade version (if needed).  
