@@ -22,6 +22,8 @@
   - [[MongoDB|NoSQL-MongoDB]]
   - [[Cassandra|NoSQL-Cassandra]]
   - [[Redis|NoSQL-Redis]]
+- Optional extensions
+  - [[Office|Extension-Office]]
 - Miscellaneous
   - [[Diagrams (ERD)|ER-Diagrams]]
   - [[Query Manager|Query-Manager]]
