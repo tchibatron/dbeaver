@@ -22,4 +22,9 @@ Note: to upgrade use `sudo rpm -Uvh dbeaver-<version>.rpm` parameter.
 
 ### MacOS
 Just drag-and-drop dmg archive to your disk.  
-Note: Recent MacOS versions may reject to install unsigned software.  DBeaver don’t have a signed certificate so you may need [this workaround](http://www.tech-recipes.com/rx/45404/mac-downloaded-app-is-damaged-and-cant-be-opened-error-solved/) to install.
+Note: DBeaver requires Java 1.8 so you need to install [JDK 1.8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) before.
+
+Also you can use [brew](http://macappstore.org/dbeaver-community/): 
+```sh
+brew install Caskroom/cask/java
+```
