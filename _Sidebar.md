@@ -31,6 +31,7 @@
   - Data/metadata search
   - Database compare
 - [[Command-Line]]
+- [[Enterprise Edition]]
 
 ##### Admin Guide
 - [[Managing connections|Admin-Manage-Connections]]
