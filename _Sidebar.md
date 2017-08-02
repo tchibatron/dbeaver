@@ -27,9 +27,9 @@
 - Miscellaneous
   - [[Diagrams (ERD)|ER-Diagrams]]
   - [[Query Manager|Query-Manager]]
-  - [[Data-transfer|Data transfer (export/import)]]
-  - [[Database-Search|Data/metadata search]]
-  - [[Database-compare|Database compare]]
+  - [[Data transfer (export/import)|Data-transfer]]
+  - [[Data/metadata search|Database-Search]]
+  - [[Database compare|Database-compare]]
 - [[Command-Line]]
 - [[Enterprise Edition]]
 
