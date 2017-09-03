@@ -1,6 +1,7 @@
 ##### User Guide
 - [[Installation|Installation]]
 - [[Connecting to a database|Connect-to-database]]
+- [[Database drivers|Database drivers]]
 - [[Projects]]
 - [[Database navigator]]
 - [[Data editor|Data-Editor]]
