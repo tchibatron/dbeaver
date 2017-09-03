@@ -25,6 +25,7 @@
   - [[Redis|NoSQL-Redis]]
 - Optional extensions
   - [[Office|Extension-Office]]
+  - [[SVG format|Extension-SVG-Format]]
 - Miscellaneous
   - [[Diagrams (ERD)|ER-Diagrams]]
   - [[Query Manager|Query-Manager]]
