@@ -8,11 +8,12 @@ When installing DBeaver manually, without using an installer:
 NOTE: Do not unzip the archive over a previous DBeaver version.
 4. Run the **dbeaver** executable.
 
-### Windows installer
-Run installer executable. It will automatically upgrade version (if needed).  
-Installer doesn’t change any system settings or Java installation.  
-Included JRE will be accessible only for DBeaver.  
-Windows installer distribution is the recommended way to install DBeaver. Besides other benefits it is the smallest (because of advanced archiving technology which is not available in case of plain zip archive).
+### Windows Installer
+The installer distribution is the recommended way to install DBeaver on Windows. It is the most lightweight due to an advanced archiving technology that is uses and that is not available in the case of the ZIP archive. Besides this, the installer automatically upgrades DBeaver to the new version, if a previous version is already installed.
+To install DBeaver, run the installer executable and follow the instructions in its screens.
+NOTE:
+* The installer does not change any system settings or the Java installation. 
+* The Included JRE will be accessible only for DBeaver.  
 
 ### Debian package
 Run `sudo dpkg -i dbeaver-<version>.deb`.  
