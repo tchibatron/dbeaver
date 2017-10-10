@@ -12,6 +12,7 @@ NOTE: Do not unzip the archive over a previous DBeaver version.
 ### Windows Installer
 The installer distribution is the recommended way to install DBeaver on Windows. It is the most lightweight due to an advanced archiving technology that is uses and that is not available in the case of the ZIP archive. Besides this, the installer automatically upgrades DBeaver to the new version, if a previous version is already installed.
 To install DBeaver, run the installer executable and follow the instructions in its screens.
+
 NOTE:
 * The installer does not change any system settings or the Java installation. 
 * The Included JRE will be accessible only for DBeaver.  
