@@ -1,8 +1,8 @@
 # Overview
 
-DBeaver is a free and open source (Apache License 2) universal database tool for developers and database administrators.
+DBeaver is a free and open source (Apache License 2) universal database management tool for developers and database administrators.
 
-Having usability as the main goal, DBeaver offers:
+Having usability as its main goal, DBeaver offers:
 - Carefully designed and implemented User Interface
 - Multiplatform support
 - Capability to write various extensions (plugins)
