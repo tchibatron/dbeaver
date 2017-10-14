@@ -3,4 +3,10 @@ DBeaver`s window contains a menu bar, a toolbar, a shortcut bar, a workspace wit
 
 ### Menu Bar
 * **File** menu contains menu items for the creation of files, folders, projects, database connections, database projects, and ER diagrams as well as Import and Export items.  
-* **Edit** menu contains global commands like Cut, Copy, Paste, and Delete targeted at the active elements.
+* **Edit** menu contains global commands like Cut, Copy, Paste, and Delete targeted at the active element.
+* **Navigate** menu
+* **Search** menu
+* **SQL Editor** menu
+* **Database** menu
+* **Window** menu
+* **Help** menu
