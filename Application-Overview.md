@@ -6,7 +6,7 @@ DBeaver`s window contains a menu bar, a toolbar, a shortcut bar, a workspace wit
 * **Edit** menu contains global commands like Cut, Copy, Paste, and Delete targeted at the active element.
 * **Navigate** menu
 * **Search** menu
-* **SQL Editor** menu is for opening SQL Editor adn managing its look.
+* **SQL Editor** menu is for opening SQL Editor and managing its appearance.
 * **Database** menu allows managing database drivers, connections and transactions as well as reconnecting to and disconnecting from a database.
 * **Window** menu includes items to manage the look of DBeaver window: show/hide and minimize/maximize views and editors, display bars, split editors, and manage other preferences.
 * **Help** menu
