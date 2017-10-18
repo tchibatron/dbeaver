@@ -14,5 +14,5 @@ You can customize the menu bar and the list of menu items to display in **Window
 
 ### Toolbar
 The toolbar contains buttons for basic and most frequently used commands:
-[Toolbar](https://www.dropbox.com/sh/qynzmdii2l9mlub/AACAhlCqQLlTtiuYhD0a6ZMua?row=1)
+<img src="https://www.dropbox.com/s/q1l8fait39ylfp2/Toolbar.png?raw=1">
 Some of the buttons are enabled (colored), others are disabled (greyed). The set of enabled and disabled buttons changes depending on which editor is currently active in the workbench. Only enabled buttons are applicable to the active editor.
