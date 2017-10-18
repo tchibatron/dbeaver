@@ -17,3 +17,4 @@ The toolbar contains buttons for basic and most frequently used commands:
 <img src="https://www.dropbox.com/s/q1l8fait39ylfp2/Toolbar.png?raw=1">
 
 Some of the buttons are enabled (colored), others are disabled (greyed). The set of enabled and disabled buttons changes depending on which editor is currently active in the workbench. Only enabled buttons are applicable to the active editor.
+You can customize the toolbar in **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
