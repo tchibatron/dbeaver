@@ -18,3 +18,10 @@ The toolbar contains buttons for basic and most frequently used commands:
 
 Some of the buttons are enabled (colored), others are disabled (greyed). The sets of enabled and disabled buttons change depending on which editor is currently active in the workbench. Only enabled buttons are applicable to the active editor.
 You can customize the toolbar in **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
+
+### Views
+Views are windows within the workbench that provide presentations and ways to navigate the information.
+Views can appear as separate windows or as tabs stacked with other views in a tabbed window.
+You can change the layout of the workbench by opening and closing views, docking them in different positions in the workbench window, collapsing them to the shortcut bar, or expanding them to occupy the whole workbench window and restoring to the latest docked position.  
+ 
+
