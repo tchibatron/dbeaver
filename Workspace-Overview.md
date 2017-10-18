@@ -11,7 +11,7 @@ DBeaver`s window contains a menu bar, a toolbar, a shortcut bar, a workspace wit
 * **Window** menu includes items to manage the look of DBeaver window: show/hide and minimize/maximize views and editors, display bars, split editors, and manage other preferences.
 * **Help** menu contains links to information and help resources, as well as menu items to check the version number and availability of updates.
 
-You can customize the menu bar and the list of menu items to display in **Window -> Customize Perspective -> Menu Visibility** tab.
+You can customize the menu bar and the list of menu items to display - this is done on **Window -> Customize Perspective -> Menu Visibility** tab.
 
 ### Toolbar
 The toolbar contains buttons for basic and most frequently used commands:
@@ -19,7 +19,7 @@ The toolbar contains buttons for basic and most frequently used commands:
 
 Some of the buttons are enabled (colored), others are disabled (greyed). The sets of enabled and disabled buttons change depending on which editor is currently active in the workbench. Only enabled buttons are applicable to the active editor.
 
-You can customize the toolbar in **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
+You can customize the toolbar - this is done on **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
 
 ### Views
 Views are windows within the workbench that provide presentations and ways to navigate the information.
@@ -29,6 +29,7 @@ You can change the layout of the workbench by opening and closing views, docking
 To open a view:
 * On the Window menu, click **Show View** and then, on the submenu, click the name of the view.
 * For Database Navigator, Projects, and Project Explorer views, on the Window menu, just click the name of the view.
+
 Some views open together with editors or on demand, for example, Error Log view opens when an error occurs.
 
 To dock a view to a position in the workbench window, 
