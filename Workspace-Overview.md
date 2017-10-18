@@ -10,3 +10,9 @@ DBeaver`s window contains a menu bar, a toolbar, a shortcut bar, a workspace wit
 * **Database** menu allows managing database drivers, connections and transactions as well as reconnecting to and disconnecting from a database.
 * **Window** menu includes items to manage the look of DBeaver window: show/hide and minimize/maximize views and editors, display bars, split editors, and manage other preferences.
 * **Help** menu contains links to information and help resources, as well as menu items to check the version number and availability of updates.
+You can customize the menu bar and the list of menu items to display in **Window -> Customize Perspective -> Menu Visibility** tab.
+
+### Toolbar
+The toolbar contains buttons for basic and most frequently used commands:
+(https://www.dropbox.com/sh/qynzmdii2l9mlub/AACAhlCqQLlTtiuYhD0a6ZMua?row=1)
+Some of the buttons are enabled (colored), others are disabled (greyed). The set of enabled and disabled buttons changes depending on which editor is currently active in the workbench. Only enabled buttons are applicable to the active editor.
