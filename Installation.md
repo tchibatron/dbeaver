@@ -25,6 +25,7 @@ Then execute `dbeaver &`.
 To install DBeaver using an RPM package:
 1. Run `sudo rpm -ivh dbeaver-<version>.rpm`.  
 2. Execute `dbeaver &`.  
+
 NOTE: To upgrade DBeaver to the next version, use `sudo rpm -Uvh dbeaver-<version>.rpm` parameter.
 
 ### MacOS
