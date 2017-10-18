@@ -27,7 +27,6 @@ You can change the layout of the workbench by opening and closing views, docking
 To open a view:
 * On the Window menu, click **Show View** and then, on the submenu, click the name of the view.
 * For Database Navigator, Projects, and Project Explorer views, on the Window menu, just click the name of the view.
-
 Some views open together with editors or on demand, for example, Error Log view opens when an error occurs.
 
 To dock a view to a position in the workbench window, 
