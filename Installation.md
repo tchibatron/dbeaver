@@ -17,11 +17,12 @@ NOTE:
 * The installer does not change any system settings or the Java installation. 
 * The Included JRE will be accessible only for DBeaver.  
 
-### Debian package
-Run `sudo dpkg -i dbeaver-<version>.deb`.  
-Then execute `dbeaver &`.  
+### Debian Package
+To install DBeaver using a Debian package:
+1. Run `sudo dpkg -i dbeaver-<version>.deb`.  
+2. Execute `dbeaver &`.  
 
-### RPM package
+### RPM Package
 To install DBeaver using an RPM package:
 1. Run `sudo rpm -ivh dbeaver-<version>.rpm`.  
 2. Execute `dbeaver &`.  
