@@ -57,6 +57,7 @@ When one view is maximized, other views appear as shortcuts on the shortcut bar.
 
 ## Minimizing Views
 When you minimize a view, it wraps into a shortcut on the shortcut bar:
+<img src="https://www.dropbox.com/s/151a9yxnlnervj1/Minimize%20view.png?raw=1">
 
 To minimize a view to the size of the whole workspace, do one of the following:
 * Click the Maximize button in the upper-right corner of the view.
