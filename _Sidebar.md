@@ -1,8 +1,6 @@
 ##### User Guide
 - [[Installation|Installation]]
 - [[Workspace Overview]]
-  - [[Menu Bar]]
-  - [[Toolbar]]
 - [[Connecting to a database|Connect-to-database]]
 - [[Database drivers|Database drivers]]
 - [[Projects]]
