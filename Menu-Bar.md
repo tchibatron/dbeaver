@@ -1,3 +1,5 @@
+By default, the menu bar contains the following menus:
+
 * **File** menu contains menu items for the creation of files, folders, projects, database connections, database projects, and ER diagrams as well as Import and Export items.  
 * **Edit** menu contains global commands like Cut, Copy, Paste, and Delete targeted at the active element.
 * **Navigate** menu allows navigating through scripts and database objects.
