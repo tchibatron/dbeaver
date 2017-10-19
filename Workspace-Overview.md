@@ -61,8 +61,10 @@ To restore a maximized view to its latest docked position, double-click its titl
 When you minimize a view, it wraps into a shortcut on the shortcut bar:
 <img src="https://www.dropbox.com/s/151a9yxnlnervj1/Minimize%20view.png?raw=1">
 
+The shortcuts of views and editors may appear on the left or on the right shortcut bar depending on the latest docked position of the view or editor.
+
 To minimize a view, do one of the following:
 * Click the Minimize button in the upper-right corner of the view.
 * On the Window menu, click **Appearance -> Maximixe Active View or Editor**.
 
-To restore a minimized view, click
+To restore a minimized view to its previous position, on the shortcut bar, click the Restore button of the view or editor. To restore a minimized view to a new position, click the view / editor name button under the restore button.
