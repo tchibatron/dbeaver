@@ -28,6 +28,9 @@ Views are windows within the workspace that provide presentations and ways to na
 Views can appear as separate windows or as tabs stacked with other views in a tabbed window.
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
 
+The following are parts of a view: 
+<img src="https://www.dropbox.com/s/09ifmnmzr317b4x/View%20window%20overview.png?raw=1">
+
 ## Opening Views
 To open a view:
 * On the Window menu, click **Show View** and then, on the submenu, click the name of the view.
