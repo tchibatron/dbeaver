@@ -3,8 +3,6 @@
 - [[Workspace Overview]]
   - [[Menu Bar]]
   - [[Toolbar]]
-  - [[Views]]
-  - [[Editors]]
 - [[Connecting to a database|Connect-to-database]]
 - [[Database drivers|Database drivers]]
 - [[Projects]]
