@@ -55,11 +55,14 @@ To maximize a view to the size of the whole workspace, do one of the following:
 
 When one view is maximized, other views appear as shortcuts on the shortcut bar.
 
+To restore a maximized view to its latest docked position, double-click its title bar. 
+
 ## Minimizing Views
 When you minimize a view, it wraps into a shortcut on the shortcut bar:
 <img src="https://www.dropbox.com/s/151a9yxnlnervj1/Minimize%20view.png?raw=1">
 
-To minimize a view to the size of the whole workspace, do one of the following:
-* Click the Maximize button in the upper-right corner of the view.
-* Double-click the title bar of the view.
+To minimize a view, do one of the following:
+* Click the Minimize button in the upper-right corner of the view.
 * On the Window menu, click **Appearance -> Maximixe Active View or Editor**.
+
+To restore a minimized view, click
