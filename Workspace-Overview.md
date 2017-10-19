@@ -42,4 +42,4 @@ You can move views around the workbench and dock them in different positions:
 
 You can also swap locations of two views.
 
-To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it to the desired position.  
+To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it in the desired position.  
