@@ -24,9 +24,9 @@ Some of the buttons are enabled (colored), others are disabled (greyed). The set
 You can customize the toolbar - this is done on **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
 
 # Views
-Views are windows within the workbench that provide presentations and ways to navigate the information.
+Views are windows within the workspace that provide presentations and ways to navigate the information.
 Views can appear as separate windows or as tabs stacked with other views in a tabbed window.
-You can change the layout of the workbench by opening and closing views, docking them in different positions in the workbench window, collapsing them to the shortcut bar, or expanding them to occupy the whole workbench window and restoring to the latest docked position.  
+You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
 
 ## Opening Views
 To open a view:
@@ -35,4 +35,11 @@ To open a view:
 
 Some views open together with editors or on demand, for example, Error Log view opens when an error occurs.
 
-To dock a view to a position in the workbench window, 
+## Changing Views Layout
+You can move views around the workbench and dock them in different positions:
+* As a tab in a tabbed window
+* As a separate window with a vertical or horizontal layout in any zone of the workspace
+
+You can also swap locations of two views.
+
+To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it to the desired position.  
