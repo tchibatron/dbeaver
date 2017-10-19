@@ -1,4 +1,4 @@
-The DBeaver window contains a menu bar, a toolbar, a shortcut bar, a workbench with one or more editors and views, and a status line:
+The DBeaver window contains a menu bar, a toolbar, a shortcut bar, a workspace with one or more editors and views, and a status line:
 <img src="https://www.dropbox.com/s/hxkbuw6r7a8dmw6/UI%20with%20markup.png?raw=1">
 
 # Menu Bar
@@ -45,4 +45,20 @@ You can move views around the workbench and dock them in different positions:
 
 You can also swap locations of two views.
 
-To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it in the desired position.  
+To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it onto the desired position.  
+
+## Maximizing Views
+To maximize a view to the size of the whole workspace, do one of the following:
+* Click the Maximize button in the upper-right corner of the view.
+* Double-click the title bar of the view.
+* On the Window menu, click **Appearance -> Maximixe Active View or Editor**.
+
+When one view is maximized, other views appear as shortcuts on the shortcut bar.
+
+## Minimizing Views
+When you minimize a view, it wraps into a shortcut on the shortcut bar:
+
+To minimize a view to the size of the whole workspace, do one of the following:
+* Click the Maximize button in the upper-right corner of the view.
+* Double-click the title bar of the view.
+* On the Window menu, click **Appearance -> Maximixe Active View or Editor**.
