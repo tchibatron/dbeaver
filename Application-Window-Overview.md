@@ -28,9 +28,10 @@ You can hide or show the toolbar in the application window. To do it, on the Win
 # Shortcut Bar
 There are two shortcut bars - on the left and on the right side of the workspace zone. Shortcut bars host shortcuts of views and editors and appear if at least one view or editor is minimized, otherwise they are hidden.
 
-# Views
+# Workspace: Views and Editors
 Views are windows within the workspace that provide presentations and ways to navigate the information.
-Views can appear as separate windows or as tabs stacked with other views in a tabbed window.
+Editors are windows in which you can interact with content of files and databases. 
+Both can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
 
 The following are parts of a view: 
@@ -43,12 +44,12 @@ To open a view:
 
 Some views open together with editors or on demand, for example, Error Log view opens when an error occurs.
 
-## Changing Views Layout
-You can move views around the workbench and dock them in different positions:
+## Changing Workspace Layout
+You can move views and around the workspace and dock them in different positions:
 * As a tab in a tabbed window
 * As a separate window with a vertical or horizontal layout in any zone of the workspace
 
-You can also swap locations of two views.
+You can also swap locations of two views or editors.
 
 To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it onto the desired position.  
 
@@ -72,4 +73,4 @@ To minimize a view, do one of the following:
 * Click the Minimize button in the upper-right corner of the view.
 * On the Window menu, click **Appearance -> Maximixe Active View or Editor**.
 
-To restore a minimized view to its previous position, on the shortcut bar, click the Restore button of the view or editor. To restore a minimized view to a new position, click the view / editor name button under the restore button.
+To restore a minimized view to its previous position, click the Restore button in the upper-right corner of the view or editor or on its the shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
