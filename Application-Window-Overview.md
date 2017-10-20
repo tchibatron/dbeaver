@@ -19,7 +19,7 @@ You can customize the menu bar and the list of menu items to display, for this, 
 The toolbar contains buttons for basic and most frequently used commands:
 <img src="https://www.dropbox.com/s/q1l8fait39ylfp2/Toolbar.png?raw=1">
 
-Some of the buttons are enabled (colored), others are disabled (greyed). The sets of enabled and disabled buttons change depending on which editor is currently active in the workbench. Only enabled buttons are applicable to the active editor.
+Some of the buttons are enabled (colored), others are disabled (greyed). The sets of enabled and disabled buttons change depending on which editor is currently active in the workspace. Only enabled buttons are applicable to the active view or editor.
 
 You can customize the toolbar, for this, go to **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
 
@@ -32,6 +32,9 @@ There are two shortcut bars - on the left and on the right side of the workspace
 Views are windows within the workspace that provide presentations and ways to navigate the information.
 Editors are windows in which you can interact with content of files and databases. 
 Both can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
+
+There can be several views and editors simultaneously open in the workspace but only one of them can be active at a time.
+
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
 
 ## Opening Views
