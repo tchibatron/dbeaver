@@ -29,7 +29,8 @@ You can hide or show the toolbar in the application window. To do it, on the Win
 There are two shortcut bars - on the left and on the right side of the workspace zone. Shortcut bars host shortcuts of views and editors and appear if at least one view or editor is minimized, otherwise they are hidden.
 
 # Workspace: Views and Editors
-Views are windows within the workspace that provide presentations and ways to navigate the information.
+Views are windows within the workspace that provide presentations and ways to navigate the information. For more information about particular views, see 
+
 Editors are windows in which you can interact with content of files and databases. 
 Both can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
 
