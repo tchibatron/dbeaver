@@ -34,8 +34,8 @@ Editors are windows in which you can interact with content of files and database
 Both can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
 
-The following are parts of a view: 
-<img src="https://www.dropbox.com/s/09ifmnmzr317b4x/View%20window%20overview.png?raw=1">
+All views and editors have the Close, Minimize and Maximize buttons: 
+<img src="https://www.dropbox.com/s/fgnyuj8dhv9anft/Buttons.png?raw=1">
 
 ## Opening Views
 To open a view:
