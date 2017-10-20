@@ -13,7 +13,7 @@ By default, the menu bar contains the following menus:
 * **Window** menu includes items to manage the look of DBeaver window: show/hide and minimize/maximize views and editors, display bars, split editors, and manage other preferences.
 * **Help** menu contains links to information and help resources, as well as menu items to check the version number and availability of updates.
 
-You can customize the menu bar and the list of menu items to display - this is done on **Window -> Customize Perspective -> Menu Visibility** tab.
+You can customize the menu bar and the list of menu items to display, for this, go to **Window -> Customize Perspective -> Menu Visibility** tab.
 
 # Toolbar
 The toolbar contains buttons for basic and most frequently used commands:
@@ -21,7 +21,7 @@ The toolbar contains buttons for basic and most frequently used commands:
 
 Some of the buttons are enabled (colored), others are disabled (greyed). The sets of enabled and disabled buttons change depending on which editor is currently active in the workbench. Only enabled buttons are applicable to the active editor.
 
-You can customize the toolbar - this is done on **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
+You can customize the toolbar, for this, go to **Window -> Customize Perspective -> Tool Bar Visibility** tab. 
 
 You can hide or show the toolbar in the application window. To do it, on the Window menu, click **Appearance -> Hide  Toolbar / Show Toolbar**.
 
