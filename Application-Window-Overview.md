@@ -45,6 +45,8 @@ To open a view:
 
 Some views open together with editors or on demand, for example the Search view opens to show search results.
 
+## Opening Editors
+
 ## Changing Workspace Layout
 You can move views and around the workspace and dock them in different positions:
 * As a tab in a tabbed window
