@@ -34,9 +34,6 @@ Editors are windows in which you can interact with content of files and database
 Both can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
 
-All views and editors have the Close, Minimize and Maximize buttons: 
-<img src="https://www.dropbox.com/s/fgnyuj8dhv9anft/Buttons.png?raw=1">
-
 ## Opening Views
 To open a view:
 * On the Window menu, click **Show View** and then, on the submenu, click the name of the view.
@@ -53,17 +50,21 @@ You can also swap locations of two views or editors.
 
 To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it onto the desired position.  
 
-## Maximizing Views
-To maximize a view to the size of the whole workspace, do one of the following:
+## Maximizing, Minimizing and Restoring View and Editors
+All views and editors have the Close, Minimize and Maximize buttons that allow : 
+<img src="https://www.dropbox.com/s/fgnyuj8dhv9anft/Buttons.png?raw=1">
+
+The Maximize button changes to the Restore button when a view or editor is maximized.
+
+To maximize a view or editor to the size of the whole workspace, do one of the following:
 * Click the Maximize button in the upper-right corner of the view.
-* Double-click the title bar of the view.
-* On the Window menu, click **Appearance -> Maximixe Active View or Editor**.
+* Double-click the title bar of the view or editor.
+* On the Window menu, click **Appearance -> Maximize Active View or Editor**.
 
-When one view is maximized, other views appear as shortcuts on the shortcut bar.
+When one view is maximized, other views and editors appear as shortcuts on the shortcut bar.
 
-To restore a maximized view to its latest docked position, double-click its title bar. 
+To restore a maximized view or editor to its latest docked position, double-click its title bar or click the Restore button in its upper-right corner. 
 
-## Minimizing Views
 When you minimize a view, it wraps into a shortcut on the shortcut bar:
 <img src="https://www.dropbox.com/s/151a9yxnlnervj1/Minimize%20view.png?raw=1">
 
@@ -71,6 +72,6 @@ The shortcuts of views and editors may appear on the left or on the right shortc
 
 To minimize a view, do one of the following:
 * Click the Minimize button in the upper-right corner of the view.
-* On the Window menu, click **Appearance -> Maximixe Active View or Editor**.
+* On the Window menu, click **Appearance -> Minimize Active View or Editor**.
 
-To restore a minimized view to its previous position, click the Restore button in the upper-right corner of the view or editor or on its the shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
+To restore a minimized view or editor to its previous position, click the Restore button on its the shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
