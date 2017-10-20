@@ -2,6 +2,7 @@
 - [[Installation|Installation]]
 - [[Application Window Overview]]
 - [[Connecting to a database|Connect-to-database]]
+- [[Views]]
 - [[Database drivers|Database drivers]]
 - [[Projects]]
 - [[Database navigator]]
