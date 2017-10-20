@@ -6,6 +6,7 @@
   - [[Database Navigator]]
   - [[Projects]]
   - [[Project Explorer]]
+- [[Editors]]
 - [[Database drivers|Database drivers]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
