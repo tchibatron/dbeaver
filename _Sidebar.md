@@ -7,8 +7,6 @@
   - [[Projects]]
   - [[Project Explorer]]
 - [[Database drivers|Database drivers]]
-- [[Projects]]
-- [[Database navigator]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
