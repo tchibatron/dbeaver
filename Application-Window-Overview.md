@@ -39,7 +39,7 @@ To open a view:
 * On the Window menu, click **Show View** and then, on the submenu, click the name of the view.
 * For Database Navigator, Projects, and Project Explorer views, on the Window menu, just click the name of the view.
 
-Some views open together with editors or on demand, for example, Error Log view opens when an error occurs.
+Some views open together with editors or on demand, for example the Search view opens to show search results.
 
 ## Changing Workspace Layout
 You can move views and around the workspace and dock them in different positions:
@@ -48,10 +48,12 @@ You can move views and around the workspace and dock them in different positions
 
 You can also swap locations of two views or editors.
 
-To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it onto the desired position.  
+To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it onto the desired position. 
+
+You can resize the view and editor windows. To resize, place the cursor to the border of the window to see it change to a double-ended arrow, then click and drag the border to the needed size.
 
 ## Maximizing, Minimizing and Restoring View and Editors
-All views and editors have the Close, Minimize and Maximize buttons that allow : 
+All views and editors have the Close, Minimize and Maximize buttons: 
 <img src="https://www.dropbox.com/s/fgnyuj8dhv9anft/Buttons.png?raw=1">
 
 The Maximize button changes to the Restore button when a view or editor is maximized.
@@ -74,4 +76,10 @@ To minimize a view, do one of the following:
 * Click the Minimize button in the upper-right corner of the view.
 * On the Window menu, click **Appearance -> Minimize Active View or Editor**.
 
-To restore a minimized view or editor to its previous position, click the Restore button on its the shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
+To restore a minimized view or editor to its previous position, click the Restore button on its shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
+
+To close a view or editor, click the Close button or right-click the title bar of the view / editor and then click one of the options on the context menu (they change depending on the configuration of windows):
+* **Close **- to close the active window or tab in a tabbed window
+* **Close Others** (for editors and views that appear as tabs in tabbed windows) - to close all tabs of the current tabbed window except the active tab
+* **Close Tabs to the Right / Left** (also for tabbed windows) - to close all tabs of the current tabbed window that are located to the right / left of the active tab
+* **Close All** - to close all tabs of a tabbed window (close the window)
