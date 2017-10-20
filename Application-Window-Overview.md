@@ -79,7 +79,7 @@ To minimize a view, do one of the following:
 To restore a minimized view or editor to its previous position, click the Restore button on its shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
 
 To close a view or editor, click the Close button or right-click the title bar of the view / editor and then click one of the options on the context menu (they change depending on the configuration of windows):
-* **Close **- to close the active window or tab in a tabbed window
+* **Close** - to close the active window or tab in a tabbed window
 * **Close Others** (for editors and views that appear as tabs in tabbed windows) - to close all tabs of the current tabbed window except the active tab
 * **Close Tabs to the Right / Left** (also for tabbed windows) - to close all tabs of the current tabbed window that are located to the right / left of the active tab
 * **Close All** - to close all tabs of a tabbed window (close the window)
