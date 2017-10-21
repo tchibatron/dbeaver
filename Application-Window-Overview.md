@@ -31,9 +31,12 @@ There are two shortcut bars - on the left and on the right side of the workspace
 # Workspace: Views and Editors
 Views are windows within the workspace that provide presentations and ways to navigate the information. For more information about particular views, see [Views](https://github.com/serge-rider/dbeaver/wiki/Views) article.
 
-Editors are windows in which you can interact with content of files and databases. For more information about particular editors, see [Editors](https://github.com/serge-rider/dbeaver/wiki/Editors) article.
+Editors are windows in which you can interact with the content of files and databases. For more information about particular editors, see [Editors](https://github.com/serge-rider/dbeaver/wiki/Editors) article.
 
-Both views and editors can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
+Both views and editors can appear as separate windows or as tabs stacked with other views/editors in a tabbed window:
+
+<img src="https://www.dropbox.com/s/nsbsmie3dx548lq/tabbed%20window.png?row=1"
+
 There can be several views and editors simultaneously open in the workspace but only one of them can be active at a time.
 
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
