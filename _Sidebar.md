@@ -1,6 +1,6 @@
 ##### User Guide
 - [[Installation|Installation]]
-- [[Application Overview]]
+- [[Application Window Overview]]
 - [[Connecting to a database|Connect-to-database]]
 - [[Views]]
   - [[Database Navigator]]
