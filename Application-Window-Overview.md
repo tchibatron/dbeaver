@@ -33,7 +33,7 @@ Views are windows within the workspace that provide presentations and ways to na
 
 Editors are windows in which you can interact with the content of files and databases. For more information about particular editors, see [Editors](https://github.com/serge-rider/dbeaver/wiki/Editors) article.
 
-Both views and editors can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
+Both views and editors can appear as separate windows or as tabs stacked with other views/editors in a tabbed window. The following image shows the title bar of a tabbed window. If tabs do not fit in the title bar of a tabbed window, they become hidden. To see the list of hidden tabs, click the Show List icon that also indicates their number:
 
 <img src="https://www.dropbox.com/s/nsbsmie3dx548lq/tabbed%20window.png?raw=1">
 
