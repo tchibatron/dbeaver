@@ -35,7 +35,7 @@ Editors are windows in which you can interact with the content of files and data
 
 Both views and editors can appear as separate windows or as tabs stacked with other views/editors in a tabbed window:
 
-<img src="https://www.dropbox.com/s/nsbsmie3dx548lq/tabbed%20window.png?row=1"
+<img src="https://www.dropbox.com/s/nsbsmie3dx548lq/tabbed%20window.png?row=1">
 
 There can be several views and editors simultaneously open in the workspace but only one of them can be active at a time.
 
