@@ -33,10 +33,7 @@ Views are windows within the workspace that provide presentations and ways to na
 
 Editors are windows in which you can interact with the content of files and databases. For more information about particular editors, see [Editors](https://github.com/serge-rider/dbeaver/wiki/Editors) article.
 
-Both views and editors can appear as separate windows or as tabs stacked with other views/editors in a tabbed window:
-
-<img src="https://www.dropbox.com/s/nsbsmie3dx548lq/tabbed%20window.png?row=1">
-
+Both views and editors can appear as separate windows or as tabs stacked with other views/editors in a tabbed window.
 There can be several views and editors simultaneously open in the workspace but only one of them can be active at a time.
 
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
@@ -60,6 +57,12 @@ You can also swap locations of two views or editors.
 To dock a view to a position in the workspace, press and hold the title bar of the view, then drag and drop it onto the desired position. 
 
 You can resize the view and editor windows. To resize, place the cursor to the border of the window to see it change to a double-ended arrow, then click and drag the border to the needed size.
+
+To close a view or editor, click the Close button or right-click the title bar of the view / editor and then click one of the options on the context menu (they change depending on the configuration of windows):
+* **Close** - to close the active window or tab in a tabbed window
+* **Close Others** (for editors and views that appear as tabs in tabbed windows) - to close all tabs of the current tabbed window except the active tab
+* **Close Tabs to the Right / Left** (also for tabbed windows) - to close all tabs of the current tabbed window that are located to the right / left of the active tab
+* **Close All** - to close all tabs of a tabbed window (close the window)
 
 ## Maximizing, Minimizing and Restoring View and Editors
 All views and editors have the Close, Minimize and Maximize buttons: 
@@ -86,10 +89,3 @@ To minimize a view, do one of the following:
 * On the Window menu, click **Appearance -> Minimize Active View or Editor**.
 
 To restore a minimized view or editor to its previous position, click the Restore button on its shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
-
-## Closing Views and Editors
-To close a view or editor, click the Close button or right-click the title bar of the view / editor and then click one of the options on the context menu (they change depending on the configuration of windows):
-* **Close** - to close the active window or tab in a tabbed window
-* **Close Others** (for editors and views that appear as tabs in tabbed windows) - to close all tabs of the current tabbed window except the active tab
-* **Close Tabs to the Right / Left** (also for tabbed windows) - to close all tabs of the current tabbed window that are located to the right / left of the active tab
-* **Close All** - to close all tabs of a tabbed window (close the window)
