@@ -17,3 +17,5 @@ Icon|Item|Description
 <img src=" |**New Folder**|Opens a dialog box for creating a new folder
 <img src="https://www.dropbox.com/s/jg92vpaegfm8alz/Collapse%20All%20icon.png?raw=1"> |**Collapse All**|Collapses the tree to the root level
 <img src=" |**Link with editor**| Enabled when at least one editor is open, otherwise disabled - highlights the object in the tree that has its editor open
+
+The toolbar buttons repeat the menu items except the Active Project one.
