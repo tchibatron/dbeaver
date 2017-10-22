@@ -2,7 +2,7 @@ The installation process depends on the distribution type and your Operational S
 
 ### ZIP Archive
 When installing DBeaver manually, without using an installer:
-1. Install Java 1.8+ as a separate step.
+1. Install <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java 1.8+</a> as a separate step.
 2. If you already have any version of DBeaver installed, remove it before installing the new version.
 NOTE: All configurations, scripts and other necessary data are stored in a separate location (usually in the user`s home directory) so the program deinstallation will not affect them.
 3. Extract the contents of the archive.
