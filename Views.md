@@ -11,3 +11,5 @@ Views provide their own toolbar and menu:
 To open the view menu, click the View Menu button in the upper-right corner of the view`s title bar, next to the Minimize button.
 
 The toolbar contains buttons applicable to the objects displayed in the view. The set of enabled and disabled buttons depends on the object in focus.
+
+Views also provide context menus for objects they display. To open a context menu for an object, right-click the object.
