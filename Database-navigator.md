@@ -1,4 +1,4 @@
-The Database Navigator view is the main view to work with the structure and content of databases.
+Database Navigator is the main view to work with the structure and content of databases.
 
 [[images/database-navigator.png]]
 
