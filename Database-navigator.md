@@ -1,14 +1,13 @@
 The Database Navigator view is the main view to work with the structure and content of databases.
 [[images/database-navigator.png]]
 
-The Database Navigator view is the main view to work with the structure and content of databases.
 The view contains a tree of the following objects:
 * Folders (of connections, tables, views, keys, and other objects) - <img src="https://www.dropbox.com/s/cn25anbwlma0ku5/Folders.png?raw=1">
-* Database connections
-* Tables
-* Views
-* Columns
-* Indices
+* Database connections - <img src="https://www.dropbox.com/s/vcoyyh5ygds38qe/Connections%20icons.png?raw=1"> and other (icons differ depending on the database type)
+* Tables - <img src="https://www.dropbox.com/s/f4dsi8knfu62v7k/Table%20icon.png?raw=1">
+* Views - <img src="https://www.dropbox.com/s/2plf0fwwaorw82l/View%20icon.png?raw=1">
+* Columns - <img src="https://www.dropbox.com/s/wxffh1j7sd8m2sp/Column%20icons.png?raw=1">
+* Indices-  <img src="https://www.dropbox.com/s/bkegxqbvrohucqq/Index%20icon.png?raw=1">
 
 Icon|Command|Description
 ----|-------|-----------
