@@ -15,5 +15,5 @@ Icon|Command|Description
  |New Connection|Opens the Create new connection wizard. See … for information about creating connections
  |Active Project|Allows choosing a project
  |New Folder|Opens a dialog box for creating a new folder
- |Collapse All|Collapses the tree to the root level
+<img src="https://www.dropbox.com/s/jg92vpaegfm8alz/Collapse%20All%20icon.png?raw=1"> |Collapse All|Collapses the tree to the root level
  |Link with editor| Enabled when at least one editor is open, otherwise disabled - highlights the object in the tree that has its editor open
