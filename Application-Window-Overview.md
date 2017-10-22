@@ -41,17 +41,8 @@ There can be several views and editors simultaneously open in the workspace but 
 
 You can change the layout of the workspace by opening and closing views, docking them in different positions in the workspace, collapsing them to the shortcut bar, or expanding them to occupy the whole workspace and restoring to the latest docked position.  
 
-## Opening Views
-To open a view:
-* On the Window menu, click **Show View** and then, on the submenu, click the name of the view.
-* For Database Navigator, Projects, and Project Explorer views, on the Window menu, just click the name of the view.
-
-Some views open together with editors or on demand, for example the Search view opens to show search results.
-
-## Opening Editors
-
 ## Changing Workspace Layout
-You can move views and around the workspace and dock them in different positions:
+You can move views and editors around the workspace and dock them in different positions:
 * As a tab in a tabbed window
 * As a separate window with a vertical or horizontal layout in any zone of the workspace
 
