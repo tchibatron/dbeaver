@@ -20,3 +20,15 @@ Icon|Item|Description
 <img src="https://www.dropbox.com/s/8ctcn4vmkfex5zt/Link%20with%20editor%20icon.png?raw=1"> | **Link with editor** | Enabled when at least one editor is open, otherwise disabled - highlights the object in the tree that has its editor open
 
 The toolbar buttons duplicate the menu items except for the **Active Project** one.
+
+The following table summarizes context menu items for all objects in the tree:
+
+Menu item|Available for|Description
+---------|-------------|-----------
+**Open folder**|Connections folder|Opens the folder in a separate view
+**Create new connections**|Connections folder|Opens the Create new connection wizard
+**New Folder**|Connections folder<br> DB connection<br>|Opens a dialog box for creating a new folder
+**Copy**|All types of folders<br> DB connection<br> Table|Copies the object to the clipboard
+**Paste**|All types of folders except Views, Indexes, Sequences, Data Types<br> Table|Pastes the copied object to a selected destination
+**Delete**|Connections folder<br> DB connection<br> Table<br> Column<br> Key<br> Index<br> Reference<br> View|Deletes the object
+**Rename**|Connections folder<br> DB connection<br> Table<br> View|Opens the Rename folder dialog box
