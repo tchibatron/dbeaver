@@ -20,12 +20,12 @@ Icon|Menu item|Description
 
 The toolbar buttons duplicate the menu items except for the **Active Project** one.
 
-The following table summarizes context menu items for all objects in the tree:
+The following table summarizes context menu items for all objects in the tree. Note that the presence or absence of context menu items for an object depends on the database type and the object type.
 
 Menu item|Description
 ---------|-----------
 **Open folder**|Opens a folder in a separate view
-**Create new connections**|Opens the Create new connection wizard
+**Create new connections / Create New Connection**|Opens the Create new connection wizard
 **New Folder**|Opens a dialog box for creating a new folder
 **Copy**|Copies an object to the clipboard 
 **Paste**|Inserts the copied object into a selected folder - most convenient for copy-pasting connections
