@@ -31,3 +31,26 @@ Menu item|Description
 **Paste**|Inserts the copied object into a selected folder - most convenient for copy-pasting connections
 **Delete**|Deletes an object<br/> **WARNING!** The Delete menu item removes the object not only from the tree but from the database itself or the file system, and this action is irreversible. 
 **Rename**|Opens the Rename [object] dialog box
+**Properties**|Opens the Properties for [object] window which allows viewing and modifying the object`s properties
+**Refresh**|Depending on the object, refreshes the object itself, or its parent, or its subnodes – mostly used for refreshing tables and schemes
+**Connect**|Attempts to connect to the database
+**Invalidate/Reconnect**|?
+**Disconnect**|Disconnects from the database
+**SQL Editor**|Opens a new SQL editor for the connection
+**Recent SQL Editor**|Opens the most recently opened SQL editor
+**Edit Connection**|Opens the Connection Configuration window that allows configuring connection settings
+**View [objects]**|Opens the object in a separate editor
+**Edit [object]**|Opens the object in a separate editor
+**Create new [object]**|Opens an editor in which you can specify properties and save the new object
+**Filter**|Opens a submenu of one or more filtering options (depending on the object):<br/>-	Hide [object]<br/>-	Show only [object]<br/>-	Configure [objects] filter<br/>-	Toggle filter<br/>-	Clear filter
+**Copy Advanced Info**|Copies the full name of an object
+**Read Data in SQL Console**|Opens an SQL console displaying the object`s data
+**Copy Advanced Info**|Copies the full name of an object
+**Read Data in SQL Console**|Opens an SQL console displaying the object`s data
+**Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate. Clicking one of the items (for example INSERT) generates the corresponding query in a separate window.
+
+
+
+
+
+
