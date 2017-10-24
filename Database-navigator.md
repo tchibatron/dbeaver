@@ -8,10 +8,11 @@ The view contains a tree of the following objects:
 * Tables - <img src="https://www.dropbox.com/s/f4dsi8knfu62v7k/Table%20icon.png?raw=1">
 * Views - <img src="https://www.dropbox.com/s/2plf0fwwaorw82l/View%20icon.png?raw=1">
 * Columns - <img src="https://www.dropbox.com/s/wxffh1j7sd8m2sp/Column%20icons.png?raw=1">
-* Indices-  <img src="https://www.dropbox.com/s/bkegxqbvrohucqq/Index%20icon.png?raw=1">
+* Indexes-  <img src="https://www.dropbox.com/s/bkegxqbvrohucqq/Index%20icon.png?raw=1">
 
-Icon|Item|Description
-----|-------|-----------
+
+Icon|Menu item|Description
+----|---------|-----------
 <img src="https://www.dropbox.com/s/iwa48qjl029pkzh/Driver%20Manager%20icon.png?raw=1"> |**Driver Manager**|Opens the Driver Manager window that allows creating, editing and deleting drivers for databases. See … for information about managing database drivers
 <img src="https://www.dropbox.com/s/dkysg3skiwl2n9e/New%20connection%20icon.png?raw=1"> |**New Connection**|Opens the Create new connection wizard. See … for information about creating connections
 (empty) | **Active Project** |Allows choosing a project
