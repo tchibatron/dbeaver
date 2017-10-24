@@ -20,7 +20,7 @@ Icon|Menu item|Description
 
 The toolbar buttons duplicate the menu items except for the **Active Project** one.
 
-The following table summarizes context menu items for all types of objects that may appear in the tree. Note that the presence or absence of context menu items for an object depends on the database type and the object type.
+The following table summarizes context menu items for all types of objects that may appear in the tree. Note that the presence or absence of context menu items for an object depends on the database and object types.
 
 Menu item|Description
 ---------|-----------
