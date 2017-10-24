@@ -1,4 +1,4 @@
-Database Navigator is the main view to work with the structure and content of databases. For information on how to open views and where to find the view toolbar and menu, please see the [Views](https://github.com/serge-rider/dbeaver/wiki/Views) article.
+Database Navigator is the main view to work with the structure and content of databases. For information on how to open views and where to find the view toolbar and menu, please see the [Views](https://github.com/serge-rider/dbeaver/wiki/Views) article. For information on how to change the view layout, please see the [Application Window Overview](https://github.com/serge-rider/dbeaver/wiki/Application-Window-Overview) article.
 
 [[images/database-navigator.png]]
 
