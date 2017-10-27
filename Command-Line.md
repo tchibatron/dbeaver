@@ -13,6 +13,7 @@ Name|Value|Example
 `-con`|Opens database connection in DBeaver UI|See [connection parameters table](#connection-parameters)
 `-closeTabs`|Closes all open editor tabs|
 <nobr>`-disconnectAll`</nobr>|Closes all open connections|
+`-reuseWorkspace`|Force reuse of single workspace by multiple DBeaver instances|
 
 ## System parameters
 
