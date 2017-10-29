@@ -51,7 +51,7 @@ Menu item|Description
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
 **Copy Advanced Info**|Copies the full name of an object
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
-**Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate:<br/>-SELECT<br/>-INSERT<br/>-UPDATE<br/>-DELETE<br/>-MERGE<br/>-DDL<br/> Clicking one of the items (for example INSERT) generates the corresponding query in a separate window.
+**Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate:<br/>- SELECT<br/>- INSERT<br/>- UPDATE<br/>- DELETE<br/>- MERGE<br/>- DDL<br/> Clicking one of the items (for example INSERT) generates the corresponding query in a separate window.
 
 Above the tree of objects, Database Navigator displays a filter that allows filtering objects by names of tables and views:
 
