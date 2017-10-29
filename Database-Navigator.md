@@ -46,7 +46,7 @@ Menu item|Description
 **View [objects]**|-	For objects that DBeaver can create and delete, opens the object in a separate editor<br/>-	For objects that DBeaver cannot create and delete, opens the object in a separate viewer
 **Edit [object]**|-	For objects that DBeaver can create and delete, opens the object in a separate editor<br/>-	For objects that DBeaver cannot create and delete, opens the object in a separate viewer
 **Create new [object]**|Opens an editor in which you can specify properties and save the new object
-**Filter**|Opens a submenu of one or more filtering options (depending on the object):<br/>-	Hide [object]<br/>-	Show only [object]<br/>-	Configure [objects] filter<br/>-	Toggle filter<br/>-	Clear filter
+**Filter**|Opens a submenu of one or more filtering options (depending on the object):<br/>-	Hide [object]<br/>-	Show only [object]<br/>-	Configure [objects] filter<br/>-	Toggle filter<br/>-	Clear filter<br/> See ... for information.
 **Copy Advanced Info**|Copies the full name of an object
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
 **Copy Advanced Info**|Copies the full name of an object
