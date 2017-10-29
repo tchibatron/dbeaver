@@ -57,12 +57,4 @@ Above the tree of objects, Database Navigator displays a filter that allows filt
 
 <img src="https://www.dropbox.com/s/u74zvc5bayf678l/DB%20Nav%20filter.png?raw=1">
 
-To filter objects by the name of a table and view, type the name into the field. The tree dynamically updates to show tables / views with that name. To reset the filter, click the Clear icon (<img src="https://www.dropbox.com/s/sk0yqgs5sdr6v87/Clear%20filter%20icon.png?raw=1">) on the right side of the field.
-
-
-
-
-
-
-
-
+To filter objects by the name of a table and view, type the name into the field. The tree dynamically updates to show tables / views with that name. To reset the filter, click the Clear icon (<img src="https://www.dropbox.com/s/sk0yqgs5sdr6v87/Clear%20filter%20icon.png?raw=1">) at the right end of the field.
