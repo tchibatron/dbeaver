@@ -23,7 +23,7 @@ Icon|Item|Description
 <img src="https://www.dropbox.com/s/jg92vpaegfm8alz/Collapse%20All%20icon.png?raw=1"/>|Collapse All|	Collapses the tree to the root level
 <img src="https://www.dropbox.com/s/8ctcn4vmkfex5zt/Link%20with%20editor%20icon.png?raw=1"/>|Link with editor|- Enabled when at least one editor is open, otherwise disabled<br/>- Highlights the object in the tree that has its editor open
 
-The toolbar is located in the title bar of the window, its buttons duplicate the view menu items except for the Refresh Projects one.
+The toolbar is located in the title bar of the window, its buttons duplicate the view menu items except for the **Refresh Projects** one.
 
 ## Filtering objects
 
