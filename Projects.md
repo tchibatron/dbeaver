@@ -19,10 +19,11 @@ To open the view menu of the Projects view, click the View Menu button (<img src
 Icon|Item|Description
 ----|----|-----------
 <img src="https://www.dropbox.com/s/jlswp7lf1fwijvy/Create%20project%20icon.png?raw=1"/>|Create Project|Opens the Create Project wizard
-<img src="https://www.dropbox.com/sh/qynzmdii2l9mlub/AACAhlCqQLlTtiuYhD0a6ZMua?raw=1"/>|Refresh Projects|Refreshes the projects tree to display changes caused by creating modifying or deleting projects 
-<img src="https://www.dropbox.com/sh/qynzmdii2l9mlub/AACAhlCqQLlTtiuYhD0a6ZMua?raw=1"/>|Collapse All|	Collapses the tree to the root level
-<img src="https://www.dropbox.com/sh/qynzmdii2l9mlub/AACAhlCqQLlTtiuYhD0a6ZMua?raw=1"/>|Link with editor|- Enabled when at least one editor is open, otherwise disabled<br/>- Highlights the object in the tree that has its editor open
+<img src="https://www.dropbox.com/s/t47ic11b7fxt36d/Refresh%20projects%20icon.png?raw=1"/>|Refresh Projects|Refreshes the projects tree to display changes caused by creating modifying or deleting projects 
+<img src="https://www.dropbox.com/s/jg92vpaegfm8alz/Collapse%20All%20icon.png?raw=1"/>|Collapse All|	Collapses the tree to the root level
+<img src="https://www.dropbox.com/s/8ctcn4vmkfex5zt/Link%20with%20editor%20icon.png?raw=1"/>|Link with editor|- Enabled when at least one editor is open, otherwise disabled<br/>- Highlights the object in the tree that has its editor open
 
+The toolbar is located in the title bar of the window, its buttons duplicate the view menu items except for the Refresh Projects one.
 
 ## Filtering objects
 
