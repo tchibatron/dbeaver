@@ -55,13 +55,12 @@ Menu item|Description
 
 # Filtering Database Objects
 You can filter database objects to include or exclude some of them from the view. You can filter schemas, tables, views and procedures. A `(...)` sign next to the node`s name indicates that a filter is applied to its sub-nodes:
+
 (picture)
 
 There are several ways in which you can filter objects.
 One of the ways is to filter objects by names of tables and views using the filter field above the tree of objects:
 
-Above the tree of objects, Database Navigator displays a filter that allows filtering objects by names of tables and views:
-
 <img src="https://www.dropbox.com/s/u74zvc5bayf678l/DB%20Nav%20filter.png?raw=1">
 
-To filter objects by the name of a table and view, type the name into the field. The tree dynamically updates to show tables / views with that name. To reset the filter, click the Clear icon (<img src="https://www.dropbox.com/s/sk0yqgs5sdr6v87/Clear%20filter%20icon.png?raw=1">) at the right end of the field.
+To filter objects by the name of a table and view, type the name into the field. The tree dynamically updates to show tables / views with that name. To reset the filter, click the Clear icon  (<img src="https://www.dropbox.com/s/sk0yqgs5sdr6v87/Clear%20filter%20icon.png?raw=1">) on the right end of the field.
