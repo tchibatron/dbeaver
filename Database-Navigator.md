@@ -53,6 +53,11 @@ Menu item|Description
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate:<br/>- SELECT<br/>- INSERT<br/>- UPDATE<br/>- DELETE<br/>- MERGE<br/>- DDL<br/> Clicking one of the items (for example INSERT) generates a relevant query in a separate window.
 
+# Filtering Database Objects
+You can filter database objects to include or exclude some of them from the view. When a filter is applied, the tree nodes that contain filtered objects show a (…) sign. 
+ There are several ways in which you can filter objects.
+One of the ways is to filter objects by names of tables and views using the filter field above the tree of objects:
+
 Above the tree of objects, Database Navigator displays a filter that allows filtering objects by names of tables and views:
 
 <img src="https://www.dropbox.com/s/u74zvc5bayf678l/DB%20Nav%20filter.png?raw=1">
