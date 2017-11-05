@@ -84,3 +84,20 @@ Filter submenu item|Description
 **Show only selected objects**|Shows the selected objects while hiding the rest
 
 To reset such filters, right-click the parent (folder) node displaying the `(...)` sign, and then click **Filter -> Clear filter**.
+
+## Configuring Complex Filters
+To configure a complex filter:
+1. Right-click the object and on the context menu click **Filter -> Configure [objects] filter**. The Filtering window opens.
+
+   <img src="https://www.dropbox.com/s/32uvjklnx1d3wpg/Filtering%20dialog.png?raw=1"/>
+
+2. Select the **Enable** checkbox to activate the fields of the window.
+3. If you want the filter to apply to all objects of a certain type, for example to all schemes, click **Show global filter**. Otherwise, the filter will apply only to the current object.
+NOTE: Once you apply the global filter, you cannot revert back to the local filer in the same window. To create a local filter, reopen the Filtering window, see Step 1.
+4. For objects that you want to show, click **Add** next to the **Include** field and then, in the field itself, enter the name or combination of symbols to search. 
+For objects that you want to hide, click **Add** next to the **Exclude** field and then, in the field itself, enter the name or combination of symbols to search. 
+NOTE: You can use the % and * masks to replace one or more symbols and _ to replace one symbol in the search combination.
+5. To remove one filtering combination, click the combination in the field and then click **Remove**. To remove all combinations from either of the fields, click **Clear** next to the field.
+6. Once you set all filtering criteria, you can save a filter to use for other objects. To save the filter, in the Saved filter area, in the **Name** field, enter the filter`s name and click **Save**.
+7. You can also remove any of the saves filters. To remove a filter, in the **Name** drop-down list, click the filter name and then click **Remove**.
+8. Click **OK** to apply the filtering criteria. Otherwise, click **Cancel**.
