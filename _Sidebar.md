@@ -38,6 +38,7 @@
   - [[Database compare|Database-compare]]
 - [[Command-Line]]
 - [[Enterprise Edition]]
+- Projects Management
 
 ##### Admin Guide
 - [[Managing connections|Admin-Manage-Connections]]
