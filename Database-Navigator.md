@@ -85,8 +85,8 @@ Filter submenu item|Description
 
 To reset such filters, right-click the parent (folder) node displaying the `(...)` sign, and then click **Filter -> Clear filter**.
 
-## Configuring Complex Filters
-To configure a complex filter:
+## Configuring Filters
+To configure a custom filter:
 1. Right-click the object and on the context menu click **Filter -> Configure [objects] filter**. The Filtering window opens.
 
    <img src="https://www.dropbox.com/s/32uvjklnx1d3wpg/Filtering%20dialog.png?raw=1"/>
