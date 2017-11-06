@@ -2,7 +2,7 @@
 
 You might need to classify and group database connections into projects.  Projects store objects related not to a particular database but to all database connections. These are usually files stored on the file system.
 
-The Projects view displays all projects created in the system and provides tools to manage them. To open the Projects view, on the **Window** menu, click **Projects** (or use ALT+W+P shortcut).
+The Projects view displays all projects created in the system and provides tools to manage them. To open the Projects view, on the **Window** menu, click **Projects** (or use <kbd>ALT+W+P</kbd> shortcut).
 
 <img src="https://www.dropbox.com/s/v51mrexzl4a561z/Projects%20view.png?raw=1"/>
 
@@ -35,7 +35,7 @@ Bookmarks are quick access links to objects of a database. They appear in the pr
 
 To create a bookmark:
 1. In the Database Navigator or under **Connections **node of the Projects view, click the database object of interest to set focus on it.
-2. Press CTRL+d. The **Bookmark Name** dialog box appears.
+2. Press <kbd>CTRL+d</kbd>. The **Bookmark Name** dialog box appears.
 3. In the **Bookmark Name** field, enter the bookmark name, then in the **Bookmark folder** field, click the folder, and then click **OK**. The bookmark appears in the selected folder of the related project.
 
 To open an object using its bookmark, double-click the bookmark or right-click it and click **Open Bookmark** on the context menu. You can rename and delete bookmarks using the context menu as well. 
