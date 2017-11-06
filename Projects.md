@@ -30,11 +30,27 @@ For information about context menu items of all objects under the **Connections*
 * The **Set Active Project** menu item (for a project root node) makes the project active, that is visible in the Database Navigator. 
 * The **Link File (SQL Script)** and **Link Folder** menu items allow creating links to files and folders in the file system.
 
+# Managing Projects
+The Projects view allows creating new projects as well as renaming and deleting projects that are not active.
+NOTE: You cannot rename or delete a project that is set as active. 
+
+## Creating Project
+To create a project, in the Projects view, in the toolbar, click **Create Project** (<img src="https://www.dropbox.com/s/jlswp7lf1fwijvy/Create%20project%20icon.png?raw=1"/>). The Project Create Wizard opens.
+
+<img src="https://www.dropbox.com/s/ri4t1jsae2ojmpt/Create%20project%20wizard.png?raw=1"/>
+
+TBA 
+
+## Deleting Project
+To delete a project, in the Projects view, right-click its name in the tree and click **Delete** on the context menu. Two confirmation dialog boxes appear one after another:
+1. Delete object dialog box is to confirm the deletion of the project itself. Click **Yes** if you are sure you want to delete it. Otherwise, click **No**.
+2. Delete project dialog box is to confirm the deletion of the project`s contents. Click **Yes** if you want the contents to be deleted as well. To keep the contents, click **No**.
+
 # Managing Bookmarks
 Bookmarks are quick access links to objects of a database. They appear in the project tree inside the Projects or Project Explorer views.
 
 To create a bookmark:
-1. In the Database Navigator or under **Connections **node of the Projects view, click the database object of interest to set focus on it.
+1. In the Database Navigator or under **Connections** node of the Projects view, click the database object of interest to set focus on it.
 2. Press <kbd>CTRL+d</kbd>. The **Bookmark Name** dialog box appears.
 3. In the **Bookmark Name** field, enter the bookmark name, then in the **Bookmark folder** field, click the folder, and then click **OK**. The bookmark appears in the selected folder of the related project.
 
