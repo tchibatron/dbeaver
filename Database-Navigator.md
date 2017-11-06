@@ -51,7 +51,7 @@ Menu item|Description
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
 **Copy Advanced Info**|Copies the full name of an object
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
-**Compare**|Opens the Compare objects wizard
+**Compare**|- Appears only you select several objects of the same level<br/> - Opens the Compare objects wizard which guides you through the steps to generate a comparison report for the selected objects
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate:<br/>- SELECT<br/>- INSERT<br/>- UPDATE<br/>- DELETE<br/>- MERGE<br/>- DDL<br/> Clicking one of the items (for example INSERT) generates a relevant query in a separate window.
 
 # Filtering Database Objects
