@@ -27,8 +27,8 @@ The toolbar is located in the title bar of the window, its buttons duplicate the
 
 To open the context menu for an object in the tree, right-click the object.
 For information about context menu items of all objects under the **Connections** node of the tree, please see [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator).  The context menus of other nodes in the tree contain some basic items for copy-pasting, renaming, deleting objects, managing their properties, creating folders, etc. 
-•	The **Set Active Project** menu item (for a project root node) makes the project active, that is visible in the Database Navigator. 
-•	The **Link File (SQL Script)** and **Link Folder** menu items allow creating links to files and folders in the file system.
+* The **Set Active Project** menu item (for a project root node) makes the project active, that is visible in the Database Navigator. 
+* The **Link File (SQL Script)** and **Link Folder** menu items allow creating links to files and folders in the file system.
 
 # Managing Bookmarks
 Bookmarks are quick access links to objects of a database. They appear in the project tree inside the Projects or Project Explorer views.
