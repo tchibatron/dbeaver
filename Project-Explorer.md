@@ -15,3 +15,4 @@ Button|Name|Description
 <img src="https://www.dropbox.com/s/6s5bu4czspsb5px/Expand%20All%20button.png?raw=1"/>|**Expand All**| Expands the tree nodes
 <img src="https://www.dropbox.com/s/8ctcn4vmkfex5zt/Link%20with%20editor%20icon.png?raw=1"/>|**Link with editor**|- Enabled when at least one editor is open, otherwise disabled<br/>- Highlights the object in the tree that has its editor open
 
+To sort the metadata in the table by a certain column, click the column header.
