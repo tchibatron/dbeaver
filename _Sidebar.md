@@ -6,7 +6,7 @@
   - [[Projects]]
   - [[Project Explorer]]
 - [[Database Connections]]
-  - [[Creating Database Connections]]
+  - [[Creating Connections]]
   - [[Editing Connections]]
 - [[Editors]]
 - [[Database drivers|Database drivers]]
