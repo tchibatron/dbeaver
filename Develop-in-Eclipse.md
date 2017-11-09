@@ -32,4 +32,3 @@ That's it.
 
 ##### Notes:
 Everything above covers Community Edition version.  
-EE version has extra sources which are not (yet?) open source.
