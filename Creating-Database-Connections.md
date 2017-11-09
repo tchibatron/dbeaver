@@ -19,7 +19,7 @@ If you cannot find a driver for your database then probably there is no suitable
 
 NOTE: The list of database drivers diaplays the number of exising connections next to each driver. No number is displayed if there are no connections.
 
-2. In the Connection Settings screen, on the General tab, set all primary connection settings:
+2. In the Connection Settings screen, on the General tab, set all primary connection settings and then click **Next**:
 
    [[images/connect-wizard-settings.png]]  
 
@@ -30,7 +30,7 @@ For most drivers required settings include:
 - User name and password
 
 However, the number and type of connection properties are very dependent on the driver.
-Embedded drivers requires only the path to a database.
+Embedded drivers require only the path to the database.
 
 #### Finish
 On the final page you may set connection name, type and initial settings (such as bootstrap queries, transaction state, global filters, etc).
