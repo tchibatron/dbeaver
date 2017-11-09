@@ -6,6 +6,8 @@ The Projects view displays all projects created in the system and provides tools
 
 <img src="https://www.dropbox.com/s/v51mrexzl4a561z/Projects%20view.png?raw=1"/>
 
+For information on how to change the view layout, please see the [Application Window Overview](https://github.com/serge-rider/dbeaver/wiki/Application-Window-Overview) article.
+
 The projects are organized into a tree and all have the same high-level structure:
 * **Connections** – repeat the content of the Database Navigator view for this project. You can perform the same actions over the objects of the databases as in Database Navigator.
 * **Bookmarks** – contains bookmarks – shortcuts to database objects, see … 
