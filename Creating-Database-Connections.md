@@ -9,22 +9,27 @@ In other cases, to create a connection, click:
 
   <img src="https://www.dropbox.com/s/g2g9hatjs1c8chx/new%20connection%20on%20menu.png?raw=1"/>
 
-#### Choose a driver for your new connection
-[[images/connect-wizard-driver.png]]  
-To quickly find needed driver you may type a hint in the top text field.  
-If you can't find a driver for your database then maybe you need to create a new one.  
-Refer to [[Create database driver|Create-database-driver]] article.  
+Then, in the new connection wizard:
+1. Choose a driver for the new connection: click the suitable database type in the list. Then click **Next**.
+   
+   [[images/connect-wizard-driver.png]]  
 
-#### Configuring connection
-[[images/connect-wizard-settings.png]]  
-Set all primary connection properties.
-For most drivers required fields are:
-- host
-- port
-- database name 
-- user name and password
+To quickly find the needed driver, you can type a hint in the text field above the list of drivers.
+If you cannot find a driver for your database then probably there is no suitable and you need to create one. Please see [[Create database driver|Create-database-driver]] article.
 
-However number and type of connection properties are very dependent on driver.
+NOTE: The list of database drivers diaplays the number of exising connections next to each driver. No number is displayed if there are no connections.
+
+2. In the Connection Settings screen, on the General tab, set all primary connection settings:
+
+   [[images/connect-wizard-settings.png]]  
+
+For most drivers required settings include:
+- Host
+- Port
+- Database name 
+- User name and password
+
+However, the number and type of connection properties are very dependent on the driver.
 Embedded drivers requires only the path to a database.
 
 #### Finish
