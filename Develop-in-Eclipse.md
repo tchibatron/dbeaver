@@ -15,7 +15,7 @@ It consists from a set of Eclipse plugins, features and products.
 
 ##### Opening workspace in Eclipse
 
-You will need to setup "Eclipse for RCP and RAP developers". Currently default Eclipse version is Oxygen (4.7). Build may fail on newer or older versions.  
+You will need to setup "<a href="https://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/oxygen1a">Eclipse for RCP and RAP developers</a>". Currently default Eclipse version is Oxygen (4.7). Build may fail on newer or older versions.  
 Then you will need to install a few additional Eclipse plugins which DBeaver depends on (and which are not included in the standard Eclipse distribution):
 - Open main menu Help -> Install New Software
 - Copy `http://dbeaver.jkiss.org/eclipse-repo/` into "Work with" field and press enter
