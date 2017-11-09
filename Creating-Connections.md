@@ -15,7 +15,7 @@ Then, in the new connection wizard:
    [[images/connect-wizard-driver.png]]  
 
    To quickly find the needed driver, you can type a hint in the text field above the list of drivers.  
-   If you cannot find a driver for your database then probably there is no suitable and you need to create one. Please see [[Create database driver|Create-database-driver]] article.
+   If you cannot find a driver for your database then probably there is no suitable and you need to create one. Please see [[Create database driver|Create-database-driver]] article.  
 
    NOTE: The list of database drivers diaplays the number of exising connections next to each driver. No number is displayed if there are no connections.
 
