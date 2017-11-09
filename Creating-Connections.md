@@ -23,14 +23,14 @@ Then, in the new connection wizard:
 
    [[images/connect-wizard-settings.png]]  
 
-  For most drivers required settings include:  
-  - Host  
-  - Port  
-  - Database name  
-  - User name and password  
+   For most drivers required settings include:   
+   - Host  
+   - Port  
+   - Database name  
+   - User name and password  
 
-  However, the number and type of connection properties are very dependent on the driver.
-Embedded drivers require only the path to the database.  
+   However, the number and type of connection properties are very dependent on the driver.  
+   Embedded drivers require only the path to the database.  
 
 #### Finish
 On the final page you may set connection name, type and initial settings (such as bootstrap queries, transaction state, global filters, etc).
