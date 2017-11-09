@@ -1,7 +1,7 @@
 ##### User Guide
 - [[Installation|Installation]]
 - [[Application Window Overview]]
-- [[Connecting to a database|Connect-to-database]]
+- [[Creating Database Connections|Connect-to-database]]
 - [[Views]]
   - [[Database Navigator]]
   - [[Projects]]
