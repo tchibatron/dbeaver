@@ -1,7 +1,13 @@
-### Open New Connection wizard
-If you run DBeaver for the first time (standalone version) then new connection wizard will appear automatically.
-Otherwise click on "New Connection" item in the main toolbar or in the Database Navigator view toolbar or in the main menu "Database".
-[[images/connect-wizard-item.png]]
+DBeaver provides a wizard that guides you through the steps to create a connection.
+If you run DBeaver for the first time (standalone version), the new connection wizard appears automatically.
+In other cases, to create a connection, click:
+* Either the **New Connection** button in the application toolbar or in the Database Navigator view toolbar:
+
+  [[images/connect-wizard-item.png]]
+
+* Or **Database -> New Connection** in the menu bar:
+
+  <img src="https://www.dropbox.com/s/g2g9hatjs1c8chx/new%20connection%20on%20menu.png?raw=1"/>
 
 #### Choose a driver for your new connection
 [[images/connect-wizard-driver.png]]  
