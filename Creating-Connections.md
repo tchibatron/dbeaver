@@ -9,7 +9,7 @@ In other cases, to create a connection, click:
 
   <img src="https://www.dropbox.com/s/g2g9hatjs1c8chx/new%20connection%20on%20menu.png?raw=1"/>
 
-Then, in the new connection wizard:
+Then, in the Create new connection wizard:
 1. Choose a driver for the new connection: click the suitable database type in the list. Then click **Next**.
    
    [[images/connect-wizard-driver.png]]  
