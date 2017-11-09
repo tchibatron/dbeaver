@@ -46,6 +46,7 @@
 
 ##### Development
 - [[Develop in Eclipse|Develop-in-Eclipse]]
+- [[Features structure|Features-structure]]
 
 ##### Troubleshooting
 - [[Reset workspace|Reset-workspace]]
