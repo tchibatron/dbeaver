@@ -1,4 +1,4 @@
-To edit configuration settings of a database connection, in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) or in the Projects view, right-click the connection and click **Edit Connection** on the context menu. The Connection configuration window opens:
+To edit configuration settings of a database connection, in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) or in the [Projects](https://github.com/serge-rider/dbeaver/wiki/Projects) view, right-click the connection and click **Edit Connection** on the context menu. The Connection configuration window opens:
 
 <img src="https://www.dropbox.com/s/10gb2ta1x6epbbn/Connection%20%27DBeaver%20Sample%20Database%20%28SQLite%29%27%20configuration.png?raw=1"/>
 
