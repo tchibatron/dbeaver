@@ -30,7 +30,7 @@ Then, in the Create new connection wizard:
    - User name and password  
 
    However, the number and type of connection properties are very dependent on the driver.  
-   For example, embedded drivers (such as SQLite), unlike remote ones, require only the path to the database. 
+   For example, embedded drivers (such as SQLite, Derby Embedded, HSQLDB, H2 Embedded), unlike remote ones, require only the path to the database. 
 
 3. If necessary, specify advanced settings, see **Advanced Settings** section below, and click **Next**.
 4. In the final screen, you can set the connection name, type and initial settings (such as bootstrap queries, transaction state, global filters, etc.).
