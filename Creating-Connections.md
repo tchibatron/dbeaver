@@ -32,17 +32,23 @@ Then, in the Create new connection wizard:
    However, the number and type of connection properties are very dependent on the driver.  
    For example, embedded drivers (such as SQLite), unlike remote ones, require only the path to the database. 
 
-#### Finish
-On the final page you may set connection name, type and initial settings (such as bootstrap queries, transaction state, global filters, etc).
-[[images/connect-wizard-general.png]]  
+3. If necessary, specify advanced settings, see **Advanced Settings** section below, and click **Next**.
+4. In the final screen, you can set the connection name, type and initial settings (such as bootstrap queries, transaction state, global filters, etc.).
 
-#### Extra configuration
-For advanced users.
+   [[images/connect-wizard-general.png]] 
 
-##### Driver properties
-Each driver has it's own set of additional properties. Refer to the driver documentation to get information about available properties and their values.  
+5. To test if the connection works, click **Test Connection**.
+6. Click **Finish**. The connection appears in the tree of connections in the Database Navigator and DBeaver actually connects to the database.
+
+ 
+
+# Advanced Settings
+## Driver Properties
+Each driver has its own set of additional properties. Refer to the driver documentation to get information about available properties and their values. 
+ 
 [[images/connect-wizard-settings-driver.png]]  
 
-##### Network settings (SSH, SOCKS, SSL)
-If your database cannot be accessed directly you can use SSH tunnel.  
+## Network Settings (SSH, SOCKS, SSL)
+If your database cannot be accessed directly, you can use SSH tunnel:
+
 [[images/connect-wizard-ssh.png]]  
