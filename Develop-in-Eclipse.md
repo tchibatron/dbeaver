@@ -28,6 +28,11 @@ Select DBeaver checkout directory as root a directory. Check all plugins and fea
 
 Now you can build DBeaver (`Ctrl+B`).
 To run the standalone version find file `DBeaver.product` (it is located in `product/standalone` directory). Open it and click on "Launch an Eclipse application" or "Launch an Eclipse application in Debug mode".  
+
+If product won't start with `No application id has been found` error try this workaround:
+https://stackoverflow.com/questions/13575695/eclipse-rcp-no-application-id-has-been-found  
+> What you need to do is go to your Run Configurations (Run -> Run Configurations). Select the Plug-ins tab and then hit "Add Required Plug-ins". Apply, then Run, and it should work now.
+
 That's it.
 
 ##### Notes:
