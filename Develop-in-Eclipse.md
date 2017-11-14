@@ -4,7 +4,7 @@ It consists from a set of Eclipse plugins, features and products.
 ##### Sources structure:
 - `docs` - some documentations (mostly outdated)
 - `features` - feature descriptors. Doesn't contain any source code. Used to structurize product plugins/dependencies.
-- `modules` - very base plugins (like utils)
+- `bundles` - very base plugins (like utils)
 - `plugins` - main sources location
   - `org.jkiss.dbeaver.model` - model API and base classes. Doesn't contain any UI dependencies, just pure data model.
   - `org.jkiss.dbeaver.core` - main DBeaver module. Most of base UI classes are here.
