@@ -53,6 +53,7 @@ Menu item|Description
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
 **Compare**|- Appears only if you select several objects of the same level<br/> - Opens the Compare objects wizard which guides you through the steps to generate a comparison report for the selected objects
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate:<br/>- SELECT<br/>- INSERT<br/>- UPDATE<br/>- DELETE<br/>- MERGE<br/>- DDL<br/> Clicking one of the items (for example INSERT) generates a relevant query in a separate window.
+**Tools**|Opens a submenu that provides tools for database backup and restore, vacuum, etc.
 
 # Filtering Database Objects
 You can filter database objects to include or exclude some of them from the view. You can filter schemas, tables, views and procedures. A `(...)` sign next to the node`s name indicates that a filter is applied to its sub-nodes:
