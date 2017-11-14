@@ -9,7 +9,7 @@
   - [[Connecting to Databases]]
   - [[Editing Connections]]
 - [[Editors]]
-- [[Database drivers|Database drivers]]
+  - [[Objects Metadata Editor]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
@@ -18,6 +18,7 @@
   - Script management
   - [[Client side commands|Client-side-scripting]]
   - [[SQL Templates|SQL-Editor-Templates]]
+- [[Database drivers|Database drivers]]
 - SQL databases
   - MySQL (MariaDB)
   - PostgreSQL
