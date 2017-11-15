@@ -8,8 +8,10 @@
 - [[Database Connections]]
   - [[Connecting to Databases]]
   - [[Editing Connections]]
-- [[Editors]]
-  - [[Objects Metadata Editor]]
+- [[Objects Metadata Editor]]
+  - [[Properties]]
+  - [[Data]]
+  - [[ER Diagram]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
