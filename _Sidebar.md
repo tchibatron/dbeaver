@@ -20,8 +20,8 @@
   - Script management
   - [[Client side commands|Client-side-scripting]]
   - [[SQL Templates|SQL-Editor-Templates]]
-- [[Database Management}}
-  - [[Filtering Database Objects]]
+- [[Database Management]]
+  - [[Configure Filters]]
 - [[Database drivers|Database drivers]]
 - SQL databases
   - MySQL (MariaDB)
