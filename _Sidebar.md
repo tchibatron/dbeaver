@@ -8,7 +8,7 @@
 - [[Database Connections]]
   - [[Connecting to Databases]]
   - [[Editing Connections]]
-- [[Objects Metadata Editor]]
+- [[Database Object Editor]]
   - [[Properties]]
   - [[Data]]
   - [[ER Diagram]]
