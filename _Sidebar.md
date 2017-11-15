@@ -20,7 +20,7 @@
   - Script management
   - [[Client side commands|Client-side-scripting]]
   - [[SQL Templates|SQL-Editor-Templates]]
-- [[Database Management]]
+- [[Database Management|Database Management]]
   - [[Filter Database Objects]]
   - [[Configure Filters]]
 - [[Database drivers|Database drivers]]
