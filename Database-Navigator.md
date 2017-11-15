@@ -55,4 +55,4 @@ Menu item|Description
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate:<br/>- SELECT<br/>- INSERT<br/>- UPDATE<br/>- DELETE<br/>- MERGE<br/>- DDL<br/> Clicking one of the items (for example INSERT) generates a relevant query in a separate window.
 **Tools**|Opens a submenu that provides tools for database backup and restore, vacuum, etc.
 
-You can filter database objects in Database Navigator, see [Filter Database Objects](https://github.com/serge-rider/dbeaver/wiki/Filter-Database-Objects)
+You can filter database objects in Database Navigator, see [Filter Database Objects](https://github.com/serge-rider/dbeaver/wiki/Filter-Database-Objects).
