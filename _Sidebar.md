@@ -21,6 +21,7 @@
   - [[Client side commands|Client-side-scripting]]
   - [[SQL Templates|SQL-Editor-Templates]]
 - [[Database Management]]
+  - [[Filter Database Objects]]
   - [[Configure Filters]]
 - [[Database drivers|Database drivers]]
 - SQL databases
