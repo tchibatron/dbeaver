@@ -15,6 +15,6 @@ The object`s path shows the chain of all its parent entities. The entities are c
 
 The toolbar contains different tools on each of the three tabs.
 
-An asterisk appears in the title of the editor if it contains unsaved changes:
+An asterisk appears in the title of an editor if it contains unsaved changes:
 
 <img src="https://www.dropbox.com/s/deojn9xj28njz4a/Asterisk.png?raw=1"/>
