@@ -14,6 +14,7 @@ Name|Value|Example
 `-closeTabs`|Closes all open editor tabs|
 <nobr>`-disconnectAll`</nobr>|Closes all open connections|
 `-reuseWorkspace`|Force reuse of single workspace by multiple DBeaver instances|
+`-newInstance`|Force new DBeaver instance creation (do not try to reuse already running one)|
 
 ## System parameters
 
