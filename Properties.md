@@ -1,0 +1,1 @@
+The Properties tab of the Database Object editor provides tools to view and edit the object`s properties. 
