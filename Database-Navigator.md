@@ -53,6 +53,8 @@ Menu item|Description
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
 **Compare**|- Appears only if you select several objects of the same level<br/> - Opens the Compare objects wizard which guides you through the steps to generate a comparison report for the selected objects
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate:<br/>- SELECT<br/>- INSERT<br/>- UPDATE<br/>- DELETE<br/>- MERGE<br/>- DDL<br/> Clicking one of the items (for example INSERT) generates a relevant query in a separate window.
+**Export Table Data**|Opens the Data Transfer wizard that helps you select a format and export table data 
+**Import Table Data**|Opens a window with existing database connections in which you can select a table to import data from 
 **Tools**|Opens a submenu that provides tools for database backup and restore, vacuum, etc.
 
 You can filter database objects in Database Navigator, see [Filter Database Objects](https://github.com/serge-rider/dbeaver/wiki/Filter-Database-Objects).
