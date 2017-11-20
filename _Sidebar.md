@@ -9,7 +9,7 @@
   - [[Connecting to Databases]]
   - [[Editing Connections]]
 - [[Database Object Editor]]
-  - [[Properties]]
+  - [[Properties Editor]]
   - [[Data]]
   - [[ER Diagram]]
 - [[Data editor|Data-Editor]]
