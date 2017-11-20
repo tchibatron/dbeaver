@@ -17,9 +17,24 @@ Button|Name|Description
 <img src="https://www.dropbox.com/s/h01225sper0kfjw/Configure%20columns%20icon.png?raw=1"/>|Configure columns|Opens the Configure columns dialog box in which you can select the columns to display or hide in the current view
 <img src="https://www.dropbox.com/s/b0kh0gj14wvfhlx/Refresh%20items%20icon.png?raw=1"/>|Refresh the selected items|Depending on the database type, refreshes either the current item or its parent or the whole database object – reloading data from the database
 <img src="https://www.dropbox.com/s/vlflmta976cuydd/View-edit%20item%20icon.png?raw=1"/>|View / Edit [items]|Opens an editor for the item currently in focus
-<img src="|Create new [items]|Creates a new item of the same type as currently displayed in the open view, for example, a column
-<img src="|Delete database object|Deletes the item currently in focus
-<img src="|Save the current contents|- Same as the Save button on the application main toolbar<br/>- Same as <kbd>Ctrl+S</kbd><br/>- Opens the Persist Changes window that allows saving changes in the currently open sub-entity<br/>NOTE: DBeaver recommends saving work after each change. 
-<img src="|Revert to the last saved state|Reverts all changes made to the whole database object to the last saved state 
+<img src="https://www.dropbox.com/s/ba6fqyb6adkuoxg/Create%20new%20item%20icon.png?raw=1"/>|Create new [items]|Creates a new item of the same type as currently displayed in the open view, for example, a column
+<img src="https://www.dropbox.com/s/xbf7xgvi6bcrpzz/Delete%20object%20icon.png?raw=1"/>|Delete database object|Deletes the item currently in focus
+<img src="https://www.dropbox.com/s/ap5204kc1itnijc/Save%20button.png?raw=1"/>|Save the current contents|- Same as the Save button on the application main toolbar<br/>- Same as <kbd>Ctrl+S</kbd><br/>- Opens the Persist Changes window that allows saving changes in the currently open sub-entity<br/>NOTE: DBeaver recommends saving work after each change. 
+<img src="https://www.dropbox.com/s/70jsleztkvw9ce4/Revert%20button.png?raw=1"/>|Revert to the last saved state|Reverts all changes made to the whole database object to the last saved state 
 
 Items in the tabbed editors have context menus which provide the same commands as those in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator). To open a context menu for an item, right-click the item. 
+
+# SQL Based Editors
+SQL based editors (**DDL** and **Source**) of the Properties tab contain SQL code which you can either view or modify.
+The toolbar of the DDL and Source tabs provides the following tools:
+
+Button|Name|Description
+------|----|-----------
+<img src="https://www.dropbox.com/s/9eobh6afyqdj4c5/Load%20from%20file%20icon.png?raw=1"/>|Load form file|- Allows selecting a file from the file system<br/>- Disabled if the SQL code is read-only
+<img src="https://www.dropbox.com/s/n8kw5nreu19kwp6/Save%20to%20file%20icon.png?raw=1"/>|Save to file|Allows saving the current SQL code to a file
+<img src="https://www.dropbox.com/s/lsggyzs1acoq7iy/Open%20in%20SQL%20Console%20icon.png?raw=1"/>|Open in SQL console|Opens the SQL code in an SQL Editor
+
+You can select parts of the SQL code and apply generic commands such as copy-paste or SQL-specific commands like formatting – using the context menu. To open the context menu, right-click the SQL code. See [SQL Editor](https://github.com/serge-rider/dbeaver/wiki/SQL-Editor) for information about SQL-specific commands.
+
+NOTE: **SQL Assist**, **SQL Template**, and **SQL Context Information** menu items on the context menu are disabled if the SQL code is read-only.
+
