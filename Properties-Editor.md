@@ -19,6 +19,7 @@ Button|Name|Description
 <img src="https://www.dropbox.com/s/vlflmta976cuydd/View-edit%20item%20icon.png?raw=1"/>|View / Edit [items]|Opens an editor for the item currently in focus
 <img src="|Create new [items]|Creates a new item of the same type as currently displayed in the open view, for example, a column
 <img src="|Delete database object|Deletes the item currently in focus
-<img src="|Save the current contents|- Same as the Save button on the application main toolbar<br/>- Same as <kbd>Ctrl+S</kbd|Opens the Persist Changes window that allows saving changes in the currently open sub-entity<br/>NOTE: DBeaver recommends saving work after each change. 
+<img src="|Save the current contents|- Same as the Save button on the application main toolbar<br/>- Same as <kbd>Ctrl+S</kbd><br/>- Opens the Persist Changes window that allows saving changes in the currently open sub-entity<br/>NOTE: DBeaver recommends saving work after each change. 
 <img src="|Revert to the last saved state|Reverts all changes made to the whole database object to the last saved state 
 
+Items in the tabbed editors have context menus which provide the same commands as those in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator). To open a context menu for an item, right-click the item. 
