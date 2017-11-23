@@ -9,9 +9,9 @@
   - [[Connecting to Databases]]
   - [[Editing Connections]]
 - [[Database Object Editor]]
-  - [[Properties Editor]]
-  - [[Data]]
-  - [[ER Diagram]]
+  - [[Properties Tab]]
+  - [[Data Tab]]
+  - [[ER Diagram Tab]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
