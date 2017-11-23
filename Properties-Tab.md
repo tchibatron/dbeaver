@@ -24,8 +24,8 @@ Button|Name|Description
 
 Items in the tabbed editors have context menus which provide the same commands as those in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator). To open a context menu for an item, right-click the item. 
 
-# SQL Based Editors
-SQL based editors (**DDL** and **Source**) of the Properties tab contain SQL code which you can either view or modify.
+# SQL Script Editors
+SQL script editors (**DDL** and **Source**) of the Properties tab contain SQL script that you can either view or modify.
 The toolbar of the DDL and Source tabs provides the following tools:
 
 Button|Name|Description
@@ -36,5 +36,5 @@ Button|Name|Description
 
 You can select parts of the SQL code and apply generic commands such as copy-paste or SQL-specific commands like formatting – using the context menu. To open the context menu, right-click the SQL code. See [SQL Editor](https://github.com/serge-rider/dbeaver/wiki/SQL-Editor) for information about SQL-specific commands.
 
-NOTE: **SQL Assist**, **SQL Template**, and **SQL Context Information** menu items on the context menu are disabled if the SQL code is read-only.
+NOTE: **SQL Assist**, **SQL Template**, and **SQL Context Information** menu items on the context menu are disabled if the SQL script is read-only.
 
