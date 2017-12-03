@@ -10,4 +10,4 @@ Dbeaver – Open Source IDE for Postgres.
 
 DBeaver is a universal Database GUI client. We creating DBeaver using Open Source model. We pay special attention to PotgreSQL because of its capabilities, popularity and openness.
 
-We will tell about DBeaver evolution, explain some internals structurtes show base functionality.  We will separately discuss  difficulties which take place when we create PostgreSQL client part. Also we will discuss issues management model and interaction with  PostgreSQL community. We will shiw in details interactive debugging of PL/pgSQL. Stored procedures. We will introduce some new features of nearest Dbeaver release and our development plans
+We will tell about DBeaver evolution, explain some internals structurtes show base functionality.  We will separately discuss  difficulties which take place when we create PostgreSQL client part. Also we will discuss issues management model and interaction with  PostgreSQL community. We will show in details interactive debugging of PL/pgSQL stored procedures. We will introduce some new features of nearest DBeaver release and our development plans.
