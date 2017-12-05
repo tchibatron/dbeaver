@@ -4,7 +4,7 @@ It consists from a set of Eclipse plugins, features and products.
 ##### Sources structure:
 - `docs` - some documentations (mostly outdated)
 - `features` - feature descriptors. Doesn't contain any source code. Used to structurize product plugins/dependencies.
-- `modules` - very base plugins (like utils)
+- `bundles` - very base plugins (like utils)
 - `plugins` - main sources location
   - `org.jkiss.dbeaver.model` - model API and base classes. Doesn't contain any UI dependencies, just pure data model.
   - `org.jkiss.dbeaver.core` - main DBeaver module. Most of base UI classes are here.
@@ -15,7 +15,7 @@ It consists from a set of Eclipse plugins, features and products.
 
 ##### Opening workspace in Eclipse
 
-You will need to setup "Eclipse for RCP and RAP developers". Currently default Eclipse version is Neon (4.6). Build may fail on newer or older versions.  
+You will need to setup "<a href="https://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/oxygen1a">Eclipse for RCP and RAP developers</a>". Currently default Eclipse version is Oxygen (4.7). Build may fail on newer or older versions.  
 Then you will need to install a few additional Eclipse plugins which DBeaver depends on (and which are not included in the standard Eclipse distribution):
 - Open main menu Help -> Install New Software
 - Copy `http://dbeaver.jkiss.org/eclipse-repo/` into "Work with" field and press enter
@@ -28,8 +28,12 @@ Select DBeaver checkout directory as root a directory. Check all plugins and fea
 
 Now you can build DBeaver (`Ctrl+B`).
 To run the standalone version find file `DBeaver.product` (it is located in `product/standalone` directory). Open it and click on "Launch an Eclipse application" or "Launch an Eclipse application in Debug mode".  
+
+If product won't start with `No application id has been found` error try this workaround:
+https://stackoverflow.com/questions/13575695/eclipse-rcp-no-application-id-has-been-found  
+> What you need to do is go to your Run Configurations (Run -> Run Configurations). Select the Plug-ins tab and then hit "Add Required Plug-ins". Apply, then Run, and it should work now.
+
 That's it.
 
 ##### Notes:
 Everything above covers Community Edition version.  
-EE version has extra sources which are not (yet?) open source.

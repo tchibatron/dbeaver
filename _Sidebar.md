@@ -1,8 +1,17 @@
 ##### User Guide
 - [[Installation|Installation]]
-- [[Connecting to a database|Connect-to-database]]
-- [[Projects]]
-- [[Database navigator]]
+- [[Application Window Overview]]
+- [[Views]]
+  - [[Database Navigator]]
+  - [[Projects]]
+  - [[Project Explorer]]
+- [[Database Connections]]
+  - [[Connecting to Databases]]
+  - [[Editing Connections]]
+- [[Database Object Editor]]
+  - [[Properties Tab]]
+  - [[Data Tab]]
+  - [[ER Diagram Tab]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
@@ -11,19 +20,18 @@
   - Script management
   - [[Client side commands|Client-side-scripting]]
   - [[SQL Templates|SQL-Editor-Templates]]
+- Database Management
+  - [[Filter Database Objects]]
+  - [[Configure Filters]]
+- [[Database drivers|Database drivers]]
 - SQL databases
-  - MySQL (MariaDB)
-  - PostgreSQL
-  - Oracle
-  - SQL Server
-  - DB2
-  - Generic (JDBC)
 - NoSQL databases
   - [[MongoDB|NoSQL-MongoDB]]
   - [[Cassandra|NoSQL-Cassandra]]
   - [[Redis|NoSQL-Redis]]
 - Optional extensions
   - [[Office|Extension-Office]]
+  - [[SVG format|Extension-SVG-Format]]
 - Miscellaneous
   - [[Diagrams (ERD)|ER-Diagrams]]
   - [[Query Manager|Query-Manager]]
@@ -32,6 +40,7 @@
   - [[Database compare|Database-compare]]
 - [[Command-Line]]
 - [[Enterprise Edition]]
+- Projects Management
 
 ##### Admin Guide
 - [[Managing connections|Admin-Manage-Connections]]
@@ -39,6 +48,7 @@
 
 ##### Development
 - [[Develop in Eclipse|Develop-in-Eclipse]]
+- [[Features structure|Features-structure]]
 
 ##### Troubleshooting
 - [[Reset workspace|Reset-workspace]]
