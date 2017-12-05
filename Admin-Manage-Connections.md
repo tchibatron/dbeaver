@@ -26,7 +26,7 @@ You can specify just URL or set host/port/etc setting.
 User name/password are options.
 
 #### Sample CSV
-```csv
+```
 name,host,port,server,database,url,user,password,type
 Postgre Import XML 1,localhost,5432,,postgres,jdbc:postgresql://localhost:5432/postgres,postgres,postgres,dev
 Postgre Import XML 2,localhost,5432,,postgres2,jdbc:postgresql://localhost:5432/postgres2,postgres2,postgres2,prod
