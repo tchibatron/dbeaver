@@ -30,7 +30,7 @@ To install DBeaver using an RPM package:
 
 NOTE: To upgrade DBeaver to the next version, use `sudo rpm -Uvh dbeaver-<version>.rpm` parameter.
 
-### MacOS
+### MacOS DMG
 You could try DMG or ZIP archive if you can't use PKG installer for some reason.  
 To install DBeaver on MacOS, just drag-and-drop the DMG archive to your disk.  
 NOTE: DBeaver requires Java 1.8 to be installed, so you need to install [JDK 1.8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) prior to installing DBeaver.
