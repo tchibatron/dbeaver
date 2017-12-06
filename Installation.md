@@ -10,8 +10,8 @@ NOTE: All configurations, scripts and other necessary data are stored in a separ
 
 4. Run the **dbeaver** executable.
 
-### Windows Installer
-The installer distribution is the recommended way to install DBeaver on Windows. It is the most lightweight due to an advanced archiving technology that is uses and that is not available in the case of the ZIP archive. Besides this, the installer automatically upgrades DBeaver to the new version, if a previous version is already installed.
+### Windows / MacOS Installer
+The installer distribution is the recommended way to install DBeaver on Windows and MacOS X. It is the most lightweight due to an advanced archiving technology that is uses and that is not available in the case of the ZIP archive. Besides this, the installer automatically upgrades DBeaver to the new version, if a previous version is already installed.
 To install DBeaver, run the installer executable and follow the instructions in its screens.
 
 NOTE:
