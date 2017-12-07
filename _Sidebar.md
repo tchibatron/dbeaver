@@ -13,7 +13,7 @@
   - [[ER Diagram Tab]]
 - [[Data Editor]]
   - [[Navigation]]
-  - [[Data Appearance Management]]
+  - [[Data Appearance]]
   - [[Data Filters]]
   - [[Data Refresh]]
   - [[Data Viewing and Editing]]
