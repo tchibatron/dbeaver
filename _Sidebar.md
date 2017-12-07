@@ -12,6 +12,7 @@
   - [[Properties Tab]]
   - [[Data Tab]]
   - [[ER Diagram Tab]]
+- [[Data Editor]]
 - [[Data editor|Data-Editor]]
   - [[Filters|Data-filter]]
   - FK navigation
