@@ -1,1 +1,1 @@
-See 
+See [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor) article.
