@@ -30,9 +30,6 @@ You can apply custom filters to any table contents or query results. Type filter
 Filters context menu can be activated with shortcut `CTRL+F11`.
 
 
-**Data search**
-
-`CTRL+F` shows standard search dialog. It will search only in already fetched rows. Also you can use find/replace feature.
 
 **Copy/paste**
 
