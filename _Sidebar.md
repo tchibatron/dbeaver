@@ -18,6 +18,7 @@
   - [[Data Refresh]]
   - [[Data Viewing and Editing]]
   - [[Panels]]
+  - [[Data Search]]
   - [[View/Format]]
   - [[Layout]]
 - [[Data editor|Data-Editor]]
