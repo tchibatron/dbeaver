@@ -8,13 +8,6 @@ If you work with complex types (structures, arrays) or long text data or BLOBs t
 To edit single cell value select it and press Enter or double-click on it.  
 To open dialog with value editor press `SHIFT+Enter`. For LOB types special data editor will be opened instead of dialog.
 
-**Scrolling**
-
-If resultset has many rows then you can scroll it. 
-By default DBeaver limits number of fetched rows by 200 (you can change this value in main toolbar or in preferences). Once you scroll to the last row of results DBeaver will fetch next segment (next 200 rows). 
-You can disable this behaviour in preferences. Also you can manually fetch next segment or fetch whole resultset (be careful, in case of huge resultset it may lead to program hanging or out-of-memory errors).
-You can navigate thru resultset using standard shortcuts `HOME`, `END`, `PgUp`, `PgDown`, `CTRL+HOME`, `CTRL+END`.
-
 **BLOB/CLOB support**
 
 DBeaver has full support of CLOB/BLOB data types. You view values, edit them and save back to database. You can open CLOB/BLOB value in a separate editor (`SHIFT+ENTER` on selected cell value). You can save/load LOB value to/from regular files.
@@ -36,9 +29,6 @@ To be able to persist column value change table must have some unique key (prima
 You can apply custom filters to any table contents or query results. Type filter criteria in the input field above results panel. Criteria could be any SQL expression operating with any number of columns/values. Also you can apply per-field filters in filter settings dialog. Or you can make filter from cell value – choose Order/Filter in the context menu and then some field criteria.  
 Filters context menu can be activated with shortcut `CTRL+F11`.
 
-**Data ordering**
-
-You can order results by some column(s) – just click on the arrows icon after column name. By default DBeaver uses server-side ordering (i.e. query will be re-executed on server) but you can reconfigure it and make only client-side orderings.
 
 **Data search**
 
@@ -48,9 +38,6 @@ You can order results by some column(s) – just click on the arrows icon after 
 
 `CTRL+C` on selected cells will copy these cells into clipboard in TAB-delimited format. Then you can paste this selection in some spreadsheet editor (like Excel). `CTRL+SHIFT+C` shows “Advanced Copy” dialog where you can configure additional copy settings (copy with column names/row numbers, configure delimiter and choose values format). Pressing `CTRL+V` on a cell will set cell value (with appropriate data type conversion).
 
-**Data export**
-
-In the context menu you can choose “Export ResultSet” – it will show standard data transfer wizard (see below). Data will be exported with all applied filters and orderings.
 
 **SQL generation**
 
