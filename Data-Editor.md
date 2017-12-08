@@ -1,16 +1,3 @@
-In results viewer you can view and edit data. Results are produced by some custom SQL query in SQL editor. Or you can open Data tab in table editor to see table contents.
-
-**Record mode**
-
-To toggle record/grid mode press `TAB` key. In record model columns becomes rows and you see just on record. Convenient if your table has big number of columns.
-
-**Data presentations**
-
-To switch between different presentation use combo box in status bar or press `CTRL+~`.
-- Grid: standard presentation. Looks like a spreadsheet.
-- Plain-text: similar to Grid but all values are presented as plain-text (like in console applications).
-- JSON: represents documents in JSON format (available in EE version for document-oriented tables).
-- XML: represents documents in XML format (available in EE version for document-oriented tables). 
 
 **Value view panel**
 
