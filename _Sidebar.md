@@ -21,10 +21,8 @@
   - [[Data Search]]
   - [[View/Format]]
   - [[Layout]]
-- [[Data editor|Data-Editor]]
-  - [[Filters|Data-filter]]
-  - FK navigation
-  - [[Working with XML|Working with XML]]
+  - [[FK Navigation]]
+  - [[Work with XML]]
 - [[SQL Editor|SQL-Editor]]
   - Script management
   - [[Client side commands|Client-side-scripting]]
