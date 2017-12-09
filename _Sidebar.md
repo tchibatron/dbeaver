@@ -1,5 +1,5 @@
 ##### User Guide
-- [[Installation|Installation]]
+- [[Installation]]
 - [[Application Window Overview]]
 - [[Views]]
   - [[Database Navigator]]
@@ -25,7 +25,7 @@
   - [[Work with XML]]
 - [[SQL Editor|SQL-Editor]]
   - Script management
-  - [[Client side commands|Client-side-scripting]]
+  - [Client side commands](Client-side-scripting)
   - [[SQL Templates|SQL-Editor-Templates]]
 - Database Management
   - [[Filter Database Objects]]
