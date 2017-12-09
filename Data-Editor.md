@@ -7,8 +7,7 @@ The central part of the Data editor is the data table. The editor also provides 
 
 
 
-# Rows Coloring
-TBA
+
 
 
 
