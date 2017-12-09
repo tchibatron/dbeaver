@@ -35,7 +35,7 @@
 - NoSQL databases
   - [MongoDB](NoSQL-MongoDB)
   - [Cassandra](NoSQL-Cassandra)
-  - [Redis)(NoSQL-Redis)
+  - [Redis](NoSQL-Redis)
 - Optional extensions
   - [Office](Extension-Office)
   - [SVG format](Extension-SVG-Format)
