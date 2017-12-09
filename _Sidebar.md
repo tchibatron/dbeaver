@@ -34,8 +34,8 @@
 - SQL databases
 - NoSQL databases
   - [MongoDB](NoSQL-MongoDB)
-  - [Cassandra](NoSQL-Cassandra)
-  - [Redis](NoSQL-Redis)
+  - [[Cassandra]]
+  - [[Redis]]
 - Optional extensions
   - [Office](Extension-Office)
   - [SVG format](Extension-SVG-Format)
@@ -54,11 +54,11 @@
 - [[Managing drivers|Admin-Manage-Drivers]]
 
 ##### Development
-- [[Develop in Eclipse|Develop-in-Eclipse]]
-- [[Features structure|Features-structure]]
+- [Develop in Eclipse](Develop-in-Eclipse)
+- [Features structure](Features-structure)
 
 ##### Troubleshooting
-- [[Reset workspace|Reset-workspace]]
-- [[Posting issues|Posting-issues]]
-- [[Log files|Log-files]]
-- [[Thread dump|Making-a-thread-dump]]
+- [[Reset workspace]]
+- [[Posting issues]]
+- [[Log files]]
+- [Thread dump](Making-a-thread-dump)
