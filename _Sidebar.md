@@ -23,28 +23,28 @@
   - [[Layout]]
   - [[FK Navigation]]
   - [[Work with XML]]
-- [[SQL Editor|SQL-Editor]]
+- [[SQL Editor]]
   - Script management
   - [Client side commands](Client-side-scripting)
-  - [[SQL Templates|SQL-Editor-Templates]]
+  - [SQL Templates](SQL-Editor-Templates)
 - Database Management
   - [[Filter Database Objects]]
   - [[Configure Filters]]
-- [[Database drivers|Database drivers]]
+- [[Database drivers]]
 - SQL databases
 - NoSQL databases
-  - [[MongoDB|NoSQL-MongoDB]]
-  - [[Cassandra|NoSQL-Cassandra]]
-  - [[Redis|NoSQL-Redis]]
+  - [MongoDB](NoSQL-MongoDB)
+  - [Cassandra](NoSQL-Cassandra)
+  - [Redis)(NoSQL-Redis)
 - Optional extensions
-  - [[Office|Extension-Office]]
-  - [[SVG format|Extension-SVG-Format]]
+  - [Office](Extension-Office)
+  - [SVG format](Extension-SVG-Format)
 - Miscellaneous
-  - [[Diagrams (ERD)|ER-Diagrams]]
-  - [[Query Manager|Query-Manager]]
-  - [[Data transfer (export/import)|Data-transfer]]
-  - [[Data/metadata search|Database-Search]]
-  - [[Database compare|Database-compare]]
+  - [Diagrams (ERD)](ER-Diagrams)
+  - [[Query Manager]]
+  - [Data transfer (export/import)](Data-transfer)
+  - [Data/metadata search](Database-Search)
+  - [Database compare](Database-compare)
 - [[Command-Line]]
 - [[Enterprise Edition]]
 - Projects Management
