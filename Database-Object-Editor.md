@@ -3,9 +3,9 @@ The metadata editor is available for multiple database objects such as tables, v
 * Click the database object and press <kbd>Enter</kbd> or <kbd>F4</kbd>
 
 The editor has three tabs:
-* [Properties](https://github.com/serge-rider/dbeaver/wiki/Properties) - appears for all objects, contains properties of the database object and its sub-entities
+* [Properties](https://github.com/serge-rider/dbeaver/wiki/Properties) tab - appears for all objects, contains properties of the database object and its sub-entities
 * **Data** tab appears for tables and views and represents a [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor)
-* [ER Diagram](https://github.com/serge-rider/dbeaver/wiki/ER-Diagram) - appears for tables and schemas
+* [ER Diagram](https://github.com/serge-rider/dbeaver/wiki/ER-Diagram) tab - appears for tables and schemas
 
 The tabs have the following common parts:
 
