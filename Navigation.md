@@ -12,3 +12,11 @@ To fetch the whole result set, click the **Fetch all rows** button (<img src="ht
 NOTE: Be careful when fetching the whole result set. If it is huge, it might cause program hangup or out-of-memory errors.
 
 You can navigate through the result set using standard shortcuts <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd>, <kbd>PgDown</kbd>, <kbd>Ctrl+Home</kbd>, <kbd>Ctrl+End</kbd>.
+
+## Data Rows
+To jump to the first or last row or move one row forward or backward, use the navigation buttons in the bottom toolbar or on the context menu: <img src="https://www.dropbox.com/s/hng62ypf43elz5s/Navigation%20buttons.png?raw=1"/> 
+
+To jump to a specific line, right-click anywhere in the table and click **Navigate** -> **Go to Line** on the context menu. Then in the Go to Row dialog box, enter the row number and click **OK**.
+## History
+ DBeaver remembers the history of such actions as applying filters to data, opening reference tables or other tables via links. You can navigate among such tables and filtered views using the forward and backward buttons in the top toolbar: <img src="https://www.dropbox.com/s/ch97i2oy3uytkz7/Backward%20button.png?raw=1"/> <img src="https://www.dropbox.com/s/1t87l4wthqoopnv/Forward%20button.png?raw=1"/>    
+
