@@ -37,3 +37,35 @@ To reset the data ordering to its initial state, click the Reset button (<img sr
 
 Also, to remove all ordering settings, click the Remove All Filters/Orderings button (<img src="https://www.dropbox.com/s/vvqyaz3blha7wf2/Remove%20all%20filters%20button.png?raw=1"/>)
 in the top toolbar.
+
+## Managing Display of Columns in Data Table
+
+To hide a single column, right-click the column or any cell in it and click **Hide column** on the context menu. To unhide a hidden column, open the Result Set Order/Filter Settings window (see the image earlier in this section) and select the checkbox next to the column name or click the Reset button (<img src="https://www.dropbox.com/s/djtedg8jjid1udm/Reset%20button.png?raw=1"/>).
+
+To display or hide columns in the data table, in the Result Set Order/Filter Settings window:
+1. Select the checkboxes next to the columns that you want to see in the table and clear the checkboxes next to those that you want to hide.
+2. Use the Show All (<img src="https://www.dropbox.com/s/6k7iamq60gdhyto/Show%20All%20button.png?raw=1"/>)  and Show None (<img src="https://www.dropbox.com/s/ffll7ftbdmdmy8v/Show%20None%20button.png?raw=1"/>) buttons at the bottom of the window.
+
+## Sorting Columns in Data Table
+
+You can modify the order of columns in the data table in two ways:
+1.	Click the icon in the column header and drag-and-drop the column to a new position.
+2.	To sort column alphabetically, in the Result Set Order/Filter Settings window, click the Sort button (<img src="https://www.dropbox.com/s/4p154wspfs60pwv/Sort%20button.png?raw=1"/>)
+3.	In the Result Set Order/Filter Settings window, click the column to set focus to it and then move it using the navigation buttons: (<img src="https://www.dropbox.com/s/vmn35r0pjv0pjde/Up-Down%20buttons.png?raw=1"/>)
+
+## Data Presentation
+
+You can switch between two data presentations in SE version and four presentations in EE version. Pressing <kbd>CTRL+~</kbd> switches available presentations in turn.
+* To see data in a grid view, similar to Excel spreadsheet, click the **Grid** button in the bottom toolbar.
+* To switch to the plain text view, click **Text** in the bottom toolbar.
+* To switch to JSON view (available in EE version only for MongoDB documents and JSON tables), click **JSON** in the toolbar.
+* To switch to XML view (available in EE version only for XML tables), click **XML** in the toolbar.
+
+## Table vs. Record Views
+
+The table view is a standard table (Excel-like) in which columns are vertical and rows are horizontal. This view is the default one. If you click the **Record** button in the bottom toolbar or press <kbd>Tab</kbd>, the rows and columns switch positions – columns appear as rows, and rows hide in one **Value** column which now shows only one row of data.  The Record view is useful if the table contains a big number of columns. To navigate from row to row of data, use the navigation buttons in the bottom toolbar: <img src="https://www.dropbox.com/s/hng62ypf43elz5s/Navigation%20buttons.png?raw=1"/>
+
+To return back to the standard table view, click the **Record** button again.
+
+## Rows Coloring
+TBA
