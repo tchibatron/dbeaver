@@ -49,7 +49,7 @@ Button|Name|Description
 
 Items in the tabbed editors have context menus which provide the same commands as those in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator). To open a context menu for an item, right-click the item. 
 
-# SQL Script Editors
+## SQL Script Editors
 SQL script editors (**DDL** and **Source**) of the Properties tab contain SQL script that you can either view or modify.
 The toolbar of the DDL and Source tabs provides the following tools:
 
