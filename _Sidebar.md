@@ -10,7 +10,6 @@
   - [[Editing Connections]]
 - [[Database Object Editor]]
   - [[Properties Tab]]
-  - [[ER Diagram Tab]]
 - [[Data Editor]]
   - [[Navigation]]
   - [[Data Appearance]]
