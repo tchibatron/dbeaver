@@ -25,6 +25,8 @@
   - [[FK Navigation]]
   - [[Work with XML]]
 - [[ER Diagrams]]
+  - [[Database Structure Diagrams]]
+  - [[Custom Diagrams]]
 - [[SQL Editor]]
   - Script management
   - [Client side commands](Client-side-scripting)
