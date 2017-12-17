@@ -1,1 +1,1 @@
-DBeaver - Universal Database Manager
+[DBeaver - Universal Database Manager](https://dbeaver.jkiss.org)
