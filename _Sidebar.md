@@ -24,6 +24,7 @@
   - [[SQL Generation]]
   - [[FK Navigation]]
   - [[Work with XML]]
+- [[ER Diagrams]]
 - [[SQL Editor]]
   - Script management
   - [Client side commands](Client-side-scripting)
