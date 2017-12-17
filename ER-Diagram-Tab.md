@@ -12,8 +12,9 @@ To view the ER diagram for a full database schema, double-click on schema name o
 
 NOTE: Table and schema diagrams are read-only. You can rearrange the layout, drag-n-drop elements inside a diagram but you canot save the changes state or delete/add anything. This is because the diagrams represent the actual state of databases.
 
-### Custom ER diagrams
-You can create custom ER diagrams which may contain any tables, relations and notes.  
+## Custom ER Diagrams
+
+You can create custom ER diagrams that can contain any tables, relations and notes.  
 However even custom diagrams may contain only real existing database entities (tables).  
 [[images/erd-custom-colors.png]]
 To create custom diagram you can:
