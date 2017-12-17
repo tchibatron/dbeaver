@@ -41,8 +41,7 @@ To remove the filter, click the cross icon next to the search field.
 
 
 ## Diagram Export
-You can export (save) diagram as an image (PNG, GIF, BMP formats) or as a file in GraphML format. To export a diagram,
-click **Save diagram in external format** (<img src="https://www.dropbox.com/s/9haqosyhzuqfhqn/Export%20diagram.png?raw=1"/>) in the toolbar.
+You can export (save) a diagram as an image (PNG, GIF, BMP formats) or as a file in GraphML format. To export a diagram, click **Save diagram in external format** (<img src="https://www.dropbox.com/s/9haqosyhzuqfhqn/Export%20diagram.png?raw=1"/>) in the toolbar.
 
 ## Diagram Printing
 To print a diagram, press <kbd>CTRL+P</kbd> or click **Print Diagram** (<img src="https://www.dropbox.com/s/gaxdk0q5lkqy6wa/Print%20diagram.png?raw=1"/>) in the toolbar.
