@@ -4,11 +4,11 @@ However, even custom diagrams may contain only real existing database entities (
 [[images/erd-custom-colors.png]]
 
 You can create a custom diagram in one of the ways:
-1. On the DBeaver main menu, click **File -> New -> DBeaver -> ER Diagram**:
+1. On the DBeaver main menu, click **File -> New**. In the new diagram wizard, click **DBeaver -> ER Diagram**:
 
    <img src="https://www.dropbox.com/s/s0yj0smmk55a06u/New%20diagram%20wizard.png?raw=1"/>  
    
-   Then click **Next** and specify the diagram name and (optionally) choose initial diagram contents (set of tables).
+   Then specify the diagram name and (optionally) choose initial diagram contents (set of tables).
 
 2. Right click on `ER Diagrams` node in project explorer view `-> Create New Diagram`
 
