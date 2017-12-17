@@ -6,7 +6,7 @@ ER diagram for a table shows the table itself and its relations with other table
 
 <img src="https://www.dropbox.com/s/1na71z07tabmhos/ER%20diagram.png?raw=1"/>
 
-To view the ER diagram for a full database schema, double-click on schema name or the **Tables** node:
+To view the ER diagram for a full database schema, double-click the schema name or the **Tables** node:
 
 <img src="https://www.dropbox.com/s/ndtttbnha3kf5eb/ER%20schema.png?raw=1"/>
 
