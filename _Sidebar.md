@@ -9,7 +9,6 @@
   - [[Connecting to Databases]]
   - [[Editing Connections]]
 - [[Database Object Editor]]
-  - [[Properties Tab]]
 - [[Data Editor]]
   - [[Navigation]]
   - [[Data Appearance]]
