@@ -4,7 +4,8 @@ Entity Relation Diagrams (ERD) are graphic presentations of database entities an
 Both types of diagrams provide the same tools to adjust their view and structure. They can be printed and exported to image file formats.
 
 ## Structure Adjustment
-You can do the following structure changes in diagrams:
+NOTE: All changes to existing database schemas cannot be saved and are intended for exploration purposes only.  
+You can do the following structure changes in diagrams.
 *  Add new tables to a diagram by drag-n-dropping them onto the diagram field from the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator).
 *  Rearrange tables in the diagram by dragging them all over the space. You can select several tables and drag them to a new location.
 *  Auto-arrange tables into a compact view after manual rearrangements: click the **Arrange Diagram** (<img src="https://www.dropbox.com/s/hh1xnkn22ow0tzf/Arrange%20diagram.png?raw=1"/>) in the toolbar or on the context menu (right-click anywhere on the diagram tab).
