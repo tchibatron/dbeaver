@@ -3,7 +3,7 @@ The metadata editor is available for multiple database objects such as tables, v
 * Click the database object and press <kbd>Enter</kbd> or <kbd>F4</kbd>
 
 The editor has three tabs:
-* **Properties** tab appears for all objects, contains properties of the database object and its sub-entities, see further in this article
+* **Properties** tab appears for all objects, contains properties of the database object and its sub-entities, see 
 * **Data** tab appears for tables and views and represents the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor)
 * **ER Diagram** tab appears for tables and schemas and displays ERD (Entity Relation Diagrams), see [ER Diagrams](https://github.com/serge-rider/dbeaver/wiki/ER-Diagrams) and [Database Structure Diagrams](https://github.com/serge-rider/dbeaver/wiki/Database-Structure-Diagrams)
 
@@ -20,6 +20,8 @@ An asterisk appears in the title of an editor if it contains unsaved changes:
 <img src="https://www.dropbox.com/s/deojn9xj28njz4a/Asterisk.png?raw=1"/>
 
 The Database Object editor supports the Ctrl+Z (undo) function.
+
+## Properties Tab
 
 The Properties tab of the [Database Object Editor](https://github.com/serge-rider/dbeaver/wiki/Database-Object-Editor) provides tools to view and edit the database object`s properties. 
 
