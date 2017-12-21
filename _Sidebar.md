@@ -26,7 +26,7 @@
   - [[Database Structure Diagrams]]
   - [[Custom Diagrams]]
 - [[SQL Editor]]
-  - [[Script Execution]]
+  - [[Script Execution]](Script-and-Query-Execution)
   - [SQL Templates](SQL-Editor-Templates)
   - [Client Side Commands](Client-side-scripting)
 - Database Management
