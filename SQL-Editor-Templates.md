@@ -1,4 +1,4 @@
-Templates allow you to insert frequently used SQL expressions into an SQL script.
+Templates allow you to insert frequently used SQL statements into an SQL script.
 
 To see available templates, press <kbd>Ctrl+Alt+SPACE</kbd> or right-click the line in the script pane and click **SQL Template** on the context menu. A box appears with a list of available templates:
 
@@ -7,7 +7,7 @@ To see available templates, press <kbd>Ctrl+Alt+SPACE</kbd> or right-click the l
 To apply a template, in the SQL Editor, in the script pane:
 * Type the template name and press <kbd>Tab</kbd>
 * Right-click the line where you want to insert a template expression, click **SQL Template** on the context menu, and then, in the list of templates, double-click the required template name.  
-The template SQL expression appears in the script.
+The template SQL statement appears in the script.
   
 To edit/add/remove templates, click Configure (<img src="https://www.dropbox.com/s/h01225sper0kfjw/Configure%20columns%20icon.png?raw=1"/>) in the bottom toolbar, then click **Preferences -> SQL Editor -> Templates**. 
 For more information about managing templates, please visit [Eclipse Website](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Fconcepts%2Fconcept-editor-templates.htm).
