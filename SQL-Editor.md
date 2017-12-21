@@ -1,5 +1,3 @@
-***Scripts***
-
 To open SQL editor for some connection select this connection in the Database Navigator view and press F3 (you can do the same from context menu or main menu). DBeaver opens popup window with SQL scripts linked to this connection. If you need to create new SQL script press "New Script" in that popup or click on "New SQL Editor" on the main toolbar. 
 
 You can open the most recent SQL editor using <kbd>CTRL+Enter</kbd> shortcut in the Database Navigator view.
