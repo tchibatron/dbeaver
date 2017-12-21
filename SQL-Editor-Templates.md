@@ -17,19 +17,19 @@ For more information about managing templates, please visit [Eclipse Website](ht
 | Variable | Description |
 -----------|-------------|
 |${cursor} | Specifies the cursor position when the template edit mode is left. This is useful when the cursor should jump to different place than to the end of the template upon leaving the template edit mode. |
-|${year} | Evaluates to the current year |
-|${date} | Evaluates to the current date |
-|${time} | Evaluates to the current time |
-|${dollar} | Evaluates to the dollar sign $. Alternatively, two dollar signs can be used: $$. |
-|${user} | Evaluates to the user name. |
-|${word_selection} | Evaluates to the content of the current text selection |
-|${line_selection} | Evaluates to content of all currently selected lines
+|${year} | Takes the current year value |
+|${date} | Takes the current date value |
+|${time} | Takes the current time value |
+|${dollar} | Takes the dollar sign $. Alternatively, two dollar signs can be used: $$. |
+|${user} | Takes the user name |
+|${word_selection} | Takes the content of the current text selection |
+|${line_selection} | Takes content of all currently selected lines
 
 #### DBeaver-specific templates:  
 
 | Variable | Description |
 -----------|-------------|
-|${schema} | Evaluates to the current schema name |
-|${catalog} | Evaluates to the catalog name |
-|${table} | Evaluates to the current table name (from the active catalog/schema) |
-|${column} | Evaluates to the column name (from the current table) |
+|${schema} | Takes the current schema name |
+|${catalog} | Takes the catalog name |
+|${table} | Takes the current table name (from the active catalog/schema) |
+|${column} | Takes the column name (from the current table) |
