@@ -4,14 +4,17 @@ To open an SQL editor for some connection:
 * Click **Recent SQL Editor** on the context menu for this connection or on the main menu (**SQL Editor -> Recent SQL Editor**). This opens the latest used SQL editor. You can also open the most recent SQL editor using <kbd>Ctrl+Enter</kbd> shortcut in the Database Navigator view.
 * If you need to create a new SQL script, on the main menu, click **SQL Editor -> New SQL Editor** or press <kbd>F3</kbd> and then click **New Script** in the Choose SQL Script window. 
 
-The SQL editor includes the script pane at the top and result tabs at the bottom of the tab:
+The SQL editor includes the script pane at the top and result tabs at the bottom:
 
 <img src="https://www.dropbox.com/s/3ayxw9jpyr0cmqk/SQL%20Editor.png?raw=1"/>
 
-The result tabs represent instances of the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor)
+The result tabs represent instances of the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor).
 
-You can see all your SQL scripts in the Project Explorer view folder “Scripts”. You can organize your scripts in folders, reassign database connections for particular scripts in the same Project Explorer view. 
-DBeaver uses SQL syntax highlighting which depends on database associated with a script. Different databases have different sets of reserved keywords, system functions. 
+You can create, edit and execute SQL scripts in the script pane and then see the results in the result tabs. 
+
+You can see all your SQL scripts in the [Project Explorer](https://github.com/serge-rider/dbeaver/wiki/Project-Explorer) view in the **Scripts** folder.
+ 
+DBeaver uses SQL syntax highlighting which depends on the database associated with the script. Different databases have different sets of reserved keywords and system functions. 
 
 ***Import/export scripts***
 
