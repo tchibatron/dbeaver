@@ -1,6 +1,14 @@
-To open SQL editor for some connection select this connection in the Database Navigator view and press F3 (you can do the same from context menu or main menu). DBeaver opens popup window with SQL scripts linked to this connection. If you need to create new SQL script press "New Script" in that popup or click on "New SQL Editor" on the main toolbar. 
+You can create multiple SQL scripts for a single connection. Every script opens in its own SQL editor. 
+To open an SQL editor for some connection:
+* Click this connection in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) view and press <kbd>F3</kbd> or click **SQL Editor -> SQL Editor** on the main menu. Alternatively, you click **SQL Editor** on the context menu of this connection. DBeaver opens the Choose SQL script window with saved SQL scripts linked to this connection. CLick the SQL script to open it in a separate tab.
+* Click **Recent SQL Editor** on the context menu for this connection or on the main menu (**SQL Editor -> Recent SQL Editor**). This opens the latest used SQL editor. You can also open the most recent SQL editor using <kbd>Ctrl+Enter</kbd> shortcut in the Database Navigator view.
+* If you need to create a new SQL script, on the main menu, click **SQL Editor -> New SQL Editor** or press <kbd>F3</kbd> and then click **New Script** in the Choose SQL Script window. 
 
-You can open the most recent SQL editor using <kbd>CTRL+Enter</kbd> shortcut in the Database Navigator view.
+The SQL editor includes the script pane at the top and result tabs at the bottom of the tab:
+
+<img src="https://www.dropbox.com/s/3ayxw9jpyr0cmqk/SQL%20Editor.png?raw=1"/>
+
+The result tabs represent instances of the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor)
 
 You can see all your SQL scripts in the Project Explorer view folder “Scripts”. You can organize your scripts in folders, reassign database connections for particular scripts in the same Project Explorer view. 
 DBeaver uses SQL syntax highlighting which depends on database associated with a script. Different databases have different sets of reserved keywords, system functions. 
