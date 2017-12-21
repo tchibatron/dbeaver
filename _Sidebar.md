@@ -27,7 +27,7 @@
   - [[Custom Diagrams]]
 - [[SQL Editor]]
   - Script management
-  - [Client side commands](Client-side-scripting)
+  - [Client Side Commands](Client-side-scripting)
   - [SQL Templates](SQL-Editor-Templates)
 - Database Management
   - [[Filter Database Objects]]
