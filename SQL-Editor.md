@@ -11,10 +11,12 @@ The SQL editor includes the script pane at the top and result tabs at the bottom
 The result tabs represent instances of the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor).
 
 You can create, edit and execute SQL scripts in the script pane and then see the results in the result tabs. 
-
-You can see all your SQL scripts in the [Project Explorer](https://github.com/serge-rider/dbeaver/wiki/Project-Explorer) view in the **Scripts** folder.
  
-DBeaver uses SQL syntax highlighting which depends on the database associated with the script. Different databases have different sets of reserved keywords and system functions. 
+DBeaver uses SQL syntax highlighting which depends on the database associated with the script. Different databases have different sets of reserved keywords and system functions.
+
+NOTE: SQL Editor for a connection is different from SQL console for a table or view (right-click the table and click **Read data in SQL console**) in that, unlike the console, it can save scripts and changes to them.
+
+You can see all your saved SQL scripts in the [Project Explorer](https://github.com/serge-rider/dbeaver/wiki/Project-Explorer) view in the **Scripts** folder.
 
 ***Import/export scripts***
 
