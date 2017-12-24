@@ -1,3 +1,11 @@
+## Dynamic Parameter Bindings
+
+You can use dynamic parameters in your SQL queries. The parameter format is :name. When you execute a query which contains dynamic parameters, DBeaver displays a dialog box in which you can fill the parameters` values:
+
+<img src="https://www.dropbox.com/s/adne99abuixgpor/Parameter%20bindings.png?raw=1"/>
+
+Also you can use anonymous parameters (?) but then you need to enable them in SQL editor preferences. 
+
 ## SQL Templates
 
 Templates allow you to insert frequently used SQL statements into an SQL script.
