@@ -1,0 +1,1 @@
+To format SQL text, select it and press <kbd>Ctrl+Alt+F</kbd>.
