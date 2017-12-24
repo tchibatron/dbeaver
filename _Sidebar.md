@@ -27,10 +27,9 @@
   - [[Custom Diagrams]]
 - [[SQL Editor]]
   - [[Script Creation]]
-  - [[Script Management]]
   - [[Script Formatting]]
   - [Script Execution](Script-and-Query-Execution)
-  - [[SQL Assist and Auto-Complete]]
+  - [[Script Management]]
   - [Client Side Commands](Client-side-scripting)
 - Database Management
   - [[Filter Database Objects]]
