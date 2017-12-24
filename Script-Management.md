@@ -9,6 +9,6 @@ To save a script to the file system, right-click the script, click **File -> Sav
 To load a script stored in the file system to the SQL Editor, right-click the script pane and click **File -> Load SQL script** on the context menu. 
 
 ## Renaming Scripts
-To rename a script, right-click anywhere in the script pane, click **File -> Rename SQL Script** on the context menu, then enter the new name in the Rename SQL script dialog box and click **OK**.  
+To rename a script, right-click anywhere in the script pane, click **File -> Rename SQL Script** (or press <kbd>CTRL+F2</kbd>) on the context menu, then enter the new name in the Rename SQL script dialog box and click **OK**.  
 
 
