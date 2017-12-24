@@ -21,10 +21,6 @@ You can see all your saved SQL scripts in the [Project Explorer](https://github.
 ***Import/export scripts***
 
 
-***Execution plan***
-
-If database driver supports execution plan visualization then you can see execution plan of current query (under cursor) by pressing <kbd>CTRL+SHIFT+E</kbd> (or clicking on “Explain execution plan” in context menu or editor toolbar).  
-
 ***Query Parameters***
 
 Dynamic parameters bindings. You can use dynamic parameters in your SQL queries. Parameter format :name. When you execute a query which contains dynamic parameters DBeaver will popup dialog where you can fill parameters’ values. Also you can use anonymous parameters (?) but you will need to enable them in SQL editor preferences.  
