@@ -1,6 +1,18 @@
-You can execute a query in several ways.
+You can execute one query, or a selected piece of a script, or a whole script and you can do it in several ways:
+* Using a shortcut key combinations
+* Using the context menu (right-click the query):
 
-- To execute a query under cursor or selected text, press <kbd>Ctrl+Enter</kbd> or right-click the query and click **Execute -> Execute SQL Statement** on the context menu. You can do the same from the main menu: **SQL Editor -> Execute SQL Statement**. This executes the SQL query under cursor or selected text and fills the results pane with query results.
-- To execute a query under cursor in a separate tab, press <kbd>CTRL+\ </kbd> or right-click the query and click **Execute -> Execute SQL in new tab** on the context menu. Same can be done from the main menu: **SQL Editor -> Execute SQL in new tab**. This executes the SQL query under cursor or selected text and creates a new results tab.
-- To execute the whole script, press <kbd>ALT+X</kbd>. This executes all queries in the current editor (or selected queries) as a script. DBeaver parses queries one by one using a statements delimiter (“;” by default) and executes them consequently. You can configure the script execution behavior in the SQL editor preferences (in the bottom toolbar, click **Configure** (<img src="https://www.dropbox.com/s/iebvq6vomzwqls4/Configure%20button.png?raw=1"/>) -> **Preferences**).
-- Execute a script opening each query results in a separate tab (<kbd>CTRL+ALT+X</kbd>). The same as script execution but opens multiple result tabs. Each script query will be executed in a separate thread (i.e. all queries are executed simultaneously). Be careful with this feature – if you’ll execute a huge script with big number of queries it may lead to unexpected problems. 
+  <img src="https://www.dropbox.com/s/tjmnteriqnc23c7/Execute%20menu.png?raw=1"/>  
+
+* Using the main menu:
+ 
+  <img src="https://www.dropbox.com/s/v2w72bpnak9wyej/Execute%20on%20main%20menu.png?raw=1"/>  
+
+To execute a query under cursor or selected text, press <kbd>Ctrl+Enter</kbd> or right-click the query and click **Execute -> Execute SQL Statement** on the context menu. You can do the same from the main menu: **SQL Editor -> Execute SQL Statement**. This executes the SQL query under cursor or selected text and fills the results pane with query results.
+
+To execute a query under cursor in a separate tab, press <kbd>CTRL+\ </kbd> or right-click the query and click **Execute -> Execute SQL in new tab** on the context menu. Same can be done from the main menu: **SQL Editor -> Execute SQL in new tab**. This executes the SQL query under cursor or selected text and creates a new results tab.
+
+To execute the whole script, press <kbd>Alt+X</kbd> or click **Execute -> Execute SQL Script** on the context menu or **SQL Editor -> Execute SQL Script** on the main menu. This executes all queries in the current editor (or selected queries) as a script. DBeaver parses queries one by one using a statements delimiter (“;” by default) and executes them consequently. You can configure the script execution behavior in the SQL editor preferences (In the bottom toolbar, click **Configure** (<img src="https://www.dropbox.com/s/iebvq6vomzwqls4/Configure%20button.png?raw=1"/>) -> **Preferences**).
+
+To execute a script opening each query results in a separate tab, press <kbd>Ctrl+Alt+X</kbd> or click **Execute -> Execute Statements In Separate Tabs** on the context menu or **SQL Editor -> Execute Statements In Separate Tabs** on the main menu. The executes all queries in the script but opens multiple result tabs. Each script query is executed in a separate thread (that is, all queries are executed simultaneously).  
+NOTE: Be careful with this feature. If you execute a huge script with a large number of queries, it might cause unexpected problems. 
