@@ -39,7 +39,7 @@ You can click the rows of the execution plan to see their details in the panels 
 
 
 ## Exporting Query
-You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu. This feature is useful if you have some very long-running query and you do not need to see it’s results in results panel.  
+You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu. This feature is useful if you have some very long-running query and you do not need to see its results in results panel.  
 
 ## Miscellaneous
 * To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
