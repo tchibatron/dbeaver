@@ -4,7 +4,7 @@ To open an SQL editor for some connection:
 * Click **Recent SQL Editor** on the context menu for this connection or on the main menu (**SQL Editor -> Recent SQL Editor**). This opens the latest used SQL editor. You can also open the most recent SQL editor using <kbd>Ctrl+Enter</kbd> shortcut in the Database Navigator view.
 * If you need to create a new SQL script, on the main menu, click **SQL Editor -> New SQL Editor** or press <kbd>F3</kbd> and then click **New Script** in the Choose SQL Script window. 
 
-The SQL editor includes the script pane at the top and result tabs at the bottom:
+The SQL editor includes the script pane at the top and result pane at the bottom:
 
 <img src="https://www.dropbox.com/s/3ayxw9jpyr0cmqk/SQL%20Editor.png?raw=1"/>
 
@@ -18,11 +18,9 @@ NOTE: SQL Editor for a connection is different from SQL console for a table or v
 
 You can see all your saved SQL scripts in the [Project Explorer](https://github.com/serge-rider/dbeaver/wiki/Project-Explorer) view in the **Scripts** folder.
 
-
-
 ***Miscellaneous***
 
-Select of current query row count can be performed by pressing <kbd>CTRL+ALT+C</kbd>.  
+To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
 
 Execution Log tab contains all queries executed in current SQL editor. You can configure Query Manager settings in global preferences.
 
