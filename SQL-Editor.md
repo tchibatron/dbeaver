@@ -28,7 +28,7 @@ You can see all your saved SQL scripts in the [Project Explorer](https://github.
 
 To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
 
-To open current object (under cursor) definition press <kbd>F4</kbd>.  
+To open the object currently in focus (under cursor) definition, press <kbd>F4</kbd>.  
 Hyperlinks: you can press CTRL and move mouse over SQL text. If DBeaver will recognize some identifier as a table/view name then it will be presented as a hyperlink which will navigate to an object editor.  
 
 
