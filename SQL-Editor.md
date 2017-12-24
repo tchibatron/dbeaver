@@ -41,7 +41,3 @@ You can toggle auto-commit mode and transactions isolation level on the **Databa
 
 <img src="https://www.dropbox.com/s/1eft5yt0c7uxfqr/Commit%20menu.png?raw=1"/> 
 
-## Miscellaneous
-* To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
-* To open the definition of the database object currently in focus (under cursor) in a viewer/editor, press <kbd>F4</kbd>.  
-* You can open SQL editor preferences by pressing <kbd>Alt+Enter</kbd>.
