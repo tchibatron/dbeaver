@@ -27,4 +27,4 @@ The result is an execution plan tree that appears as one of result tabs:
 
 <img src="https://www.dropbox.com/s/pvep9egs9mefd5t/Execution%20plan%20result.png?raw=1"/>
 
-You can click the rows of the execution plan to see the details under it and in the panel to the right.
+You can click the rows of the execution plan to see their details in the panels below and to the right of the plan.
