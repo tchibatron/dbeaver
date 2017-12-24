@@ -26,7 +26,7 @@
   - [[Database Structure Diagrams]]
   - [[Custom Diagrams]]
 - [[SQL Editor]]
-  - [[SQL Creation]]
+  - [[SQL Creation and Editing]]
   - [[SQL Formatting]]
   - [[SQL Execution]]
   - [[Script Management]]
