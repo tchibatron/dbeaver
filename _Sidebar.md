@@ -28,6 +28,7 @@
 - [[SQL Editor]]
   - [[Script Formatting]]
   - [Script Execution](Script-and-Query-Execution)
+  - [[Script Management]]
   - [SQL Templates](SQL-Editor-Templates)
   - [[SQL Assist]]
   - [Client Side Commands](Client-side-scripting)
