@@ -27,6 +27,8 @@
   - [[Custom Diagrams]]
 - [[SQL Editor]]
   - [[SQL Creation and Editing]]
+  - [[SQL Templates]]
+  - [[SQL Assist and Suto-Complete]]
   - [[SQL Formatting]]
   - [[SQL Execution]]
   - [[Script Management]]
