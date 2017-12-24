@@ -17,3 +17,14 @@ To execute the whole script, press <kbd>Alt+X</kbd> or click **Execute -> Execut
 
 To execute a script opening each query results in a separate tab, press <kbd>Ctrl+Alt+X</kbd> or click **Execute -> Execute Statements In Separate Tabs** on the context menu or **SQL Editor -> Execute Statements In Separate Tabs** on the main menu or in the main toolbar. The executes all queries in the script but opens multiple result tabs. Each script query is executed in a separate thread (that is, all queries are executed simultaneously).  
 NOTE: Be careful with this feature. If you execute a huge script with a large number of queries, it might cause unexpected problems. 
+
+## Execution Plan
+
+If a database driver supports execution plan visualization, you can see the execution plan of the current query (under cursor) by pressing <kbd>Ctrl+Shift+E</kbd> or clicking **Explain execution plan** on the context menu or in the main toolbar: <img src="https://www.dropbox.com/s/dug8beiaot1r6n4/Explain%20execution%20plan.png?raw=1"/>  
+The execution plan command generates a tree of query execution and is convenient in estimating if the query/script is quick/optimal enough. 
+
+The result is an execution plan tree that appears as one of result tabs:
+
+<img src="https://www.dropbox.com/s/pvep9egs9mefd5t/Execution%20plan%20result.png?raw=1"/>
+
+You can click the rows of the execution plan to see the details under it and in the panel to the right.
