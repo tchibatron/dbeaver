@@ -26,7 +26,6 @@
   - [[Database Structure Diagrams]]
   - [[Custom Diagrams]]
 - [[SQL Editor]]
-  - [[SQL Creation and Editing]]
   - [[SQL Templates]]
   - [[SQL Assist and Auto-Complete]]
   - [[SQL Formatting]]
