@@ -36,3 +36,8 @@ The result is an execution plan tree that appears as one of result tabs:
 <img src="https://www.dropbox.com/s/pvep9egs9mefd5t/Execution%20plan%20result.png?raw=1"/>
 
 You can click the rows of the execution plan to see their details in the panels below and to the right of the plan.
+
+## Miscellaneous
+* To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
+* To open the definition of the database object currently in focus (under cursor) in a viewer/editor, press <kbd>F4</kbd>.  
+* You can open SQL editor preferences by pressing <kbd>Alt+Enter</kbd>.
