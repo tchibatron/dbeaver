@@ -26,6 +26,7 @@
   - [[Database Structure Diagrams]]
   - [[Custom Diagrams]]
 - [[SQL Editor]]
+  - [[Script Formatting]]
   - [Script Execution](Script-and-Query-Execution)
   - [SQL Templates](SQL-Editor-Templates)
   - [[SQL Assist]]
