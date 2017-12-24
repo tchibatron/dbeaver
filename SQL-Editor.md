@@ -4,7 +4,7 @@ To open an SQL editor for some connection:
 * Click **Recent SQL Editor** on the context menu for this connection or on the main menu (**SQL Editor -> Recent SQL Editor**). This opens the latest used SQL editor. You can also open the most recent SQL editor using <kbd>Ctrl+Enter</kbd> shortcut in the Database Navigator view.
 * If you need to create a new SQL script, on the main menu, click **SQL Editor -> New SQL Editor** or press <kbd>F3</kbd> and then click **New Script** in the Choose SQL Script window. 
 
-The SQL editor includes the script pane at the top and result pane at the bottom:
+The SQL editor includes the script pane at the top and results pane at the bottom:
 
 <img src="https://www.dropbox.com/s/3ayxw9jpyr0cmqk/SQL%20Editor.png?raw=1"/>
 
