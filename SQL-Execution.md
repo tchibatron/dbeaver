@@ -18,6 +18,14 @@ To execute the whole script, press <kbd>Alt+X</kbd> or click **Execute -> Execut
 To execute a script opening each query results in a separate tab, press <kbd>Ctrl+Alt+X</kbd> or click **Execute -> Execute Statements In Separate Tabs** on the context menu or **SQL Editor -> Execute Statements In Separate Tabs** on the main menu or in the main toolbar. The executes all queries in the script but opens multiple result tabs. Each script query is executed in a separate thread (that is, all queries are executed simultaneously).  
 NOTE: Be careful with this feature. If you execute a huge script with a large number of queries, it might cause unexpected problems. 
 
+## Dynamic Parameter Bindings
+
+You can use dynamic parameters in your SQL queries. The parameter format is :name. When you execute a query which contains dynamic parameters, DBeaver displays a dialog box in which you can fill the parameters` values:
+
+<img src="https://www.dropbox.com/s/adne99abuixgpor/Parameter%20bindings.png?raw=1"/>
+
+Also you can use anonymous parameters (?) but then you need to enable them in SQL editor preferences. 
+
 ## Execution Plan
 
 If a database driver supports execution plan visualization, you can see the execution plan of the current query (under cursor) by pressing <kbd>Ctrl+Shift+E</kbd> or clicking **Explain execution plan** on the context menu or in the main toolbar: <img src="https://www.dropbox.com/s/dug8beiaot1r6n4/Explain%20execution%20plan.png?raw=1"/>  
