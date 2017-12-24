@@ -39,7 +39,7 @@ To change the connection associated with the current SQL editor or change the ac
 ## Transactions Management
 You can toggle auto-commit mode and transactions isolation level on the **Database** menu or in the main toolbar:
 
-<img strc="https://www.dropbox.com/s/1eft5yt0c7uxfqr/Commit%20menu.png?raw=1"/> 
+<img src="https://www.dropbox.com/s/1eft5yt0c7uxfqr/Commit%20menu.png?raw=1"/> 
 
 ## Miscellaneous
 * To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
