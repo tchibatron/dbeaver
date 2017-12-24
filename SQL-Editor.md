@@ -8,7 +8,10 @@ The SQL editor includes the script pane at the top and result pane at the bottom
 
 <img src="https://www.dropbox.com/s/3ayxw9jpyr0cmqk/SQL%20Editor.png?raw=1"/>
 
-The result tabs represent instances of the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor).
+The results pane displays tabs with results in various formats. The tabs resulting from scropt execution represent instances of the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor).
+
+The results pane provides **Output** and **Log** views of results.
+
 
 You can create, edit and execute SQL scripts in the script pane and then see the results in the result tabs. 
  
