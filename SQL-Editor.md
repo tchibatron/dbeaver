@@ -25,10 +25,6 @@ You can see all your saved SQL scripts in the [Project Explorer](https://github.
 
 Dynamic parameters bindings. You can use dynamic parameters in your SQL queries. Parameter format :name. When you execute a query which contains dynamic parameters DBeaver will popup dialog where you can fill parameters’ values. Also you can use anonymous parameters (?) but you will need to enable them in SQL editor preferences.  
 
-***Auto-complete***
-
-To perform some object name auto-complete press <kbd>CTRL+SPACE</kbd>. DBeaver searches for possible completions objects in already loaded database metadata and in database system tables. Also DBeaver completes SQL keywords. Another auto-complete function is <kbd>CTRL+SHIFT+SPACE</kbd>, it searches for completion only within already entered identifiers.  
-
 ***Miscellaneous***
 
 Select of current query row count can be performed by pressing <kbd>CTRL+ALT+C</kbd>.  
