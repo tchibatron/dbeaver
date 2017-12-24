@@ -30,7 +30,7 @@
   - [[Script Formatting]]
   - [Script Execution](Script-and-Query-Execution)
   - [SQL Templates](SQL-Editor-Templates)
-  - [[SQL Assist]]
+  - [[SQL Assist and Auto-Completion]]
   - [Client Side Commands](Client-side-scripting)
 - Database Management
   - [[Filter Database Objects]]
