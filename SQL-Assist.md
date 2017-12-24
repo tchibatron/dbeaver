@@ -3,4 +3,5 @@ To perform some object name auto-complete, press <kbd>Ctrl+Space</kbd> or right-
 
 <img src="https://www.dropbox.com/s/p0pzgztwp4w9ivv/SQL%20Assist.png?raw=1"/>
 
-Also DBeaver completes SQL keywords. Another auto-complete function is <kbd>CTRL+SHIFT+SPACE</kbd>, it searches for completion only within already entered identifiers.  
+When you start typing SQL keywords, DBeaver offers auto-complete options for them as well.
+Another auto-complete function is <kbd>Ctrl+Shift+Space</kbd>, it searches for completion only within already entered identifiers.  
