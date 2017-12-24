@@ -28,7 +28,7 @@
 - [[SQL Editor]]
   - [[SQL Creation and Editing]]
   - [[SQL Templates]]
-  - [[SQL Assist and Suto-Complete]]
+  - [[SQL Assist and Auto-Complete]]
   - [[SQL Formatting]]
   - [[SQL Execution]]
   - [[Script Management]]
