@@ -37,6 +37,10 @@ The result is an execution plan tree that appears as one of result tabs:
 
 You can click the rows of the execution plan to see their details in the panels below and to the right of the plan.
 
+
+## Exporting Query
+You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu. This feature is useful if you have some very long-running query and you do not need to see it’s results in results panel.  
+
 ## Miscellaneous
 * To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
 * To open the definition of the database object currently in focus (under cursor) in a viewer/editor, press <kbd>F4</kbd>.  
