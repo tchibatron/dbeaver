@@ -11,7 +11,7 @@ To load a script stored in the file system to the SQL Editor, right-click the sc
 ## Renaming Scripts
 To rename a script, right-click anywhere in the script pane, click **File -> Rename SQL Script** on the context menu, then enter the new name in the Rename SQL script dialog box and click **OK**.  
 
-## Export of Query
+## Exporting Query
 You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu. This feature is useful if you have some very long-running query and you do not need to see it’s results in results panel.  
 
 
