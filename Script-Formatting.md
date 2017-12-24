@@ -1,1 +1,1 @@
-To format SQL text, select it and press <kbd>Ctrl+Alt+F</kbd>.
+To format SQL text, select it and press <kbd>Ctrl+Alt+F</kbd> or right-click the text and click **Format -> Format SQL** on the context menu.
