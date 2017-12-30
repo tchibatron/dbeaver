@@ -6,15 +6,15 @@ On Windows you also can use `dbeaver-cli.exe` executable (it doesn't spawn new w
 ## DBeaver control
 Name|Value|Example
 ----|-----|-------
-`-help`|Prints help message|
-`-stop`|Quits DBeaver|
-`-dump`|Prints DBeaver thread dump|
-`-f`|Opens file in DBeaver UI|`-f c:\some-path\some-file.sql`
-`-con`|Opens database connection in DBeaver UI|See [connection parameters table](#connection-parameters)
-`-closeTabs`|Closes all open editor tabs|
-<nobr>`-disconnectAll`</nobr>|Closes all open connections|
-`-reuseWorkspace`|Force reuse of single workspace by multiple DBeaver instances|
-`-newInstance`|Force new DBeaver instance creation (do not try to reuse already running one)|
+-help|Prints help message|
+-stop|Quits DBeaver|
+-dump|Prints DBeaver thread dump|
+-f|Opens file in DBeaver UI|`-f c:\some-path\some-file.sql`
+-con|Opens database connection in DBeaver UI|See [connection parameters table](#connection-parameters)
+-closeTabs|Closes all open editor tabs|
+-disconnectAll|Closes all open connections|
+-reuseWorkspace|Force reuse of single workspace by multiple DBeaver instances|
+-newInstance|Force new DBeaver instance creation (do not try to reuse already running one)|
 
 ## System parameters
 
