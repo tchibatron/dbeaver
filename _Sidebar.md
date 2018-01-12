@@ -48,8 +48,8 @@
   - [Diagrams (ERD)](ER-Diagrams)
   - [[Query Manager]]
   - [Data transfer (export/import)](Data-transfer)
-  - [Data/metadata search](Database-Search)
-  - [Database compare](Database-compare)
+  - [[Data/metadata search]]
+  - [[Database compare]]
 - [[Command-Line]]
 - [[Enterprise Edition]]
 - Projects Management
