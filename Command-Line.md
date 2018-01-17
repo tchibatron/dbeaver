@@ -57,5 +57,5 @@ savePassword|Do not ask use password on connect|`savePassword=true`
 connect|Connect to this database|`connect=false`
 openConsole|Open SQL console for this database (sets `connect` to true)|`openConsole=true`
 folder|Put new connection in a folder|`folder=FolderName`
-autocommit|Sets connection autocommit flag (default value depends on driver)|`autocommit=true`
+autoCommit|Sets connection auto commit flag (default value depends on driver)|`autoCommit=true`
 prop.propName|Advanced connection parameters (depend on driver)|`prop.connectTimeout=30`
