@@ -42,8 +42,6 @@
   - [[Cassandra]]
   - [[Redis]]
 - [[Optional extensions - Office, Git, SVG|Optional extensions]]
-  - [Office](Extension-Office)
-  - [SVG format](Extension-SVG-Format)
 - Miscellaneous
   - [Diagrams (ERD)](ER-Diagrams)
   - [[Query Manager]]
