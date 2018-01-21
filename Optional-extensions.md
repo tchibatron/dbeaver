@@ -26,6 +26,8 @@ It is included in EE version.
 Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-office-integration  
 P2 repository URL: https://dbeaver.jkiss.org/update/office/latest/
 
+  [[images/office-open-excel.png]]
+
 ### SVG format support
 
 This extension supports ERD export in SVG (vector) format.  
