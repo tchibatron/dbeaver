@@ -9,6 +9,8 @@ You can install optional extensions (plugins) in DBeaver.
 3. Check items you wish to install
 4. Click Next->Finish. Restart DBeaver.
 
+**IMPORTANT:** installation won't work if DBeaver is installed in write-protected folder (like `Program Files`, `/Applications`, `/usr/`). To proceed you need to run DBeaver from some non write-protected folder or run it as Administrator/root.
+
 ### Extension installation in EE
 
 You can do this from online Eclipse Marketplace (open Marketplace UI from main menu).
@@ -34,4 +36,5 @@ P2 repository URL: https://dbeaver.jkiss.org/update/svg/latest/
 
 ### Git integration
 
-Choose Oxygen (or other Eclipse version item) in available items
+Choose Oxygen (or other Eclipse version item) in available items:
+  [[images/p2-install-git.png]]
