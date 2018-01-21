@@ -41,13 +41,13 @@
   - [MongoDB](NoSQL-MongoDB)
   - [[Cassandra]]
   - [[Redis]]
-- Optional extensions
+- [[Optional extensions - Office, Git, SVG|Optional extensions]]
   - [Office](Extension-Office)
   - [SVG format](Extension-SVG-Format)
 - Miscellaneous
   - [Diagrams (ERD)](ER-Diagrams)
   - [[Query Manager]]
-  - [Data transfer (export/import)](Data-transfer)
+  - [[Data transfer (export/import)]]
   - [[Data/metadata search]]
   - [[Database compare]]
 - [[Command-Line]]
