@@ -36,11 +36,6 @@
   - [[Filter Database Objects]]
   - [[Configure Filters]]
 - [[Database drivers]]
-- SQL databases
-- NoSQL databases
-  - [MongoDB](NoSQL-MongoDB)
-  - [[Cassandra]]
-  - [[Redis]]
 - [[Optional extensions - Office, Git, SVG|Optional extensions]]
 - Miscellaneous
   - [Diagrams (ERD)](ER-Diagrams)
@@ -48,13 +43,18 @@
   - [[Data transfer (export/import)]]
   - [[Data/metadata search]]
   - [[Database compare]]
-- [[Command-Line]]
-- [[Enterprise Edition]]
-- Projects Management
+
+##### Databases
+- SQL databases
+- NoSQL databases
+  - [MongoDB](NoSQL-MongoDB)
+  - [[Cassandra]]
+  - [[Redis]]
 
 ##### Admin Guide
 - [[Managing connections|Admin-Manage-Connections]]
 - [[Managing drivers|Admin-Manage-Drivers]]
+- [[Command-Line]]
 
 ##### Development
 - [Develop in Eclipse](Develop-in-Eclipse)
@@ -65,3 +65,6 @@
 - [[Posting issues]]
 - [[Log files]]
 - [Thread dump](Making-a-thread-dump)
+
+##### Other
+- [[Enterprise Edition]]
