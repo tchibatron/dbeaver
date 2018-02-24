@@ -1,5 +1,5 @@
 The DBeaver window contains a menu bar, a toolbar, a shortcut bar, a workspace with one or more editors and views, and a status bar:
-[[images/ug/appwindow-with-markup.png]]
+[[images/ug/App-window-with-markup.png]]
 
 # Menu Bar
 By default, the menu bar contains the following menus:
