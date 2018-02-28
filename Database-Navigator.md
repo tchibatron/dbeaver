@@ -5,7 +5,7 @@ Database Navigator is the main view to work with the structure and content of da
 Database Navigator contains a tree of objects, a toolbar and View menu which contain generic items. Each object in the tree has its own context menu.
 The tree contains the following objects:
 * Folders - <img src="https://www.dropbox.com/s/kxehrqzy14u88d4/Connection%20folder%20icon.png?raw=1">
-* Database connections - <img src="https://www.dropbox.com/s/vcoyyh5ygds38qe/Connections%20icons.png?raw=1"> and other (icons differ depending on the database type)
+* Database connections - [[images/ug/PostgreSQL-icon.png]][[images/ug/SQLite-icon.png]][[images/ug/Cache-icon.png]][[images/ug/Exasol-icon.png]][[images/ug/Firebird-icon.png]] and other (icons differ depending on the database type)
 * Database objects - various depending on the database type, such as Tables <img src="https://www.dropbox.com/s/f4dsi8knfu62v7k/Table%20icon.png?raw=1">, Views <img src="https://www.dropbox.com/s/2plf0fwwaorw82l/View%20icon.png?raw=1">, Columns <img src="https://www.dropbox.com/s/wxffh1j7sd8m2sp/Column%20icons.png?raw=1">, Indexes <img src="https://www.dropbox.com/s/bkegxqbvrohucqq/Index%20icon.png?raw=1">, etc.
 
 To open the view menu of Database Navigator, click the View Menu button (<img src="https://www.dropbox.com/s/k4ut6zbp5apbcdo/View%20menu%20icon.png?raw=1"/>) in the upper-right corner of the window. 
