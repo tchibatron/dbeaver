@@ -6,7 +6,7 @@ Database Navigator contains a tree of objects, a toolbar and View menu which con
 The tree contains the following objects:
 * Folders - [[images/ug/folder-icon.png]]
 * Database connections - [[images/ug/PostgreSQL-icon.png]][[images/ug/SQLite-icon.png]][[images/ug/Cache-icon.png]][[images/ug/Exasol-icon.png]][[images/ug/Firebird-icon.png]] and other (icons differ depending on the database type)
-* Database objects - various depending on the database type, such as Tables [[images/ug/table-icon.png]], Views <img src="https://www.dropbox.com/s/2plf0fwwaorw82l/View%20icon.png?raw=1">, Columns [[images/ug/column-icon1.png]], [[images/ug/column-icon2.png]], Indexes <img src="https://www.dropbox.com/s/bkegxqbvrohucqq/Index%20icon.png?raw=1">, etc.
+* Database objects - various depending on the database type, such as Tables [[images/ug/table-icon.png]], Views <img src="https://www.dropbox.com/s/2plf0fwwaorw82l/View%20icon.png?raw=1">, Columns [[images/ug/column-icon1.png]] [[images/ug/column-icon2.png]], Indexes <img src="https://www.dropbox.com/s/bkegxqbvrohucqq/Index%20icon.png?raw=1">, etc.
 
 To open the view menu of Database Navigator, click the View Menu button (<img src="https://www.dropbox.com/s/k4ut6zbp5apbcdo/View%20menu%20icon.png?raw=1"/>) in the upper-right corner of the window. 
 For more information on where to find the view toolbar and menu, please see the [Views](https://github.com/serge-rider/dbeaver/wiki/Views) article.
