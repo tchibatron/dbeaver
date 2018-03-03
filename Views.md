@@ -9,7 +9,7 @@ Some views open on demand, for example the Search view opens to show search resu
 
 Views provide their own toolbar and menu:
 
-[[images/ug/dbnavigator-overview.png]]
+[[images/ug/DBnavigator-overview.png]]
 
 To open the view menu, click the View Menu button in the upper-right corner of the view`s title bar, next to the Minimize button.
 
