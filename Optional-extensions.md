@@ -28,6 +28,14 @@ P2 repository URL: https://dbeaver.jkiss.org/update/office/latest/
 
   [[images/office-open-excel.png]]
 
+### Debugger support
+
+This extension supports SQL debugger in PostgreSQL.  
+It is included in EE version.  
+
+Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-debug-support  
+P2 repository URL: https://dbeaver.jkiss.org/update/debug/latest/
+
 ### SVG format support
 
 This extension supports ERD export in SVG (vector) format.  
