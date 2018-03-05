@@ -33,7 +33,7 @@ P2 repository URL: https://dbeaver.jkiss.org/update/office/latest/
 This extension supports SQL debugger in PostgreSQL.  
 It is included in EE version.  
 
-Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-debug-support  
+Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-sql-debugger
 P2 repository URL: https://dbeaver.jkiss.org/update/debug/latest/
 
 ### SVG format support
