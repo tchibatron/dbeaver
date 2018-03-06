@@ -36,7 +36,7 @@
   - [[Filter Database Objects]]
   - [[Configure Filters]]
 - [[Database drivers]]
-- [[Optional extensions - Office, Git, SVG|Optional extensions]]
+- [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
 - Miscellaneous
   - [Diagrams (ERD)](ER-Diagrams)
   - [[Query Manager]]
