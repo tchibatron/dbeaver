@@ -15,12 +15,12 @@ The menu contains the following items:
 
 Icon|Menu item|Description
 ----|---------|-----------
-<img src="https://www.dropbox.com/s/iwa48qjl029pkzh/Driver%20Manager%20icon.png?raw=1"> |**Driver Manager**|Opens the Driver Manager window that allows creating, editing and deleting drivers for databases. See … for information about managing database drivers
-<img src="https://www.dropbox.com/s/dkysg3skiwl2n9e/New%20connection%20icon.png?raw=1"> |**New Connection**|Opens the Create new connection wizard. See … for information about creating connections
+[[images/ug/Driver-Manager-icon.png]] |**Driver Manager**|Opens the Driver Manager window that allows creating, editing and deleting drivers for databases. See … for information about managing database drivers
+[[images/ug/New-connection-icon.png]] |**New Connection**|Opens the Create new connection wizard. See … for information about creating connections
 (empty) | **Active Project** |Displays a submenu which allows you to choose a project. See ... for information about projects.
-<img src="https://www.dropbox.com/s/pg9eoar3zkyymem/New%20Folder%20icon.png?raw=1"> |**New Folder** |Opens a dialog box for creating a new folder
-<img src="https://www.dropbox.com/s/jg92vpaegfm8alz/Collapse%20All%20icon.png?raw=1"> | **Collapse All** |Collapses the tree to the root level
-<img src="https://www.dropbox.com/s/8ctcn4vmkfex5zt/Link%20with%20editor%20icon.png?raw=1"> | **Link with editor** | Enabled when at least one editor is open, otherwise disabled - highlights the object in the tree that has its editor open
+[[images/ug/New-Folder-icon.png]] |**New Folder** |Opens a dialog box for creating a new folder
+[[images/ug/Collapse-All-icon.png]] | **Collapse All** |Collapses the tree to the root level
+[[images/ug/Link-with-Editor-icon.png]] | **Link with editor** | Enabled when at least one editor is open, otherwise disabled - highlights the object in the tree that has its editor open
 
 The toolbar is located in the title bar of the window, its buttons duplicate the menu items except for the **Active Project** one. 
 
