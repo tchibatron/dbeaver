@@ -16,7 +16,7 @@ The projects are organized into a tree and all have the same high-level structur
 
 The Projects view provides a toolbar and View menu which contain generic items. Each object in the tree has its own context menu.
 
-To open the view menu of the Projects view, click the View Menu button (<img src="https://www.dropbox.com/s/k4ut6zbp5apbcdo/View%20menu%20icon.png?raw=1"/>) in the upper-right corner of the window. The view menu contains the following items:
+To open the view menu of the Projects view, click the View Menu button ([[images/ug/View-menu-icon.png]]) in the upper-right corner of the window. The view menu contains the following items:
 
 Icon|Item|Description
 ----|----|-----------
