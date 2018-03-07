@@ -37,9 +37,9 @@ The Projects view allows creating new projects as well as renaming and deleting 
 NOTE: You cannot rename or delete a project that is set as active. 
 
 ## Creating Project
-To create a project, in the Projects view, in the toolbar, click **Create Project** (<img src="https://www.dropbox.com/s/jlswp7lf1fwijvy/Create%20project%20icon.png?raw=1"/>). The Project Create Wizard opens.
+To create a project, in the Projects view, in the toolbar, click **Create Project** ([[images/ug/Create-project-icon.png]]). The Project Create Wizard opens.
 
-<img src="https://www.dropbox.com/s/ri4t1jsae2ojmpt/Create%20project%20wizard.png?raw=1"/>
+[[images/ug/Create-project-wizard.png]]
 
 TBA 
 
