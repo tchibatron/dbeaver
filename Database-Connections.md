@@ -3,3 +3,10 @@ To be able to manage your database in DBeaver, you need to create a connection t
 Connections reside in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) and in the [Projects](https://github.com/dbeaver/dbeaver/wiki/Projects) views. In these views, you can:
 * Edit connections, see [Editing Connections](https://github.com/serge-rider/dbeaver/wiki/Editing-Connections)
 * Rename and delete connections - via corresponding context menu items, see [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator)
+
+Database connections might have the following states:
+
+  [[images/ug/PostgreSQL-icon.png]] - not connected  
+  [[images/ug/DB-icon-not-connected.png]] - has network settings  
+  [[images/ug/DB-icon-connected.png]] - connected  
+  [[images/ug/Connection-error-icon.png]] - connection error  
