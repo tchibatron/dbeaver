@@ -1,7 +1,7 @@
 DBeaver provides a wizard that guides you through the steps to create a connection.
 If you run DBeaver for the first time (standalone version), the new connection wizard appears automatically.
 In other cases, to create a connection, do one of the following:
-* Click the **New Connection** button in the application toolbar or in the Database Navigator view toolbar:
+* Click the **New Connection Wizard** button in the application toolbar or in the Database Navigator view toolbar:
 
   [[images/ug/Create-new-connection-button.png]]
 
