@@ -53,9 +53,9 @@ Then, in the **Create new connection** wizard:
 ## Driver Properties
 Each driver has its own set of additional properties. Refer to the driver documentation to get information about available properties and their values. 
  
-[[images/connect-wizard-settings-driver.png]]  
+[[images/ug/Wizard-driver-properties.png]]  
 
 ## Network Settings (SSH, SOCKS, SSL)
 If your database cannot be accessed directly, you can use SSH tunnel:
 
-[[images/connect-wizard-ssh.png]]  
+[[images/ug/Wizard-network settings.png]]  
