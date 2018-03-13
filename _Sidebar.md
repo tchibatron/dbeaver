@@ -7,7 +7,7 @@
   - [[Project Explorer]]
 - [[Database Connections]]
   - [[Create Connection]]
-  - [[Editing Connections]]
+  - [[Edit Connection]]
 - [[Database Object Editor]]
 - [[Data Editor]]
   - [[Navigation]]
