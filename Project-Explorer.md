@@ -1,6 +1,6 @@
 The Project Explorer view displays detailed contents of the currently active project. To open the Project Explorer, click **Window -> Project Explorer**.
 
-[[images/ug/Project-Explorer-view.png]]
+[[images/ug/Project_Explorer-view.png]]
 
 For information on how to change the view layout, please see the [Application Window Overview](https://github.com/serge-rider/dbeaver/wiki/Application-Window-Overview) article.
 
