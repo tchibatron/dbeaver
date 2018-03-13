@@ -43,7 +43,7 @@ To create a project, in the Projects view, in the toolbar, click **Create Projec
 
 1. In the Project screen, in the **Project name** field, specify the name of the project.
 2. To keep the default location to store the project, leave the **Use default location** checkbox selected. If you want to change the location, clear the checkbox and enter the name of the new directory into the **Location** field or click **Browse** and select the directory in the folder tree. 
-3. Click **Finish**.
+3. Click **Finish**. The new project appears in the projects tree.
 
 ## Deleting Project
 To delete a project, in the Projects view, right-click its name in the tree and click **Delete** on the context menu. Two confirmation dialog boxes appear one after another:
