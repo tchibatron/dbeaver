@@ -17,7 +17,7 @@ In other cases, to create a connection, do one of the following:
   [[images/ug/New-connection-option.png]]
 
 Then, in the **Create new connection** wizard:
-1. Choose a driver for the new connection: click the suitable database type in the list. Then click **Next**.
+1. Choose a driver for the new connection: click the name of the suitable database type in the list. Then click **Next**.
    
    [[images/ug/Wizard-select-connection.png]]  
 
