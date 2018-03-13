@@ -19,7 +19,7 @@ In other cases, to create a connection, do one of the following:
 Then, in the **Create new connection** wizard:
 1. Choose a driver for the new connection: click the suitable database type in the list. Then click **Next**.
    
-   [[images/connect-wizard-driver.png]]  
+   [[images/ug/Wizard-select-connection.png]]  
 
    To quickly find the needed driver, you can type a hint in the text field above the list of drivers.  
    If you cannot find a driver for your database then probably there is no suitable driver and you need to create one. Please see [[Create database driver|Create-database-driver]] article.  
@@ -28,7 +28,7 @@ Then, in the **Create new connection** wizard:
 
 2. In the Connection Settings screen, on the General tab, set all primary connection settings and then click **Next**:
 
-   [[images/connect-wizard-settings.png]]  
+   [[images/ug/Wizard-MySQL-settings.png]]  
 
    For most drivers required settings include:   
    - Host  
@@ -42,7 +42,7 @@ Then, in the **Create new connection** wizard:
 3. If necessary, specify advanced settings, see **Advanced Settings** section below, and click **Next**.
 4. In the final screen, you can set the connection name, type and initial settings (such as bootstrap queries, transaction state, global filters, etc.).
 
-   [[images/connect-wizard-general.png]] 
+   [[images/ug/Wizard-finish-connection-creation.png]] 
 
 5. To test if the connection works, click **Test Connection**.
 6. Click **Finish**. The connection appears in the tree of connections in the Database Navigator and DBeaver actually connects to the database.
