@@ -7,6 +7,6 @@ Connections reside in the [Database Navigator](https://github.com/serge-rider/db
 Database connections might have the following states:
 
   [[images/ug/PostgreSQL-icon.png]] - not connected  
-  [[images/ug/DB-icon-not-connected.png]] - has network settings  
+  [[images/ug/DB-icon-not-connected.png]] - has network settings specified (such as SSH tunnel, etc.)   
   [[images/ug/DB-icon-connected.png]] - connected  
   [[images/ug/Connection-error-icon.png]] - connection error  
