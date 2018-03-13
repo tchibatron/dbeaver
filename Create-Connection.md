@@ -59,3 +59,5 @@ Each driver has its own set of additional properties. Refer to the driver docume
 If your database cannot be accessed directly, you can use SSH tunnel:
 
 [[images/ug/Wizard-network settings.png]]  
+
+If a connection has network settings specified, such a connection appears in the application with a special 'arrow' icon such as: [[images/ug/DB-icon-network-settings.png]]
