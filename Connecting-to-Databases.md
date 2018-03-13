@@ -12,7 +12,7 @@ In other cases, to create a connection, do one of the following:
 * Press <kbd>Ctrl+N</kbd> or click **File -> New** in the menu bar:
 
   [[images/ug/Create-new-connection-menu-item1.png]]  
-  Then, in the wizard, click **Database connection** adn then click **Next**:
+  Then, in the wizard, click **Database connection** and then click **Next**:
 
   [[images/ug/New-connection-option.png]]
 
