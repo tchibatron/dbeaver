@@ -1,7 +1,7 @@
 DBeaver provides a wizard that guides you through the steps to create a connection.
 If you run DBeaver for the first time (standalone version), the new connection wizard appears automatically.
 In other cases, to create a connection, do one of the following:
-* Click the **New Connection** button in the application toolbar or in the Database Navigator view toolbar:
+* Click the **New Connection Wizard** button in the application toolbar or in the Database Navigator view toolbar:
 
   [[images/ug/Create-new-connection-button.png]]
 
@@ -17,7 +17,7 @@ In other cases, to create a connection, do one of the following:
   [[images/ug/New-connection-option.png]]
 
 Then, in the **Create new connection** wizard:
-1. Choose a driver for the new connection: click the suitable database type in the list. Then click **Next**.
+1. Choose a driver for the new connection: click the name of the suitable database type in the list. Then click **Next**.
    
    [[images/ug/Wizard-select-connection.png]]  
 
@@ -53,9 +53,9 @@ Then, in the **Create new connection** wizard:
 ## Driver Properties
 Each driver has its own set of additional properties. Refer to the driver documentation to get information about available properties and their values. 
  
-[[images/connect-wizard-settings-driver.png]]  
+[[images/ug/Wizard-driver-properties.png]]  
 
 ## Network Settings (SSH, SOCKS, SSL)
 If your database cannot be accessed directly, you can use SSH tunnel:
 
-[[images/connect-wizard-ssh.png]]  
+[[images/ug/Wizard-network settings.png]]  
