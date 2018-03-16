@@ -9,7 +9,7 @@
   - [[Create Connection]]
   - [[Edit Connection]]
   - [[Connect to Database]]
-  - [[Invalidate/Reconnect to Database|Invalidate & Reconnect to Database]]
+  - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
 - [[Database Object Editor]]
 - [[Data Editor]]
   - [[Navigation]]
