@@ -3,6 +3,7 @@ To be able to manage your database in DBeaver, you need to create a connection t
 Connections reside in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) and in the [Projects](https://github.com/dbeaver/dbeaver/wiki/Projects) views. In these views, you can:
 * Edit connections, see [Editing Connections](https://github.com/serge-rider/dbeaver/wiki/Editing-Connections)
 * Rename and delete connections - via corresponding context menu items, see [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator)
+* Connect to and disconnect from databases using connections, see [Connect to Database](https://github.com/dbeaver/dbeaver/wiki/Connect-to-Database) and Disconnect from Database.
 
 Database connections might have the following states:
 
