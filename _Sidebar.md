@@ -10,6 +10,7 @@
   - [[Edit Connection]]
   - [[Connect to Database]]
   - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
+  - [[Disconnect from Database]]
 - [[Database Object Editor]]
 - [[Data Editor]]
   - [[Navigation]]
