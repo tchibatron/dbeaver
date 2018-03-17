@@ -12,6 +12,7 @@
   - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
   - [[Disconnect from Database]]
 - [[Database Object Editor]]
+  - [[Properties]]
   - [[Data Editor]]
     - [[Navigation]]
     - [[Data Appearance]]
