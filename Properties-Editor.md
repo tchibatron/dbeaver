@@ -23,3 +23,17 @@ Button|Name|Description
 <img src="https://www.dropbox.com/s/70jsleztkvw9ce4/Revert%20button.png?raw=1"/>|Revert to the last saved state|Reverts all changes made to the whole database object to the last saved state 
 
 Items in the tabbed editors have context menus which provide the same commands as those in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator). To open a context menu for an item, right-click the item. 
+
+## SQL Script Editors
+SQL script editors (**DDL** and **Source**) of the Properties tab contain SQL script that you can either view or modify.
+The toolbar of the DDL and Source tabs provides the following tools:
+
+Button|Name|Description
+------|----|-----------
+<img src="https://www.dropbox.com/s/9eobh6afyqdj4c5/Load%20from%20file%20icon.png?raw=1"/>|Load form file|- Allows selecting a file from the file system<br/>- Disabled if the SQL code is read-only
+<img src="https://www.dropbox.com/s/n8kw5nreu19kwp6/Save%20to%20file%20icon.png?raw=1"/>|Save to file|Allows saving the current SQL code to a file
+<img src="https://www.dropbox.com/s/lsggyzs1acoq7iy/Open%20in%20SQL%20Console%20icon.png?raw=1"/>|Open in SQL console|Opens the SQL code in an SQL Editor
+
+You can select parts of the SQL code and apply generic commands such as copy-paste or SQL-specific commands like formatting – using the context menu. To open the context menu, right-click the SQL code. See [SQL Editor](https://github.com/serge-rider/dbeaver/wiki/SQL-Editor) for information about SQL-specific commands.
+
+NOTE: **SQL Assist**, **SQL Template**, and **SQL Context Information** menu items on the context menu are disabled if the SQL script is read-only.
