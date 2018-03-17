@@ -1,4 +1,4 @@
-The metadata editor is available for multiple database objects such as tables, views and schemas. To open the metadata editor for an object, in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) or in the [Projects](https://github.com/serge-rider/dbeaver/wiki/Projects) view:
+The Database object, or metadata, editor is available for multiple database objects such as tables, views and schemas. To open the metadata editor for an object, in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) or in the [Projects](https://github.com/serge-rider/dbeaver/wiki/Projects) view:
 * Double-click the database object
 * Click the database object and press <kbd>Enter</kbd> or <kbd>F4</kbd>
 
@@ -9,7 +9,7 @@ The editor has three tabs:
 
 The tabs have the following common parts:
 
-<img src="https://www.dropbox.com/s/jt5icc117393bg2/DB%20Object%20edito%20with%20markup.png?raw=1"/>
+[[images/ug/Metadata-editor.png]]
 
 The object`s path shows the chain of all its parent entities. The entities are clickable: clicking an entity in the path, depending on its nature, either shows its children or opens an editor or a settings window.
 
