@@ -1,16 +1,10 @@
-##### User Guide
+##### General User Guide
 - [[Installation]]
 - [[Application Window Overview]]
 - [[Views]]
   - [[Database Navigator]]
   - [[Projects]]
   - [[Project Explorer]]
-- [[Database Connections]]
-  - [[Create Connection]]
-  - [[Edit Connection]]
-  - [[Connect to Database]]
-  - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
-  - [[Disconnect from Database]]
 - [[Database Object Editor]]
   - [[Properties Editor]]
   - [[Data Editor]]
@@ -36,9 +30,20 @@
   - [[SQL Execution]]
   - [[Script Management]]
   - [Client Side Commands](Client-side-scripting)
-- Database Management
+- Filters
   - [[Filter Database Objects]]
   - [[Configure Filters]]
+#####Database Management
+- [[Database Connections]]
+  - [[Create Connection]]
+  - [[Edit Connection]]
+  - [[Connect to Database]]
+  - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
+  - [[Disconnect from Database]]
+-[[Transactions]]
+  - [[Auto and Manual Commit Modes]]
+  - [[Transaction Log]]
+  - [[Connection Types]]
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
 - Miscellaneous
