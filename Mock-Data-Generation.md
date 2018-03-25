@@ -51,6 +51,7 @@ Mock data generators for data types with their configurable parameters:
 * NULL values
 * FK - data from the referenced table according to the constraint
 
+[[/images/mockdata_progress.png]]
 
 ***
 <sup>*</sup> These features are available in the [DBeaver Enterprise Edition](https://dbeaver.com/) only.
