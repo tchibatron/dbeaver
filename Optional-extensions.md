@@ -44,6 +44,12 @@ It is included in EE version.
 Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-svg-support  
 P2 repository URL: https://dbeaver.jkiss.org/update/svg/latest/
 
+### Advanced SSH tunnel libraries
+
+Needed to support more key formats (e.g. ed25519).  
+
+P2 repository URL: https://dbeaver.jkiss.org/update/sshj/latest/
+
 ### Git integration
 
 Choose Oxygen (or other Eclipse version item) in available items:

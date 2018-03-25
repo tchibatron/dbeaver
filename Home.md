@@ -10,7 +10,7 @@ Having usability as its main goal, DBeaver offers:
 - Capability to write various extensions (plugins)
 - Support for any database having a JDBC driver
 - Capability to handle any external data source which may or may not have a JDBC driver
-- Set of plugins for certain databases (MySQL, Oracle, DB2, SQL Server, PostgreSQL, Vertica, Informix, MongoDB, Cassandra in version 3.x) and different database management utilities (e.g. ERD)
+- Set of plugins for certain databases (MySQL, MariaDB, Oracle, DB2, SQL Server, PostgreSQL, SQL Server, Sybase, Vertica, Informix, MongoDB, Cassandra, Redis, Snowflake in version 5.x) and different database management utilities (e.g. ERD, MockData generator, etc)
 - Great number of features
 
 # License
