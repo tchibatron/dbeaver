@@ -1,5 +1,7 @@
 Sometimes in software development we need to generate mock but valid data for the testing. Filling in the database by hand is a time-consuming and exhausting process. It can be very complicated when you need to generate not just 5–10 users, but thousands entities of different types. DBeaver Mock Data generator helps you generate test data much easier. 
 
+[[/images/mockdata_menu.png]] [[/images/mockdata_button.png]]
+
 > _Disclaimer:_ Mock data idea is to generate fake data in the table and it is **NOT TO BE USED IN PRODUCTION ENVIRONMENTS**. Please ensure you have a backup of your database before running the Mock Data generation process.
 
 DBeaver Mock Data generator features:
@@ -10,6 +12,8 @@ DBeaver Mock Data generator features:
 ** constraints (PK, FK, unique) support
 * over 20 configurable data generators (random, sequences, names, domains, addresses, prices, regex based etc)
 * old database data can be saved or rewritten
+
+[[/images/mockdata_wizard.png]]
 
 Mock data generators for data types with their configurable parameters:
 * Boolean
