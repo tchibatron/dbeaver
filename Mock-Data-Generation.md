@@ -6,7 +6,7 @@ Sometimes in software development we need to generate mock but valid data for th
 
 DBeaver Mock Data generator features:
 * works for all the RDBMS are supported by DBeaver (DB2, MS SQL Server, MySQL, Oracle, PostgreSQL, SQLite etc)
-* generation of data that matches to your database schema
+* generates data that matches to your database schema
 ** generated data are matched the database column types
 ** all base data types are supported
 ** constraints (PK, FK, unique) support
