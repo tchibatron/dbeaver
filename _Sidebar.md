@@ -1,4 +1,4 @@
-##### General User Guide
+#### General User Guide
 - [[Installation]]
 - [[Application Window Overview]]
 - [[Views]]
@@ -30,17 +30,18 @@
   - [[SQL Execution]]
   - [[Script Management]]
   - [Client Side Commands](Client-side-scripting)
-- Filters
+- [[Filters]]
   - [[Filter Database Objects]]
   - [[Configure Filters]]
-#####Database Management
+
+#### Database Management
 - [[Database Connections]]
   - [[Create Connection]]
   - [[Edit Connection]]
   - [[Connect to Database]]
   - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
   - [[Disconnect from Database]]
--[[Transactions]]
+- [[Transactions]]
   - [[Auto and Manual Commit Modes]]
   - [[Transaction Log]]
   - [[Connection Types]]
