@@ -49,8 +49,8 @@ Mock data generators for data types with their configurable parameters:
         * Postal Code preset <sup>*</sup>
         * Price preset <sup>*</sup>
 * NULL values
-* FK - data from the related table according to the constraint
+* FK - data from the referenced table according to the constraint
 
 
 ***
-<sup>*</sup> These features are available i the DBeaver Enterprise Edition only.
+<sup>*</sup> These features are available in the [DBeaver Enterprise Edition](https://dbeaver.com/) only.
