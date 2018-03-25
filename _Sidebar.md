@@ -41,7 +41,7 @@
   - [[Connect to Database]]
   - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
   - [[Disconnect from Database]]
-- [[Transactions]]
+- Transactions
   - [[Auto and Manual Commit Modes]]
   - [[Transaction Log]]
   - [[Connection Types]]
