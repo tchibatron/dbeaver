@@ -1,6 +1,6 @@
 DBeaver supports two modes for committing changes to the database:
-* **Auto-commit** transfers all changes that you make immediately to the database
-* **Manual commit** requires your confirmation before committing a change to the database or rolling it back
+* **Auto-commit** transfers all changes that you make immediately to the database.
+* **Manual commit** requires your confirmation before committing a change to the database or rolling it back.
 
 Though available in many cases, the two modes are actionable only in [SQL Editor](https://github.com/dbeaver/dbeaver/wiki/SQL-Editor). See the next sections for details of using the modes.
 
