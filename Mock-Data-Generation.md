@@ -10,7 +10,7 @@ DBeaver Mock Data generator features:
     * generated data are matched the database column types
     * all base data types are supported
     * constraints (PK, FK, multi-column FK, unique) support
-* over 20 configurable data generators (random, sequences, names, domains, addresses, prices, regex based etc)
+* over 20 configurable data generators (constants, randoms, sequences, names, domains, addresses, prices, regex based etc)
 * old database data can be saved or rewritten
 
 [[/images/mockdata_wizard.png]]
