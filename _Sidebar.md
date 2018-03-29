@@ -48,7 +48,6 @@
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
 - Miscellaneous
-  - [Diagrams (ERD)](ER-Diagrams)
   - [[Query Manager]]
   - [[Data transfer (export/import)]]
   - [[Data/metadata search]]
