@@ -14,3 +14,5 @@ For your convenience, DBeaver supports color-coding of connection types so that 
 To manage connection types for a database connection, in the Database Navigator or Projects view, click the connection to set focus to it and then press <kbd>F4</kbd> to open the connection properties window. Then, in the properties window, in the navigation pane on the left, click **General** to see the general settings. You can see **Connection Type** field among the settings:
 
 [[images/ug/Connection-Properties-General.png]]
+
+There are three default connection types – **Development**, **Test**, and **Production**. You can change the connection type for your database connection as well as you can create a new connection type, edit or delete an existing one.
