@@ -9,6 +9,14 @@ Connection types define how DBeaver behaves regarding:
 
 For your convenience, DBeaver supports color-coding of connection types so that you know at once which behavior to expect when you use a certain connection. Colored are database connections that use a certain connection type in the [Database Navigator](https://github.com/dbeaver/dbeaver/wiki/Database-Navigator) and [Projects](https://github.com/dbeaver/dbeaver/wiki/Projects) views as well as editors related to these connections:
 
+[[images/ug/Colored_connections.png]]
+
+To manage connection types for a database connection, in the Database Navigator or Projects view, click the connection to set focus to it and then press <kbd>F4</kbd> to open the connection properties window. Then, in the properties window, in the navigation pane on the left, click **General** to see the general settings. You can see **Connection Type** field among the settings:
+
+[[images/ug/Connection-Properties-General.png]]
+
+There are three default connection types – **Development**, **Test**, and **Production**. You can change the connection type for your database connection as well as you can create a new connection type, edit or delete an existing one.
+
 ### Change Connection Type
 By default, the **Development** connection is preset for all database connections. You can change the connection type to one of the default connection types or to a custom type, if there are any.
 
@@ -48,10 +56,3 @@ To delete a connection type:
 3.	Click **Yes** in the confirmation dialog box to confirm the deletion. Otherwise, click **No**.
 4.	Click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window.
 
-[[images/ug/Colored_connections.png]]
-
-To manage connection types for a database connection, in the Database Navigator or Projects view, click the connection to set focus to it and then press <kbd>F4</kbd> to open the connection properties window. Then, in the properties window, in the navigation pane on the left, click **General** to see the general settings. You can see **Connection Type** field among the settings:
-
-[[images/ug/Connection-Properties-General.png]]
-
-There are three default connection types – **Development**, **Test**, and **Production**. You can change the connection type for your database connection as well as you can create a new connection type, edit or delete an existing one.
