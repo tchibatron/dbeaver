@@ -9,9 +9,9 @@ To switch between the modes, use the mode selection button that appears in one o
 ## Auto-Commit Mode
 Auto-commit mode is the default one for the Development and Test connection types, see [Connection Types](https://github.com/dbeaver/dbeaver/wiki/Connection-Types). Auto-commit mode is on if you can see the auto-commit view of the mode selection button ([[images/ug/Auto-commit-button.png]]) in the application toolbar. If you see the manual commit view ([[images/ug/Manual-commit-button.png]]), then in order to switch to auto-commit mode, click the mode selection button – it changes to auto-commit. At the same time, this disables the two manual commit buttons in the toolbar: **Commit** and **Rollback** – these are available only in manual commit mode.
 
-The statistics field next to the mode selection button always shows **Auto** in auto-commit mode: [[images/ug/Auto-statements.png]]
+The statistics field next to the mode selection button always shows **Auto** in auto-commit mode: [[images/ug/Auto-statements.png]].
 
-Clicking the field opens the [Transaction Log](https://github.com/dbeaver/dbeaver/wiki/Transaction-Log).
+Clicking the statistics field opens the [Transaction Log](https://github.com/dbeaver/dbeaver/wiki/Transaction-Log).
 
 ## Manual Commit Mode
 Manual commit is intended to protect your database from inadvertent changes and that is why it is the default mode for Production connection type, see [Connection Types](https://github.com/dbeaver/dbeaver/wiki/Connection-Types).
@@ -24,7 +24,7 @@ If you hover you mouse over the field, you can see statistics of your SQL statem
 
 [[images/ug/Statements-statistics.png]]
 
-To commit statements to the database, click the **Commit** button in the toolbar, to discard them, click **Rollback**.
+To commit statements to the database, click the **Commit** button in the toolbar. To discard them, click **Rollback**.
 
 If no modifying statements have been made, the statistics field shows **None**: [[images/ug/None-statements.png]]
  
@@ -32,4 +32,5 @@ Clicking the statistics field opens the [Transaction Log](https://github.com/dbe
 
 ## Transaction Isolation Level
 For both, Auto and Manual commit modes, you can select the transaction isolation level. To do so, click the arrow next to the mode icon and then click the required option in the dropdown list:
-(Pic)
+
+[[images/ug/Transaction-isolation-level.png]]
