@@ -44,7 +44,7 @@
 - Transactions
   - [[Auto and Manual Commit Modes]]
   - [[Transaction Log]]
-  - [[Connection Types]]
+- [[Connection Types]]
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
 - Miscellaneous
