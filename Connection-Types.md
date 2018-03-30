@@ -44,15 +44,16 @@ To create a connection type:
    * To set DBeaver to ask for your confirmation at each execution of SQL statement of ‘transaction’ type, select the **Confirm SQL execution** checkbox. Otherwise, leave it empty.  
 4. Click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window. To discard all changes and return to the previous state, click **Restore Defaults**.
 
-Edit Connection Type
+### Edit Connection Type
 To edit a connection type:
-1.	In the connection properties window (<kbd>F4</kbd>  on a connection), on the **General** page, click **Edit** next to the **Connection type** field.
-2.	Specify the settings for the new connection type the same way as when you create a connection type, see Create Connection Types.
-3.	When you finish editing the connection types, click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window. To discard all changes and return to the previous state, click **Restore Defaults**.
-Delete Connection Type
+1. In the connection properties window (<kbd>F4</kbd>  on a connection), on the **General** page, click **Edit** next to the **Connection type** field.
+2. Specify the settings for the new connection type the same way as when you create a connection type, see Create Connection Types.
+3. When you finish editing the connection types, click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window. To discard all changes and return to the previous state, click **Restore Defaults**.
+
+### Delete Connection Type
 To delete a connection type:
-1.	In the connection properties window (<kbd>F4</kbd>  on a connection), on the **General** page, click **Edit** next to the **Connection type** field. The Properties for connection types window opens.
-2.	In the Properties window, in the list of connection types, click the connection type to set focus to it and then click the delete button under the list:  .
-3.	Click **Yes** in the confirmation dialog box to confirm the deletion. Otherwise, click **No**.
-4.	Click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window.
+1. In the connection properties window (<kbd>F4</kbd> on a connection), on the **General** page, click **Edit** next to the **Connection type** field. The Properties for connection types window opens.
+2. In the Properties window, in the list of connection types, click the connection type to set focus to it and then click the delete button under the list: [[images/ug/Delete-connection-type-button.png]]
+3. Click **Yes** in the confirmation dialog box to confirm the deletion. Otherwise, click **No**.
+4. Click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window.
 
