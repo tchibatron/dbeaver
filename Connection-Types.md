@@ -3,7 +3,7 @@ Connection types define how DBeaver behaves regarding:
 
   NOTE: You can override the default commit behavior during your work with connections by changing the commit mode, see [Auto and Manual Commit Modes](https://github.com/dbeaver/dbeaver/wiki/Auto-and-Manual-Commit-Modes).  
 
-* SQL statements execution (with or without user confirmation). If set to require user confirmation of SQL execution, DBeaver shows a confirmation message every time you attempt to execute a ‘transaction’ type of query (INSERT/DELETE/UPDATE, etc.):
+* SQL statements execution (with or without user confirmation). If set to require user confirmation for SQL execution, DBeaver shows a confirmation message every time you attempt to execute a ‘transaction’ type of query (INSERT/DELETE/UPDATE, etc.):
 
   [[images/ug/Confirm-query-execution-dialog.png]]
 
@@ -31,7 +31,7 @@ To change the connection type:
 To create a connection type:
 1. In the connection properties window (<kbd>F4</kbd>  on a connection), on the **General** page, click **Edit** next to the **Connection type** field. The Properties for connection types window opens:
 
-   [[images/ug/Properties-for-connection-types-window.png]]  
+   [[images/ug/Properties-for-connection-types_window.png]]  
 
    The window displays existing connection types and their settings.  
 2. Click the new connection type button. A new connection type appears in the list:
@@ -47,7 +47,7 @@ To create a connection type:
 ### Edit Connection Type
 To edit a connection type:
 1. In the connection properties window (<kbd>F4</kbd>  on a connection), on the **General** page, click **Edit** next to the **Connection type** field.
-2. Specify the settings for the new connection type the same way as when you create a connection type, see Create Connection Types.
+2. Specify the settings for the new connection type the same way as when you create a connection type, see 'Create Connection Types' section above.
 3. When you finish editing the connection types, click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window. To discard all changes and return to the previous state, click **Restore Defaults**.
 
 ### Delete Connection Type
