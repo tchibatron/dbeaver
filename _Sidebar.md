@@ -41,10 +41,10 @@
   - [[Connect to Database]]
   - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
   - [[Disconnect from Database]]
+- [[Connection Types]]
 - Transactions
   - [[Auto and Manual Commit Modes]]
   - [[Transaction Log]]
-- [[Connection Types]]
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
 - Miscellaneous
