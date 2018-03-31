@@ -5,6 +5,7 @@
   - [[Database Navigator]]
   - [[Projects]]
   - [[Project Explorer]]
+  - [[Query Manager]]
 - [[Database Object Editor]]
   - [[Properties Editor]]
   - [[Data Editor]]
