@@ -47,7 +47,7 @@ To create a connection type:
 ### Edit Connection Type
 To edit a connection type:
 1. In the connection properties window (<kbd>F4</kbd>  on a connection), on the **General** page, click **Edit** next to the **Connection type** field.
-2. Specify the settings for the new connection type the same way as when you create a connection type, see Create Connection Types.
+2. Specify the settings for the new connection type the same way as when you create a connection type, see 'Create Connection Types' section above.
 3. When you finish editing the connection types, click **Apply** to apply the changes and keep the window open or click **Apply and Close** to apply the changes and close the window. To discard all changes and return to the previous state, click **Restore Defaults**.
 
 ### Delete Connection Type
