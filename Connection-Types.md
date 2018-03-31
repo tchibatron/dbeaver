@@ -31,7 +31,7 @@ To change the connection type:
 To create a connection type:
 1. In the connection properties window (<kbd>F4</kbd>  on a connection), on the **General** page, click **Edit** next to the **Connection type** field. The Properties for connection types window opens:
 
-   [[images/ug/Properties-for-connection-types-window.png]]  
+   [[images/ug/Properties-for-connection-types_window.png]]  
 
    The window displays existing connection types and their settings.  
 2. Click the new connection type button. A new connection type appears in the list:
