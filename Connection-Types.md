@@ -3,7 +3,7 @@ Connection types define how DBeaver behaves regarding:
 
   NOTE: You can override the default commit behavior during your work with connections by changing the commit mode, see [Auto and Manual Commit Modes](https://github.com/dbeaver/dbeaver/wiki/Auto-and-Manual-Commit-Modes).  
 
-* SQL statements execution (with or without user confirmation). If set to require user confirmation of SQL execution, DBeaver shows a confirmation message every time you attempt to execute a ‘transaction’ type of query (INSERT/DELETE/UPDATE, etc.):
+* SQL statements execution (with or without user confirmation). If set to require user confirmation for SQL execution, DBeaver shows a confirmation message every time you attempt to execute a ‘transaction’ type of query (INSERT/DELETE/UPDATE, etc.):
 
   [[images/ug/Confirm-query-execution-dialog.png]]
 
