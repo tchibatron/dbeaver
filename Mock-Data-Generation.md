@@ -1,21 +1,21 @@
-Sometimes in software development we need to generate mock but valid data for the testing. Filling in the database by hand is a time-consuming and exhausting process. It can be very complicated when you need to generate not just 5–10 users, but thousands entities of different types. DBeaver Mock Data generator helps you generate test data much easier. 
+Sometimes in software development we need to generate mock, but valid, data for testing. Filling in the database by hand is a time-consuming and exhausting process. It can be very complicated when you need to generate not just 5–10 users, but thousands of entities of different types. DBeaver Mock Data generator helps you generate test data much easier.
 
 [[/images/mockdata_menu.png]] [[/images/mockdata_button.png]]
 
-> _Disclaimer:_ Mock data idea is to generate fake data in the table and it is **NOT TO BE USED IN PRODUCTION ENVIRONMENTS**. Please ensure you have a backup of your database before running the Mock Data generation process.
+> _Disclaimer:_ The idea behind Mock Data is to generate fake data in a table and should **NOT TO BE USED IN PRODUCTION ENVIRONMENTS**. Please ensure you have a backup of your database before running the Mock Data generation process.
 
 DBeaver Mock Data generator features:
-* works for all the RDBMS are supported by DBeaver (DB2, MS SQL Server, MySQL, Oracle, PostgreSQL, SQLite etc)
-* generates data that matches to your database schema
-    * generated data are matched the database column types
+* works for all the RDBMS that are supported by DBeaver (DB2, MS SQL Server, MySQL, Oracle, PostgreSQL, SQLite etc)
+* generates data that matches your database schema
+    * generated data matches the database column types
     * all base data types are supported
     * constraints (PK, FK, multi-column FK, unique) support
-* over 20 configurable data generators (constants, randoms, sequences, names, domains, addresses, prices, regex based etc)
-* old database data can be saved or rewritten
+* over 20 configurable data generators (constants, randoms, sequences, names, domains, addresses, prices, regex based, etc)
+* old database data can be saved or overwritten
 
 [[/images/mockdata_wizard.png]]
 
-Mock data generators for data types with their configurable parameters:
+Mock Data generators for data types with their configurable parameters:
 * Boolean
     * Random
     * Sequence (initial, order)
