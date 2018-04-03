@@ -19,4 +19,4 @@ An asterisk appears in the title of an editor if it contains unsaved changes:
 
 [[images/ug/Unsaved_changes.png]]
 
-The Database Object editor supports the Ctrl+Z (undo) function.
+The Database Object editor supports the <kbd>Ctrl+Z</kbd> (undo) function.
