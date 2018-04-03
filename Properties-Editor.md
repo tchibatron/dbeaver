@@ -1,6 +1,6 @@
 The Properties tab of the [Database Object Editor](https://github.com/serge-rider/dbeaver/wiki/Database-Object-Editor) provides tools to view and edit the database object`s properties. 
 
-<img src="https://www.dropbox.com/s/w01qxmgh5l82j2s/View%20editor.png?raw=1"/>
+[[images/ug/Properties-Editor-markup.png]]
 
 The content area of the Properties tab falls into two parts: the upper pane displays properties of the current database object itself while the lower pane contains properties of the object`s sub-entities or some complex properties like DDL (an SQL description of the current database object).
 
