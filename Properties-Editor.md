@@ -14,7 +14,7 @@ Button|Name|Description
 [[images/ug/Filter-button.png]]|Filter settings|Opens the Filtering window which allows setting a custom filter, see [Configure Filters](https://github.com/serge-rider/dbeaver/wiki/Configure-Filters)
 [[images/ug/Configure-columns-visibility-icon.png]]|Configure columns|Opens the Configure columns dialog box in which you can select the columns to display or hide in the current view
 [[images/ug/Refresh-projects-icon.png]]|Refresh the selected items|Depending on the database type, refreshes either the current item or its parent or the whole database object – reloading data from the database
-[[View-Triggers-icon.png]]|View / Edit [items]|Opens an editor for the item currently in focus
+[[images/ug/View-Triggers-icon.png]]|View / Edit [items]|Opens an editor for the item currently in focus
 <img src="https://www.dropbox.com/s/ba6fqyb6adkuoxg/Create%20new%20item%20icon.png?raw=1"/>|Create new [items]|Creates a new item of the same type as currently displayed in the open view, for example, a column
 <img src="https://www.dropbox.com/s/xbf7xgvi6bcrpzz/Delete%20object%20icon.png?raw=1"/>|Delete database object|Deletes the item currently in focus
 <img src="https://www.dropbox.com/s/ap5204kc1itnijc/Save%20button.png?raw=1"/>|Save the current contents|- Same as the Save button on the application main toolbar<br/>- Same as <kbd>Ctrl+S</kbd><br/>- Opens the Persist Changes window that allows saving changes in the currently open sub-entity<br/>NOTE: DBeaver recommends saving work after each change. 
