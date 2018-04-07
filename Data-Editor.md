@@ -31,6 +31,4 @@ Menu Item|Description
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate
 **Refresh**|Refreshes the whole results set including all items that are not visible in the screen
 
-For more information about using the Data Editor, please see the subsections of this article.
-
-
+For more information about using the Data Editor, please see the subsections of this article - open them via the contents tree on the right.
