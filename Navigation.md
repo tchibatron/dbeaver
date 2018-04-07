@@ -5,7 +5,7 @@ If the result set has many rows, you can scroll the results page. By default, DB
 The maximum number of rows that DBeaver fetches to display in the Data tab is specified in the Maximum result-set size field in the main toolbar: [[images/ug/Max-result-set.png]]
 
 Once you scroll to the last row of the current result portion, DBeaver fetches the next portion (next 200 rows). You can disable this behavior in preferences. 
-You can also manually fetch the next portion of data equal to the maximum results set size. To do it, you need to click the **Fetch next page of results** button ([[images/ug/Fetch-next-page-button.png) in the bottom toolbar or right-click the table and click **Navigate -> Fetch next page** on the context menu.
+You can also manually fetch the next portion of data equal to the maximum results set size. To do it, you need to click the **Fetch next page of results** button ([[images/ug/Fetch-next-page-button.png]]) in the bottom toolbar or right-click the table and click **Navigate -> Fetch next page** on the context menu.
 
 To fetch the whole result set, click the **Fetch all rows** button ([[images/ug/Fetch-all-rows-button.png]]) in the bottom toolbar or right-click the table and click **Navigate -> Fetch All Data** on the context menu.
 
