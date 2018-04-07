@@ -46,6 +46,7 @@
 - Transactions
   - [[Auto and Manual Commit Modes]]
   - [[Transaction Log]]
+  - [[Pending Transactions]]
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
 - Miscellaneous
