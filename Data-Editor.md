@@ -5,7 +5,7 @@ The Data editor appears:
 The Data editor allows viewing and editing the data of a database table or view.
 The central part of the Data editor is the data table. The editor also provides two toolbars and a filter field:
 
-<img src="https://www.dropbox.com/s/r0ul9jadxbtn046/Data%20tab%20with%20markup.png?raw=1"/>
+[[images/ug/Data-Editor-with-markup.png]]
 
 Every cell in the data table has a context menu – right-click the cell to open the menu. The context menu provides the following items:
 
@@ -31,5 +31,4 @@ Menu Item|Description
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate
 **Refresh**|Refreshes the whole results set including all items that are not visible in the screen
 
-
-
+For more information about using the Data Editor, please see the subsections of this article - open them via the contents tree on the right.
