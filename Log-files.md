@@ -1,6 +1,8 @@
+There is Error Log view (main menu Window->Show View->Error Log) which contains all errors occurred during DBeaver runtime.  
+
 DBeaver writes different log files. Most of them are Eclipse logs.  
 Usually log files reside in the workspace.  
-Default workspace location is `${HOME}/.dbeaver` (`${HOME}/.dbeaver4` for DBeaver 4.x+).  
+Default workspace location is `${HOME}/.dbeaver4`.  
 
 Two standard log files:
 - `<workspace-path>/.metadata/.log` - all warnings and errors which happens during normal work
