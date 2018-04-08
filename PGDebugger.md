@@ -42,6 +42,8 @@ When breakpoint is local, stop will be done only for server process launched by 
 *Receive responses from process;
 *Translate responces to the client.
 
+
+
 # How to establish link with global brteakpoint
 
 When control point is global, stop will be done for any server process launched by anyone. No modifications or additional calls from the process debugged is required.When you create session with global breakpoint, the following steps are performed:
