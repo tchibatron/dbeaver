@@ -14,7 +14,7 @@ DBeaver Mock Data generator features:
 * can automatically associate a column with a generator based on the column characteristics
 * old database data can be saved or overwritten
 
-[[/images/mockdata_wizard.png]]
+[[/images/mockdata_wizard_2.png]]
 
 Mock Data generators for data types with their configurable parameters:
 * Boolean
