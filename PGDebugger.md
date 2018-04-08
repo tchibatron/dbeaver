@@ -68,9 +68,22 @@ If server plugin up and running and you succefully installed debugger plugin you
 You must choose type for your debug session Local or Global
 
 For **Global** session you need to specify target process PID filter (-1 for any process) : 
-[[/images/start-debug-global.PNG|Debug popup menu]]
+[[/images/start-debug-global.PNG|Debug global dialog]]
 
 After running Global session you need to wait for any (or specified PID) process will call your procedure
 
 For **Local** session you need to specify executable SQL sentence for starting in target process : 
-[[/images/start-debug-local.PNG|Debug popup menu]]
+[[/images/start-debug-local.PNG|Debug local dialog]]
+
+In scrip edit window you can see text “select get_count(?)” this is just specification of how DBeaver must call your function(procedure) for debug. 
+
+DBeaver does not know anything about the values of the variables with which to start the procedure for debugging – you need to set the values for call arguments BEFORE starting debugging your settings may look like this  :
+[[/images/start-debug-local-params.PNG|Debug local dialog]]
+
+If you run debugging now - Dbeaver creates a separate connection to the database server and tries to execute given SQL sentence (select get_count(‘pg_class’)) in this connection and attach debug session to running SQL context.
+
+After successfuly attaching to target server process platform ask you about switching to debug perspective :
+[[/images/debug-perspective.png|Debug perspective switch]]
+
+Click "OK" and you will see debug toolset (perspective) :
+[[/images/debug-perspective-win.png|Debug perspective]]
