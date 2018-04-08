@@ -78,12 +78,12 @@ For **Local** session you need to specify executable SQL sentence for starting i
 In scrip edit window you can see text “select get_count(?)” this is just specification of how DBeaver must call your function(procedure) for debug. 
 
 DBeaver does not know anything about the values of the variables with which to start the procedure for debugging – you need to set the values for call arguments BEFORE starting debugging your settings may look like this  :
-[[/images/start-debug-local-params.PNG|Debug local dialog]]
+[[/images/start-debug-local-params.png|Debug local dialog]]
 
 If you run debugging now - Dbeaver creates a separate connection to the database server and tries to execute given SQL sentence (select get_count(‘pg_class’)) in this connection and attach debug session to running SQL context.
 
 After successfuly attaching to target server process platform ask you about switching to debug perspective :
-[[/images/debug-perspective.png|Debug perspective switch]]
+[[/images/debug-perspective.PNG|Debug perspective switch]]
 
 Click "OK" and you will see debug toolset (perspective) :
 [[/images/debug-perspective-win.png|Debug perspective]]
