@@ -31,7 +31,7 @@ Installation
 
 If you using binary builds from pgdg you can use repository for your linux distribution, more info at  https://www.postgresql.org/download/
 
-# How to establish link with local breakpoint
+# How to start debug with local breakpoint
 When breakpoint is local, stop will be done only for server process launched by initiator. All other processes will run procedure\function as usually. When you create or run previously defined debugging session in Dbeaver with local breakpoint, the following steps are performed:
 1. DBeaver creates initiator session and local breakpoint
 1. Dbeaver runs procedure\function (with parameters specified) selected for debugging in the initiator session  
@@ -42,9 +42,9 @@ When breakpoint is local, stop will be done only for server process launched by 
 *Receive responses from process;
 *Translate responces to the client.
 
+[[/images/debug-local.png|Debug with local breakpoint]]
 
-
-# How to establish link with global brteakpoint
+# How to start debug with global brteakpoint
 
 When control point is global, stop will be done for any server process launched by anyone. No modifications or additional calls from the process debugged is required.When you create session with global breakpoint, the following steps are performed:
 
@@ -54,3 +54,5 @@ When control point is global, stop will be done for any server process launched 
 1. On each executed line, process checks if global breakpoint (with corresponding conditions) exists and becomes blocked if breakpoint is reached
 1. Process establishes connection with PROXY and reports that point is reached
 1. After that, process becomes blocked and waits for PROXY (client) commands. Process will be implementing commands unless procedure is finished or exception is thrown. 
+
+[[/images/debug-global.png|Debug with global breakpoint]]
