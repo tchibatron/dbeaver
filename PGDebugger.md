@@ -7,14 +7,14 @@ The debugger provides required server API for the debugging of a PL/SQL procedur
 * Step-by-step tracing;
 * Variable acquisition and management.
 
-You need to install plugin_debugger extension in your postgres database 
+Installation
+------------
+
+First, you need to install plugin_debugger extension in your postgres database 
 
 Its free and open source. You can download source code here https://git.postgresql.org/gitweb/?p=pldebugger.git;a=tree
 
 README for make and install here - https://git.postgresql.org/gitweb/?p=pldebugger.git;a=blob_plain;f=README.pldebugger;hb=HEAD
-
-Installation
-------------
 
 * Copy this directory to contrib/ in your PostgreSQL source tree.
 * Run 'make; make install'
@@ -30,6 +30,8 @@ Installation
   script directly using psql).
 
 If you using binary builds from pgdg you can use repository for your linux distribution, more info at  https://www.postgresql.org/download/
+
+After installing plugin at server you need to install debug plugion from marketplace or P2 repository, [see doc](https://github.com/dbeaver/dbeaver/wiki/Optional-extensions)
 
 # How to start debug with local breakpoint
 When breakpoint is local, stop will be done only for server process launched by initiator. All other processes will run procedure\function as usually. When you create or run previously defined debugging session in Dbeaver with local breakpoint, the following steps are performed:
@@ -56,3 +58,19 @@ When control point is global, stop will be done for any server process launched 
 1. After that, process becomes blocked and waits for PROXY (client) commands. Process will be implementing commands unless procedure is finished or exception is thrown. 
 
 [[/images/debug-global.png|Debug with global breakpoint]]
+
+Running debugger in DBeaver interface
+------------
+If server plugin up and running and you succefully installed debugger plugin you can start Debug from procedure source page by right-clicking on procedure source text (popup menu will appear) :
+
+[[/images/start-debug.PNG|Debug popup menu]]
+
+You must choose type for your debug session Local or Global
+
+For **Global** session you need to specify target process PID filter (-1 for any process) : 
+[[/images/start-debug-global.PNG|Debug popup menu]]
+
+After running Global session you need to wait for any (or specified PID) process will call your procedure
+
+For **Local** session you need to specify executable SQL sentence for starting in target process : 
+[[/images/start-debug-local.PNG|Debug popup menu]]
