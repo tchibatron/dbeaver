@@ -82,7 +82,8 @@ DBeaver does not know anything about the values of the variables with which to s
 
 If you run debugging now - Dbeaver creates a separate connection to the database server and tries to execute given SQL sentence (select get_count(‘pg_class’)) in this connection and attach debug session to running SQL context.
 
-After successfuly attaching to target server process platform ask you about switching to debug perspective :
+After successfuly attaching to target server process platform ask you about switching to debug perspective:
+
 [[/images/debug-perspective.PNG|Debug perspective switch]]
 
 Click "OK" and you will see debug toolset (perspective) :
