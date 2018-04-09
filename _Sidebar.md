@@ -31,6 +31,8 @@
   - [[SQL Execution]]
   - [[Script Management]]
   - [Client Side Commands](Client-side-scripting)
+  - Debug
+    - [PostgreSQL Debugger](PGDebugger)
 - [[Filters]]
   - [[Filter Database Objects]]
   - [[Configure Filters]]
