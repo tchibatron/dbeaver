@@ -50,7 +50,7 @@
   - [[Transaction Log]]
   - [[Pending Transactions]]
 - [[Database drivers]]
-- [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
+- [[Optional extensions - Office, Debugger, Git, SVG, SSH|Optional extensions]]
 - Miscellaneous
   - [[Query Manager]]
   - [[Data transfer (export/import)]]
