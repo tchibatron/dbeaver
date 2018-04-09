@@ -7,6 +7,10 @@ The central part of the Data editor is the data table. The editor also provides 
 
 [[images/ug/Data-Editor-with-markup.png]]
 
+To learn how many rows the data table contains, click the **Calculate total row count** button in the bottom toolbar. The number of rows appears in a status field next to the button: [[images/ug/Calculate-rows-button.png]]
+
+To learn about ways to navigate data in the data table, see [Navigation](https://github.com/dbeaver/dbeaver/wiki/Navigation) article.
+
 Every cell in the data table has a context menu – right-click the cell to open the menu. The context menu provides the following items:
 
 Menu Item|Description
