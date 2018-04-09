@@ -31,6 +31,8 @@
   - [[SQL Execution]]
   - [[Script Management]]
   - [Client Side Commands](Client-side-scripting)
+  - Debug
+    - [PostgreSQL Debugger](PGDebugger)
 - [[Filters]]
   - [[Filter Database Objects]]
   - [[Configure Filters]]
@@ -48,7 +50,7 @@
   - [[Transaction Log]]
   - [[Pending Transactions]]
 - [[Database drivers]]
-- [[Optional extensions - Office, Debugger, Git, SVG|Optional extensions]]
+- [[Optional extensions - Office, Debugger, Git, SVG, SSH|Optional extensions]]
 - Miscellaneous
   - [[Query Manager]]
   - [[Data transfer (export/import)]]
