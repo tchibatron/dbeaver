@@ -18,7 +18,7 @@ NOTE: Be careful when fetching the whole result set. If it is huge, it might cau
 You can navigate through the result set using standard shortcuts <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd>, <kbd>PgDown</kbd>, <kbd>Ctrl+Home</kbd>, <kbd>Ctrl+End</kbd>.
 
 ## Data Rows
-To jump to the first or last row or move one row forward or backward, use the navigation buttons in the bottom toolbar or on the context menu: <img src="https://www.dropbox.com/s/hng62ypf43elz5s/Navigation%20buttons.png?raw=1"/> 
+To jump to the first or last row or move one row forward or backward, use the navigation buttons in the bottom toolbar or on the context menu: [[images/ug/Navigation-buttons.png]] 
 
 To jump to a specific line, right-click anywhere in the table and click **Navigate** -> **Go to Line** on the context menu. Then in the Go to Row dialog box, enter the row number and click **OK**.
 ## History
