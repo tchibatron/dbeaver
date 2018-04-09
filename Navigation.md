@@ -8,11 +8,12 @@ Once you scroll to the last row of the current result portion, DBeaver fetches t
 You can also manually fetch the next portion of data equal to the maximum result set size. To do it, you need to click the **Fetch next page of results** button ([[images/ug/Fetch-next-page-button.png]]) in the bottom toolbar or right-click the table and click **Navigate -> Fetch next page** on the context menu.
 
 The number of rows fetched is visible in the status field under the data table: [[images/ug/Number-fetched-rows.png]]
+
 To see the details, click the details button in the status field.
 
 To fetch the whole result set, click the **Fetch all rows** button ([[images/ug/Fetch-all-rows-button.png]]) in the bottom toolbar or right-click the table and click **Navigate -> Fetch All Data** on the context menu.
 
-NOTE: Be careful when fetching the whole result set. If it is huge, it might cause program hangup or out-of-memory errors. You can
+NOTE: Be careful when fetching the whole result set. If it is huge, it might cause program hangup or out-of-memory errors. To learn how many rows the data table contains, click the **Calculate total row count** button in the bottom toolbar. The number of rows appears in a status field next to the button: [[images/ug/Calculate-rows-button.png]]
 
 You can navigate through the result set using standard shortcuts <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd>, <kbd>PgDown</kbd>, <kbd>Ctrl+Home</kbd>, <kbd>Ctrl+End</kbd>.
 
