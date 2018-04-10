@@ -32,6 +32,7 @@ README for make and install here - https://git.postgresql.org/gitweb/?p=pldebugg
 If you using binary builds from pgdg you can use repository for your linux distribution, more info at  https://www.postgresql.org/download/
 
 After installing plugin at server you need to install debug plugion from marketplace or P2 repository, [see doc](https://github.com/dbeaver/dbeaver/wiki/Optional-extensions)
+Detail DBeaverCE Debug plugin installation guide from Jkiss P2 repository can be found [here](https://github.com/dbeaver/dbeaver/wiki/DebugPluginInstall)
 
 # How to start debug with local breakpoint
 When breakpoint is local, stop will be done only for server process launched by initiator. All other processes will run procedure\function as usually. When you create or run previously defined debugging session in Dbeaver with local breakpoint, the following steps are performed:
