@@ -1,6 +1,6 @@
 ## Scrolling Results Page
 
-If the result set has many rows, you can scroll the results page. To learn how many rows the data table contains, click the **Calculate total row count** button in the bottom toolbar. The number of rows appears in a status field next to the button: [[images/ug/Calculate-rows-button.png]]
+If the result set has many rows, you can scroll the results page. To learn how many rows the data table contains, click the **Calculate total row count** button in the bottom toolbar. The number of rows appears in a status field next to the button: [[images/ug/Calculate-rows-button.png]]. Alternatively, you can right-click a cell in the table and then click **Navigate -> Row Count** on the context menu.
 
 By default, DBeaver limits the number of rows fetched to **200** (you can change this value in the main toolbar or in preferences). The maximum number of rows that DBeaver fetches to display in the Data tab is specified in the Maximum result-set size field in the main toolbar: [[images/ug/Max-result-set.png]]
 
@@ -25,5 +25,8 @@ To jump to the first or last row or move one row forward or backward, use the na
 To jump to a specific line, right-click anywhere in the table and click **Navigate** -> **Go to Line** on the context menu. Then in the Go to Row dialog box, enter the row number and click **OK**.
 
 ## History
-DBeaver remembers the history of such actions as applying filters to data, opening reference tables or other tables via links. You can navigate among such tables and filtered views using the forward and backward buttons in the top toolbar: <img src="https://www.dropbox.com/s/ch97i2oy3uytkz7/Backward%20button.png?raw=1"/> <img src="https://www.dropbox.com/s/1t87l4wthqoopnv/Forward%20button.png?raw=1"/>    
+DBeaver remembers the history of such actions as applying filters to data, opening reference tables or other tables via links. You can navigate among such tables and filtered views:
+* Use the forward and backward buttons in the top toolbar: [[images/ug/History-navigation.png]]
+* Click <kbd>Ctrl+Left</kbd> or <kbd>Ctrl+Right</kbd>  
 
+Hovering over these buttons displays the names of the tables or filtered views saved in the history. 
