@@ -1,6 +1,8 @@
-The main tool for managing the appearance of the data table is the Result Set/Filter Settings window. To open this window, click the Custom Filters icon (<img src="https://www.dropbox.com/s/c49v6wtsr4w7tin/Filter%20settings%20icon.png?raw=1"/>):
- 
-<img src="https://www.dropbox.com/s/g1qhlhv1az5qxmc/Results%20set%20order%20box.png?raw=1"/>
+The main tool for managing the appearance of the data table is the Result Set Order/Filter Settings window.
+
+[[images/ug/Result-Set-Settings-window.png]]
+
+To open this window, click the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar.
 
 This window provides instruments to:
 * Order data inside columns
@@ -8,16 +10,17 @@ This window provides instruments to:
 * Manage the order of columns in the table
 * Filter data in the table using an SQL expression, see … below
 
-## Ordering Data in Columns
-In the data table, every column header contains three elements each having its own function:
+Another tool for managing data appearance are column headers. In the data table, every column header contains three elements each having its own function: Data (column) type icon, column name, filter icon, and ordering icon.
 
 [[images/ug/Column-header.png]]
 
-* Simply clicking the column name or column icon highlights the whole column.
-* You can click the column icon and then drag and drop the column to a different position in the table.
+* Simply clicking the column name or column type icon highlights the whole column.
+* You can click the column type icon and then drag and drop the column to a different position in the table.
 * You can click the column name and then drag the cursor right or left to highlight multiple columns. 
-* Clicking the ordering icon allows ordering the data in the column in ascending or descending order.
+* Clicking the ordering icon allows ordering the data in the column in ascending or descending order - see 'Ordering Data in Columns' section further in this article
+* Clicking the filter icon allows filtering the data by a cell value, see [TBA]
 
+## Ordering Data in Columns
 You can order data in columns in one of the ways:
 1. Click the ordering icon  (<img src="https://www.dropbox.com/s/0dfzmn77oko7s9v/Ordering%20icon.png?raw=1"/>) in the header of the column. The icon has three states:
    * Clicking once establishes ascending order (<img src="https://www.dropbox.com/s/pcxcudkktb9ewkv/Ascending%20order%20icon.png?raw=1"/>) 
