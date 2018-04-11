@@ -25,5 +25,7 @@ To jump to the first or last row or move one row forward or backward, use the na
 To jump to a specific line, right-click anywhere in the table and click **Navigate** -> **Go to Line** on the context menu. Then in the Go to Row dialog box, enter the row number and click **OK**.
 
 ## History
-DBeaver remembers the history of such actions as applying filters to data, opening reference tables or other tables via links. You can navigate among such tables and filtered views using the forward and backward buttons in the top toolbar: <img src="https://www.dropbox.com/s/ch97i2oy3uytkz7/Backward%20button.png?raw=1"/> <img src="https://www.dropbox.com/s/1t87l4wthqoopnv/Forward%20button.png?raw=1"/>    
+DBeaver remembers the history of such actions as applying filters to data, opening reference tables or other tables via links. You can navigate among such tables and filtered views:
+* Use the forward and backward buttons in the top toolbar: [[images/ug/History-navigation.png]]
+* Click <kbd>Ctrl+Left</kbd> or <kbd>Ctrl+Right</kbd>  
 
