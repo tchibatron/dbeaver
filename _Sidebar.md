@@ -52,7 +52,6 @@
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG, SSH|Optional extensions]]
 - Miscellaneous
-  - [[Query Manager]]
   - [[Data transfer (export/import)]]
   - [[Data/metadata search]]
   - [[Database compare]]
