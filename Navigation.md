@@ -29,3 +29,4 @@ DBeaver remembers the history of such actions as applying filters to data, openi
 * Use the forward and backward buttons in the top toolbar: [[images/ug/History-navigation.png]]
 * Click <kbd>Ctrl+Left</kbd> or <kbd>Ctrl+Right</kbd>  
 
+Hovering over these buttons displays the names of the tables or filtered views saved in the history. 
