@@ -11,7 +11,7 @@ This window provides instruments to:
 ## Ordering Data in Columns
 In the data table, every column header contains three elements each having its own function:
 
-<img src="https://www.dropbox.com/s/qvuhu74r1g3j4s0/Column%20in%20Data%20editor.png?raw=1"/>
+[[images/ug/Column-header.png]]
 
 * Simply clicking the column name or column icon highlights the whole column.
 * You can click the column icon and then drag and drop the column to a different position in the table.
