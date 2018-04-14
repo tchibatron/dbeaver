@@ -15,14 +15,14 @@ The menu contains the following items:
 
 Icon|Menu item|Description
 ----|---------|-----------
-[[images/ug/Driver-Manager-icon.png]] |**Driver Manager**|Opens the Driver Manager window that allows creating, editing and deleting drivers for databases. See … for information about managing database drivers
-[[images/ug/New-connection-icon.png]] |**New Connection**|Opens the Create new connection wizard. See … for information about creating connections
+[[images/ug/Driver-Manager-icon.png]] |**Driver Manager**|Opens the Driver Manager window that allows creating, editing and deleting drivers for databases. See … for information about managing database drivers.
+[[images/ug/New-connection-icon.png]] |**New Connection**|Opens the Create new connection wizard. See … for information about creating connections.
 (empty) | **Active Project** |Displays a submenu which allows you to choose a project. See ... for information about projects.
 [[images/ug/New-Folder-icon.png]] |**New Folder** |Opens a dialog box for creating a new folder
 [[images/ug/Collapse-All-icon.png]] | **Collapse All** |Collapses the tree to the root level
 [[images/ug/Link-with-Editor-icon.png]] | **Link with editor** | Enabled when at least one editor is open, otherwise disabled - highlights the object in the tree that has its editor open
 
-The toolbar is located in the title bar of the window, its buttons duplicate the menu items except for the **Active Project** one. 
+The toolbar is located in the title bar of the window. Its buttons duplicate the menu items, except for the **Active Project**. 
 
 To open the context menu for an object, right-click the object in the tree. The following table summarizes context menu items for all types of objects that may appear in the tree. Note that the presence or absence of context menu items for an object depends on the database and object types.
 
@@ -57,4 +57,4 @@ Menu item|Description
 **Import Table Data**|Opens a window with existing database connections in which you can select a table to import data from 
 **Tools**|Opens a submenu that provides tools for database backup and restore, vacuum, etc.
 
-You can filter database objects in Database Navigator, see [Filter Database Objects](https://github.com/serge-rider/dbeaver/wiki/Filter-Database-Objects).
+For information on how to filter database objects in Database Navigator, please see the [Filter Database Objects](https://github.com/serge-rider/dbeaver/wiki/Filter-Database-Objects) article.
