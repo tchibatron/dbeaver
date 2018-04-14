@@ -1,5 +1,5 @@
 You can execute one query, a highlighted portion of a script, or a whole script.  This can be accomplished in several ways:
-* Using a shortcut key combinations
+* Using a shortcut key combination
 * Using tools in the main toolbar: <img src="https://www.dropbox.com/s/qtahw2wgz5rmnkw/Execute%20commands%20in%20the%20toolbar.png?raw=1"/>
 * Using the context menu (right-click the query):
 
