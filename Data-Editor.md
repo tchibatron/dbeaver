@@ -19,8 +19,40 @@ Button|Name|Description
 [[images/ug/Remove-all-filters-orderings.png]]|**Remove all filters/orderings**|Removes all filters and orderings applied to the data
 [[images/ug/Save-filter-settings-for-current-object.png]]|**Save filter settings for current object**|Saves the current filter settings for the database object to apply next time when you reopen it in the editor, see details in [Data Filters](https://github.com/dbeaver/dbeaver/wiki/Data-Filters) article
 [[images/ug/Filter-button.png]]|**Custom Filters**|Opens the Result Set Order/Filter Settings window, see [Data Appearance](https://github.com/dbeaver/dbeaver/wiki/Data-Appearance) article for more information
-[[images/ug/Configure-auto-refresh.png]]|**Configure auto-refresh**|Allows configuring data auto-refresh settings, see [Data Refresh](https://github.com/dbeaver/dbeaver/wiki/Data-Refresh)article for details
-[[images/ug/History-navigation.png]]|Forward and backward -  history navigation buttons|Navigate forward and backward in the Data Editor history, see _History_ section of [Navigation](https://github.com/dbeaver/dbeaver/wiki/Navigation) article for more information. The buttons are equivalent to pressing the key combinations: <kbd>Alt+Left</kbd> (backward) and <kbd>Alt+right</kbd> (forward)
+[[images/ug/Configure-auto-refresh.png]]|**Configure auto-refresh**|Allows configuring data auto-refresh settings, see [Data Refresh](https://github.com/dbeaver/dbeaver/wiki/Data-Refresh) article for details
+[[images/ug/History-navigation.png]]|Forward and backward -  history navigation buttons|Navigate forward and backward in the Data Editor history, see _History_ section of [Navigation](https://github.com/dbeaver/dbeaver/wiki/Navigation) article for more information. The buttons are equivalent to pressing the key combinations: <kbd>Alt+Left</kbd> (backward) and <kbd>Alt+right</kbd> (forward).
+
+The bottom toolbar provides the following buttons:
+
+Button|Name|Description
+------|----|-----------
+[[images/ug/Save-button-Data-Editor.png]]|**Save**|Saves all unsaved changes to the data such as adding, duplicating, deleting rows, inline editing of values, see [Data Viewing and Editing](https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing) article for information
+[[images/ug/Cancel-button-Data-Editor.png]]|**Cancel**|Discards all unsaved changes to the data
+[[images/ug/Script-button.png]]|**Script**|Opens the Preview Changes window in which you can see changes that you have made to the data, see details in [Data Viewing and Editing](https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing) article
+[[images/ug/Edit-cell-value-button.png]]|**Edit cell value in separate dialog/editor**|Opens the cell in focus for editing in a separate editor or dialog box, see details in _Cell Editor_ section of [Data Viewing and Editing](https://github.com/dbeaver/dbeaver/wiki/Data-Viewing-and-Editing) article
+[[images/ug/Add-new-row-button.png]]|**Add new row**|Adds a new empty row below the current row, see details in Adding, Copying and Deleting Rows section of Data Viewing and Editing article
+ 	Duplicate current row	Copies the current rows and pastes the copy below the current row, see details in Adding, Copying and Deleting Rows section of Data Viewing and Editing article
+ 	Delete current row	Colors the rows in focus in red to mark them for deletion, see details in Adding, Copying and Deleting Rows section of Data Viewing and Editing article
+ 	Move to first row	Moves the focus (highlighting) from the current to the first row of the table
+ 	Move to previous row	Moves the focus (highlighting) from the current to the previous row of the table
+ 	Move to next row	Moves the focus (highlighting) from the current to the next row of the table
+ 	Move to last row	Moves the focus (highlighting) from the current to the last row of the table
+ 	Fetch next page of results	Fetches the next portion of data (next N rows) making it ready for display, see Scrolling Results Page section of Navigation article for more information.
+ 	Fetch all rows	Fetches the whole result set making it ready for display, see Scrolling Results Page section of Navigation article for more information.
+ 	Record	•	Same as pressing <kbd>Tab</kbd>
+•	Switches the positions of rows and columns so that columns appear as rows, and rows hide in one Value column, see details in the Table vs. Record Views section of Data Appearance article.
+ 	Panels	Opens panels on the right side of the Data Editor, see Panels for information.
+ 	Configure	Opens a dropdown menu with settings
+ 	Grid	Switches to grid view of data
+ 	Text	Switches to plain text view of data
+(picture)	JSON	•	Available in EE version only for MongoDB documents and JSON tables
+•	Switches to JSON view of data
+(picture)	XML	•	Available in EE version only for XML tables
+•	Switches to XML view of data
+ 	Generate Mock Data	Opens the Mock Data Generator window, see TBD for details
+ 	Rows fetched details	Opens the **Status details** dialog box showing the timing details of fetching table rows
+ 	Calculate total row count	Calculates the total number of rows in the table
+
 
 
 Every cell in the data table has a context menu – right-click the cell to open the menu. The context menu provides the following items:
