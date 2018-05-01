@@ -22,10 +22,10 @@ Another tool for managing data appearance are column headers. In the data table,
 
 ## Ordering Data in Columns
 You can order data in columns in one of the ways:
-1. Click the ordering icon  (<img src="https://www.dropbox.com/s/0dfzmn77oko7s9v/Ordering%20icon.png?raw=1"/>) in the header of the column. The icon has three states:
-   * Clicking once establishes ascending order (<img src="https://www.dropbox.com/s/pcxcudkktb9ewkv/Ascending%20order%20icon.png?raw=1"/>) 
-   * Clicking a second time changes the order to descending (<img src="https://www.dropbox.com/s/uu9hzcjbtwxfozw/Descending%20order%20icon.png?raw=1"/>)  
-   * Clicking a third time removes the ordering from the column (<img src="https://www.dropbox.com/s/0dfzmn77oko7s9v/Ordering%20icon.png?raw=1"/>)  
+1. Click the ordering icon  ([[images/ug/No-order.png]]) in the header of the column. The icon has three states:
+   * Clicking once establishes ascending order ([[images/ug/Order-ascending.png]]) 
+   * Clicking a second time changes the order to descending ([[images/ug/Order-descending.png]])  
+   * Clicking a third time removes the ordering from the column ([[images/ug/No-order.png]])  
 
 To order data by several columns, go column by column, setting the order with the Ordering icon, starting from the column by which you want to order data first.
   
