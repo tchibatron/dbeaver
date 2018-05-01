@@ -1,6 +1,8 @@
 You can do inline editing (see the **Inline Editing** section below) as well as open the content of a cell in a separate editor (see the **Cell Editor** section below). 
 
-When you make any changes to the data and save them using steps described in this section, the changes apply to the database itself. Prior to saving the changes, you can preview the SQL script that the system sends to the database to apply the changes there. To see the SQL script, after making changes and before saving or discarding them, click **Script** on the bottom toolbar. The Preview Changes window opens, in which you can only view the SQL script and copy it, if necessary.
+When you make any changes to the data and save them using steps described in this section, the changes apply to the database itself. Prior to saving the changes, you can preview the SQL script that the system sends to the database to apply the changes there. To see the SQL script, after making changes and before saving or discarding them, click the **Script** button ([[images/ug/Script-button.png]]) in the bottom toolbar. The Preview Changes window opens, in which you can only view the SQL script and copy it, if necessary:
+
+[[images/ug/Preview-Changes-window.png]]
 
 ## Inline Editing
 
