@@ -36,7 +36,7 @@ NOTE: DBeaver has full support of CLOB/BLOB data types. You can view values, edi
 
 You can add an empty below the row in focus. To add an empty row, click the **Add new row** button (<img src="https://www.dropbox.com/s/kjnaoldqr29k7tn/Add%20new%20row%20button.png?raw=1"/>) in the bottom toolbar. Use inline editing or open cell values in a separate editor to populate them with data.
 
-You can copy any row that is in focus. To copy a row, click the **Duplicate current row** button (<img src="https://www.dropbox.com/s/svqjl6uctcdx4in/Duplicate%20current%20row%20button.png?raw=1"/>) in the bottom toolbar. The duplicate row appears below the row in focus.
+You can copy any row or several rows currently in focus. To copy rows, highlight one or more rows and click the **Duplicate current row** button (<img src="https://www.dropbox.com/s/svqjl6uctcdx4in/Duplicate%20current%20row%20button.png?raw=1"/>) in the bottom toolbar. The duplicate rows appear below the rows in focus.
 
 To delete a row, click the row to set focus to it and click the **Delete current row** button (<img src="https://www.dropbox.com/s/vfhsu6etpzleo73/Delete%20current%20row%20button.png?raw=1"/>) in the bottom toolbar.
 
