@@ -38,7 +38,7 @@ You can add an empty below the row in focus. To add an empty row, click the **Ad
 
 You can copy any row or several rows currently in focus. To copy rows, highlight one or more rows and click the **Duplicate current row** button (<img src="https://www.dropbox.com/s/svqjl6uctcdx4in/Duplicate%20current%20row%20button.png?raw=1"/>) in the bottom toolbar. The duplicate rows appear below the rows in focus.
 
-To delete a row, click the row to set focus to it and click the **Delete current row** button (<img src="https://www.dropbox.com/s/vfhsu6etpzleo73/Delete%20current%20row%20button.png?raw=1"/>) in the bottom toolbar.
+To delete a row or rows, set highlight to the rows and click the **Delete current row** button (<img src="https://www.dropbox.com/s/vfhsu6etpzleo73/Delete%20current%20row%20button.png?raw=1"/>) in the bottom toolbar. The rows are colored red, which means that they are marked for deletion and will be deleted when you save the changes.
 
 To save any of such changes, click the **Save** button (<img src="https://www.dropbox.com/s/j3diu0m22x9wuof/Save%20button%20in%20Data%20tab.png?raw=1"/>) in the bottom toolbar. To discard the changes, click the **Cancel** button (<img src="https://www.dropbox.com/s/w34nc4noeyhm1at/Cancel%20button%20in%20Data%20tab.png?raw=1"/>) in the bottom toolbar.
 
