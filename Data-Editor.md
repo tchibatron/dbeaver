@@ -11,6 +11,18 @@ To learn how many rows the data table contains, click the **Calculate total row 
 
 To learn about ways to navigate data in the data table, see [Navigation](https://github.com/dbeaver/dbeaver/wiki/Navigation) article.
 
+The top toolbar contains the following buttons:
+
+Button|Name|Description
+------|----|-----------
+[[images/ug/Apply-filter-criteria-button.png]]|**Apply filter criteria**|Applies filter criteria entered in the filter field above the data table, see [Data Filters](https://github.com/dbeaver/dbeaver/wiki/Data-Filters) article
+[[images/ug/Remove-all-filters-orderings.png]]|**Remove all filters/orderings**|Removes all filters and orderings applied to the data
+[[images/ug/Save-filter-settings-for-current-object.png]]|**Save filter settings for current object**|Saves the current filter settings for the database object to apply next time when you reopen it in the editor, see details in [Data Filters](https://github.com/dbeaver/dbeaver/wiki/Data-Filters) article
+[[images/ug/Filter-button.png]]|**Custom Filters**|Opens the Result Set Order/Filter Settings window, see [Data Appearance](https://github.com/dbeaver/dbeaver/wiki/Data-Appearance) article for more information
+[[images/ug/Configure-auto-refresh.png]]|**Configure auto-refresh**|Allows configuring data auto-refresh settings, see [Data Refresh](https://github.com/dbeaver/dbeaver/wiki/Data-Refresh)article for details
+[[images/ug/History-navigation.png]]|Forward and backward -  history navigation buttons|Navigate forward and backward in the Data Editor history, see _History_ section of [Navigation](https://github.com/dbeaver/dbeaver/wiki/Navigation) article for more information. The buttons are equivalent to pressing the key combinations: <kbd>Alt+Left</kbd> (backward) and <kbd>Alt+right</kbd> (forward)
+
+
 Every cell in the data table has a context menu – right-click the cell to open the menu. The context menu provides the following items:
 
 Menu Item|Description
