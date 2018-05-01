@@ -15,7 +15,7 @@ The top toolbar contains the following buttons:
 
 Button|Name|Description
 ------|----|-----------
-[[images/ug/Apply-filter-criteria-button.png]]|**Apply filter criteria**|Applies filter criteria entered in the filter field above the data table, see [Data Filters](https://github.com/dbeaver/dbeaver/wiki/Data-Filters) article
+[[images/ug/Apply-filter-criteria-button.png]]|**Apply filter criteria**|Applies filter criteria entered in the filter field above the data table, see [Data Filters](https://github.com/dbeaver/dbeaver/wiki/Data-Filters) article for more information
 [[images/ug/Remove-all-filters-orderings.png]]|**Remove all filters/orderings**|Removes all filters and orderings applied to the data
 [[images/ug/Save-filter-settings-for-current-object.png]]|**Save filter settings for current object**|Saves the current filter settings for the database object to apply next time when you reopen it in the editor, see details in [Data Filters](https://github.com/dbeaver/dbeaver/wiki/Data-Filters) article
 [[images/ug/Filter-button.png]]|**Custom Filters**|Opens the Result Set Order/Filter Settings window, see [Data Appearance](https://github.com/dbeaver/dbeaver/wiki/Data-Appearance) article for more information
