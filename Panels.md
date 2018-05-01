@@ -1,4 +1,4 @@
-Panels provide additional space on the Data editor in which you can manipulate data. They are handy If you work with complex types (structures, arrays) or long text data or BLOBs. Panels appear as tabs in an additional pane in the right part of the Data tab. This additional pane appears only when you open one of the three panels:
+Panels provide additional space on the Data editor in which you can manipulate data. They are handy if you work with complex types (structures, arrays) or long text data or BLOBs. Panels appear as tabs in an additional pane in the right part of the Data tab. This additional pane appears only when you open one of the three panels:
 * Aggregate columns
 * Metadata
 * Value viewer (default)
