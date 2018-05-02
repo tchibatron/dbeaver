@@ -22,32 +22,38 @@ Another tool for managing data appearance are column headers. In the data table,
 
 ## Ordering Data in Columns
 You can order data in columns in one of the ways:
-1. Click the ordering icon  ([[images/ug/No-order.png]]) in the header of the column. The icon has three states:
+1. Click the ordering icon  ([[images/ug/No-order.png]]) in the header of the column.
+
+   [[images/ug/Column-headers.png]]  
+
+   The icon has three states:  
    * Clicking once establishes ascending order ([[images/ug/Order-ascending.png]]) 
    * Clicking a second time changes the order to descending ([[images/ug/Order-descending.png]])  
    * Clicking a third time removes the ordering from the column ([[images/ug/No-order.png]])  
 
 To order data by several columns, go column by column, setting the order with the Ordering icon, starting from the column by which you want to order data first.
   
-2. Click the Custom Filters icon (<img src="https://www.dropbox.com/s/c49v6wtsr4w7tin/Filter%20settings%20icon.png?raw=1"/>) to open the Result Set Order/Filter Settings window (see above):
+2. Click the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar to open the Result Set Order/Filter Settings window (see above):
 
    a) Next to the column by which you want to order data in the first turn, set the ascending or descending order using the same three-state principle as described above.  
    b) Set the ordering in other columns by which you want to sort data in the second, third, etc. turn. The **Order** column indicates the order in which the sorting will happen.  
    NOTE: The number (**#**) column indicates the initial order of columns.  
-   c) To easily move the ordering setting from column to column, you can use the Move up/down/to top/to bottom/ buttons: <img src="https://www.dropbox.com/s/vmn35r0pjv0pjde/Up-Down%20buttons.png?raw=1"/>   
+   c) To easily move the ordering setting from column to column, you can use the Move up/down/to top/to bottom/ buttons: [[images/ug/Move-up-down-buttons.png]]   
 
-To reset the data ordering to its initial state, click the Reset button (<img src="https://www.dropbox.com/s/djtedg8jjid1udm/Reset%20button.png?raw=1"/>).
+To reset the data ordering to its initial state, click the Reset button ([[images/ug/Reset-button.png]]) in the same window.
 
-Also, to remove all ordering settings, click the Remove All Filters/Orderings button (<img src="https://www.dropbox.com/s/vvqyaz3blha7wf2/Remove%20all%20filters%20button.png?raw=1"/>)
-in the top toolbar.
+Also, to remove all ordering settings, click the Remove All Filters/Orderings button ([[images/ug/Remove-all-filters-orderings.png]]) in the top toolbar.
 
 ## Managing Display of Columns in Data Table
 
-To hide a single column, right-click the column or any cell in it and click **Hide column** on the context menu. To unhide a hidden column, open the Result Set Order/Filter Settings window (see the image earlier in this section) and select the checkbox next to the column name or click the Reset button (<img src="https://www.dropbox.com/s/djtedg8jjid1udm/Reset%20button.png?raw=1"/>).
+To hide a single column, right-click the column or any cell in it and click **Hide column** on the context menu. To unhide a hidden column, open the Result Set Order/Filter Settings window (see the image at the beginning of in this article) and select the checkbox next to the column name or click the Reset button ([[images/ug/Reset-button.png]]).
 
 To display or hide columns in the data table, in the Result Set Order/Filter Settings window:
 1. Select the checkboxes next to the columns that you want to see in the table and clear the checkboxes next to those that you want to hide.
-2. Use the Show All (<img src="https://www.dropbox.com/s/6k7iamq60gdhyto/Show%20All%20button.png?raw=1"/>)  and Show None (<img src="https://www.dropbox.com/s/ffll7ftbdmdmy8v/Show%20None%20button.png?raw=1"/>) buttons at the bottom of the window.
+
+   [[images/ug/Unhide-columns.png]]  
+
+2. Use the Show All ([[images/ug/Show-all-button.png]])  and Show None ([[images/ug/Show-None-button.png]]) buttons at the bottom of the window.
 
 ## Sorting Columns in Data Table
 
