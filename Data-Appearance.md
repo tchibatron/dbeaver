@@ -42,7 +42,7 @@ To order data by several columns, go column by column, setting the order with th
 
 To reset the data ordering to its initial state, click the Reset button ([[images/ug/Reset-button.png]]) in the same window.
 
-Also, to remove all ordering settings, click the Remove All Filters/Orderings button ([[images/ug/Remove-all-filters-orderings.png]]) in the top toolbar.
+Also, to remove all ordering settings, click the Remove All Filters/Orderings button ([[images/ug/Remove-all-filters-orderings.png]]) in the top toolbar of the Data Editor.
 
 ## Managing Display of Columns in Data Table
 
