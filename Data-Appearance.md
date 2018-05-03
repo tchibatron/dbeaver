@@ -2,9 +2,9 @@ The main tool for managing the appearance of the data table is the Result Set Or
 
 [[images/ug/Result-Set-Settings-window.png]]
 
-To open this window, click the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar or click the Configure button ([[images/ug/Configure-columns-visibility-icon.png]]) and then click **Order/Filter** on the dropdown menu.
+To open this window, click the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar of the editor or click the Configure button ([[images/ug/Configure-columns-visibility-icon.png]]) and then click **Order/Filter** on the dropdown menu.
 
-This window provides instruments to:
+The Result Set Order/Filter Settingswindow provides tools to:
 * Order data inside columns
 * Manage the display of columns in the table
 * Manage the order of columns in the table
@@ -33,11 +33,12 @@ You can order data in columns in one of the ways:
 
 To order data by several columns, go column by column, setting the order with the Ordering icon, starting from the column by which you want to order data first.
   
-2. Click the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar to open the Result Set Order/Filter Settings window (see above):
+2. Click the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar of the editor to open the Result Set Order/Filter Settings window (see above):
 
    a) Next to the column by which you want to order data in the first turn, set the ascending or descending order using the same three-state principle as described above.  
    b) Set the ordering in other columns by which you want to sort data in the second, third, etc. turn. The **Order** column indicates the order in which the sorting will happen.  
    NOTE: The number (**#**) column indicates the initial order of columns.  
+   [[images/ug/Sorting-ordering-columns.png]]  
    c) To easily move the ordering setting from column to column, you can use the Move up/down/to top/to bottom/ buttons: [[images/ug/Move-up-down-buttons.png]]   
 
 To reset the data ordering to its initial state, click the Reset button ([[images/ug/Reset-button.png]]) in the same window.
@@ -59,20 +60,20 @@ To display or hide columns in the data table, in the Result Set Order/Filter Set
 
 You can modify the order of columns in the data table in two ways:
 1.	Click the icon in the column header and drag-and-drop the column to a new position.
-2.	To sort column alphabetically, in the Result Set Order/Filter Settings window, click the Sort button (<img src="https://www.dropbox.com/s/4p154wspfs60pwv/Sort%20button.png?raw=1"/>)
-3.	In the Result Set Order/Filter Settings window, click the column to set focus to it and then move it using the navigation buttons: (<img src="https://www.dropbox.com/s/vmn35r0pjv0pjde/Up-Down%20buttons.png?raw=1"/>)
+2.	To sort column alphabetically, in the Result Set Order/Filter Settings window (open by clicking the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar of the editor), click the Sort button ([[images/ug/Sort-button.png]])
+3.	In the Result Set Order/Filter Settings window, click the column to set focus to it and then move it using the navigation buttons: ([[images/ug/Move-up-down-buttons.png]])
 
 ## Data Presentation
 
 You can switch between two data presentations in SE version and four presentations in EE version. Pressing <kbd>CTRL+~</kbd> switches available presentations in turn.
-* To see data in a grid view, similar to Excel spreadsheet, click the **Grid** button in the bottom toolbar.
-* To switch to the plain text view, click **Text** in the bottom toolbar.
+* To see data in a grid view, similar to Excel spreadsheet, click the **Grid** button ([[images/ug/Grid-button.png]]) in the bottom toolbar of the editor.
+* To switch to the plain text view, click **Text** ([[images/ug/Text-button.png]]) in the bottom toolbar.
 * To switch to JSON view (available in EE version only for MongoDB documents and JSON tables), click **JSON** in the toolbar.
 * To switch to XML view (available in EE version only for XML tables), click **XML** in the toolbar.
 
 ## Table vs. Record Views
 
-The table view is a standard table (Excel-like) in which columns are vertical and rows are horizontal. This view is the default one. If you click the **Record** button in the bottom toolbar or press <kbd>Tab</kbd>, the rows and columns switch positions – columns appear as rows, and rows hide in one **Value** column which now shows only one row of data.  The Record view is useful if the table contains a big number of columns. To navigate from row to row of data, use the navigation buttons in the bottom toolbar: <img src="https://www.dropbox.com/s/hng62ypf43elz5s/Navigation%20buttons.png?raw=1"/>
+The table view is a standard table (Excel-like) in which columns are vertical and rows are horizontal. This view is the default one. If you click the **Record** button in the bottom toolbar of the editor ([[images/ug/Record-button.png]]) or press <kbd>Tab</kbd>, the rows and columns switch positions – columns appear as rows, and rows hide in one **Value** column which now shows only one row of data.  The Record view is useful if the table contains a big number of columns. To navigate from row to row of data, use the navigation buttons in the bottom toolbar of the editor: [[images/ug/Navigation-buttons.png]]
 
 To return back to the standard table view, click the **Record** button again.
 
