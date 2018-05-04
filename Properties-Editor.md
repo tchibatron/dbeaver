@@ -29,8 +29,8 @@ The toolbar of the DDL and Source tabs provides the following tools:
 Button|Name|Description
 ------|----|-----------
 <img src="https://www.dropbox.com/s/9eobh6afyqdj4c5/Load%20from%20file%20icon.png?raw=1"/>|Load form file|- Allows selecting a file from the file system<br/>- Disabled if the SQL code is read-only
-<img src="https://www.dropbox.com/s/n8kw5nreu19kwp6/Save%20to%20file%20icon.png?raw=1"/>|Save to file|Allows saving the current SQL code to a file
-<img src="https://www.dropbox.com/s/lsggyzs1acoq7iy/Open%20in%20SQL%20Console%20icon.png?raw=1"/>|Open in SQL console|Opens the SQL code in an SQL Editor
+[[images/ug/Save-to-file-icon.png]]|Save to file|Allows saving the current SQL code to a file
+[[images/ug/Open-in-SQL-console-button.png]]|Open in SQL console|Opens the SQL code in an SQL Editor
 
 You can select parts of the SQL code and apply generic commands such as copy-paste or SQL-specific commands like formatting – using the context menu. To open the context menu, right-click the SQL code. See [SQL Editor](https://github.com/serge-rider/dbeaver/wiki/SQL-Editor) for information about SQL-specific commands.
 
