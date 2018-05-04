@@ -8,6 +8,10 @@ You can apply ready-to-use SQL expressions or SQL expression templates via the c
 
 [[images/ug/Filters-menu.png]]
  
+The third way is to filter data by a cell value using the filter icon in the column header. To filter data this way, click the filter icon in the column header and then double-click the cell value in the Filter by column value dialog box:
+
+[[images/ug/Filter-via-column-header.png]]
+
 The data updates dynamically. To remove a filter, click the Remove All Filters/Orderings button ([[images/ug/Remove-all-filters-orderings.png]]) in the top toolbar of the editor.
 
 You can save the current filter settings for the database object to apply next time when you reopen it in the editor. To save the current filter settings, click the Save filter settings for current object button ([[images/ug/Save-filter-settings-for-current-object.png]]) in the top toolbar.
