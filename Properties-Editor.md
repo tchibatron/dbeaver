@@ -1,12 +1,16 @@
 The Properties tab of the [Database Object Editor](https://github.com/serge-rider/dbeaver/wiki/Database-Object-Editor) provides tools to view and edit the database object`s properties. 
 
-The content area of the Properties tab falls into two parts: the upper pane displays properties of the current database object itself while the lower pane contains properties of the object`s sub-entities or some complex properties like DDL (an SQL description of the current database object).
+The content area of the Properties tab falls into two parts: the top pane displays properties of the current database object itself while the bottom pane contains properties of the object`s sub-entities or some complex properties like DDL (an SQL description of the current database object).
 
-Properties of sub-entities appear in tabbed editors – to open such an editor, click the tabs on the left side of the area:
+Properties of sub-entities appear in side tabbed editors – to open such an editor, click the tabs on the left side of the area:
 
 [[images/ug/Properties-Editor-markup.png]]
 
-The toolbar at the bottom of a tabbed editor provides the following tools for the majority of sub-entities except for some specific ones like Permissions (in PostreSQL) or SQL based views (DDL and Source):
+The top pane can be wrapped to the **Information** side tab appearing together with sub-entity tabs on the left. To do so, click the Move properties to tab / Detach properties to top panel button ([[images/ug/Move-properties-button.png]]) in the toolbar:
+
+[[images/ug/Information-tab.png]]
+
+The toolbar at the bottom of the editor provides the following tools for the majority of sub-entities except for some specific ones like Permissions (in PostreSQL) or SQL based views (DDL and Source):
 
 Button|Name|Description
 ------|----|-----------
