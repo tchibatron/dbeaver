@@ -1,4 +1,8 @@
-Panels provide additional space on the Data editor in which you can manipulate with data. The panels are handy if you work with complex types (structures, arrays), or long text data, or BLOBs. Panels appear as tabs in an additional pane in the right part of the Data tab. This additional pane appears only when you open one of the three panels:
+Panels provide additional space on the Data editor in which you can manipulate with data. The panels are handy if you work with complex types (structures, arrays), or long text data, or BLOBs. Panels appear as tabs in an additional pane in the right part of the Data tab:
+
+[[images/ug/Panels.png]]
+
+This additional pane appears only when you open one of the three panels:
 * Aggregate columns
 * Metadata
 * Value viewer (default)
@@ -6,11 +10,12 @@ Panels provide additional space on the Data editor in which you can manipulate w
 To open panels, click **Panels** in the bottom toolbar. By default, the Value viewer panel opens. Alternatively, you can open the Value panel by pressing <kbd>F7</kbd> on a cell.
 To open the other two panels, click the down arrow next to the **Panels** button and click the name of the panel on the menu:
 
-<img src="https://www.dropbox.com/s/fkegrn16hs01h7o/Panels%20menu.png?raw=1"/>
+[[images/ug/Panels-menu.png]]
 
 Panels also open if you try to inline-edit a cell with a complex data type.
 
-To close panels, click the **Panels** button again or click the standard Close (cross) icon in the upper right corner of each panel.
+To close panels, click the **Panels** button again or click the standard Close (cross) icon in the upper right corner of each panel.  
+You can also show and hide panels by clicking the Configure button ([[images/ug/Configure-columns-visibility-icon.png]]) in the bottom toolbar and then **Toggle result panels** on the Configure dropdown menu.
 
 ## Value Viewer
 
