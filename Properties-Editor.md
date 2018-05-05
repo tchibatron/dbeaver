@@ -15,7 +15,7 @@ Button|Name|Description
 [[images/ug/Configure-columns-visibility-icon.png]]|Configure columns|Opens the Configure columns dialog box in which you can select the columns to display or hide in the current view
 [[images/ug/Refresh-projects-icon.png]]|Refresh the selected items|Depending on the database type, refreshes either the current item or its parent or the whole database object – reloading data from the database
 [[images/ug/View-Triggers-icon.png]]|View|Opens an editor/viewer for the item currently in focus
-[[images/ug/Create-project-icon.png]]|Create new [items]|Creates a new item of the same type as currently displayed in the open view, for example, a column
+[[images/ug/Create-DB-Object-button.png]]|Create new [items]|Creates a new item of the same type as currently displayed in the open view, for example, a column
 [[images/ug/Delete-DB-object.png]]|Delete database object|Deletes the item currently in focus
 [[images/ug/Save-button.png]]|Save the current contents|- Same as the **Save** button on the application main toolbar<br/>- Same as <kbd>Ctrl+S</kbd><br/>- Opens the **Persist Changes** window that allows saving changes in the currently open sub-entity<br/>NOTE: DBeaver recommends saving work after each change. 
 [[images/ug/Revert-button.png]]|Revert to the last saved state|Reverts all changes made to the whole database object to the last saved state 
