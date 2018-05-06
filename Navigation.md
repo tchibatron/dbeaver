@@ -30,3 +30,26 @@ DBeaver remembers the history of such actions as applying filters to data, openi
 * Click <kbd>Ctrl+Left</kbd> or <kbd>Ctrl+Right</kbd>  
 
 Hovering over these buttons displays the names of the tables or filtered views saved in the history. 
+
+## Navigation Links 
+In the data editor, you can navigate to linked tables – the ones that the current table references.
+To open a linked table, click the Navigate link icon in a cell that contains it:
+
+[[images/ug/Navigate-link-icon.png]]
+ 
+Another way is to right-click such a cell and click **Navigate -> Navigate link** on the context menu.
+The linked table opens in the same editor, filtered by the cell value:
+ 
+[[images/ug/Linked-table.png]]  
+NOTE: The table name in green above the table indicates which table is currently open in the editor.
+
+To navigate back and forth between the initial and linked tables, use the history navigation buttons ([[images/ug/History-navigation.png]]) in the top toolbar of the editor.  
+You can open a linked table in a separate editor. To do so, simultaneously hold the <kbd>Ctrl</kbd> key and click the Navigate link icon ([[images/ug/Navigate-link-icon2.png]]) in the cell.
+
+## Referencing Tables
+Referencing tables is the functionality opposite to navigation links (see _Navigation Links_ section above). You can navigate to referencing tables – those that reference the current table.  
+To open a referencing table, press <kbd>Ctrl+1</kbd> or right-click the cell and click **Navigate->Referencing tables->[table name]**:
+ 
+[[images/ug/Referencing-tables-menu.png]]
+
+The referencing table opens in the same editor. To navigate back and forth between the initial and referencing tables, use the history navigation buttons ([[images/ug/History-navigation.png]]) in the top toolbar of the editor.
