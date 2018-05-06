@@ -32,7 +32,7 @@ The toolbar of the DDL and Source tabs provides the following tools:
 
 Button|Name|Description
 ------|----|-----------
-<img src="https://www.dropbox.com/s/9eobh6afyqdj4c5/Load%20from%20file%20icon.png?raw=1"/>|Load form file|- Allows selecting a file from the file system<br/>- Disabled if the SQL code is read-only
+[[images/ug/Load-from-file-button.png]]|Load form file|- Allows selecting a file from the file system<br/>- Disabled if the SQL code is read-only
 [[images/ug/Save-to-file-icon.png]]|Save to file|Allows saving the current SQL code to a file
 [[images/ug/Open-in-SQL-console-button.png]]|Open in SQL console|Opens the SQL code in an SQL Editor
 
