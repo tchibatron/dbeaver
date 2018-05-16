@@ -55,7 +55,7 @@
   - [[Data transfer (export/import)]]
   - [[Data/metadata search]]
   - [[Database compare]]
-  - [[Mock Data Generation]]
+  - [[Mock Data Generation in DBeaver]]
 
 ##### Databases
 - SQL databases
