@@ -47,7 +47,7 @@ Also, to remove all ordering settings, click the Remove All Filters/Orderings bu
 
 ## Managing Display of Columns in Data Table
 
-To hide a single column, right-click the column or any cell in it and click **Hide column** on the context menu. To unhide a hidden column, open the Result Set Order/Filter Settings window (see the image at the beginning of in this article) and select the checkbox next to the column name or click the Reset button ([[images/ug/Reset-button.png]]).
+To hide a single column, right-click the column or any cell in it and click **View/Format -> Hide column** on the context menu. To unhide a hidden column, open the Result Set Order/Filter Settings window (see the image at the beginning of in this article) and select the checkbox next to the column name or click the Reset button ([[images/ug/Reset-button.png]]).
 
 To display or hide columns in the data table, in the Result Set Order/Filter Settings window:
 1. Select the checkboxes next to the columns that you want to see in the table and clear the checkboxes next to those that you want to hide.
