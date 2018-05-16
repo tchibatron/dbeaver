@@ -17,7 +17,6 @@
     - [[Panels]]
     - [[Data Search]]
     - [[View/Format]]
-    - [[Layout]]
     - [[SQL Generation]]
     - [[FK Navigation]]
     - [[Work with XML]]
