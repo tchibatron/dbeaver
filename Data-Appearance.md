@@ -84,7 +84,7 @@ In the data editor, you can color all rows that have the same value as a particu
 
 [[images/ug/Color_rows.png]]
 
-Then choose the color in the palette window that appears and click **OK**. The row changes its color to the one you selected:
+Then choose the color in the palette window that appears and click **OK**. The current row and all other rows that contain the same value change their color to the one you selected:
 
 [[images/ug/Colored_rows.png]]
 
