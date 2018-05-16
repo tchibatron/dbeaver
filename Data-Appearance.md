@@ -80,7 +80,7 @@ The Record view is useful if the table contains a big number of columns. To navi
 To return back to the standard table view, click the **Record** button again.
 
 ## Rows Coloring
-In the data editor, you can color all rows that have the same value as a particular cell of a certain column. To do so, right-click the cell and click **View/Format -> Color by <column name>** on the context menu:
+In the data editor, you can color all rows that have the same value as a particular cell of a certain column. To do so, right-click the cell and click **View/Format -> Color by {column name}** on the context menu:
 
 [[images/ug/Color_rows.png]]
 
@@ -88,4 +88,4 @@ Then choose the color in the palette window that appears and click **OK**. The r
 
 [[images/ug/Colored_rows.png]]
 
-To remove the coloring by a particular column, right-click the cell again and click **View/Format ->Reset color by <column name>** on the context menu. To remove coloring from all rows, right-click anywhere in the table and click **View/Format ->Reset all colors** on the context menu.
+To remove the coloring by a particular column, right-click the cell again and click **View/Format -> Reset color by [column name]** on the context menu. To remove coloring from all rows, right-click anywhere in the table and click **View/Format ->Reset all colors** on the context menu.
