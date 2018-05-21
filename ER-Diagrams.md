@@ -2,19 +2,19 @@ ER diagrams appear on the rightmost tab of the [Database Object Editor](https://
 
 [[images/ug/ER-Diagrams-Editor.png]]
 
-Entity Relation Diagrams (ERD) are graphic presentations of database entities and relations between them. DBeaver allows viewing diagrams of existing tables and whole database schemas, see [Database Structure Diagrams](https://github.com/serge-rider/dbeaver/wiki/Database-Structure-Diagrams), as well as create custom diagrams, see 
-[Custom Diagrams](https://github.com/serge-rider/dbeaver/wiki/Custom-Diagrams).
+Entity Relation Diagrams (ERD) are graphic presentations of database entities and relations between them. DBeaver allows viewing diagrams of existing tables and whole database schemas, see [Database Structure Diagrams](https://github.com/dbeaver/dbeaver/wiki/Database-Structure-Diagrams), as well as create custom diagrams, see
+[Custom Diagrams](https://github.com/dbeaver/dbeaver/wiki/Custom-Diagrams).
 
 Both types of diagrams provide the same tools to adjust their view and structure. They can be printed and exported to image file formats.
 
 ## Structure Adjustment
 NOTE: All changes to existing database schemas cannot be saved and are intended for exploration purposes only.  
 You can do the following structure changes in diagrams.
-*  Add new tables to a diagram by drag-n-dropping them onto the diagram field from the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator).
+*  Add new tables to a diagram by drag-n-dropping them onto the diagram field from the [Database Navigator](https://github.com/dbeaver/dbeaver/wiki/Database-Navigator).
 *  Rearrange tables in the diagram by dragging them all over the space. You can select several tables and drag them to a new location.
 *  Auto-arrange tables into a compact view after manual rearrangements: click the **Arrange Diagram** (<img src="https://www.dropbox.com/s/hh1xnkn22ow0tzf/Arrange%20diagram.png?raw=1"/>) in the toolbar or on the context menu (right-click anywhere on the diagram tab).
-*  (Available for [Custom Diagrams](https://github.com/serge-rider/dbeaver/wiki/Custom-Diagrams) only) - connect tables with a connector: click the **Show Palette** button (<img src="https://www.dropbox.com/s/xsypnsxths50o8v/Show%20Palette%20button.png?raw=1"/>) in the upper-left corner of the diagram tab and then, in the Palette panel, click **Connection**. Now click the tables that you want to connect with each other in turn one by one, and then to stop the connection line double-clicking the last table.
-*  (Available for [Custom Diagrams](https://github.com/serge-rider/dbeaver/wiki/Custom-Diagrams) only) - remove tables: right-click the table and click **Delete** on the context menu.
+*  (Available for [Custom Diagrams](https://github.com/dbeaver/dbeaver/wiki/Custom-Diagrams) only) - connect tables with a connector: click the **Show Palette** button (<img src="https://www.dropbox.com/s/xsypnsxths50o8v/Show%20Palette%20button.png?raw=1"/>) in the upper-left corner of the diagram tab and then, in the Palette panel, click **Connection**. Now click the tables that you want to connect with each other in turn one by one, and then to stop the connection line double-clicking the last table.
+*  (Available for [Custom Diagrams](https://github.com/dbeaver/dbeaver/wiki/Custom-Diagrams) only) - remove tables: right-click the table and click **Delete** on the context menu.
 
 ## View Adjustment
 You can adjust the view of any diagram in the following ways:
@@ -37,7 +37,7 @@ You can adjust the view of any diagram in the following ways:
 To see changes made to the database schema by other users, you might need to refresh the diagram: click **Refresh Diagram** (<img src="https://www.dropbox.com/s/t47ic11b7fxt36d/Refresh%20projects%20icon.png?raw=1"/>) in the toolbar.
 
 ## Notes Creation
-You can create notes only in [Custom Diagrams](https://github.com/serge-rider/dbeaver/wiki/Custom-Diagrams). To create a note, click the **Show Palette** button (<img src="https://www.dropbox.com/s/xsypnsxths50o8v/Show%20Palette%20button.png?raw=1"/>) in the upper-left corner of the diagram tab, then, in the Palette panel, click **Note** and then click anywhere in the diagram tab. Now you can double-click **Note** box to enter the note text.
+You can create notes only in [Custom Diagrams](https://github.com/dbeaver/dbeaver/wiki/Custom-Diagrams). To create a note, click the **Show Palette** button (<img src="https://www.dropbox.com/s/xsypnsxths50o8v/Show%20Palette%20button.png?raw=1"/>) in the upper-left corner of the diagram tab, then, in the Palette panel, click **Note** and then click anywhere in the diagram tab. Now you can double-click **Note** box to enter the note text.
 
 ## Search in Diagram Entities
 To search among entities of a diagram, click the **Search items** button (<img src="https://www.dropbox.com/s/ymgrvdc9rizdxmo/search%20icon.png?raw=1"/>) in the toolbar, then type in the search combination. The entities that contain the search combination are highlighted in the diagram.  

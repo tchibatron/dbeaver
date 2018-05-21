@@ -22,7 +22,7 @@ Then you will need to install a few additional Eclipse plugins which DBeaver dep
 [[images/eclipse-deps-install.png]]
 - Check all plugins and finish the installation process
 
-Now you need to checkout DBeaver repository with `git clone https://github.com/serge-rider/dbeaver.git` command.  
+Now you need to checkout DBeaver repository with `git clone https://github.com/dbeaver/dbeaver.git` command.
 In Eclipse create a new workspace and run Import wizard. Choose "General->Existing projects into Workspace".  
 Select DBeaver checkout directory as root a directory. Check all plugins and features Eclipse will find and finish the wizard.  
 

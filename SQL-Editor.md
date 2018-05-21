@@ -1,6 +1,6 @@
 You can create multiple SQL scripts for a single connection. Every script opens in its own SQL editor. 
 To open an SQL editor for some connection:
-* Click this connection in the [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator) view and press <kbd>F3</kbd> or click **SQL Editor -> SQL Editor** on the main menu. Alternatively, you click **SQL Editor** on the context menu of this connection. DBeaver opens the Choose SQL script window with saved SQL scripts linked to this connection. CLick the SQL script to open it in a separate tab.
+* Click this connection in the [Database Navigator](https://github.com/dbeaver/dbeaver/wiki/Database-Navigator) view and press <kbd>F3</kbd> or click **SQL Editor -> SQL Editor** on the main menu. Alternatively, you click **SQL Editor** on the context menu of this connection. DBeaver opens the Choose SQL script window with saved SQL scripts linked to this connection. CLick the SQL script to open it in a separate tab.
 * Click **Recent SQL Editor** on the context menu for this connection or on the main menu (**SQL Editor -> Recent SQL Editor**). This opens the latest used SQL editor. You can also open the most recent SQL editor using <kbd>Ctrl+Enter</kbd> shortcut in the Database Navigator view.
 * If you need to create a new SQL script, on the main menu, click **SQL Editor -> New SQL Editor** or press <kbd>F3</kbd> and then click **New Script** in the Choose SQL Script window.
 
@@ -8,14 +8,14 @@ DBeaver uses SQL syntax highlighting which depends on the database associated wi
 
 NOTE: SQL Editor for a connection is different from SQL console for a table or view (right-click the table and click **Read data in SQL console**) in that, unlike the console, it can save scripts and changes to them.
 
-You can see all your saved SQL scripts in the [Project Explorer](https://github.com/serge-rider/dbeaver/wiki/Project-Explorer) view in the **Scripts** folder.
+You can see all your saved SQL scripts in the [Project Explorer](https://github.com/dbeaver/dbeaver/wiki/Project-Explorer) view in the **Scripts** folder.
 
 The SQL editor includes the script pane at the top and results pane at the bottom:
 
 <img src="https://www.dropbox.com/s/3ayxw9jpyr0cmqk/SQL%20Editor.png?raw=1"/>
 
 ## Results Pane
-The results pane displays tabs with results in various formats. The tabs resulting from script execution represent instances of the [Data Editor](https://github.com/serge-rider/dbeaver/wiki/Data-Editor). You can create, edit and execute SQL scripts in the script pane and then see the results in the result tabs. 
+The results pane displays tabs with results in various formats. The tabs resulting from script execution represent instances of the [Data Editor](https://github.com/dbeaver/dbeaver/wiki/Data-Editor). You can create, edit and execute SQL scripts in the script pane and then see the results in the result tabs.
 * To toggle (hide/show) the results pane, press <kbd>F6</kbd>.
 * To maximize the results pane, press <kbd>Shift+F6</kbd> or double-click the results tab name.
 * To switch between the script pane and the results pane, press <kbd>Alt+F6</kbd>.

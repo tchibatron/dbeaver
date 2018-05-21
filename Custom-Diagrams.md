@@ -10,10 +10,10 @@ You can create a custom diagram in one of the ways:
    
    Then specify the diagram name and (optionally) choose initial diagram contents (set of tables).
 
-2. In the [Project Explorer](https://github.com/serge-rider/dbeaver/wiki/Project-Explorer) view, right-click the **ER Diagrams** node and then click **Create New ER Diagram** on the context menu. Then in the new diagram wizard, specify the diagram name and (optionally) choose initial diagram contents (set of tables).
+2. In the [Project Explorer](https://github.com/dbeaver/dbeaver/wiki/Project-Explorer) view, right-click the **ER Diagrams** node and then click **Create New ER Diagram** on the context menu. Then in the new diagram wizard, specify the diagram name and (optionally) choose initial diagram contents (set of tables).
 
 The new diagram appears in a separate window or tab. Now you can drag-n-drop any number of tables into it. You can add tables from different connections and even different database type (for example, combine Oracle and MySQL tables in one and the same diagram).
 
-Also you can add notes and custom relations (associations) using the ERD palette on the left side of diagram tab, see details in [ER Diagrams](https://github.com/serge-rider/dbeaver/wiki/ER-Diagrams) article.
+Also you can add notes and custom relations (associations) using the ERD palette on the left side of diagram tab, see details in [ER Diagrams](https://github.com/dbeaver/dbeaver/wiki/ER-Diagrams) article.
 
 Undo/redo functions are fully supported during diagram editing.

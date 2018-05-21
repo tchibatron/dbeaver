@@ -1,5 +1,5 @@
 Views are windows within the workspace that provide presentations and ways to navigate the information.
-The main views in DBeaver are: [Database Navigator](https://github.com/serge-rider/dbeaver/wiki/Database-Navigator), [Projects](https://github.com/serge-rider/dbeaver/wiki/Projects) and [Project Explorer](https://github.com/serge-rider/dbeaver/wiki/Project-Explorer).
+The main views in DBeaver are: [Database Navigator](https://github.com/dbeaver/dbeaver/wiki/Database-Navigator), [Projects](https://github.com/dbeaver/dbeaver/wiki/Projects) and [Project Explorer](https://github.com/dbeaver/dbeaver/wiki/Project-Explorer).
 
 To open a view:
 * On the Window menu, click **Show View** and then, on the submenu, click the name of the view. Click **Other** if the view is not visible on the submenu.
