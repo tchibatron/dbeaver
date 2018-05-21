@@ -24,7 +24,7 @@ This extension supports data export in Office formats (XLS). IT works for all pl
 It is included in EE version.  
 
 Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-office-integration  
-P2 repository URL: https://dbeaver.jkiss.org/update/office/latest/
+P2 repository URL: https://dbeaver.io/update/office/latest/
 
   [[images/office-open-excel.png]]
 
@@ -34,7 +34,7 @@ This extension supports SQL debugger in PostgreSQL.
 It is included in EE version.  
 
 Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-sql-debugger
-P2 repository URL: https://dbeaver.jkiss.org/update/debug/latest/
+P2 repository URL: https://dbeaver.io/update/debug/latest/
 
 ### SVG format support
 
@@ -42,13 +42,13 @@ This extension supports ERD export in SVG (vector) format.
 It is included in EE version.  
 
 Marketplace URL: https://marketplace.eclipse.org/content/dbeaver-svg-support  
-P2 repository URL: https://dbeaver.jkiss.org/update/svg/latest/
+P2 repository URL: https://dbeaver.io/update/svg/latest/
 
 ### Advanced SSH tunnel libraries
 
 Needed to support more key formats (e.g. ed25519).  
 
-P2 repository URL: https://dbeaver.jkiss.org/update/sshj/latest/
+P2 repository URL: https://dbeaver.io/update/sshj/latest/
 
 ### Git integration
 

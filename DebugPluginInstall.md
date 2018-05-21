@@ -11,7 +11,7 @@ In order to use interactive debugging of PL/SQL procedures in DBeaver you have t
 **Step 2.** You can see "Install new software" dialog :
 [[/images/install_debug/Install_dialog.png|]]
 
-**Step 3.** Now press add button in "Install new software" dialog and add name (for example "Dbeaver Debug") and P2 URL from Jkiss.org (https://dbeaver.jkiss.org/update/debug/latest/), press "OK" button when finished:
+**Step 3.** Now press add button in "Install new software" dialog and add name (for example "Dbeaver Debug") and P2 URL from Jkiss.org (https://dbeaver.io/update/debug/latest/), press "OK" button when finished:
 [[/images/install_debug/Install_dialog_add.png|]]
 
 **Step 4.** After platform finished downloading package from JKiss.org "Install" window will appear, click Next:
