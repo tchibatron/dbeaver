@@ -33,6 +33,7 @@
 - [[Filters]]
   - [[Filter Database Objects]]
   - [[Configure Filters]]
+- [[Search]]
 
 #### Database Management
 - [[Database Connections]]
