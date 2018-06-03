@@ -57,12 +57,12 @@ Pressing <kbd>Ctrl+V</kbd> on a cell pastes the copied content into the cell app
 To be able to persist column value changes, a table must have some unique key (primary key or unique index). Some databases (Oracle, DB2, PostgreSQL) support a special virtual unique column that DBeaver can use to save changes. In other cases, you can define a virtual key – a set of columns that forms a unique combination of values.
 When you try to save changes in a table without a unique key, DBeaver displays the following error message:
 
-<img src="https://www.dropbox.com/s/v07c0xv99f38g6n/Unique%20key%20error.png?raw=1"/>
+[[images/ug/Virtual-key-warning.png]]
 
 To use all columns as the virtual key, click **Use All Columns**.
-To create a custom key, click **Custom Unique Key**. Alternatively, to create a custom unique key, you can click the **Configure** (<img src="https://www.dropbox.com/s/iebvq6vomzwqls4/Configure%20button.png?raw=1"/>) button in the bottom toolbar and then click **Define virtual unique key** on the Configure menu. The Define virtual unique identifier window opens:
+To create a custom key, click **Custom Unique Key**. Alternatively, to create a custom unique key, you can click the **Configure** ([[images/ug/Configure-columns-visibility-icon.png]]) button in the bottom toolbar and then click **Define virtual unique key** on the Configure menu. The Define virtual unique identifier window opens:
 
-<img src="https://www.dropbox.com/s/b44r4ygk7zf1tbz/Define%20virtual%20unique%20identifier%20dialog.png?raw=1"/>
+[[images/ug/Define-virtual-key.png]]
  
 To define the key, select some of the columns or click **Select All** and then click **OK**.
 To remove a unique key from a table, click the **Configure** button in the bottom toolbar and then click **Clear virtual unique key**.
