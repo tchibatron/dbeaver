@@ -88,4 +88,15 @@ Then choose the color in the palette window that appears and click **OK**. The c
 
 [[images/ug/Colored_rows.png]]
 
-To remove the coloring by a particular column, right-click the cell again and click **View/Format -> Reset color by [column name]** on the context menu. To remove coloring from all rows, right-click anywhere in the table and click **View/Format ->Reset all colors** on the context menu.
+To remove the coloring by a particular column, right-click the cell again and click **View/Format -> Reset color by [column name]** on the context menu. To remove coloring from all rows, right-click anywhere in the table and, on the context menu, click **View/Format -> Reset all colors**.
+
+## Coloring by Data Types
+Besides coloring rows by a value, you can colorize values in columns by data types. To do so, right-click any cell in the table and, on the context menu, click **View/Format -> Colorize Data Types**. Values in cells are colored in different colors according to preferences currently set:
+
+[[images/ug/Colored-Data-Types.png]]
+
+You can change the color preferences in the Preferences window: click **Window -> Preferences** on the main menu. Then, in the window, in the navigation pane on the left, expand **General** and then **Appearance**, and then click **Colors and Fonts**:
+
+[[images/ug/Color-Preferences.png]]
+
+To remove coloring by data types, on the context menu, click **View/Format -> Colorize Data Types** again.
