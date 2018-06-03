@@ -62,6 +62,8 @@ Mock Data generators for data types with their configurable parameters:
 * NULL values
 * FK - data from the referenced table according to the constraint
 
+[[/images/mockdata_template.png]]
+
 [[/images/mockdata_progress.png]]
 
 ***
