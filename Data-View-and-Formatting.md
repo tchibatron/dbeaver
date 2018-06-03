@@ -101,7 +101,7 @@ You can change the color preferences in the Preferences window: click **Window -
 
 To remove coloring by data types, on the context menu, click **View/Format -> Colorize Data Types** again.
 
-## Transformation of Data Presentation
+## Transforming Data Presentation
 For string and numeric data types, DBeaver provides tools to transform the data presentation into a number of formats, such as URL and Binary for strings and Epoch Time, Number Radix, etc. for numbers. To change the data presentation in a certain column, right-click a cell in the column, then, on the context menu, click **View/Format -> View as** and then click the presentation type name:
 
 [[images/ug/View-as.png]]
@@ -121,3 +121,12 @@ For complex data types (that themselves represent a structure), such as objects,
 [[images/ug/Structurize.png]]
 
 To do so, right-click a cell in the column and, on the context menu, click **View/Format -> Structurize complex types**.
+
+## Configuring Numeric and Time Data Formats
+You can specify the exact format of Time, Timestamp, Date, and Number data used in the currently open database or globally. To specify a format, right-click any cell in the table and, on the context menu, click **View/Format -> Data formats**. The Properties window opens displaying the **Data Formats** page:
+
+[[images/ug/Data-format-properties.png]]
+
+To configure the format for the current database only, select the **Datasource "[Connection name]" settings** checkbox. To configure the settings globally, to all databases that you have in DBeaver, click **Global settings**.  
+You can specify the locale for the data format in the **Locale** area, then, in the **Type** dropdown list, click the name of the data type and then, in the **Settings** table, click the required format.  
+To apply the changes and make them visible in the table, click **Apply and Close** and then refresh the window (<kbd>F5</kbd>).
