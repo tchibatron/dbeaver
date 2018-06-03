@@ -18,7 +18,6 @@
     - [[Data Search]]
     - [[View/Format]]
     - [[SQL Generation]]
-    - [[FK Navigation]]
     - [[Work with XML]]
   - [[ER Diagrams]]
     - [[Database Structure Diagrams]]

@@ -49,8 +49,20 @@ Mock Data generators for data types with their configurable parameters:
         * Phone Number preset <sup>*</sup>
         * Postal Code preset <sup>*</sup>
         * Price preset <sup>*</sup>
+    * Template with parametrized directives for other generators <sup>*</sup>:
+        * address() - US postal address,
+        * city() - one of the world largest cities,
+        * country() - country,
+        * domain() - one of the top Internet domains,
+        * email(gender,surname) - e-mail address (gender is ALL|FEMALE|MALE, surname is true|false),
+        * name(gender,surname) - personal name (gender is ALL|FEMALE|MALE, surname is true|false),
+        * random(minimum,maximum) - random integer,
+        * regex(pattern) - regex based value for the pattern,
+        * sequence(start,step) - sequence of integers.
 * NULL values
 * FK - data from the referenced table according to the constraint
+
+[[/images/mockdata_template.png]]
 
 [[/images/mockdata_progress.png]]
 
