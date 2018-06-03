@@ -10,7 +10,7 @@
   - [[Properties Editor]]
   - [[Data Editor]]
     - [[Navigation]]
-    - [[Data View and Formatting]]
+    - [[Data View and Format]]
     - [[Data Filters]]
     - [[Data Refresh]]
     - [[Data Viewing and Editing]]
