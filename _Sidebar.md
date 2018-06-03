@@ -16,7 +16,6 @@
     - [[Data Viewing and Editing]]
     - [[Panels]]
     - [[Data Search]]
-    - [[View/Format]]
     - [[SQL Generation]]
     - [[Work with XML]]
   - [[ER Diagrams]]

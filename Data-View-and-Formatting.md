@@ -63,7 +63,7 @@ You can modify the order of columns in the data table in two ways:
 2.	To sort column alphabetically, in the Result Set Order/Filter Settings window (open by clicking the Custom Filters button ([[images/ug/Filter-button.png]]) in the top toolbar of the editor), click the Sort button ([[images/ug/Sort-button.png]])
 3.	In the Result Set Order/Filter Settings window, click the column to set focus to it and then move it using the navigation buttons: ([[images/ug/Move-up-down-buttons.png]])
 
-## Data Presentation
+## Grid vs. Plain Text Views
 
 You can switch between two data presentations in SE version and four presentations in EE version. Pressing <kbd>CTRL+~</kbd> switches available presentations in turn.
 * To see data in a grid view, similar to Excel spreadsheet, click the **Grid** button ([[images/ug/Grid-button.png]]) in the bottom toolbar of the editor.
@@ -100,3 +100,17 @@ You can change the color preferences in the Preferences window: click **Window -
 [[images/ug/Color-Preferences.png]]
 
 To remove coloring by data types, on the context menu, click **View/Format -> Colorize Data Types** again.
+
+## Transformation of Data Presentation
+For string and numeric data types, DBeaver provides tools to transform the data presentation into a number of formats, such as URL and Binary for strings and Epoch Time, Number Radix, etc. for numbers. To change the data presentation in a certain column, right-click a cell in the column, then, on the context menu, click **View/Format -> View as** and then click the presentation type name:
+
+[[images/ug/View-as.png]]
+
+The Transformer settings window opens showing the value in the chosen format. Click **OK** to apply the change:
+
+[[images/ug/Transformer-settings-window.png]]
+
+The values in the column appear in the new format.  
+NOTE: For URL format, the resulting cell provides a link to the URL in a browser window. 
+
+To roll back the changes to the default format, right-click any cell in the column, and on the context menu, click **View/Format -> View as -> Default**.
