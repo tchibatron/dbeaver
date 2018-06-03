@@ -2,8 +2,9 @@ Panels provide additional space on the Data editor in which you can manipulate w
 
 [[images/ug/Panels.png]]
 
-This additional pane appears only when you open one of the three panels:
-* Aggregate columns
+This additional pane appears only when you open one of the four panels:
+* Calc
+* Grouping
 * Metadata
 * Value viewer (default)
 
@@ -32,9 +33,9 @@ The Metadata panel displays metadata for each cell in the row containing the cel
 
 [[images/ug/Metadata-panel.png]]
 
-## Aggregate Panel
+## Calc Panel
 
-The Aggregate panel is useful for getting basic statistics across data in several columns and rows:
+The Calc panel is useful for getting basic statistics across data in several columns and rows:
 
 [[images/ug/Aggregate-panel.png]]
 
@@ -51,3 +52,6 @@ By default, the panel applies and displays results for two functions – **Count
 * Mode
 
 To remove an individual function, click the function and then click **Remove function** ([[images/ug/Remove-function-button.png]]) in the toolbar of the panel, or right-click the function and click **Remove function** on the context menu. To remove all functions, click **Reset** ([[images/ug/Reset-function-button.png]]) in the toolbar or on the context menu.
+
+You can copy the value of a particular function to the clipboard - right-click the row and click **Copy Value** on the context menu.  
+You can also copy all functions with their values - right-click in the table and click **Copy All** on the context menu. 
