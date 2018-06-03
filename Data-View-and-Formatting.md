@@ -114,3 +114,10 @@ The values in the column appear in the new format.
 NOTE: For URL format, the resulting cell provides a link to the URL in a browser window. 
 
 To roll back the changes to the default format, right-click any cell in the column, and on the context menu, click **View/Format -> View as -> Default**.
+
+## Structurizing Complex Data Types
+For complex data types (that themselves represent a structure), such as objects, structures and arrays, DBeaver provides a tool for breaking them into columns:
+
+[[images/ug/Structurize.png]]
+
+To do so, right-click a cell in the column and, on the context menu, click **View/Format -> Structurize complex types**.
