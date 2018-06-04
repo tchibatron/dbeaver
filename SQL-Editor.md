@@ -16,9 +16,9 @@ The SQL editor includes the script pane at the top and results pane at the botto
 
 ## Results Pane
 The results pane displays tabs with results in various formats. The tabs resulting from script execution represent instances of the [Data Editor](https://github.com/dbeaver/dbeaver/wiki/Data-Editor). You can create, edit and execute SQL scripts in the script pane and then see the results in the result tabs.
-* To toggle (hide/show) the results pane, press <kbd>F6</kbd>.
-* To maximize the results pane, press <kbd>Shift+F6</kbd> or double-click the results tab name.
-* To switch between the script pane and the results pane, press <kbd>Alt+F6</kbd>.
+* To toggle (hide/show) the results pane, press <kbd>CTRL+6</kbd>.
+* To maximize the results pane, press <kbd>CTRL+Shift+6</kbd> or double-click the results tab name.
+* To switch between the script pane and the results pane, press <kbd>Alt+6</kbd>.
 
 The results pane provides **Output** and **Log** views of results.
 
