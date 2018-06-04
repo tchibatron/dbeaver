@@ -55,3 +55,11 @@ To remove an individual function, click the function and then click **Remove fun
 
 You can copy the value of a particular function to the clipboard - right-click the row and click **Copy Value** on the context menu.  
 You can also copy all functions with their values - right-click in the table and click **Copy All** on the context menu. 
+
+## Grouping Panel
+
+It allows to calculate statistics based on a table of custom SQL query.
+It uses GROUP BY queries to extract values for COUNT, SUM, AVG, MIN, MAX and other analytics functions.
+
+Open the panel and drag-n-drop results column(s) into it. By default COUNT function will be used.
+
