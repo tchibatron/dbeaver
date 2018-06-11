@@ -9,9 +9,10 @@ EE version includes all features of CE version plus:
   - WMI (Windows Management Instrumentation)
 - Additional EE plugins:
   - Office formats support (XLS) for data export
-  - Persistent Query Manager database (allows tracking all your SQL)
+  - Persistent query database. Search in query history
   - JSON format viewer/editor (in MongoDB and relational databases)
   - Eclipse Marketplace (provides easily installation of any additional Eclipse plugins)
+  - Advanced Mock data generators
   - Version control support
 - A possibility for us to support and develop the Community version, add new features faster, provide better support and much more.
 
