@@ -51,7 +51,6 @@
 - [[Optional extensions - Office, Debugger, Git, SVG, SSH|Optional extensions]]
 - Miscellaneous
   - [[Data transfer (export/import)]]
-  - [[Data/metadata search]]
   - [[Database compare]]
   - [[Mock Data Generation in DBeaver]]
 
