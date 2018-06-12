@@ -2,7 +2,7 @@ Templates allow you to insert frequently used SQL statements into an SQL script.
 
 To see available templates, press <kbd>Ctrl+Alt+SPACE</kbd> or right-click the line in the script pane and click **SQL Template** on the context menu. A box appears with a list of available templates:
 
-<img src="https://www.dropbox.com/s/k0lvcfrnjcyfxg4/Available%20templates.png?raw=1"/>
+[[images/ug/Available-templates.png]]
 
 To apply a template, in the SQL Editor, in the script pane:
 * Type the template name and press <kbd>Tab</kbd>
