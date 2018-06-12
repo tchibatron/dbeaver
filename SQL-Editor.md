@@ -62,9 +62,3 @@ You can easily associate the SQL Editor with the connection that is currently in
 The reverse action is also possible: you can set the focus of the Database Navigator to the active connection of the SQL Editor - press <kbd>Ctrl+Shift+,</kbd> or click the arrow next to the **Set connection from navigator** button in DBeaver`s main toolbar and then click **Link with editor**:
 
 [[images/ug/Link-with-Editor-from SQLEditor.png]]
-
-## Transactions Management
-You can toggle auto-commit mode and transactions isolation level on the **Database** menu or in the main toolbar:
-
-<img src="https://www.dropbox.com/s/1eft5yt0c7uxfqr/Commit%20menu.png?raw=1"/> 
-
