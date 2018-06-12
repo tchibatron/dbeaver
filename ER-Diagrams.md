@@ -17,7 +17,7 @@ You can do the following structure changes in diagrams.
 
    [[images/ug/ERD-Connections.png]]  
    Now click the tables that you want to connect with each other in turn one by one, and then to stop the connection line double-clicking the last table.  
-*  (Available for [Custom Diagrams](https://github.com/dbeaver/dbeaver/wiki/Custom-Diagrams) only) - remove tables: right-click the table and click **Delete** on the context menu.
+*  (Available for [Custom Diagrams](https://github.com/dbeaver/dbeaver/wiki/Custom-Diagrams) only) - remove tables and connections: right-click the table or conection and click **Delete** on the context menu or just click the table or connection and press <kbd>Delete</kbd>.
 
 ## View Adjustment
 You can adjust the view of any diagram in the following ways:
