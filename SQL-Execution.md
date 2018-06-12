@@ -1,13 +1,13 @@
-You can execute one query, a highlighted portion of a script, or a whole script.  This can be accomplished in several ways:
-* Using a shortcut key combination
-* Using tools in the main toolbar: <img src="https://www.dropbox.com/s/qtahw2wgz5rmnkw/Execute%20commands%20in%20the%20toolbar.png?raw=1"/>
-* Using the context menu (right-click the query):
+You can execute one query, a highlighted portion of a script, or a whole script. You can execute them using:
+* Shortcut key combinations (see details further in this article)
+* Tools in the main toolbar: [[images/ug/Execute-buttons.png]]
+* Context menu (right-click the query):
 
-  <img src="https://www.dropbox.com/s/tjmnteriqnc23c7/Execute%20menu.png?raw=1"/>  
+  [[images/ug/execute-context-menu.png]]
 
-* Using the main menu:
+* DBeaver main menu:
  
-  <img src="https://www.dropbox.com/s/v2w72bpnak9wyej/Execute%20on%20main%20menu.png?raw=1"/>  
+  [[images/ug/Execute-main-menu.png]]  
 
 To execute a query under cursor or selected text, press <kbd>Ctrl+Enter</kbd> or right-click the query and click **Execute -> Execute SQL Statement** on the context menu. You can do the same using the main toolbar or main menu: **SQL Editor -> Execute SQL Statement**. This executes the SQL query under cursor or selected text and fills the results pane with the query results.
 
@@ -28,18 +28,21 @@ You can also use anonymous parameters (?), but you will need to enable them in S
 
 ## Execution Plan
 
-If a database driver supports execution plan visualization, you can see the execution plan of the current query (under cursor) by pressing <kbd>Ctrl+Shift+E</kbd> or clicking **Explain execution plan** on the context menu or in the main toolbar: <img src="https://www.dropbox.com/s/dug8beiaot1r6n4/Explain%20execution%20plan.png?raw=1"/>  
-The execution plan command generates a tree of query execution and is convenient in estimating if the query/script is quick/optimal enough. 
-
-The result is an execution plan tree that appears as one of the result tabs:
+If a database driver supports execution plan visualization, you can see the execution plan of the current query (under cursor) by pressing <kbd>Ctrl+Shift+E</kbd> or clicking **Explain execution plan** on the context menu or in the main toolbar: [[images/ug/Exec-plan.png]]  
+The execution plan command generates a tree of query execution as one of the result tabs and is convenient in estimating if the query/script is quick/optimal enough: 
 
 <img src="https://www.dropbox.com/s/pvep9egs9mefd5t/Execution%20plan%20result.png?raw=1"/>
 
 You can click the rows of the execution plan to see their details in the panels below and to the right of the plan.
 
-
 ## Exporting Query
-You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu. This feature is useful if you have some very long-running query and you do not need to see its results in the results panel.  
+It might be useful to export a query if you have a very long-running query and you do not need to see its results in the results panel. You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu:
+
+[[images/ug/Export-from-Query.png]] 
+
+The Data transfer wizard opens. Go through its steps to complete the export of the query.
+
+[[images/ug/Data-transfer-window.png]]
 
 ## Miscellaneous
 * To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
