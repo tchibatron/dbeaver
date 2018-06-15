@@ -30,7 +30,7 @@
   - [Client Side Commands](Client-side-scripting)
   - Debug
     - [PostgreSQL Debugger](PGDebugger)
-- [[Filters]]
+- Filters
   - [[Filter Database Objects]]
   - [[Configure Filters]]
 - [[Search]]
