@@ -30,3 +30,4 @@ Menu item|Description
 **Filters**|Opens Search Filters dialog box that allows setting the maximum number of top level elements in the tree of results
 **Preferences**|Opens the Preferences window on the Search page
 
+Double-clicking a results row opens it in a separate viewer.
