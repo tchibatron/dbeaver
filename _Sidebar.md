@@ -34,6 +34,9 @@
   - [[Filter Database Objects]]
   - [[Configure Filters]]
 - [[Search]]
+  - [[File Search]]
+  - [[DB Full-Text Search]]
+  - [[DB Metadata Search]]
 
 #### Database Management
 - [[Database Connections]]
