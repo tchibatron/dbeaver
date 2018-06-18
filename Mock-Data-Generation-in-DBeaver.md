@@ -1,22 +1,22 @@
-Sometimes in software development we need to generate mock, but valid, data for testing. Filling in the database by hand is a time-consuming and exhausting process. It can be very complicated when you need to generate not just 5–10 users, but thousands of entities of different types. DBeaver Mock Data generator helps you generate test data much easier.
+Sometimes in software development we need to generate mock, but valid, data for testing. Populating a database manually is a time-consuming and exhausting process. It can be very complicated when you need to generate not just 5–10 users, but thousands of entities of different types. DBeaver Mock Data generator helps you generate test data much easier.
 
 [[/images/mockdata_menu.png]] [[/images/mockdata_button.png]]
 
-> _Disclaimer:_ The idea behind Mock Data is to generate fake data in a table and should **NOT TO BE USED IN PRODUCTION ENVIRONMENTS**. Please ensure you have a backup of your database before running the Mock Data generation process.
+> _Disclaimer:_ The idea behind Mock Data is to generate mock data in a table but it should **NOT TO BE USED IN PRODUCTION ENVIRONMENTS**. Please make sure you have a backup of your database before running the Mock Data generation process.
 
-DBeaver Mock Data generator features:
-* works for all the RDBMS that are supported by DBeaver (DB2, MS SQL Server, MySQL, Oracle, PostgreSQL, SQLite etc)
-* generates data that matches your database schema
-    * generated data matches the database column types
-    * all base data types are supported
-    * constraints (PK, FK, multi-column FK, unique) support
-* over 20 configurable data generators (constants, randoms, sequences, names, domains, addresses, prices, regex based, etc)
-* can automatically associate a column with a generator based on the column characteristics
-* old database data can be saved or overwritten
+Th following are features of DBeaver Mock Data generator:
+* Works for all the RDBMS that are supported by DBeaver (DB2, MS SQL Server, MySQL, Oracle, PostgreSQL, SQLite, etc.)
+* Generates data that matches your database schema:
+    * Generated data matches the database column types.
+    * All base data types are supported.
+    * Constraints (PK, FK, multi-column FK, unique) are supported.
+* Supports over 20 configurable data generators (constants, randoms, sequences, names, domains, addresses, prices, regex based, etc.)
+* Automatically associates a column with a generator based on the column characteristics
+* Saves or overwrites old database data
 
 [[/images/mockdata_wizard_2.png]]
 
-Mock Data generators for data types with their configurable parameters:
+The following are mock data generators for data types with their configurable parameters:
 * Boolean
     * Random
     * Sequence (initial, order)
@@ -50,15 +50,15 @@ Mock Data generators for data types with their configurable parameters:
         * Postal Code preset <sup>*</sup>
         * Price preset <sup>*</sup>
     * Template with parametrized directives for other generators <sup>*</sup>:
-        * address() - US postal address,
-        * city() - one of the world largest cities,
-        * country() - country,
-        * domain() - one of the top Internet domains,
-        * email(gender,surname) - e-mail address (gender is ALL|FEMALE|MALE, surname is true|false),
-        * name(gender,surname) - personal name (gender is ALL|FEMALE|MALE, surname is true|false),
-        * random(minimum,maximum) - random integer,
-        * regex(pattern) - regex based value for the pattern,
-        * sequence(start,step) - sequence of integers.
+        * address() - US postal address
+        * city() - one of the world largest cities
+        * country() - country
+        * domain() - one of the top Internet domains
+        * email(gender,surname) - e-mail address (gender is ALL|FEMALE|MALE, surname is true|false)
+        * name(gender,surname) - personal name (gender is ALL|FEMALE|MALE, surname is true|false)
+        * random(minimum,maximum) - random integer
+        * regex(pattern) - regex based value for the pattern
+        * sequence(start,step) - sequence of integers
 * NULL values
 * FK - data from the referenced table according to the constraint
 
