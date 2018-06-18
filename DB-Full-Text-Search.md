@@ -11,8 +11,8 @@ NOTE: The **Search** button is enabled only when you select the right level of c
 
 You can apply case-sensitive search, fast search and search in numbers and LOBs.
 
-After you click **Search**, the results open in a separate Search view:
+After you click **Search**, the results open in a separate [Search](https://github.com/dbeaver/dbeaver/wiki/Search) view:
 
 [[images/ug/Search-results-view.png]]
 
-Double-clicking a row in the Search view opens the respective object in a dedicated Database Object editor.
+Double-clicking a row in the Search view opens the respective object in a dedicated [Database Object editor](https://github.com/dbeaver/dbeaver/wiki/Database-Object-Editor).
