@@ -49,10 +49,10 @@
   - [[Pending Transactions]]
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG, SSH|Optional extensions]]
-- Miscellaneous
-  - [[Data transfer (export/import)]]
-  - [[Database compare]]
-  - [[Mock Data Generation in DBeaver]]
+- [[Mock Data Generation in DBeaver]]
+- [[Data transfer (export/import)]]
+- [[Database compare]]
+
 
 ##### Databases
 - SQL databases
