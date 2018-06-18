@@ -13,9 +13,15 @@ You can also, click **SQL Editor -> Save SQL script** on the main menu:
 [[images/ug/Save-script-to-file.png]]
 
 ## Loading Scripts
-To load a script stored in the file system to the SQL Editor, press <kbd>CTRL+SHIFT+O</kbd>, or right-click the script panel and click **File -> Load SQL script** on the context menu, or click **SQL Editor -> Load SQL script** on the main menu. 
+To load a script stored in the file system to the SQL Editor, press <kbd>CTRL+SHIFT+O</kbd>, or click **SQL Editor -> Load SQL script** on the main menu, or right-click the script panel and click **File -> Load SQL script** on the context menu:
+
+[[images/ug/Load-script.png]]
 
 ## Renaming Scripts
-To rename a script, right-click anywhere in the script pane, click **File -> Rename SQL Script** (or press <kbd>CTRL+F2</kbd>) on the context menu, then enter the new name in the Rename SQL script dialog box and click **OK**.  
+To rename a script, right-click anywhere in the script panel, click **File -> Rename SQL Script** on the context menu or press <kbd>CTRL+F2</kbd>:
 
+[[images/ug/Rename-script.png]]
 
+Then enter the new name in the Rename SQL script dialog box and click **OK**:
+
+[[images/ug/Rename-script-dialog.png]]

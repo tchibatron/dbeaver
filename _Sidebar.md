@@ -30,10 +30,13 @@
   - [Client Side Commands](Client-side-scripting)
   - Debug
     - [PostgreSQL Debugger](PGDebugger)
-- [[Filters]]
+- Filters
   - [[Filter Database Objects]]
   - [[Configure Filters]]
 - [[Search]]
+  - [[File Search]]
+  - [[DB Full-Text Search]]
+  - [[DB Metadata Search]]
 
 #### Database Management
 - [[Database Connections]]
@@ -49,11 +52,10 @@
   - [[Pending Transactions]]
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG, SSH|Optional extensions]]
-- Miscellaneous
-  - [[Data transfer (export/import)]]
-  - [[Data/metadata search]]
-  - [[Database compare]]
-  - [[Mock Data Generation in DBeaver]]
+- [[Mock Data Generation in DBeaver]]
+- [[Data transfer (export/import)]]
+- [[Database compare]]
+
 
 ##### Databases
 - SQL databases

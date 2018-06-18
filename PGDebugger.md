@@ -1,7 +1,7 @@
-# Prerequisites for debugging
-In order to implement interactive debugging of PL/SQL procedures on Postgres server you have to use plugin_debugger plugin. Plugin_debugger is typical interactive debugger which is delivered as an extension and requires shared library preload in Postgres to operate shared_preload_libraries parameter in settings). The debugger is developed and maintained by the community. It's source code is available for examination and improvement.
+# Prerequisites for Debugging
+In order to implement interactive debugging of PL/SQL procedures on a Postgres server you need to use plugin_debugger. Plugin_debugger is a typical interactive debugger delivered as an extension and requiring a  shared library preload in Postgres to operate the shared_preload_libraries parameter in settings. The debugger is developed and maintained by the community. Its source code is available for examination and improvement.
  
-The debugger provides required server API for the debugging of a PL/SQL procedure with:
+The debugger provides the required server API for debugging PL/SQL procedures with:
 
 * Breakpoint management;
 * Step-by-step tracing;
@@ -10,84 +10,76 @@ The debugger provides required server API for the debugging of a PL/SQL procedur
 Installation
 ------------
 
-First, you need to install `plugin_debugger` extension in your postgres database. 
+As the first step, you need to install the **plugin_debugger** extension in your PostgreSQL database. It is free and open source. You can download the source code [here](https://git.postgresql.org/gitweb/?p=pldebugger.git;a=tree). And you can find the installation README file [here](https://git.postgresql.org/gitweb/?p=pldebugger.git;a=blob_plain;f=README.pldebugger;hb=HEAD).
 
-Its free and open source. You can download source code [here](https://git.postgresql.org/gitweb/?p=pldebugger.git;a=tree)
+To install the debugger plugin:
 
-README for make and install [here](https://git.postgresql.org/gitweb/?p=pldebugger.git;a=blob_plain;f=README.pldebugger;hb=HEAD)
+1. Copy this directory to **contrib/** in your PostgreSQL source tree.
+2. Run **make; make install**.
+3. Edit your **postgresql.conf** file and modify the **shared_preload_libraries** config option to look like the following: **shared_preload_libraries = '$libdir/plugin_debugger'**.
+5. Restart PostgreSQL for the new setting to take effect.
+6. Run the following command in the database or databases that you wish to debug functions in:  
+   **CREATE EXTENSION pldbgapi;**  
+  NOTE: On server versions older than 9.1, instead of running the command, you need to run the **pldbgapi--1.0.sql** script directly using psql.
 
-* Copy this directory to contrib/ in your PostgreSQL source tree.
-* Run `make; make install`
-* Edit your _postgresql.conf_ file, and modify the **shared_preload_libraries** config option to look like:
-  `shared_preload_libraries = '$libdir/plugin_debugger'`
-* Restart PostgreSQL for the new setting to take effect.
-* Run the following command in the database or databases that you wish to
-  debug functions in:
+If you use binary builds from pgdg, you can use repository for your Linux distribution. For more information, please see [Official Postgres page] (https://www.postgresql.org/download/).
 
-  `CREATE EXTENSION pldbgapi;`
+After installing the plugin on the database server, you need to install the debug plugin from either a marketplace or P2 repository, see this [article](https://github.com/dbeaver/dbeaver/wiki/Optional-extensions) for more information.
 
-  (on server versions older than 9.1, you must instead run the _pldbgapi--1.0.sql_
-  script directly using psql).
-
-If you using binary builds from pgdg you can use repository for your linux distribution, more info at  [Official Postgres page] (https://www.postgresql.org/download/)
-
-After installing plugin at DB server, you need to install debug plugin from either marketplace or P2 repository, [see doc](https://github.com/dbeaver/dbeaver/wiki/Optional-extensions)
-
-Detailed DBeaverCE Debug plugin installation guide from Jkiss P2 repository can be found [here](https://github.com/dbeaver/dbeaver/wiki/DebugPluginInstall)
+You can find a detailed DBeaverCE Debug plugin installation guide from Jkiss P2 repository [here](https://github.com/dbeaver/dbeaver/wiki/DebugPluginInstall).
 
 # How to start debug with local breakpoint
-For local breakpoints, stop will be done only for server process launched by initiator. All other processes will run procedure\function as usually. When you create or run previously defined debugging session in DBeaver with local breakpoint, the following steps are performed:
-1. DBeaver creates initiator session and local breakpoint
-1. DBeaver runs procedure\function (with parameters specified) selected for debugging in the initiator session  
-1. Server process reaches breakpoint and displays NOTICE to initiator, in which the PORT in reported for PLDBGBREAK:XX debugging. Then process opens the socket and becomes blocked, waiting for PROXY connection. If Debug Client can not get PORT name from the process being debugged, an error will return.
-1. Debug Client creates session, then tries to establish connection with debugged process, using PORT from step 3 provided by initiator. The connection is established via API call `attach_to_port`. If connection can not be established, « Error rcv port number» error message is displayed.
-1. PROXY receives PORT from the client, then establishes connection to process and returns session identificator to the client. After that, using the identificator, one can:
+For local breakpoints, stop will be done only for server process launched by the initiator. All other processes will run procedure/function as usual. When you create or run a previously defined debugging session in DBeaver with local breakpoint, the following steps take place:
+1. DBeaver creates initiator session and local breakpoint.
+2. DBeaver runs procedure\function (with parameters specified) selected for debugging in the initiator session. 
+3. The server process reaches breakpoint and displays NOTICE to initiator, in which the PORT is reported for PLDBGBREAK:XX debugging. Then the process opens the socket and becomes blocked, waiting for PROXY connection. If Debug Client cannot get PORT name from the process being debugged, an error message appears.
+4. Debug Client creates a session, then tries to establish connection with the debugged process, using PORT from step 3 provided by the initiator. The connection is established via API call **attach_to_port**. If the connection cannot be established, the **Error rcv port number** message appears.
+5. PROXY receives PORT from the client, then establishes connection to the process, and returns the session identifier to the client. After that, using the identificator, one can:
    * Send debugging commands to the process;
-   * Receive responses from process;
-   * Translate responces to the client.
+   * Receive responses from the process;
+   * Translate responses to the client.
 
 [[/images/debug-local.png|Debug with local breakpoint]]
 
 # How to start debug with global breakpoint
-
-Whenever breakpoint is global, stop will be done for any server process launched by anyone. No modifications or additional calls from the debugged process are required. When you create session with global breakpoint, the following steps are performed:
-
-1. Client creates session, then establishes connection with PROXY (receiving session). Then client creates global breakpoint  for the selected function, then becomes blocked via API call `pldbg_wait_for_target` waiting for the server process.
-1. PROXY receives global control point from the client and adds global control point to the shared memory, if the point of this type hasn’t been added before
-1. Initiator creates connection and runs selected procedure
-1. On each executed line, target process checks if global breakpoint, with corresponding conditions, exists and becomes blocked if breakpoint exists and conditions are met
-1. Target Process establishes connection with PROXY and reports that breakpoint is reached
-1. Afterwards, process becomes blocked and waits for PROXY (client) commands. Process will be implementing commands unless procedure is finished or exception is thrown. 
+Whenever the breakpoint is global, stop will be done for any server process launched by anyone. No modifications or additional calls from the debugged process are required. When you create a session with a global breakpoint, the following steps take place:
+1. The client creates a session and then establishes a connection with PROXY (receiving session). After that, the client creates a global breakpoint  for the selected function, and then becomes blocked via the **pldbg_wait_for_target** API call waiting for the server process.
+2. PROXY receives the global control point from the client and adds global control point to the shared memory, if the point of this type has not been added before.
+3. The initiator creates a connection and runs the selected procedure.
+4. On each executed line, the target process checks if the global breakpoint with corresponding conditions exists, and becomes blocked if the breakpoint exists and conditions are met.
+5. The target process establishes a connection with PROXY and reports that the breakpoint is reached.
+6. Afterwards, the process becomes blocked and waits for PROXY (client) commands. The process will be implementing commands unless the procedure finishes or an exception is thrown. 
 
 [[/images/debug-global.png|Debug with global breakpoint]]
 
 Running debugger in DBeaver interface
 ------------
-If you have succefully installed debugger plugin, and plugin is up and running, you can start Debug from procedure source page by right-clicking on procedure source text (context menu will appear) :
+If you have successfully installed the debugger plugin, and the plugin is up and running, you can start Debug from procedure source page by right-clicking the procedure source text - a context menu appears:
 
 [[/images/start-debug.PNG|Debug popup menu]]
 
-You must choose type of your debug session: Local or Global.
+You need to choose the type of your debug session: Local or Global.
 
-For **Global** session you need to specify target process PID filter (enter `-1` value for any process) : 
+For a **Global** session, you need to specify the target process PID filter (enter **-1** value for any process): 
 [[/images/start-debug-global.PNG|Debug global dialog]]
 
-After running Global session you need to wait for any (or specified PID) process to call your procedure.
+After running a Global session, you need to wait for any (or specified PID) process to call your procedure.
 
-For **Local** session you need to specify executable SQL sentence for starting in target process : 
+For a **Local** session, you need to specify the executable SQL sentence for starting the target process: 
 [[/images/start-debug-local.PNG|Debug local dialog]]
 
-In scripе editor window you can see text “select get_count(?)” this is just specification of how DBeaver must call your function(procedure) for debug. 
+In the script editor window, you can see the **select get_count(?)** text that is just a specification of how DBeaver must call your function(procedure) for debug. 
 
-DBeaver is not intented to know about the values of the variables in the procedure being debugged. You need to set the values for call arguments BEFORE starting debugging. 
-Your settings may look like this:
+DBeaver is not intended to know about the values of the variables in the procedure being debugged. You need to set the values for call arguments BEFORE you start debugging. 
+Your settings might look as follows:  
 [[/images/start-debug-local-params.png|Debug local dialog]]
 
-If you run debugging now - DBeaver will create a separate connection to the database server and try to execute given SQL sentence `select get_count(‘pg_class’)` in this connection and attach debug session to running SQL context.
+If you run debugging now, DBeaver creates a separate connection to the database server, tries to execute the given SQL sentence **select get_count(‘pg_class’)** in this connection, and attaches the debug session to the running SQL context.
 
-After successfuly attaching to target server process, the platform ask you about switching to debug perspective:
+After successfully attaching to the target server process, the platform prompts you to switch to the debug perspective:
 
 [[/images/debug-perspective.PNG|Debug perspective switch]]
 
-After you click "OK" you will see debug toolset (perspective) :
+After you click **OK**, the debug toolset (perspective) opens:
+  
 [[/images/debug-perspective-win.png|Debug perspective]]
