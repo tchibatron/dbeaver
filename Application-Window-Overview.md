@@ -82,4 +82,4 @@ To minimize a view, do one of the following:
 * Click the Minimize button in the upper-right corner of the view.
 * On the Window menu, click **Appearance -> Minimize Active View or Editor**.
 
-To restore a minimized view or editor to its previous position, click the Restore button on its shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button.
+To restore a minimized view or editor to its previous position, click the Restore button on its shortcut in the shortcut bar. To restore a minimized view or editor to a new position, click the view / editor name button under the restore button. 
