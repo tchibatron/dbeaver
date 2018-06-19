@@ -7,6 +7,16 @@ Entity Relation Diagrams (ERD) are graphic presentations of database entities an
 
 Both types of diagrams provide the same tools to adjust their view and structure. They can be printed and exported to image file formats.
 
+## Selection of Elements in Diagrams
+You can use one of the two tools to select elements in diagrams:
+* Select – supports both, single and multi-select modes. To select a single element (table, connection, entity inside a table) in a diagram, just click that element. To select multiple elements, similar to using the Marquee tool, click outside the first element and draw until all elements you need are in focus:  
+
+  [[images/ug/ERD-Select-tool.png]]
+  
+* Marquee – multi-selection tool that allows selecting a rectangular area with one or more elements inside (rubber band selection rectangle), but unlike the Select tool, it does not allow clicking separate elements to select. To select a rectangular area, click outside elements and draw to cover all elements you need:  
+
+  [[images/ug/ERD-Marquee-tool.png]]
+ 
 ## Structure Adjustment
 NOTE: All changes to existing database schemas cannot be saved and are intended for exploration purposes only.  
 You can do the following structure changes in diagrams.
