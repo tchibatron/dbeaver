@@ -39,7 +39,12 @@ The execution plan command generates a tree of query execution as one of the res
 
 You can click the rows of the execution plan to see their details in the panels below and to the right of the plan.
 
-## Exporting Query
+## SQL Expression Evaluation
+To evaluate an SQL expression, right-click the expression and click **Execute -> Evaluate SQL expression** on the context menu. This command basically performs a query of **SELECT [expression] FROM DUAL** type:
+
+[[images/ug/Evaluate-SQL-expression.png]]
+
+## Query Export
 It might be useful to export a query if you have a very long-running query and you do not need to see its results in the results panel. You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu:
 
 [[images/ug/Export-from-Query.png]] 
