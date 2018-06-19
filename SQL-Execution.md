@@ -22,9 +22,11 @@ NOTE: Be careful with this feature. If you execute a huge script with a large nu
 
 You can use dynamic parameters in your SQL queries. The parameter format is :name. When you execute a query which contains dynamic parameters, DBeaver displays a dialog box in which you can fill the parameter values:
 
-<img src="https://www.dropbox.com/s/adne99abuixgpor/Parameter%20bindings.png?raw=1"/>
+[[images/ug/Bind-parameters-dialog.png]]
 
-You can also use anonymous parameters (?), but you will need to enable them in SQL editor preferences. 
+You can also use anonymous parameters (?), but you will need to enable them in SQL editor preferences:
+
+[[images/ug/Anonymous-SQL-params-Preferences.png]] 
 
 ## Execution Plan
 
