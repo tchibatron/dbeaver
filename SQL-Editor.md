@@ -14,6 +14,8 @@ The SQL editor includes the script panel at the top and results panel at the bot
 
 [[images/ug/SQL-Editor.png]]
 
+You can open SQL editor preferences by pressing <kbd>Alt+Enter</kbd>.
+
 ## Results Panel
 The results panel displays tabs with results in various formats. The tabs resulting from script execution represent instances of the [Data Editor](https://github.com/dbeaver/dbeaver/wiki/Data-Editor). You can create, edit and execute SQL scripts in the script panel and then see the results in the result tabs.
 
