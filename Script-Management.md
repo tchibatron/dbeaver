@@ -25,3 +25,6 @@ To rename a script, right-click anywhere in the script panel, click **File -> Re
 Then enter the new name in the Rename SQL script dialog box and click **OK**:
 
 [[images/ug/Rename-script-dialog.png]]
+
+## Reverting Changes
+If you want to revert all changes made to the current SQL script and return it to its initial state when you just opened the SQL editor, right-click anywhere in the script panel and click **File -> Revert** on the context menu. 
