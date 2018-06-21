@@ -38,6 +38,7 @@
   - [[File Search]]
   - [[DB Full-Text Search]]
   - [[DB Metadata Search]]
+- [[Projects]]
 - [[Bookmarks]]
 
 #### Database Management
@@ -48,7 +49,6 @@
   - [[Invalidate/Reconnect to Database|Invalidate-and-Reconnect-to-Database]]
   - [[Disconnect from Database]]
 - [[Connection Types]]
-- [[Projects]]
 - Transactions
   - [[Auto and Manual Commit Modes]]
   - [[Transaction Log]]
