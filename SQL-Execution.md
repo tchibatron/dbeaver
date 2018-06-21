@@ -37,7 +37,9 @@ The execution plan command generates a tree of query execution as one of the res
 
 [[images/ug/Execution_plan.png]]
 
-You can click the rows of the execution plan to see their details in the panels below and to the right of the plan.
+You can click the rows of the execution plan to see their details (statistics) in the panels below and to the right of the plan.  
+To reevaluate the plan, click the **Reevaluate** button ([[images/ug/Refresh-projects-icon.png]]).  
+To see the source script on which the plan is based, click the **View Source** button ([[images/ug/View-Source-button.png]]). 
 
 ## SQL Expression Evaluation
 To evaluate an SQL expression, right-click the expression and click **Execute -> Evaluate SQL expression** on the context menu. This command basically performs a query of **SELECT [expression] FROM DUAL** type:
