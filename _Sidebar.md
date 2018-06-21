@@ -38,6 +38,7 @@
   - [[File Search]]
   - [[DB Full-Text Search]]
   - [[DB Metadata Search]]
+- [[Bookmarks]]
 
 #### Database Management
 - [[Database Connections]]
