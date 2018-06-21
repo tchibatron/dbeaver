@@ -3,7 +3,7 @@
 - [[Application Window Overview]]
 - [[Views]]
   - [[Database Navigator]]
-  - [[Projects]]
+  - [[Projects View]]
   - [[Project Explorer]]
   - [[Query Manager]]
   - [[Background Tasks]]
