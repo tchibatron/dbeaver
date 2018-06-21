@@ -29,14 +29,3 @@ To open the context menu for an object in the tree, right-click the object.
 For information about context menu items of all objects under the **Connections** node of the tree, please see [Database Navigator](https://github.com/dbeaver/dbeaver/wiki/Database-Navigator).  The context menus of other nodes in the tree contain some basic items for copy-pasting, renaming, deleting objects, managing their properties, creating folders, etc.
 * The **Set Active Project** menu item (for a project root node) makes the project active, that is visible in the Database Navigator. 
 * The **Link File (SQL Script)** and **Link Folder** menu items allow creating links to files and folders in the file system.
-
-
-# Managing Bookmarks
-Bookmarks are quick access links to objects of a database. They appear in the project tree inside the Projects or Project Explorer views.
-
-To create a bookmark:
-1. In the Database Navigator or under **Connections** node of the Projects view, click the database object of interest to set focus on it.
-2. Press <kbd>CTRL+d</kbd>. The **Bookmark Name** dialog box appears.
-3. In the **Bookmark Name** field, enter the bookmark name, then in the **Bookmark folder** field, click the folder, and then click **OK**. The bookmark appears in the selected folder of the related project.
-
-To open an object using its bookmark, double-click the bookmark or right-click it and click **Open Bookmark** on the context menu. You can rename and delete bookmarks using the context menu as well. 
