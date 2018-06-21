@@ -6,6 +6,7 @@
   - [[Projects]]
   - [[Project Explorer]]
   - [[Query Manager]]
+  - [[Background Tasks]]
 - [[Database Object Editor]]
   - [[Properties Editor]]
   - [[Data Editor]]

@@ -44,6 +44,11 @@ To evaluate an SQL expression, right-click the expression and click **Execute ->
 
 [[images/ug/Evaluate-SQL-expression.png]]
 
+## Row Count
+If you want to know how many rows an SQL query will produce, you need to apply the Row Count feature – highlight and right-click the SQL text and then click **Execute -> Select row count** on the context menu:
+
+[[images/ug/Row-Count.png]]
+
 ## Query Export
 It might be useful to export a query if you have a very long-running query and you do not need to see its results in the results panel. You can directly export the current query results to a file/table by right-clicking the query and then clicking **Execute -> Export From Query** on the context menu:
 
