@@ -64,6 +64,7 @@ To obtain the grouping results for one or more columns of a data table, open the
 
 [[images/ug/Grouping-Panel.png]] 
 
+If several columns are added, the panel groups da
 By default, the COUNT function is used. You can add other functions as well. To add a function:
 1. Click the **Edit grouping columns** button in the panel`s toolbar.
 2. In the Grouping Configuration window, in the **Functions** area, click **Add**, then type the function into the new row (you can use auto-complete options DBeaver provides), and then click **OK**:
@@ -79,4 +80,4 @@ You can also add or remove columns using the same Grouping Configuration window.
    [[images/ug/Grouping-add-column.png]]
 
 To remove a column, in the Grouping Configuration window, in the **Columns** area, click the column name, then **Remove** and **OK**. To remove all columns, click **Clear** and **OK**.  
-Another way to remove a column is to click the column and then the **Remove grouping column** button ([[images/ug/Grouping-remove-columns.png]]) in the panel`s toolbar. Clicking the **Clear grouping** button ([[images/ug/Clear-log-button]]) removes all results from the Grouping panel.
+Another way to remove a column is to click the column and then the **Remove grouping column** button ([[images/ug/Grouping-remove-columns.png]]) in the panel`s toolbar. Clicking the **Clear grouping** button ([[images/ug/Clear-columns-button.png]]) removes all results from the Grouping panel.
