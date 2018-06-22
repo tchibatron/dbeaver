@@ -58,8 +58,19 @@ You can also copy all functions with their values - right-click in the table and
 
 ## Grouping Panel
 
-It allows to calculate statistics based on a table of custom SQL query.
-It uses GROUP BY queries to extract values for COUNT, SUM, AVG, MIN, MAX and other analytics functions.
+The Grouping panel provides tools to calculate statistics based on a table of custom SQL query.
+It uses GROUP BY queries to extract values for COUNT (default), SUM, AVG, MIN, MAX and other analytics functions.  
+To obtain the grouping results for one or more columns of a data table, open the Grouping panel, then, in the results table, put the cursor onto the data type icon of the table header ([[images/ug/Data-type-icon-header.png]]) so that the cursor turns into a hand pointer ([[images/ug/hand-pointer.png]]), and drag-n-drop the column(s) onto the panel. The results appear in the panel:
 
-Open the panel and drag-n-drop results column(s) into it. By default COUNT function will be used.
+[[images/ug/Grouping-Panel.png]] 
+
+By default, the COUNT function is used. You can add other functions as well. To add a function:
+1. Click the **Edit grouping columns** button in the panel`s toolbar.
+2. In the Grouping Configuration window, in the **Functions** area, click **Add** and then type the function into the new row:
+  
+   [[images/ug/Grouping-new-function.png]]
+
+To remove a function, in the same Grouping Configuration window, click the function and click **Remove**. To remove all functions, click **Clear**.
+
+
 
