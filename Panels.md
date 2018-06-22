@@ -66,11 +66,14 @@ To obtain the grouping results for one or more columns of a data table, open the
 
 By default, the COUNT function is used. You can add other functions as well. To add a function:
 1. Click the **Edit grouping columns** button in the panel`s toolbar.
-2. In the Grouping Configuration window, in the **Functions** area, click **Add** and then type the function into the new row:
+2. In the Grouping Configuration window, in the **Functions** area, click **Add** and then type the function into the new row (you can use auto-complete options DBeaver provides):
   
    [[images/ug/Grouping-new-function.png]]
 
 To remove a function, in the same Grouping Configuration window, click the function and click **Remove**. To remove all functions, click **Clear**.
 
+You can also add or remove columns using the same Grouping Configuration window. To add a column:
+1. Click the **Edit grouping columns** button in the panel`s toolbar.
+2. In the Grouping Configuration window, in the **Columns** area, click **Add** and then type the column name into the new row (you can use auto-complete options DBeaver provides):  
 
-
+   [[images/ug/Grouping-add-column.png]]
