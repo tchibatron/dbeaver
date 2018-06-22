@@ -15,9 +15,9 @@ The menu contains the following items:
 
 Icon|Menu item|Description
 ----|---------|-----------
-[[images/ug/Driver-Manager-icon.png]] |**Driver Manager**|Opens the Driver Manager window that allows creating, editing and deleting drivers for databases. See … for information about managing database drivers.
-[[images/ug/New-connection-icon.png]] |**New Connection**|Opens the Create new connection wizard. See … for information about creating connections.
-(empty) | **Active Project** |Displays a submenu which allows you to choose a project. See ... for information about projects.
+[[images/ug/Driver-Manager-icon.png]] |**Driver Manager**|Opens the Driver Manager window that allows creating, editing and deleting drivers for databases. See [Database Drivers](https://github.com/dbeaver/dbeaver/wiki/Database-drivers) for information about managing database drivers.
+[[images/ug/New-connection-icon.png]] |**New Connection**|Opens the Create new connection wizard. See [Create Connection](https://github.com/dbeaver/dbeaver/wiki/Create-Connection) for information about creating connections.
+(empty) | **Active Project** |Displays a submenu which allows you to choose a project. See [Projects](https://github.com/dbeaver/dbeaver/wiki/Projects) and [Projects view](https://github.com/dbeaver/dbeaver/wiki/Projects-View) for information about projects.
 [[images/ug/New-Folder-icon.png]] |**New Folder** |Opens a dialog box for creating a new folder
 [[images/ug/Collapse-All-icon.png]] | **Collapse All** |Collapses the tree to the root level
 [[images/ug/Link-with-Editor-icon.png]] | **Link with editor** | Enabled when at least one editor is open, otherwise disabled - highlights the object in the tree that has its editor open
@@ -46,7 +46,7 @@ Menu item|Description
 **View [objects]**|-	For objects that DBeaver can create and delete, opens the object in a separate editor<br/>-	For objects that DBeaver cannot create and delete, opens the object in a separate viewer
 **Edit [object]**|-	For objects that DBeaver can create and delete, opens the object in a separate editor<br/>-	For objects that DBeaver cannot create and delete, opens the object in a separate viewer
 **Create new [object]**|Opens an editor in which you can specify properties and save the new object
-**Filter**|Opens a submenu of one or more filtering options (depending on the object):<br/>-	Hide [object]<br/>-	Show only [object]<br/>-	Configure [objects] filter<br/>-	Toggle filter<br/>-	Clear filter<br/> See ... for information.
+**Filter**|Opens a submenu of one or more filtering options (depending on the object):<br/>-	Hide [object]<br/>-	Show only [object]<br/>-	Configure [objects] filter<br/>-	Toggle filter<br/>-	Clear filter<br/> See [Filters](https://github.com/dbeaver/dbeaver/wiki/Filter-Database-Objects) for information.
 **Copy Advanced Info**|Copies the full name of an object
 **Read Data in SQL Console**|Opens an SQL console displaying the object`s data
 **Copy Advanced Info**|Copies the full name of an object

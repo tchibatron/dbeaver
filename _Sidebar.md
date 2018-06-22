@@ -3,7 +3,7 @@
 - [[Application Window Overview]]
 - [[Views]]
   - [[Database Navigator]]
-  - [[Projects]]
+  - [[Projects View]]
   - [[Project Explorer]]
   - [[Query Manager]]
   - [[Background Tasks]]
@@ -38,6 +38,8 @@
   - [[File Search]]
   - [[DB Full-Text Search]]
   - [[DB Metadata Search]]
+- [[Projects]]
+- [[Bookmarks]]
 
 #### Database Management
 - [[Database Connections]]

@@ -50,8 +50,6 @@ Button|Name|Description
 [[images/ug/Row-count-details-button.png]]|Rows count details|Opens the Status details dialog box showing the timing details of fetching table rows
 [[images/ug/Calculate-total-rows-button.png]]|**Calculate total row count**|Calculates the total number of rows in the table
 
-
-
 Every cell in the data table has a context menu – right-click the cell to open the menu. The context menu provides the following items:
 
 Menu Item|Description
@@ -68,10 +66,10 @@ Menu Item|Description
 **Hide column**|Hides the column currently in focus, see the Managing Display of Columns in Data Table section further in this article
 **Save to file…**|- Appears only for columns with BLOB/CLOB data<br/>- Opens the standard Save As window that allows saving data contained in the cell to a file 
 **Load from file…**|- Appears only for columns with BLOB/CLOB data<br/>- Opens a standard window for opening files
-**Order/Filter**|Displays a submenu that allows selecting filter criteria for the data. The submenu contains the most common filters that can be applied to the cell in focus – see details in …<br/> By default, DBeaver filters data by sending a request to the server (the Server-side results ordering checkbox selected). To filter data on the client side using DBeaver`s internal algorithm, clear the checkbox.
-**View/Format**|Opens a submenu that provides tools for formatting and modifying the view of data, see …
-**Navigate**|Opens a submenu that helps users navigate throughout the data table, see …
-**Layout**|Changes the layout of data, see …
+**Order/Filter**|Displays a submenu that allows selecting filter criteria for the data. The submenu contains the most common filters that can be applied to the cell in focus – see details in [Data Filters article](https://github.com/dbeaver/dbeaver/wiki/Data-Filters).<br/> By default, DBeaver filters data by sending a request to the server (the Server-side results ordering checkbox selected). To filter data on the client side using DBeaver`s internal algorithm, clear the checkbox.
+**View/Format**|Opens a submenu that provides tools for formatting and modifying the view of data, see [Data View and Format](https://github.com/dbeaver/dbeaver/wiki/Data-View-and-Format)
+**Navigate**|Opens a submenu that helps users navigate throughout the data table, see [Navigation](https://github.com/dbeaver/dbeaver/wiki/Navigation)
+**Layout**|Changes the layout of data, see the _Table vs. Record Views_ section of the [Data View and Format](https://github.com/dbeaver/dbeaver/wiki/Data-View-and-Format) article
 **Export Resultset**|Opens the Data Transfer wizard that guides you through the steps to select a format and export data<br/>NOTE: The system exports the whole result set including records that are not visible in the screen and preserves all applied data filters and ordering.
 **Generate SQL**|Opens a submenu on which you can select the type of SQL query to generate
 **Refresh**|Refreshes the whole results set including all items that are not visible in the screen
