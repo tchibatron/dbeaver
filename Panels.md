@@ -1,4 +1,4 @@
-Panels provide additional space in the Data editor in which you can manipulate with data. The panels are handy if you work with complex types (structures, arrays), or long text data, or BLOBs. Panels appear as tabs in an additional pane in the right part of the Data tab: 
+Panels provide additional space in the [Data editor](https://github.com/dbeaver/dbeaver/wiki/Data-Editor) in which you can manipulate with data. The panels are handy if you work with complex types (structures, arrays), or long text data, or BLOBs. Panels appear as tabs in an additional pane in the right part of the Data tab: 
 
 [[images/ug/Panels.png]]
 
@@ -9,7 +9,7 @@ This additional pane appears only when you open one of the four panels:
 * Value viewer (default)
 
 To open panels, click **Panels** in the bottom toolbar. By default, the Value viewer panel opens. Alternatively, you can open the Value panel by pressing <kbd>F7</kbd> on a cell.
-To open the other two panels, click the down arrow next to the **Panels** button and click the name of the panel on the menu:
+To open the other panels, click the down arrow next to the **Panels** button and click the name of the panel on the menu:
 
 [[images/ug/Panels-menu.png]]
 
