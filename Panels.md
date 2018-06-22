@@ -59,12 +59,12 @@ You can also copy all functions with their values - right-click in the table and
 ## Grouping Panel
 
 The Grouping panel provides tools to calculate statistics based on a table of custom SQL query.
-It uses GROUP BY queries to extract values for COUNT (default), SUM, AVG, MIN, MAX and other analytics functions.  
+It uses GROUP BY queries to extract unique values for COUNT (default), SUM, AVG, MIN, MAX and other analytics functions displaying the results in dedicated columns.  
 To obtain the grouping results for one or more columns of a data table, open the Grouping panel, then, in the results table, put the cursor onto the data type icon of the table header ([[images/ug/Data-type-icon-header.png]]) so that the cursor turns into a hand pointer ([[images/ug/hand-pointer.png]]), and drag-n-drop the column(s) onto the panel. The results appear in the panel:
 
 [[images/ug/Grouping-Panel.png]] 
 
-If several columns are added, the panel groups da
+If you add several columns to the panel, DBeaver groups data in the order in which the columns go and calculates statistics based on the grouping.  
 By default, the COUNT function is used. You can add other functions as well. To add a function:
 1. Click the **Edit grouping columns** button in the panel`s toolbar.
 2. In the Grouping Configuration window, in the **Functions** area, click **Add**, then type the function into the new row (you can use auto-complete options DBeaver provides), and then click **OK**:
@@ -78,6 +78,10 @@ You can also add or remove columns using the same Grouping Configuration window.
 2. In the Grouping Configuration window, in the **Columns** area, click **Add**, then type the column name into the new row (you can use auto-complete options DBeaver provides), and then click **OK**:  
 
    [[images/ug/Grouping-add-column.png]]
+
+You can also add a column with an expression - the expression will be calculated in the resulting column:
+
+[[images/ug/Grouping-column-expression.png]]
 
 To remove a column, in the Grouping Configuration window, in the **Columns** area, click the column name, then **Remove** and **OK**. To remove all columns, click **Clear** and **OK**.  
 Another way to remove a column is to click the column and then the **Remove grouping column** button ([[images/ug/Grouping-remove-columns.png]]) in the panel`s toolbar. Clicking the **Clear grouping** button ([[images/ug/Clear-columns-button.png]]) removes all results from the Grouping panel.
