@@ -72,7 +72,7 @@ By default, the COUNT function is used. You can add other functions as well. To 
 1. Click the **Edit grouping columns** button in the panel`s toolbar.
 2. In the Grouping Configuration window, in the **Functions** area, click **Add**, then type the function into the new row:
    * You can use auto-complete options DBeaver provides.
-   * You need to indicate the column name in brackets. COUNT is the only function that supports * instead of column name.
+   * You need to indicate the column name in brackets. COUNT is the only function that supports `*` instead of column name.
 3. Click **OK**:
   
    [[images/ug/Grouping-new-function.png]]
