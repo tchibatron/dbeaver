@@ -58,16 +58,22 @@ You can also copy all functions with their values - right-click in the table and
 
 ## Grouping Panel
 
-The Grouping panel provides tools to calculate statistics based on a table of custom SQL query.
+The Grouping panel provides tools to calculate statistics based on a table of a custom SQL query.
 It uses GROUP BY queries to extract unique values for COUNT (default), SUM, AVG, MIN, MAX and other analytics functions displaying the results in dedicated columns.  
-To obtain the grouping results for one or more columns of a data table, open the Grouping panel, then, in the results table, put the cursor onto the data type icon of the table header ([[images/ug/Data-type-icon-header.png]]) so that the cursor turns into a hand pointer ([[images/ug/hand-pointer.png]]), and drag-n-drop the column(s) onto the panel. The results appear in the panel:
+To obtain the grouping results for one or more columns of a data table, open the Grouping panel, then, in the results table, put the cursor onto the data type icon of the table header so that the cursor turns into a hand pointer ([[images/ug/hand-pointer.png]]), and drag-n-drop the column(s) onto the panel:
+
+[[images/ug/Grouping-drag-n-drop.png]]
+
+If you add several columns to the panel, DBeaver groups data in the order in which the columns go and calculates statistics based on the grouping.
 
 [[images/ug/Grouping-Panel.png]] 
 
-If you add several columns to the panel, DBeaver groups data in the order in which the columns go and calculates statistics based on the grouping.  
 By default, the COUNT function is used. You can add other functions as well. To add a function:
 1. Click the **Edit grouping columns** button in the panel`s toolbar.
-2. In the Grouping Configuration window, in the **Functions** area, click **Add**, then type the function into the new row (you can use auto-complete options DBeaver provides), and then click **OK**:
+2. In the Grouping Configuration window, in the **Functions** area, click **Add**, then type the function into the new row:
+   * You can use auto-complete options DBeaver provides.
+   * You need to indicate the column name in brackets. COUNT is the only function that supports * instead of column name.
+3. Click **OK**:
   
    [[images/ug/Grouping-new-function.png]]
 
