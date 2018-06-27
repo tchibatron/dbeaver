@@ -18,4 +18,4 @@ EE version includes all features of CE version plus:
 
 Even if you do not need enterprise features you can purchase a license as a form of donation. Thank you!
 
-There is a discount for community: enter the discount code `COMMUNITY2018` on DBeaver EE checkout page to receive 30% discount.
+There is a discount for community: enter the discount code `COMMUNITY2018` on DBeaver EE checkout page to receive 15% discount.
