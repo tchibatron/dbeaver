@@ -5,3 +5,9 @@ To edit configuration settings of a database connection, in the [Database Naviga
 The navigation pane on the left displays configuration sections, most of which are the same as those in the Create new connection wizard, see [Connect to Database](https://github.com/dbeaver/dbeaver/wiki/Connect-to-Database). There are additional configuration sections as well, such as **Result Sets** and **SQL Editor**. Click the section name to open the configuration settings for editing.
 
 You can test if your connection works with modified settings - click **Test Connection**. When you finish editing your conneciton, click **OK** to save the changes or **Cancel** to discard them.
+
+## Driver settings
+
+* In development
+
+[[JDBC Time Zones]]
