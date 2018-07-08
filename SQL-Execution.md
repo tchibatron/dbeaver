@@ -60,6 +60,18 @@ The Data transfer wizard opens. Go through its steps to complete the export of t
 
 [[images/ug/Data-transfer-window.png]]
 
+## Client-side commands
+
+You can use special commands in SQL scripts.  
+These commands are executed on DBeaver side, not on server-side.
+
+Name|Description
+----|-----
+@set var = value|Sets default value for SQL parameter
+@echo text|Prints string into server output viewer
+@include file|Includes script file from file system
+
+
 ## Miscellaneous
 * To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
 * To open the definition of the database object currently in focus (under cursor) in a viewer/editor, press <kbd>F4</kbd>.  
