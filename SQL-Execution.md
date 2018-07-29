@@ -15,7 +15,7 @@ To execute a query under cursor in a separate tab, press <kbd>CTRL+\ </kbd> or r
 
 To execute the whole script, press <kbd>Alt+X</kbd> or click **Execute -> Execute SQL Script** on the context menu or **SQL Editor -> Execute SQL Script** on the main menu or in the main toolbar. This executes all queries in the current editor (or selected queries) as a script. DBeaver parses queries one by one using a statement delimiter (“;” by default) and executes them consecutively. You can configure the script execution behavior in the SQL editor preferences (Right-click the script and click **Preferences** on the context menu).
 
-To execute a script opening each query results in a separate tab, press <kbd>Ctrl+Alt+X</kbd> or click **Execute -> Execute Statements In Separate Tabs** on the context menu or **SQL Editor -> Execute Statements In Separate Tabs** on the main menu or in the main toolbar. The executes all queries in the script, but opens multiple result tabs. Each script query is executed in a separate thread (that is, all queries are executed simultaneously).  
+To execute a script opening each query results in a separate tab, press <kbd>Ctrl+Alt+Shift+X</kbd> or click **Execute -> Execute Statements In Separate Tabs** on the context menu or **SQL Editor -> Execute Statements In Separate Tabs** on the main menu or in the main toolbar. The executes all queries in the script, but opens multiple result tabs. Each script query is executed in a separate thread (that is, all queries are executed simultaneously).
 NOTE: Be careful with this feature. If you execute a huge script with a large number of queries, it might cause unexpected problems. 
 
 ## Dynamic Parameter Bindings
@@ -73,5 +73,5 @@ Name|Description
 
 
 ## Miscellaneous
-* To select the current query row count, press <kbd>Ctrl+Alt+C</kbd>.  
+* To select the current query row count, press <kbd>Ctrl+Alt+Shift+C</kbd>.
 * To open the definition of the database object currently in focus (under cursor) in a viewer/editor, press <kbd>F4</kbd>.  
