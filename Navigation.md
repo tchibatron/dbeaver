@@ -31,6 +31,16 @@ DBeaver remembers the history of such actions as applying filters to data, openi
 
 Hovering over these buttons displays the names of the tables or filtered views saved in the history. 
 
+## Navigate Foreign Keys / Referencing Tables
+
+You can navigate by foreign keys or to referencing tables – those that reference the current table.
+To open a referencing table, press <kbd>Ctrl+1</kbd> or right-click the cell and click **Navigate->Referencing tables->[table name]**:
+
+[[images/ug/Referencing-tables-menu.png]]
+
+The referencing table opens in the same editor. To navigate back and forth between the initial and referencing tables, use the history navigation buttons ([[images/ug/History-navigation.png]]) in the top toolbar of the editor.
+In order to open referencing table in a new window use <kbd>Ctrl+Shift+1</kbd> shortcut to show menu.
+
 ## Navigation Links 
 In the data editor, you can navigate to linked tables – the ones that the current table references.
 To open a linked table, click the Navigate link icon in a cell that contains it:
@@ -45,11 +55,3 @@ NOTE: The table name in green above the table indicates which table is currently
 
 To navigate back and forth between the initial and linked tables, use the history navigation buttons ([[images/ug/History-navigation.png]]) in the top toolbar of the editor.  
 You can open a linked table in a separate editor. To do so, simultaneously hold the <kbd>Ctrl</kbd> key and click the Navigate link icon ([[images/ug/Navigate-link-icon2.png]]) in the cell.
-
-## Referencing Tables
-Referencing tables is the functionality opposite to navigation links (see _Navigation Links_ section above). You can navigate to referencing tables – those that reference the current table.  
-To open a referencing table, press <kbd>Ctrl+1</kbd> or right-click the cell and click **Navigate->Referencing tables->[table name]**:
- 
-[[images/ug/Referencing-tables-menu.png]]
-
-The referencing table opens in the same editor. To navigate back and forth between the initial and referencing tables, use the history navigation buttons ([[images/ug/History-navigation.png]]) in the top toolbar of the editor.
