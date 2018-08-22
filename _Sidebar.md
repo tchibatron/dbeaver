@@ -56,7 +56,7 @@
 - [[Database drivers]]
 - [[Optional extensions - Office, Debugger, Git, SVG, SSH|Optional extensions]]
 - [[Mock Data Generation in DBeaver]]
-- [[Data transfer (export/import)]]
+- [[Data export/import/migration|Data transfer]]
 - [[Database compare]]
 
 
