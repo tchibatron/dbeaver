@@ -26,3 +26,7 @@ Note: avoid changing data in tables you selected for export while export is runn
 In the end you will see status message:
 <img src="images/dt/dt_message-success.png" width="200"/>
 
+## Importing data from CSV format
+
+## Migrating table(s) data to another database table(s)
+
