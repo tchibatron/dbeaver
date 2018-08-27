@@ -1,3 +1,6 @@
+## !!! This is outdated article. Debug plugin is included in DBeaver CE distribution since version 5.1 !!!
+
+
 # Installing Debug plugin in DBeaver CE
 
 In order to use interactive debugging of PL/SQL procedures in DBeaver you have to install debugger plugin. Here is step-by-setp guide for install plugin from P2 repository.
