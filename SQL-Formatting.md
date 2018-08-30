@@ -1,4 +1,4 @@
-To format SQL text, select it and press <kbd>Ctrl+Alt+F</kbd> or right-click the selected text and click **Format -> Format SQL** on the context menu.
+To format SQL text, select it and press <kbd>Ctrl+Shift+F</kbd> or right-click the selected text and click **Format -> Format SQL** on the context menu.
 
 [[images/ug/Format-SQL.png]]
 
