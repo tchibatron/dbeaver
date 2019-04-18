@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project >
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.jkiss.dbeaver</groupId>
+        <artifactId>dbeaver</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../..</relativePath>
+    </parent>
+
+    <artifactId>org.jkiss.dbeaver.uitests</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>eclipse-test-plugin</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-surefire-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <configuration>
+                    <useUIHarness>true</useUIHarness>
+                    <useUIThread>false</useUIThread>
+                    <product>org.jkiss.dbeaver.core.product</product>
+                    <application>org.jkiss.dbeaver.core.application.standalone</application>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>target-platform-configuration</artifactId>
+                <version>${tycho-version}</version>
+                <configuration>
+                    <dependency-resolution>
+                        <extrarequirements>
+                            <requirement>
+                                <type>eclipse-feature</type>
+                                <id>org.jkiss.dbeaver.ce.feature</id>
+                                <versionrange>0.0.0</versionrange>
+                            </requirement>
+                            <requirement>
+                                <type>eclipse-feature</type>
+                                <id>org.eclipse.e4.rcp</id>
+                                <versionRange>0.0.0</versionRange>
+                            </requirement>
+                            <requirement>
+                                <type>eclipse-feature</type>
+                                <id>org.eclipse.pde</id>
+                                <versionRange>0.0.0</versionRange>
+                            </requirement>
+                        </extrarequirements>
+                    </dependency-resolution>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

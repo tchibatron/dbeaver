@@ -15,6 +15,7 @@
 
     <modules>
         <module>org.jkiss.dbeaver.ext.test</module>
+        <module>org.jkiss.dbeaver.uitests</module>
 
     </modules>
 
