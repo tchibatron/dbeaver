@@ -32,15 +32,15 @@
                 <version>${tycho-version}</version>
                 <configuration>
                     <dependency-resolution>
-                        <extrarequirements>
+                        <extraRequirements>
                             <requirement>
                                 <type>eclipse-feature</type>
                                 <id>org.jkiss.dbeaver.ce.feature</id>
-                                <versionrange>0.0.0</versionrange>
+                                <versionRange>0.0.0</versionRange>
                             </requirement>
                             <requirement>
                                 <type>eclipse-feature</type>
-                                <id>org.eclipse.e4.rcp</id>
+                                <id>org.eclipse.rcp</id>
                                 <versionRange>0.0.0</versionRange>
                             </requirement>
                             <requirement>
@@ -48,7 +48,7 @@
                                 <id>org.eclipse.pde</id>
                                 <versionRange>0.0.0</versionRange>
                             </requirement>
-                        </extrarequirements>
+                        </extraRequirements>
                     </dependency-resolution>
                 </configuration>
             </plugin>
