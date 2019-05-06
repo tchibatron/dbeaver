@@ -138,6 +138,8 @@ public class ResultSetViewer extends Viewer
 
     private static final String TOOLBAR_CONTRIBUTION_ID = "toolbar:org.jkiss.dbeaver.ui.controls.resultset.status";
 
+    static final String EMPTY_TRANSFORMER_NAME = "Default";
+
     static final String CONTROL_ID = ResultSetViewer.class.getSimpleName();
 
     private static final DecimalFormat ROW_COUNT_FORMAT = new DecimalFormat("###,###,###,###,###,##0");
@@ -224,7 +226,7 @@ public class ResultSetViewer extends Viewer
         this.defaultBackground = UIStyles.getDefaultTextBackground();
         this.defaultForeground = UIStyles.getDefaultTextForeground();
 
-        boolean supportsPanels = supportsPanels();
+        boolean supportsPanels = (decorator.getDecoratorFeatures() & IResultSetDecorator.FEATURE_PANELS) != 0;
 
         this.mainPanel = UIUtils.createPlaceholder(parent, supportsPanels ? 3 : 2);
 
@@ -245,6 +247,7 @@ public class ResultSetViewer extends Viewer
         this.viewerPanel = UIUtils.createPlaceholder(mainPanel, 1);
         this.viewerPanel.setLayoutData(new GridData(GridData.FILL_BOTH));
         this.viewerPanel.setData(CONTROL_ID, this);
+        CSSUtils.setCSSClass(this.viewerPanel, DBStyles.COLORED_BY_CONNECTION_TYPE);
         UIUtils.setHelp(this.viewerPanel, IHelpContextIds.CTX_RESULT_SET_VIEWER);
         this.viewerPanel.setRedraw(false);
 
@@ -265,7 +268,7 @@ public class ResultSetViewer extends Viewer
             this.presentationPanel = UIUtils.createPlaceholder(this.viewerSash, 1);
             this.presentationPanel.setLayoutData(new GridData(GridData.FILL_BOTH));
 
-            if (supportsPanels()) {
+            if (supportsPanels) {
                 this.panelFolder = new CTabFolder(this.viewerSash, SWT.FLAT | SWT.TOP);
                 CSSUtils.setCSSClass(panelFolder, DBStyles.COLORED_BY_CONNECTION_TYPE);
                 this.panelFolder.marginWidth = 0;
@@ -366,18 +369,27 @@ public class ResultSetViewer extends Viewer
     // Filters
 
     private boolean supportsPanels() {
-        return (decorator.getDecoratorFeatures() & IResultSetDecorator.FEATURE_PANELS) != 0;
+        return (decorator.getDecoratorFeatures() & IResultSetDecorator.FEATURE_PANELS) != 0 &&
+            activePresentationDescriptor != null &&
+            activePresentationDescriptor.supportsPanels();
     }
 
     private boolean supportsStatusBar() {
         return (decorator.getDecoratorFeatures() & IResultSetDecorator.FEATURE_STATUS_BAR) != 0;
     }
 
-    boolean supportsDataFilter()
-    {
+    boolean supportsDataFilter() {
         DBSDataContainer dataContainer = getDataContainer();
         return dataContainer != null &&
             (dataContainer.getSupportedFeatures() & DBSDataContainer.DATA_FILTER) == DBSDataContainer.DATA_FILTER;
+    }
+
+    boolean supportsNavigation() {
+        return activePresentationDescriptor != null && activePresentationDescriptor.supportsNavigation();
+    }
+
+    boolean supportsEdit() {
+        return activePresentationDescriptor != null && activePresentationDescriptor.supportsEdit();
     }
 
     public void resetDataFilter(boolean refresh)
@@ -385,8 +397,7 @@ public class ResultSetViewer extends Viewer
         setDataFilter(model.createDataFilter(), refresh);
     }
 
-    void saveDataFilter()
-    {
+    void saveDataFilter() {
         DBCExecutionContext context = getExecutionContext();
         if (context == null) {
             log.error("Can't save data filter with null context");
@@ -498,7 +509,7 @@ public class ResultSetViewer extends Viewer
         return UIStyles.getDefaultTextForeground();
     }
 
-    private void persistConfig() {
+    void persistConfig() {
         DBCExecutionContext context = getExecutionContext();
         if (context != null) {
             context.getDataSource().getContainer().persistConfiguration();
@@ -643,9 +654,7 @@ public class ResultSetViewer extends Viewer
         boolean focusInPresentation = UIUtils.isParent(presentationPanel, viewerPanel.getDisplay().getFocusControl());
 
         // Dispose previous presentation and panels
-        for (Control child : presentationPanel.getChildren()) {
-            child.dispose();
-        }
+        UIUtils.disposeChildControls(presentationPanel);
         if (panelFolder != null) {
             CTabItem curItem = panelFolder.getSelection();
             for (CTabItem panelItem : panelFolder.getItems()) {
@@ -672,6 +681,11 @@ public class ResultSetViewer extends Viewer
         }
         activePresentation.createPresentation(this, presentationPanel);
 
+        // Clear panels toolbar
+        if (panelSwitchFolder != null) {
+            UIUtils.disposeChildControls(panelSwitchFolder);
+        }
+
         // Activate panels
         if (supportsPanels()) {
             boolean panelsVisible = false;
@@ -690,11 +704,6 @@ public class ResultSetViewer extends Viewer
             showPanels(panelsVisible, false, false);
             viewerSash.setOrientation(verticalLayout ? SWT.VERTICAL : SWT.HORIZONTAL);
             viewerSash.setWeights(panelWeights);
-
-            // Update panels toolbar
-            for (Control child : panelSwitchFolder.getChildren()) {
-                child.dispose();
-            }
 
             if (!availablePanels.isEmpty()) {
                 VerticalButton panelsButton = new VerticalButton(panelSwitchFolder, SWT.RIGHT | SWT.CHECK);
@@ -749,6 +758,10 @@ public class ResultSetViewer extends Viewer
                     });
                     panelButton.setChecked(panelsVisible && isPanelVisible(panel.getId()));
                 }
+            }
+        } else {
+            if (viewerSash != null) {
+                viewerSash.setMaximizedControl(viewerSash.getChildren()[0]);
             }
         }
 
@@ -886,7 +899,7 @@ public class ResultSetViewer extends Viewer
     }
 
     private void savePresentationSettings() {
-        if (supportsPanels()) {
+        if ((decorator.getDecoratorFeatures() & IResultSetDecorator.FEATURE_PANELS) != 0) {
             IDialogSettings pSections = ResultSetUtils.getViewerSettings(SETTINGS_SECTION_PRESENTATIONS);
             for (Map.Entry<ResultSetPresentationDescriptor, PresentationSettings> pEntry : presentationSettings.entrySet()) {
                 if (pEntry.getKey() == null) {
@@ -1108,6 +1121,18 @@ public class ResultSetViewer extends Viewer
         updatePanelsButtons();
     }
 
+    void togglePanelsFocus() {
+        boolean panelsActive = UIUtils.hasFocus(panelFolder);
+        if (panelsActive) {
+            presentationPanel.setFocus();
+        } else {
+            CTabItem activePanelTab = panelFolder.getSelection();
+            if (activePanelTab != null && activePanelTab.getControl() != null) {
+                activePanelTab.getControl().setFocus();
+            }
+        }
+    }
+
     boolean isPanelVisible(String panelId) {
         return getPresentationSettings().enabledPanelIds.contains(panelId);
     }
@@ -1156,6 +1181,7 @@ public class ResultSetViewer extends Viewer
         }
         items.add(ActionUtils.makeCommandContribution(site, ResultSetHandlerMain.CMD_TOGGLE_MAXIMIZE));
         items.add(ActionUtils.makeCommandContribution(site, ResultSetHandlerMain.CMD_TOGGLE_PANELS));
+        items.add(ActionUtils.makeCommandContribution(site, ResultSetHandlerMain.CMD_ACTIVATE_PANELS));
         return items;
     }
 
@@ -1496,8 +1522,23 @@ public class ResultSetViewer extends Viewer
         }
         {
             final int fontHeight = UIUtils.getFontHeight(statusBar);
-            statusLabel = new StatusLabel(statusBar, SWT.NONE, this);
-            statusLabel.setLayoutData(new RowData(30 * fontHeight, SWT.DEFAULT));
+
+            resultSetSize = new Text(statusBar, SWT.BORDER);
+            resultSetSize.setLayoutData(new RowData(5 * fontHeight, SWT.DEFAULT));
+            resultSetSize.setBackground(UIStyles.getDefaultTextBackground());
+            resultSetSize.setToolTipText(DataEditorsMessages.resultset_segment_size);
+            resultSetSize.addModifyListener(e -> {
+                DBSDataContainer dataContainer = getDataContainer();
+                int fetchSize = CommonUtils.toInt(resultSetSize.getText());
+                if (fetchSize > 0 && dataContainer != null && dataContainer.getDataSource() != null) {
+                    DBPPreferenceStore store = dataContainer.getDataSource().getContainer().getPreferenceStore();
+                    int oldFetchSize = store.getInt(ResultSetPreferences.RESULT_SET_MAX_ROWS);
+                    if (oldFetchSize > 0 && oldFetchSize != fetchSize) {
+                        store.setValue(ResultSetPreferences.RESULT_SET_MAX_ROWS, fetchSize);
+                        PrefUtils.savePreferenceStore(store);
+                    }
+                }
+            });
 
             rowCountLabel = new ActiveStatusMessage(statusBar, DBeaverIcons.getImage(UIIcon.RS_REFRESH), ResultSetMessages.controls_resultset_viewer_calculate_row_count, this) {
                 @Override
@@ -1522,20 +1563,19 @@ public class ResultSetViewer extends Viewer
                 }
             };
             rowCountLabel.setLayoutData(new RowData(10 * fontHeight, SWT.DEFAULT));
+            CSSUtils.setCSSClass(rowCountLabel, DBStyles.COLORED_BY_CONNECTION_TYPE);
             rowCountLabel.setMessage("Row Count");
 
-            resultSetSize = new Text(statusBar, SWT.BORDER);
-            resultSetSize.setLayoutData(new RowData(5 * fontHeight, SWT.DEFAULT));
-            resultSetSize.setBackground(UIStyles.getDefaultTextBackground());
-            resultSetSize.setToolTipText(DataEditorsMessages.resultset_segment_size);
-            resultSetSize.addModifyListener(e -> {
-                DBSDataContainer dataContainer = getDataContainer();
-                int fetchSize = CommonUtils.toInt(resultSetSize.getText());
-                if (fetchSize > 0 && dataContainer != null && dataContainer.getDataSource() != null) {
-                    DBPPreferenceStore store = dataContainer.getDataSource().getContainer().getPreferenceStore();
-                    store.setValue(ResultSetPreferences.RESULT_SET_MAX_ROWS, fetchSize);
-                    PrefUtils.savePreferenceStore(store);
-                }
+            UIUtils.createToolBarSeparator(statusBar, SWT.VERTICAL);
+            statusLabel = new StatusLabel(statusBar, SWT.NONE, this);
+            statusLabel.setLayoutData(new RowData(30 * fontHeight, SWT.DEFAULT));
+            CSSUtils.setCSSClass(statusLabel, DBStyles.COLORED_BY_CONNECTION_TYPE);
+
+            statusBar.addListener(SWT.Resize, event -> {
+                Point fullSize = statusBar.computeSize(-1, -1);
+//                int exSize = fullSize.x - ((RowData)statusLabel.getLayoutData()).width;
+//                ((RowData)statusLabel.getLayoutData()).width = this.mainPanel.getSize().x - exSize;
+                //rowCountLabel.setLayoutData(new RowData(rowCountLabel.getMessage().length() * fontHeight + 20, SWT.DEFAULT));
             });
         }
     }
@@ -1580,6 +1620,7 @@ public class ResultSetViewer extends Viewer
 
     private void dispose()
     {
+        savePresentationSettings();
         clearData();
 
         for (ToolBarManager tb : toolbarList) {
@@ -1931,8 +1972,7 @@ public class ResultSetViewer extends Viewer
     }
 
     @Override
-    public boolean hasData()
-    {
+    public boolean hasData() {
         return model.hasData();
     }
 
@@ -2030,11 +2070,7 @@ public class ResultSetViewer extends Viewer
     }
 
     void showReferencesMenu(boolean openInNewWindow) {
-        ResultSetRow currentRow = getCurrentRow();
-        if (currentRow == null || currentRow.getRowNumber() < 0) {
-            return;
-        }
-        MenuManager menuManager = createRefTablesMenu(currentRow, openInNewWindow);
+        MenuManager menuManager = createRefTablesMenu(openInNewWindow);
         if (menuManager != null) {
             showContextMenuAtCursor(menuManager);
             viewerPanel.addDisposeListener(e -> menuManager.dispose());
@@ -2190,7 +2226,7 @@ public class ResultSetViewer extends Viewer
                 }
                 viewMenu.add(new TransformComplexTypesToggleAction());
                 viewMenu.add(new ColorizeDataTypesToggleAction());
-                if (getModel().isSingleSource()) {
+                {
                     if (valueController != null) {
                         viewMenu.add(new SetRowColorAction(attr, valueController.getValue()));
                         if (getModel().hasColorMapping(attr)) {
@@ -2203,6 +2239,7 @@ public class ResultSetViewer extends Viewer
                     }
                     viewMenu.add(new Separator());
                 }
+                viewMenu.add(new VirtualEntityEditAction());
                 viewMenu.add(new Action(ResultSetMessages.controls_resultset_viewer_action_data_formats) {
                     @Override
                     public void run() {
@@ -2230,7 +2267,7 @@ public class ResultSetViewer extends Viewer
                 }
                 if (model.isSingleSource()) {
                     // Add menu for referencing tables
-                    MenuManager refTablesMenu = createRefTablesMenu(row, false);
+                    MenuManager refTablesMenu = createRefTablesMenu(false);
                     if (refTablesMenu != null) {
                         navigateMenu.add(refTablesMenu);
                         hasNavTables = true;
@@ -2269,7 +2306,9 @@ public class ResultSetViewer extends Viewer
                 ResultSetMessages.controls_resultset_viewer_action_layout,
                 null,
                 MENU_ID_LAYOUT); //$NON-NLS-1$
-            layoutMenu.add(new ToggleModeAction());
+            if (activePresentationDescriptor != null && activePresentationDescriptor.supportsRecordMode()) {
+                layoutMenu.add(new ToggleModeAction());
+            }
             layoutMenu.add(ActionUtils.makeCommandContribution(site, ResultSetHandlerMain.CMD_TOGGLE_PANELS));
             layoutMenu.add(ActionUtils.makeCommandContribution(site, ResultSetHandlerMain.CMD_TOGGLE_LAYOUT));
             layoutMenu.add(ActionUtils.makeCommandContribution(site, ResultSetHandlerMain.CMD_SWITCH_PRESENTATION));
@@ -2340,7 +2379,7 @@ public class ResultSetViewer extends Viewer
     }
 
     @Nullable
-    private MenuManager createRefTablesMenu(ResultSetRow row, boolean openInNewWindow) {
+    private MenuManager createRefTablesMenu(boolean openInNewWindow) {
         DBSEntity singleSource = model.getSingleSource();
         if (singleSource == null) {
             return null;
@@ -2350,7 +2389,8 @@ public class ResultSetViewer extends Viewer
         MenuManager refTablesMenu = new MenuManager(menuName, null, "ref-tables");
         refTablesMenu.setActionDefinitionId(ResultSetHandlerMain.CMD_REFERENCES_MENU);
         refTablesMenu.add(ResultSetReferenceMenu.NOREFS_ACTION);
-        refTablesMenu.addMenuListener(manager -> ResultSetReferenceMenu.fillRefTablesActions(this, row, singleSource, manager, openInNewWindow));
+        refTablesMenu.addMenuListener(manager ->
+            ResultSetReferenceMenu.fillRefTablesActions(this, getSelection().getSelectedRows(), singleSource, manager, openInNewWindow));
 
         return refTablesMenu;
     }
@@ -2399,7 +2439,7 @@ public class ResultSetViewer extends Viewer
         if (customTransformers != null && !customTransformers.isEmpty()) {
             manager.add(new TransformerAction(
                 attr,
-                "Default",
+                EMPTY_TRANSFORMER_NAME,
                 IAction.AS_RADIO_BUTTON,
                 transformSettings == null || CommonUtils.isEmpty(transformSettings.getCustomTransformer()))
             {
@@ -2426,7 +2466,7 @@ public class ResultSetViewer extends Viewer
                                 final String oldCustomTransformer = settings.getCustomTransformer();
                                 settings.setCustomTransformer(descriptor.getId());
                                 TransformerSettingsDialog settingsDialog = new TransformerSettingsDialog(
-                                    ResultSetViewer.this, attr, settings);
+                                    ResultSetViewer.this, attr, settings, false);
                                 if (settingsDialog.open() == IDialogConstants.OK_ID) {
                                     // If there are no options - save settings without opening dialog
                                     saveTransformerSettings();
@@ -2447,7 +2487,7 @@ public class ResultSetViewer extends Viewer
                 @Override
                 public void run() {
                     TransformerSettingsDialog settingsDialog = new TransformerSettingsDialog(
-                        ResultSetViewer.this, attr, transformSettings);
+                        ResultSetViewer.this, attr, transformSettings, false);
                     if (settingsDialog.open() == IDialogConstants.OK_ID) {
                         saveTransformerSettings();
                     }
@@ -2537,7 +2577,7 @@ public class ResultSetViewer extends Viewer
     }
 
     @Override
-    public void navigateAssociation(@NotNull DBRProgressMonitor monitor, @Nullable DBSEntityAssociation association, @Nullable DBDAttributeBinding attr, @NotNull ResultSetRow row, boolean newWindow)
+    public void navigateAssociation(@NotNull DBRProgressMonitor monitor, @Nullable DBSEntityAssociation association, @Nullable DBDAttributeBinding attr, @NotNull List<ResultSetRow> rows, boolean newWindow)
         throws DBException
     {
         if (!confirmProceed()) {
@@ -2605,9 +2645,7 @@ public class ResultSetViewer extends Viewer
             constraint.setVisible(true);
             constraints.add(constraint);
 
-            Object keyValue = model.getCellValue(ownBinding, row);
-            constraint.setOperator(DBCLogicalOperator.EQUALS);
-            constraint.setValue(keyValue);
+            createFilterConstraint(rows, ownBinding, constraint);
         }
         // Save cur data filter in state
         curState.filter = new DBDDataFilter(model.getDataFilter());
@@ -2615,7 +2653,7 @@ public class ResultSetViewer extends Viewer
     }
 
     @Override
-    public void navigateReference(@NotNull DBRProgressMonitor monitor, @NotNull DBSEntityAssociation association, @NotNull ResultSetRow row, boolean newWindow)
+    public void navigateReference(@NotNull DBRProgressMonitor monitor, @NotNull DBSEntityAssociation association, @NotNull List<ResultSetRow> rows, boolean newWindow)
         throws DBException
     {
         if (!confirmProceed()) {
@@ -2667,12 +2705,26 @@ public class ResultSetViewer extends Viewer
                 constraint.setVisible(true);
                 constraints.add(constraint);
 
-                Object keyValue = model.getCellValue(attrBinding, row);
-                constraint.setOperator(DBCLogicalOperator.EQUALS);
-                constraint.setValue(keyValue);
+                createFilterConstraint(rows, attrBinding, constraint);
+
             }
         }
         navigateEntity(monitor, newWindow, targetEntity, constraints);
+    }
+
+    private void createFilterConstraint(@NotNull List<ResultSetRow> rows, DBDAttributeBinding attrBinding, DBDAttributeConstraint constraint) {
+        if (rows.size() == 1) {
+            Object keyValue = model.getCellValue(attrBinding, rows.get(0));
+            constraint.setOperator(DBCLogicalOperator.EQUALS);
+            constraint.setValue(keyValue);
+        } else {
+            Object[] keyValues = new Object[rows.size()];
+            for (int k = 0; k < rows.size(); k++) {
+                keyValues[k] = model.getCellValue(attrBinding, rows.get(k));
+            }
+            constraint.setOperator(DBCLogicalOperator.IN);
+            constraint.setValue(keyValues);
+        }
     }
 
     private void navigateEntity(@NotNull DBRProgressMonitor monitor, boolean newWindow, DBSEntity targetEntity, List<DBDAttributeConstraint> constraints) {
@@ -3462,7 +3514,7 @@ public class ResultSetViewer extends Viewer
     @Nullable
     DBDRowIdentifier getVirtualEntityIdentifier()
     {
-        if (!model.isSingleSource() || model.getVisibleAttributeCount() == 0) {
+        if (model.getVisibleAttributeCount() == 0) {
             return null;
         }
         DBDRowIdentifier rowIdentifier = model.getVisibleAttribute(0).getRowIdentifier();
@@ -3702,6 +3754,8 @@ public class ResultSetViewer extends Viewer
         @Override
         public void runWithEvent(Event event)
         {
+            new VirtualEntityEditAction().run();
+/*
             Menu menu = getMenu(activePresentation.getControl());
             if (menu != null && event.widget instanceof ToolItem) {
                 Rectangle bounds = ((ToolItem) event.widget).getBounds();
@@ -3709,6 +3763,7 @@ public class ResultSetViewer extends Viewer
                 menu.setLocation(point.x, point.y);
                 menu.setVisible(true);
             }
+*/
         }
 
         @Override
@@ -3722,13 +3777,24 @@ public class ResultSetViewer extends Viewer
         {
             MenuManager menuManager = new MenuManager();
             menuManager.add(new ShowFiltersAction(false));
-            menuManager.add(new CustomizeColorsAction());
+            //menuManager.add(new CustomizeColorsAction());
             menuManager.add(new Separator());
-            menuManager.add(new VirtualKeyEditAction(true));
-            menuManager.add(new VirtualKeyEditAction(false));
+            VirtualUniqueKeyEditAction vkAction = new VirtualUniqueKeyEditAction(true);
+            if (vkAction.isEnabled()) {
+                menuManager.add(vkAction);
+            }
+            VirtualUniqueKeyEditAction vkRemoveAction = new VirtualUniqueKeyEditAction(false);
+            if (vkRemoveAction.isEnabled()) {
+                menuManager.add(vkRemoveAction);
+            }
             menuManager.add(new DictionaryEditAction());
+            if (getDataContainer() != null) {
+                menuManager.add(new VirtualEntityEditAction());
+            }
             menuManager.add(new Separator());
-            menuManager.add(new ToggleModeAction());
+            if (activePresentationDescriptor != null && activePresentationDescriptor.supportsRecordMode()) {
+                menuManager.add(new ToggleModeAction());
+            }
             activePresentation.fillMenu(menuManager);
             if (!CommonUtils.isEmpty(availablePresentations) && availablePresentations.size() > 1) {
                 menuManager.add(new Separator());
@@ -4097,19 +4163,13 @@ public class ResultSetViewer extends Viewer
         DBVEntity getVirtualEntity(DBDAttributeBinding binding)
             throws IllegalStateException
         {
-            final DBSEntity entity = getModel().getSingleSource();
-            if (entity == null) {
-                throw new IllegalStateException("No virtual entity for multi-source query");
-            }
-            final DBVEntity vEntity = DBVUtils.findVirtualEntity(entity, true);
-            assert vEntity != null;
-            return vEntity;
+            return DBVUtils.getVirtualEntity(binding, true);
         }
 
         void updateColors(DBVEntity entity) {
-            model.updateColorMapping();
+            model.updateColorMapping(true);
             redrawData(false, false);
-            entity.getDataSource().getContainer().persistConfiguration();
+            entity.persistConfiguration();
         }
     }
 
@@ -4200,20 +4260,19 @@ public class ResultSetViewer extends Viewer
                 return;
             }
             final DBVEntity vEntity = getVirtualEntity(curAttribute);
-            //vEntity.removeColorOverride(attribute);
             updateColors(vEntity);
         }
 
         @Override
         public boolean isEnabled() {
-            return false;
+            return true;
         }
     }
 
-    private class VirtualKeyEditAction extends Action {
+    private class VirtualUniqueKeyEditAction extends Action {
         private boolean define;
 
-        VirtualKeyEditAction(boolean define)
+        VirtualUniqueKeyEditAction(boolean define)
         {
             super(define ? "Define virtual unique key" : "Clear virtual unique key");
             this.define = define;
@@ -4240,6 +4299,27 @@ public class ResultSetViewer extends Viewer
                     throw new InvocationTargetException(e);
                 }
             });
+        }
+    }
+
+    private class VirtualEntityEditAction extends Action {
+        VirtualEntityEditAction() {
+            super("Logical structure / view settings");
+        }
+
+        @Override
+        public void run()
+        {
+            DBSDataContainer dataContainer = getDataContainer();
+            if (dataContainer == null) {
+                return;
+            }
+            DBSEntity entity = model.isSingleSource() ? model.getSingleSource() : null;
+            DBVEntity vEntity = entity != null ?
+                DBVUtils.getVirtualEntity(entity, true) :
+                DBVUtils.getVirtualEntity(dataContainer, true);
+            EditVirtualEntityDialog dialog = new EditVirtualEntityDialog(ResultSetViewer.this, entity, vEntity);
+            dialog.open();
         }
     }
 

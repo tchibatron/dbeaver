@@ -26,6 +26,7 @@ import org.eclipse.jface.action.IContributionManager;
 import org.eclipse.jface.bindings.keys.KeyStroke;
 import org.eclipse.jface.bindings.keys.ParseException;
 import org.eclipse.jface.commands.ActionHandler;
+import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.fieldassist.ContentProposalAdapter;
@@ -65,6 +66,7 @@ import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.internal.UIActivator;
+import org.jkiss.dbeaver.ui.internal.UIMessages;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.DBPImage;
 import org.jkiss.dbeaver.model.DBPNamedObject;
@@ -91,6 +93,8 @@ import java.text.MessageFormat;
 import java.util.Collection;
 import java.util.Locale;
 import java.util.SortedMap;
+
+import static org.eclipse.swt.events.SelectionListener.widgetSelectedAdapter;
 
 /**
  * UI Utils
@@ -157,6 +161,11 @@ public class UIUtils {
         };
     }
 
+    public static void createToolBarSeparator(Composite toolBar, int style) {
+        Label label = new Label(toolBar, SWT.NONE);
+        label.setImage(DBeaverIcons.getImage((style & SWT.HORIZONTAL) == SWT.HORIZONTAL ? UIIcon.SEPARATOR_H : UIIcon.SEPARATOR_V));
+    }
+
     public static void createToolBarSeparator(ToolBar toolBar, int style) {
         Label label = new Label(toolBar, SWT.NONE);
         label.setImage(DBeaverIcons.getImage((style & SWT.HORIZONTAL) == SWT.HORIZONTAL ? UIIcon.SEPARATOR_H : UIIcon.SEPARATOR_V));
@@ -175,6 +184,16 @@ public class UIUtils {
         TreeColumn column = new TreeColumn(tree, style);
         column.setText(text);
         return column;
+    }
+
+    public static void executeOnResize(Control control, Runnable runnable) {
+        control.addControlListener(new ControlAdapter() {
+            @Override
+            public void controlResized(ControlEvent e) {
+                runnable.run();
+                control.removeControlListener(this);
+            }
+        });
     }
 
     public static void packColumns(Table table)
@@ -457,10 +476,15 @@ public class UIUtils {
         return fontData[0].getHeight();
     }
 
-    public static int getTextHeight(Control control) {
+    public static int getTextHeight(@NotNull Control control) {
+        return getTextSize(control, "X").y;
+    }
+
+    @NotNull
+    public static Point getTextSize(@NotNull Control control, @NotNull String text) {
         GC gc = new GC(control);
         try {
-            return gc.textExtent("X").y;
+            return gc.textExtent(text);
         } finally {
             gc.dispose();
         }
@@ -915,6 +939,33 @@ public class UIUtils {
         if (image != null) {
             button.setImage(image);
         }
+        if (selectionListener != null) {
+            button.addSelectionListener(selectionListener);
+        }
+        return button;
+    }
+
+    @NotNull
+    public static Button createDialogButton(@NotNull Composite parent, @Nullable String label, @Nullable SelectionListener selectionListener)
+    {
+        Button button = new Button(parent, SWT.PUSH);
+        button.setText(label);
+        button.setFont(JFaceResources.getDialogFont());
+
+        // Dialog settings
+        GridData gd = new GridData(GridData.HORIZONTAL_ALIGN_FILL);
+        GC gc = new GC(button);
+        int widthHint;
+        try {
+            gc.setFont(JFaceResources.getDialogFont());
+            widthHint = org.eclipse.jface.dialogs.Dialog.convertHorizontalDLUsToPixels(gc.getFontMetrics(), IDialogConstants.BUTTON_WIDTH);
+        } finally {
+            gc.dispose();
+        }
+        Point minSize = button.computeSize(SWT.DEFAULT, SWT.DEFAULT, true);
+        gd.widthHint = Math.max(widthHint, minSize.x);
+        button.setLayoutData(gd);
+
         if (selectionListener != null) {
             button.addSelectionListener(selectionListener);
         }
@@ -1603,6 +1654,14 @@ public class UIUtils {
         return sharedTextColors.getColor(rgbString);
     }
 
+    @Nullable
+    public static Color getSharedColor(@Nullable RGB rgb) {
+        if (rgb == null) {
+            return null;
+        }
+        return sharedTextColors.getColor(rgb);
+    }
+
     public static Color getConnectionColor(DBPConnectionConfiguration connectionInfo) {
         String rgbString = connectionInfo.getConnectionColor();
         if (CommonUtils.isEmpty(rgbString)) {
@@ -1659,7 +1718,7 @@ public class UIUtils {
 
     public static ContentProposalAdapter installContentProposal(Control control, IControlContentAdapter contentAdapter, IContentProposalProvider provider, boolean autoActivation, boolean insertAfter) {
         try {
-            KeyStroke keyStroke = autoActivation ? null : KeyStroke.getInstance("Ctrl+Space");
+            KeyStroke keyStroke = autoActivation ? null : KeyStroke.getInstance("Ctrl+Space"); //$NON-NLS-1$
             final ContentProposalAdapter proposalAdapter = new ContentProposalAdapter(
                 control,
                 contentAdapter,
@@ -1682,8 +1741,8 @@ public class UIUtils {
             if (varsTip.length() > 0) varsTip.append(",\n");
             varsTip.append("\t").append(GeneralUtils.variablePattern(var));
         }
-        varsTip.append(".");
-        control.setToolTipText(toolTip + ". Allowed variables:\n" + varsTip);
+        varsTip.append("."); //$NON-NLS-1$
+        control.setToolTipText(toolTip + ". " + UIMessages.pref_page_connections_tool_tip_text_allowed_variables + ":\n" + varsTip);
 
     }
 
@@ -1762,6 +1821,12 @@ public class UIUtils {
         gd.widthHint = 0;
         emptyLabel.setLayoutData(gd);
         return emptyLabel;
+    }
+
+    public static void disposeChildControls(Composite composite) {
+        for (Control child : composite.getChildren()) {
+            child.dispose();
+        }
     }
 
     //////////////////////////////////////////

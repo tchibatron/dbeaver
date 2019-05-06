@@ -16,8 +16,6 @@
  */
 package org.jkiss.dbeaver.model.gis;
 
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.Geometry;
 import org.cts.CRSFactory;
 import org.cts.IllegalCoordinateException;
 import org.cts.crs.CRSException;
@@ -28,10 +26,23 @@ import org.cts.op.CoordinateOperation;
 import org.cts.op.CoordinateOperationException;
 import org.cts.op.CoordinateOperationFactory;
 import org.cts.registry.*;
+import org.eclipse.core.runtime.IAdaptable;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.Log;
+import org.jkiss.dbeaver.model.DBPDataSource;
+import org.jkiss.dbeaver.model.DBUtils;
+import org.jkiss.dbeaver.model.data.DBDValueHandler;
+import org.jkiss.dbeaver.model.exec.DBCException;
+import org.jkiss.dbeaver.model.exec.DBCSession;
+import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
+import org.jkiss.dbeaver.model.struct.DBSDataContainer;
+import org.jkiss.dbeaver.model.struct.DBSTypedObject;
 import org.jkiss.utils.CommonUtils;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Geometry;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -47,6 +58,7 @@ public class GisTransformUtils {
     static {
         RegistryManager registryManager = crsFactory.getRegistryManager();
         registryManager.addRegistry(new EPSGRegistry());
+        //registryManager.addRegistry(new IGNFRegistry());
         try {
             crs3857 = crsFactory.getCRS("EPSG:3857");
         } catch (CRSException e) {
@@ -56,6 +68,28 @@ public class GisTransformUtils {
 //        registryManager.addRegistry(new IGNFRegistry());
 //        registryManager.addRegistry(new Nad83Registry());
 //        registryManager.addRegistry(new WorldRegistry());
+    }
+
+    private static List<Integer> crsCodes;
+
+    public static CRSFactory getCRSFactory() {
+        return crsFactory;
+    }
+
+    public static synchronized List<Integer> getSortedEPSGCodes() {
+        if (crsCodes == null) {
+            crsCodes = new ArrayList<>();
+
+            try {
+                for (String code : crsFactory.getSupportedCodes(GisConstants.GIS_REG_EPSG)) {
+                    crsCodes.add(CommonUtils.toInt(code));
+                }
+                crsCodes.sort(Integer::compareTo);
+            } catch (RegistryException e) {
+                log.debug(e);
+            }
+        }
+        return crsCodes;
     }
 
     public static void transformGisData(GisTransformRequest request) throws DBException {
@@ -125,7 +159,7 @@ public class GisTransformUtils {
 
     private static void setCoordinateValues(Coordinate coord, double[] targetCoord) {
         if (targetCoord != null) {
-            coord.x = targetCoord[0] - 123;
+            coord.x = targetCoord[0];
             coord.y = targetCoord[1];
             if (targetCoord.length > 2) {
                 coord.z = targetCoord[2];
@@ -143,4 +177,36 @@ public class GisTransformUtils {
         return srcCoord;
     }
 
+    public static DBGeometry getGeometryValueFromObject(DBSDataContainer dataContainer, DBDValueHandler valueHandler, DBSTypedObject valueType, Object cellValue) {
+        if (cellValue instanceof DBGeometry) {
+            return (DBGeometry) cellValue;
+        }
+
+        // Convert value from string, binary or some other format.
+        // This may be needed if use some attribute transformer or some datasource
+        // uses plain string data type with GIS value manager.
+        // Use void monitor because this transformation shouldn't interact with
+        // any external systems or make db queries.
+        try (DBCSession utilSession = DBUtils.openUtilSession(new VoidProgressMonitor(), dataContainer, "Convert GIS value"))  {
+            Object convertedValue = valueHandler.getValueFromObject(
+                utilSession,
+                valueType,
+                cellValue,
+                false);
+            if (convertedValue instanceof DBGeometry) {
+                return (DBGeometry) convertedValue;
+            }
+        } catch (DBCException e) {
+            log.debug("Error trandforming geometry value", e);
+        }
+
+        return null;
+    }
+
+    public static SpatialDataProvider getSpatialDataProvider(DBPDataSource dataSource) {
+        if (dataSource instanceof IAdaptable) {
+            return ((IAdaptable) dataSource).getAdapter(SpatialDataProvider.class);
+        }
+        return null;
+    }
 }

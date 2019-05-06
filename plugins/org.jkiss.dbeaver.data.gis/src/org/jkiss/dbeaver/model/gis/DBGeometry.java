@@ -17,9 +17,13 @@
 
 package org.jkiss.dbeaver.model.gis;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.jkiss.dbeaver.DBException;
+import org.jkiss.dbeaver.data.gis.handlers.GeometryConverter;
 import org.jkiss.dbeaver.model.data.DBDValue;
 import org.jkiss.utils.CommonUtils;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.io.ParseException;
+import org.locationtech.jts.io.WKTReader;
 
 import java.util.Map;
 
@@ -43,6 +47,11 @@ public class DBGeometry implements DBDValue {
     public DBGeometry(Geometry rawValue) {
         this.rawValue = rawValue;
         this.srid = rawValue == null ? 0 : rawValue.getSRID();
+    }
+
+    public DBGeometry(Object rawValue, int srid) {
+        this.rawValue = rawValue;
+        this.srid = srid;
     }
 
     public Geometry getGeometry() {
@@ -86,6 +95,21 @@ public class DBGeometry implements DBDValue {
         this.srid = srid;
     }
 
+    public DBGeometry flipCoordinates() throws DBException {
+        Geometry jtsGeometry = getGeometry();
+        if (jtsGeometry == null) {
+            try {
+                jtsGeometry = new WKTReader().read(getString());
+            } catch (Exception e) {
+                throw new DBException("Error parsing geometry WKT", e);
+            }
+        } else {
+            jtsGeometry = jtsGeometry.copy();
+        }
+        jtsGeometry.apply(GeometryConverter.INVERT_COORDINATE_FILTER);
+        return new DBGeometry(jtsGeometry, srid);
+    }
+
     public Map<String, Object> getProperties() {
         return properties;
     }
@@ -93,4 +117,5 @@ public class DBGeometry implements DBDValue {
     public void setProperties(Map<String, Object> properties) {
         this.properties = properties;
     }
+
 }

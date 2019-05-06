@@ -101,12 +101,6 @@ public class CoreMessages extends NLS {
 	public static String model_navigator_Connection;
 	public static String model_navigator_Connections;
 
-	public static String editor_file_delete_error_title;
-	public static String editor_file_delete_error_text;
-	public static String editor_file_delete_this_script;
-	public static String editor_file_delete_confirm_delete_text;
-	public static String editor_file_delete_confirm_delete_title;
-
 	public static String dialog_about_font;
 	public static String dialog_about_label_version;
 	public static String dialog_about_title;
@@ -432,7 +426,6 @@ public class CoreMessages extends NLS {
 	public static String toolbar_datasource_selector_action_read_databases;
 	public static String toolbar_datasource_selector_combo_database_tooltip;
 	public static String toolbar_datasource_selector_combo_datasource_tooltip;
-	public static String toolbar_datasource_selector_empty;
 	public static String toolbar_datasource_selector_error_change_database_message;
 	public static String toolbar_datasource_selector_error_change_database_title;
 	public static String toolbar_datasource_selector_error_database_not_found;
@@ -602,6 +595,7 @@ public class CoreMessages extends NLS {
 	public static String pref_page_connection_label_general;
 
 	public static String pref_page_connection_label_use_environment;
+    public static String pref_page_connections_application_name_text;
 
 	public static String transaction_info_dialog_checkbox_show_all_queries;
 

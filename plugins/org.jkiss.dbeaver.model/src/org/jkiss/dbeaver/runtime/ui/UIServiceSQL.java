@@ -44,14 +44,18 @@ public interface UIServiceSQL {
      *
      * @param site IWorkbenchPArtSite
      * @param parentControl   Composite
+     * @param showVerticalBar
      * @return TextViewer
      */
-    Object createSQLPanel(Object site, Object parentControl, DBPContextProvider contextProvider, String panelName, String sqlText)
+    Object createSQLPanel(Object site, Object parentControl, DBPContextProvider contextProvider, String panelName, boolean showVerticalBar, String sqlText)
         throws DBException;
+
+    void setSQLPanelText(Object panelObject, String sqlText);
 
     Object openNewScript(DBPDataSourceContainer dataSource);
 
     Object openRecentScript(DBPDataSourceContainer dataSource);
 
     void openResource(IResource element);
+
 }

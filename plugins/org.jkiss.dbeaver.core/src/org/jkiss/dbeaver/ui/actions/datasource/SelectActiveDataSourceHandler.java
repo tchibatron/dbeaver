@@ -59,7 +59,7 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
         return null;
     }
 
-    private static void openDataSourceSelector(IWorkbenchWindow workbenchWindow, DBPDataSourceContainer dataSource) {
+    public static void openDataSourceSelector(IWorkbenchWindow workbenchWindow, DBPDataSourceContainer dataSource) {
         IProject activeProject = dataSource != null ? dataSource.getRegistry().getProject() : DBWorkbench.getPlatform().getProjectManager().getActiveProject();
 
         IEditorPart activeEditor = workbenchWindow.getActivePage().getActiveEditor();
@@ -95,11 +95,13 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
             connectionName = dataSource.getName();
             connectionIcon = dataSource.getDriver().getIcon();
         }
-        GC gc = new GC(workbenchWindow.getShell());
-        try {
-            connectionName = TextUtils.getShortText(gc, connectionName, 200);
-        } finally {
-            gc.dispose();
+        if (workbenchWindow != null) {
+            GC gc = new GC(workbenchWindow.getShell());
+            try {
+                connectionName = TextUtils.getShortText(gc, connectionName, 200);
+            } finally {
+                gc.dispose();
+            }
         }
         element.setText(connectionName);
         element.setIcon(DBeaverIcons.getImageDescriptor(connectionIcon));

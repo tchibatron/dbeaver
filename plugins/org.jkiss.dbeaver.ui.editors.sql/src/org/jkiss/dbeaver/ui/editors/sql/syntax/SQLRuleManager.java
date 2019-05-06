@@ -38,10 +38,11 @@ import org.jkiss.dbeaver.ui.editors.sql.SQLEditorBase;
 import org.jkiss.dbeaver.ui.editors.sql.SQLPreferenceConstants;
 import org.jkiss.dbeaver.ui.editors.sql.registry.SQLCommandHandlerDescriptor;
 import org.jkiss.dbeaver.ui.editors.sql.registry.SQLCommandsRegistry;
-import org.jkiss.dbeaver.ui.editors.text.parser.SQLWordDetector;
 import org.jkiss.dbeaver.ui.editors.sql.syntax.rules.*;
 import org.jkiss.dbeaver.ui.editors.sql.syntax.tokens.*;
 import org.jkiss.dbeaver.ui.editors.text.TextWhiteSpaceDetector;
+import org.jkiss.dbeaver.ui.editors.text.parser.SQLWordDetector;
+import org.jkiss.dbeaver.utils.GeneralUtils;
 import org.jkiss.utils.ArrayUtils;
 import org.jkiss.utils.CommonUtils;
 import org.jkiss.utils.Pair;
@@ -125,10 +126,7 @@ public class SQLRuleManager extends RuleBasedScanner {
     public void refreshRules(@Nullable DBPDataSource dataSource, @Nullable IEditorInput editorInput)
     {
         SQLDialect dialect = syntaxManager.getDialect();
-        SQLRuleProvider ruleProvider = null;
-        if (dialect instanceof SQLRuleProvider) {
-            ruleProvider = (SQLRuleProvider) dialect;
-        }
+        SQLRuleProvider ruleProvider = GeneralUtils.adapt(dialect, SQLRuleProvider.class);
 
         boolean minimalRules = SQLEditorBase.isBigScript(editorInput);
 

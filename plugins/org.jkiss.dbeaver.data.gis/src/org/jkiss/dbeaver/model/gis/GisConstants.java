@@ -21,6 +21,8 @@ package org.jkiss.dbeaver.model.gis;
 */
 public interface GisConstants {
 
-    public static final int DEFAULT_SRID = 4326;
+    int DEFAULT_SRID = 4326;
+    int DEFAULT_OSM_SRID = 3857;
 
+    String GIS_REG_EPSG = "EPSG";
 }

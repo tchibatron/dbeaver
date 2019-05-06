@@ -25,10 +25,13 @@ import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.Log;
+import org.jkiss.dbeaver.model.DBUtils;
 import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.gis.DBGeometry;
+import org.jkiss.dbeaver.model.gis.GisTransformUtils;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.controls.resultset.*;
+import org.jkiss.dbeaver.ui.gis.GeometryDataUtils;
 import org.jkiss.dbeaver.ui.gis.panel.GISLeafletViewer;
 
 import java.util.ArrayList;
@@ -49,8 +52,11 @@ public class GeometryPresentation extends AbstractPresentation {
     public void createPresentation(@NotNull final IResultSetController controller, @NotNull Composite parent) {
         super.createPresentation(controller, parent);
 
-        leafletViewer = new GISLeafletViewer(parent, null);
-        leafletViewer.getBrowser().setLayoutData(new GridData(GridData.FILL_BOTH));
+        leafletViewer = new GISLeafletViewer(
+            parent,
+            null,
+            GisTransformUtils.getSpatialDataProvider(controller.getDataContainer().getDataSource()));
+        leafletViewer.getBrowserComposite().setLayoutData(new GridData(GridData.FILL_BOTH));
     }
 
     @Override
@@ -110,49 +116,35 @@ public class GeometryPresentation extends AbstractPresentation {
     public void setSelection(ISelection selection) {
     }
 
-    static class GeomAttrs {
-        DBDAttributeBinding geomAttr;
-        List<DBDAttributeBinding> descAttrs;
-
-        public GeomAttrs(DBDAttributeBinding geomAttr, List<DBDAttributeBinding> descAttrs) {
-            this.geomAttr = geomAttr;
-            this.descAttrs = descAttrs;
-        }
-    }
-
     @Override
     public void refreshData(boolean refreshMetadata, boolean append, boolean keepState) {
-        List<GeomAttrs> result = new ArrayList<>();
+        controller.updateEditControls();
+
+        List<GeometryDataUtils.GeomAttrs> result = GeometryDataUtils.extractGeometryAttributes(getController());
         ResultSetModel model = getController().getModel();
-        List<DBDAttributeBinding> attributes = model.getVisibleAttributes();
-        List<DBDAttributeBinding> descAttrs = new ArrayList<>();
-        for (DBDAttributeBinding attr : attributes) {
-            if (attr.getValueHandler().getValueObjectType(attr.getAttribute()) == DBGeometry.class) {
-                GeomAttrs geomAttrs = new GeomAttrs(attr, descAttrs);
-                result.add(geomAttrs);
-                descAttrs = new ArrayList<>();
-            } else {
-                descAttrs.add(attr);
-            }
-        }
-        if (result.size() == 1) {
-            result.get(0).descAttrs.addAll(descAttrs);
-        }
 
         // Now extract all geom values from data
         List<DBGeometry> geometries = new ArrayList<>();
-        for (GeomAttrs geomAttrs : result) {
+        for (GeometryDataUtils.GeomAttrs geomAttrs : result) {
             for (ResultSetRow row : model.getAllRows()) {
                 Object value = model.getCellValue(geomAttrs.geomAttr, row);
-                if (value instanceof DBGeometry) {
-                    DBGeometry geometry = (DBGeometry)value;
+
+                DBGeometry geometry = GisTransformUtils.getGeometryValueFromObject(
+                    controller.getDataContainer(),
+                    geomAttrs.geomAttr.getValueHandler(),
+                    geomAttrs.geomAttr,
+                    value);
+
+                if (geometry != null) {
                     geometries.add(geometry);
                     // Now get description
                     if (!geomAttrs.descAttrs.isEmpty()) {
                         Map<String, Object> properties = new LinkedHashMap<>();
                         for (DBDAttributeBinding da : geomAttrs.descAttrs) {
                             Object descValue = model.getCellValue(da, row);
-                            properties.put(da.getName(), descValue);
+                            if (!DBUtils.isNullValue(descValue)) {
+                                properties.put(da.getName(), descValue);
+                            }
                         }
                         geometry.setProperties(properties);
                     }

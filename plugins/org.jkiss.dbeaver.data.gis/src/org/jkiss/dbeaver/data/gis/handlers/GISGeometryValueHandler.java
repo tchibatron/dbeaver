@@ -16,7 +16,6 @@
  */
 package org.jkiss.dbeaver.data.gis.handlers;
 
-import com.vividsolutions.jts.geom.Geometry;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.model.exec.DBCException;
 import org.jkiss.dbeaver.model.exec.DBCSession;
@@ -26,6 +25,7 @@ import org.jkiss.dbeaver.model.exec.jdbc.JDBCSession;
 import org.jkiss.dbeaver.model.gis.DBGeometry;
 import org.jkiss.dbeaver.model.impl.jdbc.data.handlers.JDBCAbstractValueHandler;
 import org.jkiss.dbeaver.model.struct.DBSTypedObject;
+import org.locationtech.jts.geom.Geometry;
 
 import java.sql.SQLException;
 
@@ -34,7 +34,32 @@ import java.sql.SQLException;
  */
 public class GISGeometryValueHandler extends JDBCAbstractValueHandler {
 
-    public static final GISGeometryValueHandler INSTANCE = new GISGeometryValueHandler();
+    private int defaultSRID;
+    private boolean invertCoordinates;
+
+    public GISGeometryValueHandler() {
+        this(false);
+    }
+
+    public GISGeometryValueHandler(boolean invertCoordinates) {
+        this.invertCoordinates = invertCoordinates;
+    }
+
+    public boolean isFlipCoordinates() {
+        return invertCoordinates;
+    }
+
+    public int getDefaultSRID() {
+        return defaultSRID;
+    }
+
+    public void setDefaultSRID(int defaultSRID) {
+        this.defaultSRID = defaultSRID;
+    }
+
+    public void setInvertCoordinates(boolean invertCoordinates) {
+        this.invertCoordinates = invertCoordinates;
+    }
 
     @Override
     protected Object fetchColumnValue(DBCSession session, JDBCResultSet resultSet, DBSTypedObject type, int index) throws DBCException, SQLException {
@@ -65,17 +90,32 @@ public class GISGeometryValueHandler extends JDBCAbstractValueHandler {
     @NotNull
     @Override
     public DBGeometry getValueFromObject(DBCSession session, DBSTypedObject type, Object object, boolean copy) throws DBCException {
+        DBGeometry geometry;
         if (object == null) {
-            return new DBGeometry();
+            geometry = new DBGeometry();
+        } else if (object instanceof DBGeometry) {
+            geometry = (DBGeometry) object;
         } else if (object instanceof Geometry) {
-            return new DBGeometry((Geometry)object);
+            geometry = new DBGeometry((Geometry)object);
         } else if (object instanceof byte[]) {
-            return new DBGeometry(GeometryConverter.getInstance().from((byte[]) object));
+            Geometry jtsGeometry = GeometryConverter.getInstance().from((byte[]) object);
+//            if (invertCoordinates) {
+//                jtsGeometry.apply(GeometryConverter.INVERT_COORDINATE_FILTER);
+//            }
+            geometry = new DBGeometry(jtsGeometry);
         } else if (object instanceof String) {
-            return new DBGeometry(GeometryConverter.getInstance().from((String)object));
+            Geometry jtsGeometry = GeometryConverter.getInstance().from((String) object);
+            if (invertCoordinates) {
+                jtsGeometry.apply(GeometryConverter.INVERT_COORDINATE_FILTER);
+            }
+            geometry = new DBGeometry(jtsGeometry);
         } else {
             throw new DBCException("Unsupported geometry value: " + object);
         }
+        if (geometry.getSRID() == 0) {
+            geometry.setSRID(defaultSRID);
+        }
+        return geometry;
     }
 
     protected byte[] fetchBytes(JDBCResultSet resultSet, int index) throws SQLException {

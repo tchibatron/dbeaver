@@ -33,38 +33,36 @@ import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.utils.ArrayUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 /**
  * DBNProject
  */
-public class DBNProject extends DBNResource
-{
+public class DBNProject extends DBNResource {
     private static final Log log = Log.getLog(DBNProject.class);
 
-    public DBNProject(DBNNode parentNode, IProject project, DBPResourceHandler handler)
-    {
+    public DBNProject(DBNNode parentNode, IProject project, DBPResourceHandler handler) {
         super(parentNode, project, handler);
-        getModel().getPlatform().getProjectManager().addProject(project);
+        if (getModel().isGlobal()) {
+            getModel().getPlatform().getProjectManager().addProject(project);
+        }
     }
 
     @Override
-    protected void dispose(boolean reflect)
-    {
+    protected void dispose(boolean reflect) {
         IProject project = getProject();
         super.dispose(reflect);
-        getModel().getPlatform().getProjectManager().removeProject(project);
+        if (getModel().isGlobal()) {
+            getModel().getPlatform().getProjectManager().removeProject(project);
+        }
     }
 
-    public IProject getProject()
-    {
-        return (IProject)getResource();
+    public IProject getProject() {
+        return (IProject) getResource();
     }
 
-    public DBNProjectDatabases getDatabases()
-    {
+    public DBNProjectDatabases getDatabases() {
         try {
             for (DBNNode db : getChildren(new VoidProgressMonitor())) {
                 if (db instanceof DBNProjectDatabases) {
@@ -78,8 +76,7 @@ public class DBNProject extends DBNResource
     }
 
     @Override
-    public String getNodeDescription()
-    {
+    public String getNodeDescription() {
         try {
             final IProject project = getProject();
             return project == null ? null : project.getDescription().getComment();
@@ -90,14 +87,12 @@ public class DBNProject extends DBNResource
     }
 
     @Override
-    public DBPImage getNodeIcon()
-    {
+    public DBPImage getNodeIcon() {
         return DBIcon.PROJECT;
     }
 
     @Override
-    public boolean allowsOpen()
-    {
+    public boolean allowsOpen() {
         return true;
     }
 
@@ -110,15 +105,13 @@ public class DBNProject extends DBNResource
     }
 
     @Override
-    public boolean supportsRename()
-    {
+    public boolean supportsRename() {
         // Do not rename active projects
         return getModel().getPlatform().getProjectManager().getActiveProject() != getProject();
     }
 
     @Override
-    public void rename(DBRProgressMonitor monitor, String newName) throws DBException
-    {
+    public void rename(DBRProgressMonitor monitor, String newName) throws DBException {
         try {
             final IProjectDescription description = getProject().getDescription();
             description.setName(newName);
@@ -135,7 +128,7 @@ public class DBNProject extends DBNResource
             List<DBNNode> children = new ArrayList<>();
             Collections.addAll(children, super.getChildren(monitor));
             children.removeIf(node ->
-                    node instanceof DBNResource && !((DBNResource) node).getResource().exists());
+                node instanceof DBNResource && !((DBNResource) node).getResource().exists());
             return children.toArray(new DBNNode[0]);
         }
 
@@ -143,10 +136,10 @@ public class DBNProject extends DBNResource
     }
 
     @Override
-    protected DBNNode[] readChildNodes(DBRProgressMonitor monitor) throws DBException
-    {
+    protected DBNNode[] readChildNodes(DBRProgressMonitor monitor) throws DBException {
         IProject project = getProject();
-        if (!project.isOpen()) {
+        DBNModel model = getModel();
+        if (model.isGlobal() && !project.isOpen()) {
             try {
                 project.open(monitor.getNestedMonitor());
                 project.refreshLocal(IFile.DEPTH_ONE, monitor.getNestedMonitor());
@@ -154,11 +147,19 @@ public class DBNProject extends DBNResource
                 throw new DBException("Can't open project '" + project.getName() + "'", e);
             }
         }
-        DBPDataSourceRegistry dataSourceRegistry = getModel().getPlatform().getProjectManager().getDataSourceRegistry(project);
         DBNNode[] children = super.readChildNodes(monitor);
-        if (dataSourceRegistry != null) {
-            children = ArrayUtils.insertArea(DBNNode.class, children, 0, new Object[] {new DBNProjectDatabases(this, dataSourceRegistry)});
+
+        DBPDataSourceRegistry dataSourceRegistry;
+        if (model.isGlobal()) {
+            dataSourceRegistry = model.getPlatform().getProjectManager().getDataSourceRegistry(project);
+        } else {
+            dataSourceRegistry = model.getPlatform().getProjectManager().getDefaultDataSourceRegistry();
         }
+        if (dataSourceRegistry != null) {
+            children = ArrayUtils.insertArea(DBNNode.class, children, 0, new Object[]{
+                new DBNProjectDatabases(this, dataSourceRegistry)});
+        }
+
         return children;
     }
 
@@ -175,8 +176,7 @@ public class DBNProject extends DBNResource
         return super.addImplicitMembers(members);
     }
 
-    public DBNResource findResource(IResource resource)
-    {
+    public DBNResource findResource(IResource resource) {
         List<IResource> path = new ArrayList<>();
         for (IResource parent = resource; !(parent instanceof IProject); parent = parent.getParent()) {
             path.add(0, parent);

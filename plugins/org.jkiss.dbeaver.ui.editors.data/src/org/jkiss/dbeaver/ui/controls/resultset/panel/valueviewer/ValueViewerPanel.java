@@ -37,10 +37,10 @@ import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.data.DBDValue;
+import org.jkiss.dbeaver.model.impl.data.DBDValueError;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.*;
 import org.jkiss.dbeaver.ui.controls.resultset.*;
-import org.jkiss.dbeaver.ui.controls.resultset.IResultSetPanel;
 import org.jkiss.dbeaver.ui.data.IValueController;
 import org.jkiss.dbeaver.ui.data.IValueEditor;
 import org.jkiss.dbeaver.ui.data.IValueManager;
@@ -266,7 +266,9 @@ public class ValueViewerPanel implements IResultSetPanel, IAdaptable {
         if (valueEditor != null) {
             try {
                 Object newValue = previewController.getValue();
-                if (newValue instanceof DBDValue) {
+                if (newValue instanceof DBDValueError) {
+                    // Error value. Do not populate it in value viewer
+                } else if (newValue instanceof DBDValue) {
                     // Do not check for difference
                     valueEditor.primeEditorValue(newValue);
                 } else {
@@ -323,9 +325,7 @@ public class ValueViewerPanel implements IResultSetPanel, IAdaptable {
     private void cleanupPanel()
     {
         // Cleanup previous viewer
-        for (Control child : viewPlaceholder.getChildren()) {
-            child.dispose();
-        }
+        UIUtils.disposeChildControls(viewPlaceholder);
     }
 
     private void fillToolBar(final IContributionManager contributionManager)

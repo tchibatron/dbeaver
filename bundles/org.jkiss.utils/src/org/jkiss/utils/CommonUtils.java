@@ -414,6 +414,15 @@ public class CommonUtils {
         return new String(hexChars);
     }
 
+    public static byte[] parseHexString(String hex) {
+        int strLength = hex.length();
+        byte[] data = new byte[strLength / 2];
+        for (int i = 0; i < strLength; i += 2) {
+            data[i / 2] = (byte) ((Character.digit(hex.charAt(i), 16) << 4) + Character.digit(hex.charAt(i+1), 16));
+        }
+        return data;
+    }
+
     public static String toBinaryString(long longValue, int bitCount) {
         String strValue = Long.toString(longValue, 2);
         if (strValue.length() < bitCount) {
@@ -677,5 +686,25 @@ public class CommonUtils {
             .replace("\r", "")
             .replace("\t", " ")
             .replace((char)0, ' ');
+    }
+
+    public static int compare(Object o1, Object o2) {
+        if (o1 == o2) {
+            return 0;
+        }
+        if (o1 == null) {
+            return -1;
+        } else if (o2 == null) {
+            return 1;
+        }
+        if (o1.getClass() == o2.getClass() && o1 instanceof Comparable) {
+            return ((Comparable) o1).compareTo(o2);
+        }
+        return toString(o1).compareTo(toString(o2));
+    }
+
+    public static int compareNumbers(Number value1, Number value2) {
+        double numDiff = value1.doubleValue() - value2.doubleValue();
+        return numDiff < 0 ? -1 : (numDiff > 0 ? 1 : 0);
     }
 }

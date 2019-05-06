@@ -28,10 +28,7 @@ import org.jkiss.dbeaver.model.edit.DBECommand;
 import org.jkiss.dbeaver.model.edit.DBECommandContext;
 import org.jkiss.dbeaver.model.edit.DBEPersistAction;
 import org.jkiss.dbeaver.model.edit.DBEStructEditor;
-import org.jkiss.dbeaver.model.navigator.DBNContainer;
-import org.jkiss.dbeaver.model.navigator.DBNDatabaseFolder;
-import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
-import org.jkiss.dbeaver.model.navigator.DBNModel;
+import org.jkiss.dbeaver.model.navigator.*;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.DBRRunnableWithProgress;
 import org.jkiss.dbeaver.model.sql.SQLUtils;
@@ -69,7 +66,7 @@ public abstract class NavigatorHandlerObjectBase extends AbstractHandler {
         public CommandTarget(IDatabaseEditor editor)
         {
             this.editor = editor;
-            this.context = editor.getEditorInput().getCommandContext();
+            this.context = ((IDatabaseEditorInput)editor.getEditorInput()).getCommandContext();
         }
 
         public DBECommandContext getContext()
@@ -84,12 +81,12 @@ public abstract class NavigatorHandlerObjectBase extends AbstractHandler {
 
     protected static CommandTarget getCommandTarget(
         IWorkbenchWindow workbenchWindow,
-        DBNContainer container,
+        DBNNode container,
         Class<?> childType,
         boolean openEditor)
         throws DBException
     {
-        final Object parentObject = container.getValueObject();
+        final Object parentObject = container instanceof DBNDatabaseNode ? ((DBNDatabaseNode) container).getValueObject() : null;
 
         DBSObject objectToSeek = null;
         if (parentObject instanceof DBSObject) {
@@ -102,7 +99,7 @@ public abstract class NavigatorHandlerObjectBase extends AbstractHandler {
             for (final IEditorReference editorRef : workbenchWindow.getActivePage().getEditorReferences()) {
                 final IEditorPart editor = editorRef.getEditor(false);
                 if (editor instanceof IDatabaseEditor) {
-                    final IDatabaseEditorInput editorInput = ((IDatabaseEditor) editor).getEditorInput();
+                    final IDatabaseEditorInput editorInput = (IDatabaseEditorInput) editor.getEditorInput();
                     if (editorInput.getDatabaseObject() == objectToSeek) {
                         workbenchWindow.getActivePage().activate(editor);
                         switchEditorFolder(container, editor);
@@ -132,10 +129,10 @@ public abstract class NavigatorHandlerObjectBase extends AbstractHandler {
         return new CommandTarget();
     }
 
-    private static void switchEditorFolder(DBNContainer container, IEditorPart editor)
+    private static void switchEditorFolder(DBNNode container, IEditorPart editor)
     {
-        if (editor instanceof ITabbedFolderContainer && container instanceof DBNDatabaseFolder) {
-            ((ITabbedFolderContainer) editor).switchFolder(container.getChildrenType());
+        if (container instanceof DBNContainer && editor instanceof ITabbedFolderContainer && container instanceof DBNDatabaseFolder) {
+            ((ITabbedFolderContainer) editor).switchFolder(((DBNDatabaseFolder) container).getChildrenType());
         }
     }
 

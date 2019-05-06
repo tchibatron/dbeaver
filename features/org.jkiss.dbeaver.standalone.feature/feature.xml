@@ -2,7 +2,7 @@
 <feature
         id="org.jkiss.dbeaver.standalone.feature"
         label="%featureName"
-        version="6.0.3.qualifier"
+        version="6.0.4.qualifier"
         provider-name="%providerName"
         plugin="org.jkiss.dbeaver.core.application">
 
@@ -41,7 +41,7 @@
     <!-- P2 for RCP -->
     <includes id="org.eclipse.equinox.p2.rcp.feature" version="0.0.0"/>
     <includes id="org.eclipse.equinox.p2.discovery.feature" version="0.0.0"/>
-    <includes id="org.eclipse.equinox.p2.extras.feature" version="0.0.0"/>
+    <!--<includes id="org.eclipse.equinox.p2.extras.feature" version="0.0.0"/>-->
 
     <plugin id="org.eclipse.ui.ide.application" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
 
