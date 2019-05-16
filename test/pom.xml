@@ -15,8 +15,16 @@
 
     <modules>
         <module>org.jkiss.dbeaver.ext.test</module>
-        <module>org.jkiss.dbeaver.uitests</module>
 
     </modules>
+
+    <profiles>
+        <profile>
+            <id>integration-tests</id>
+            <modules>
+                <module>org.jkiss.dbeaver.uitests</module>
+            </modules>
+        </profile>
+    </profiles>
 
 </project>
