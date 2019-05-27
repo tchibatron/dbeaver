@@ -21,11 +21,29 @@ import org.eclipse.swt.widgets.Composite;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.Log;
+import org.jkiss.dbeaver.model.DBUtils;
+import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.exec.DBCException;
+import org.jkiss.dbeaver.model.exec.DBCSession;
 import org.jkiss.dbeaver.model.gis.DBGeometry;
+import org.jkiss.dbeaver.model.gis.GisTransformUtils;
+import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
+import org.jkiss.dbeaver.model.struct.DBSAttributeBase;
+import org.jkiss.dbeaver.model.struct.DBSTypedObject;
+import org.jkiss.dbeaver.ui.controls.lightgrid.GridPos;
+import org.jkiss.dbeaver.ui.controls.resultset.IResultSetController;
+import org.jkiss.dbeaver.ui.controls.resultset.IResultSetSelection;
+import org.jkiss.dbeaver.ui.controls.resultset.ResultSetRow;
+import org.jkiss.dbeaver.ui.data.IDataController;
 import org.jkiss.dbeaver.ui.data.IValueController;
 import org.jkiss.dbeaver.ui.data.editors.BaseValueEditor;
+import org.jkiss.dbeaver.ui.gis.GeometryDataUtils;
 import org.jkiss.dbeaver.ui.gis.IGeometryViewer;
+import org.jkiss.utils.ArrayUtils;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class GISBrowserViewer extends BaseValueEditor<Browser> implements IGeometryViewer {
 
@@ -40,18 +58,70 @@ public class GISBrowserViewer extends BaseValueEditor<Browser> implements IGeome
     @Override
     protected Browser createControl(Composite editPlaceholder)
     {
-        leafletViewer = new GISLeafletViewer(editPlaceholder, valueController);
+        leafletViewer = new GISLeafletViewer(
+            editPlaceholder,
+            valueController,
+            GisTransformUtils.getSpatialDataProvider(valueController.getExecutionContext().getDataSource()));
         return leafletViewer.getBrowser();
     }
 
     @Override
     public void primeEditorValue(@Nullable Object value) throws DBException
     {
-        if (value instanceof DBGeometry) {
-            leafletViewer.setGeometryData(new DBGeometry[] {(DBGeometry) value});
-        } else {
-            leafletViewer.setGeometryData(new DBGeometry[0]);
+        List<DBGeometry> geometries = new ArrayList<>();
+        IDataController dataController = valueController.getDataController();
+        if (dataController instanceof IResultSetController) {
+            IResultSetController resultSetController = (IResultSetController) dataController;
+
+            DBSTypedObject valueType = valueController.getValueType();
+            List<GeometryDataUtils.GeomAttrs> geomAttrs = null;
+            if (valueType instanceof DBSAttributeBase) {
+                geomAttrs = GeometryDataUtils.extractGeometryAttributes(resultSetController);
+            }
+
+            IResultSetSelection selection = resultSetController.getSelection();
+            Object[] selectedValues = selection.toArray();
+            if (ArrayUtils.isEmpty(selectedValues)) {
+                selectedValues = new Object[] { value };
+            }
+            for (Object cell : selectedValues) {
+                DBGeometry geometry;
+                DBDAttributeBinding attr;
+                ResultSetRow row;
+                if (cell instanceof DBGeometry) {
+                    attr = resultSetController.getActivePresentation().getCurrentAttribute();
+                    row = resultSetController.getCurrentRow();
+                    geometry = (DBGeometry) cell;
+                } else {
+                    attr = selection.getElementAttribute(cell);
+                    row = selection.getElementRow(cell);
+                    Object cellValue = resultSetController.getModel().getCellValue(attr, row);
+                    geometry = GisTransformUtils.getGeometryValueFromObject(
+                        valueController.getDataController().getDataContainer(),
+                        valueController.getValueHandler(),
+                        valueController.getValueType(),
+                        cellValue);
+                }
+
+                if (geometry != null) {
+                    geometries.add(geometry);
+
+                    // Set properties
+                    if (valueType instanceof DBSAttributeBase) {
+                        for (GeometryDataUtils.GeomAttrs ga : geomAttrs) {
+                            if (ga.geomAttr.matches(attr, false)) {
+                                GeometryDataUtils.setGeometryProperties(resultSetController, ga, geometry, row);
+                                break;
+                            }
+                        }
+                    }
+                    if (geometry.getProperties() == null) {
+                        geometry.setProperties(Collections.singletonMap("Object", geometry.getSRID()));
+                    }
+                }
+            }
         }
+        leafletViewer.setGeometryData(geometries.toArray(new DBGeometry[0]));
     }
 
     @Override

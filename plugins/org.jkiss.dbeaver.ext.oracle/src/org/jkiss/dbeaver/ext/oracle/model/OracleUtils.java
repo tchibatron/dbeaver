@@ -33,6 +33,7 @@ import org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.model.struct.DBSObjectLazy;
+import org.jkiss.dbeaver.model.struct.DBStructUtils;
 import org.jkiss.utils.CommonUtils;
 import org.jkiss.utils.IOUtils;
 
@@ -44,6 +45,7 @@ import java.sql.Clob;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -145,7 +147,7 @@ public class OracleUtils {
         } catch (SQLException e) {
             if (object instanceof OracleTablePhysical) {
                 log.error("Error generating Oracle DDL. Generate default.", e);
-                return JDBCUtils.generateTableDDL(monitor, object, options, true);
+                return DBStructUtils.generateTableDDL(monitor, object, options, true);
             } else {
                 throw new DBException(e, dataSource);
             }
@@ -374,4 +376,39 @@ public class OracleUtils {
         }
         return source;
     }
+
+    public static String formatWord(String word)
+	{
+		if (word == null) {
+			return "";
+		}
+		StringBuilder sb = new StringBuilder(word.length());
+		sb.append(Character.toUpperCase(word.charAt(0)));
+		for (int i = 1; i < word.length(); i++) {
+			char c = word.charAt(i);
+			if ((c == 'i' || c == 'I') && sb.charAt(i - 1) == 'I') {
+				sb.append('I');
+			} else {
+				sb.append(Character.toLowerCase(c));
+			}
+		}
+		return sb.toString();
+	}
+
+    public static String formatSentence(String sent)
+	{
+		if (sent == null) {
+			return "";
+		}
+		StringBuilder result = new StringBuilder();
+		StringTokenizer st = new StringTokenizer(sent, " \t\n\r-,.\\/", true);
+		while (st.hasMoreTokens()) {
+			String word = st.nextToken();
+			if (word.length() > 0) {
+				result.append(formatWord(word));
+			}
+		}
+
+		return result.toString();
+	}
 }

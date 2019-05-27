@@ -67,6 +67,7 @@ import org.jkiss.dbeaver.model.exec.plan.DBCQueryPlanner;
 import org.jkiss.dbeaver.model.impl.DefaultServerOutputReader;
 import org.jkiss.dbeaver.model.impl.sql.SQLQueryTransformerCount;
 import org.jkiss.dbeaver.model.messages.ModelMessages;
+import org.jkiss.dbeaver.model.navigator.DBNUtils;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceListener;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.model.qm.QMUtils;
@@ -111,7 +112,6 @@ import org.jkiss.dbeaver.ui.editors.sql.registry.SQLPresentationPanelDescriptor;
 import org.jkiss.dbeaver.ui.editors.sql.registry.SQLPresentationRegistry;
 import org.jkiss.dbeaver.ui.editors.text.ScriptPositionColumn;
 import org.jkiss.dbeaver.ui.navigator.INavigatorModelView;
-import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
 import org.jkiss.dbeaver.utils.GeneralUtils;
 import org.jkiss.dbeaver.utils.PrefUtils;
 import org.jkiss.dbeaver.utils.RuntimeUtils;
@@ -310,7 +310,7 @@ public class SQLEditor extends SQLEditorBase implements
             EditorUtils.setInputDataSource(input, container);
             IFile file = EditorUtils.getFileFromInput(input);
             if (file != null) {
-                NavigatorUtils.refreshNavigatorResource(file, container);
+                DBNUtils.refreshNavigatorResource(file, container);
             } else {
                 // FIXME: this is a hack. We can't fire event on resource change so editor's state won't be updated in UI.
                 // FIXME: To update main toolbar and other controls we hade and show this editor
@@ -1528,7 +1528,7 @@ public class SQLEditor extends SQLEditorBase implements
     private void explainQueryPlan(SQLQuery sqlQuery)
     {
         // 1. Determine whether planner supports plan extraction
-        DBCQueryPlanner planner = DBUtils.getAdapter(DBCQueryPlanner.class, getDataSource());
+        DBCQueryPlanner planner = GeneralUtils.adapt(getDataSource(), DBCQueryPlanner.class);
         if (planner == null) {
             DBWorkbench.getPlatformUI().showError("Execution plan", "Execution plan explain isn't supported by current datasource");
             return;
@@ -1664,8 +1664,6 @@ public class SQLEditor extends SQLEditorBase implements
             elements.add(extractActiveQuery());
         }
 
-        elements.removeIf(element -> !(element instanceof SQLQuery));
-
         if (!elements.isEmpty()) {
             processQueries(elements, false, true, true, null);
         } else {
@@ -1681,6 +1679,7 @@ public class SQLEditor extends SQLEditorBase implements
             // Nothing to process
             return;
         }
+
         final DBPDataSourceContainer container = getDataSourceContainer();
         if (checkSession) {
             try {
@@ -2404,8 +2403,16 @@ public class SQLEditor extends SQLEditorBase implements
                     List<IDataTransferProducer> producers = new ArrayList<>();
                     for (int i = 0; i < queries.size(); i++) {
                         SQLScriptElement element = queries.get(i);
-                        SQLQuery query = (SQLQuery) element;
-                        producers.add(new DatabaseTransferProducer(new SQLQueryDataContainer(job, resultsConsumer, query, i), null));
+                        if (element instanceof SQLControlCommand) {
+                            try {
+                                job.executeControlCommand((SQLControlCommand) element);
+                            } catch (DBException e) {
+                                DBWorkbench.getPlatformUI().showError("Command error", "Error processing control command", e);
+                            }
+                        } else {
+                            SQLQuery query = (SQLQuery) element;
+                            producers.add(new DatabaseTransferProducer(new SQLQueryDataContainer(job, resultsConsumer, query, i), null));
+                        }
                     }
 
                     ActiveWizardDialog dialog = new ActiveWizardDialog(

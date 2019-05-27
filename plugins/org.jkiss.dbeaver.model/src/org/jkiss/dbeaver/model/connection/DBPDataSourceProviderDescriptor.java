@@ -18,6 +18,7 @@ package org.jkiss.dbeaver.model.connection;
 
 import org.jkiss.dbeaver.model.DBPImage;
 import org.jkiss.dbeaver.model.DBPNamedObject;
+import org.jkiss.dbeaver.model.navigator.meta.DBXTreeNode;
 
 import java.util.List;
 
@@ -37,4 +38,7 @@ public interface DBPDataSourceProviderDescriptor extends DBPNamedObject {
     List<? extends DBPDriver> getEnabledDrivers();
 
     String getPluginId();
+
+    DBXTreeNode getTreeDescriptor();
+
 }

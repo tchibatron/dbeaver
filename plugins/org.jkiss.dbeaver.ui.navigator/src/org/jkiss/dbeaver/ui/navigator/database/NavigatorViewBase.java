@@ -22,6 +22,7 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.contexts.IContextService;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.jkiss.code.NotNull;
@@ -37,7 +38,6 @@ import org.jkiss.dbeaver.runtime.ui.UIServiceConnections;
 import org.jkiss.dbeaver.runtime.ui.UIServiceSQL;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.PropertyPageStandard;
-import org.jkiss.dbeaver.ui.editors.EditorUtils;
 import org.jkiss.dbeaver.ui.navigator.INavigatorFilter;
 import org.jkiss.dbeaver.ui.navigator.INavigatorModelView;
 import org.jkiss.dbeaver.ui.navigator.NavigatorPreferences;
@@ -104,8 +104,10 @@ public abstract class NavigatorViewBase extends ViewPart implements INavigatorMo
         this.tree = createNavigatorTree(parent, getRootNode());
 
         getViewSite().setSelectionProvider(tree.getViewer());
-        EditorUtils.trackControlContext(getSite(), this.tree.getViewer().getControl(), INavigatorModelView.NAVIGATOR_CONTEXT_ID);
-        EditorUtils.trackControlContext(getSite(), this.tree.getViewer().getControl(), INavigatorModelView.NAVIGATOR_VIEW_CONTEXT_ID);
+        getSite().getService(IContextService.class).activateContext(INavigatorModelView.NAVIGATOR_CONTEXT_ID);
+        getSite().getService(IContextService.class).activateContext(INavigatorModelView.NAVIGATOR_VIEW_CONTEXT_ID);
+//        EditorUtils.trackControlContext(getSite(), this.tree.getViewer().getControl(), INavigatorModelView.NAVIGATOR_CONTEXT_ID);
+//        EditorUtils.trackControlContext(getSite(), this.tree.getViewer().getControl(), INavigatorModelView.NAVIGATOR_VIEW_CONTEXT_ID);
     }
 
     private DatabaseNavigatorTree createNavigatorTree(Composite parent, DBNNode rootNode)
@@ -279,8 +281,9 @@ public abstract class NavigatorViewBase extends ViewPart implements INavigatorMo
         }
         switch (property) {
             case ModelPreferences.NAVIGATOR_SHOW_FOLDER_PLACEHOLDERS:
-            case NavigatorPreferences.NAVIGATOR_SORT_ALPHABETICALLY:
-            case NavigatorPreferences.NAVIGATOR_SORT_FOLDERS_FIRST:
+            case ModelPreferences.NAVIGATOR_SORT_ALPHABETICALLY:
+            case ModelPreferences.NAVIGATOR_SORT_FOLDERS_FIRST:
+            case NavigatorPreferences.NAVIGATOR_COLOR_ALL_NODES:
             case NavigatorPreferences.NAVIGATOR_GROUP_BY_DRIVER:
                 tree.getViewer().refresh();
                 break;

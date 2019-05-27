@@ -31,15 +31,12 @@ import org.eclipse.ui.*;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.Log;
+import org.jkiss.dbeaver.model.navigator.*;
 import org.jkiss.dbeaver.ui.editors.*;
 import org.jkiss.dbeaver.ui.editors.entity.EntityEditorDescriptor;
 import org.jkiss.dbeaver.ui.editors.entity.EntityEditorsRegistry;
 import org.jkiss.dbeaver.ui.internal.UINavigatorMessages;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.model.navigator.DBNDataSource;
-import org.jkiss.dbeaver.model.navigator.DBNDatabaseFolder;
-import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
-import org.jkiss.dbeaver.model.navigator.DBNNode;
 import org.jkiss.dbeaver.model.navigator.meta.DBXTreeItem;
 import org.jkiss.dbeaver.model.navigator.meta.DBXTreeNode;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
@@ -62,7 +59,6 @@ import org.jkiss.dbeaver.ui.editors.entity.GlobalContributorManager;
 import org.jkiss.dbeaver.ui.editors.entity.IEntityEditorContext;
 import org.jkiss.dbeaver.ui.navigator.INavigatorModelView;
 import org.jkiss.dbeaver.ui.navigator.NavigatorPreferences;
-import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
 import org.jkiss.utils.CommonUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -498,7 +494,7 @@ public class ObjectPropertiesEditor extends AbstractDatabaseObjectEditor<DBSObje
 
     private void makeDatabaseEditorTabs(final IDatabaseEditor part, final List<TabbedFolderInfo> tabList)
     {
-        final DBNDatabaseNode node = part.getEditorInput().getNavigatorNode();
+        final DBNDatabaseNode node = part.getEditorInput() instanceof IDatabaseEditorInput ? ((IDatabaseEditorInput) part.getEditorInput()).getNavigatorNode() : null;
         if (node == null) {
             return;
         }
@@ -560,7 +556,7 @@ public class ObjectPropertiesEditor extends AbstractDatabaseObjectEditor<DBSObje
             // Do not add children tabs
         } else if (node != null) {
             try {
-                DBNNode[] children = NavigatorUtils.getNodeChildrenFiltered(monitor, node, false);
+                DBNNode[] children = DBNUtils.getNodeChildrenFiltered(monitor, node, false);
                 if (children != null) {
                     for (DBNNode child : children) {
                         if (child instanceof DBNDatabaseFolder) {
@@ -591,7 +587,7 @@ public class ObjectPropertiesEditor extends AbstractDatabaseObjectEditor<DBSObje
                             try {
                                 if (!((DBXTreeItem)child).isOptional() || databaseNode.hasChildren(monitor, child)) {
                                     monitor.subTask(UINavigatorMessages.ui_properties_task_add_node + node.getNodeName() + "'"); //$NON-NLS-2$
-                                    String nodeName = child.getChildrenType(databaseNode.getObject().getDataSource());
+                                    String nodeName = child.getChildrenType(databaseNode.getObject().getDataSource(), null);
                                     tabList.add(
                                         new TabbedFolderInfo(
                                             nodeName,

@@ -21,6 +21,7 @@ import org.eclipse.core.runtime.Status;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.DBException;
+import org.jkiss.dbeaver.model.exec.DBExecUtils;
 import org.jkiss.dbeaver.model.messages.ModelMessages;
 import org.jkiss.dbeaver.model.*;
 import org.jkiss.dbeaver.model.exec.DBCExecutionContext;
@@ -80,7 +81,7 @@ public abstract class DBNDatabaseNode extends DBNNode implements DBSWrapper, DBP
     @Override
     public String getNodeType()
     {
-        return getObject() == null ? "" : getMeta().getNodeType(getObject().getDataSource()); //$NON-NLS-1$
+        return getObject() == null ? "" : getMeta().getNodeType(getObject().getDataSource(), null); //$NON-NLS-1$
     }
 
     @Override
@@ -415,7 +416,7 @@ public abstract class DBNDatabaseNode extends DBNNode implements DBSWrapper, DBP
             if (monitor.isCanceled()) {
                 break;
             }
-            monitor.subTask(ModelMessages.model_navigator_load_ + " " + child.getChildrenType(object.getDataSource()));
+            monitor.subTask(ModelMessages.model_navigator_load_ + " " + child.getChildrenType(object.getDataSource(), null));
             if (child instanceof DBXTreeItem) {
                 final DBXTreeItem item = (DBXTreeItem) child;
                 boolean isLoaded = loadTreeItems(monitor, item, oldList, toList, source, reflect);
@@ -495,7 +496,7 @@ public abstract class DBNDatabaseNode extends DBNNode implements DBSWrapper, DBP
         }
         final String propertyName = meta.getPropertyName();
         final PropertyValueReader valueReader = new PropertyValueReader(monitor, propertyName, valueObject);
-        DBUtils.tryExecuteRecover(monitor, getDataSource(), valueReader);
+        DBExecUtils.tryExecuteRecover(monitor, getDataSource(), valueReader);
         final Object propertyValue = valueReader.propertyValue;
         if (propertyValue == null) {
             return false;
@@ -769,7 +770,7 @@ public abstract class DBNDatabaseNode extends DBNNode implements DBSWrapper, DBP
         }
     }
 
-    protected Class<?> getChildrenClass(DBXTreeItem childMeta) {
+    public Class<?> getChildrenClass(DBXTreeItem childMeta) {
         Object valueObject = getValueObject();
         if (valueObject == null) {
             return null;

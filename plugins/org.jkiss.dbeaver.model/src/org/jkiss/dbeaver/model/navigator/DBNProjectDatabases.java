@@ -45,7 +45,9 @@ public class DBNProjectDatabases extends DBNNode implements DBNContainer, DBPEve
     public DBNProjectDatabases(DBNProject parentNode, DBPDataSourceRegistry dataSourceRegistry)
     {
         super(parentNode);
-        this.dataSourceRegistry = dataSourceRegistry;
+        this.dataSourceRegistry = getModel().isGlobal() ?
+            dataSourceRegistry :
+            dataSourceRegistry.createCopy(parentNode.getProject(), false);
         this.dataSourceRegistry.addDataSourceListener(this);
 
         List<? extends DBPDataSourceContainer> projectDataSources = this.dataSourceRegistry.getDataSources();
@@ -65,6 +67,10 @@ public class DBNProjectDatabases extends DBNNode implements DBNContainer, DBPEve
         children = null;
         if (dataSourceRegistry != null) {
             dataSourceRegistry.removeDataSourceListener(this);
+            if (!getModel().isGlobal()) {
+                // For local models registry si
+                dataSourceRegistry.dispose();
+            }
             dataSourceRegistry = null;
         }
         super.dispose(reflect);
@@ -127,7 +133,7 @@ public class DBNProjectDatabases extends DBNNode implements DBNContainer, DBPEve
     @Override
     public boolean allowsChildren()
     {
-        return !dataSources.isEmpty();
+        return !dataSources.isEmpty() || !dataSourceRegistry.getRootFolders().isEmpty();
     }
 
     @Override

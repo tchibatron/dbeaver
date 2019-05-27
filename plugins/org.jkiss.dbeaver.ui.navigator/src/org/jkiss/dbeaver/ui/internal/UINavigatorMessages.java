@@ -77,6 +77,8 @@ public class UINavigatorMessages extends NLS {
     public static String pref_page_database_general_label_order_elements_alphabetically;
     public static String pref_page_database_general_label_folders_first;
     public static String pref_page_database_general_label_folders_first_tip;
+    public static String pref_page_database_general_label_color_all_nodes;
+    public static String pref_page_database_general_label_color_all_nodes_tip;
     public static String pref_page_database_general_label_show_folder_placeholders;
     public static String pref_page_database_general_label_show_folder_placeholders_tip;
     public static String pref_page_database_general_label_group_database_by_driver;
@@ -168,6 +170,7 @@ public class UINavigatorMessages extends NLS {
 	public static String pref_page_target_button_use_datasource_settings;
     public static String pref_page_target_link_show_datasource_settings;
     public static String pref_page_target_link_show_global_settings;
+    public static String toolbar_datasource_selector_empty;
 
     static {
         // initialize resource bundle

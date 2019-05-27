@@ -27,12 +27,13 @@ import org.jkiss.dbeaver.model.connection.DBPConnectionConfiguration;
 import org.jkiss.dbeaver.model.navigator.DBNDataSource;
 import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
 import org.jkiss.dbeaver.model.navigator.DBNNode;
+import org.jkiss.dbeaver.model.navigator.DBNUtils;
+import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.model.struct.DBSWrapper;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.DBeaverIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.navigator.NavigatorPreferences;
-import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
 import org.jkiss.utils.CommonUtils;
 
 /**
@@ -116,7 +117,7 @@ public class DatabaseNavigatorLabelProvider extends ColumnLabelProvider implemen
     @Override
     public Font getFont(Object element)
     {
-        if (NavigatorUtils.isDefaultElement(element)) {
+        if (DBNUtils.isDefaultElement(element)) {
             return boldFont;
         } else {
             if (element instanceof DBNDataSource) {
@@ -147,10 +148,16 @@ public class DatabaseNavigatorLabelProvider extends ColumnLabelProvider implemen
     @Override
     public Color getBackground(Object element)
     {
-        if (element instanceof DBNDataSource) {
+        if (element instanceof DBNDatabaseNode) {
             DBPDataSourceContainer ds = ((DBNDatabaseNode) element).getDataSourceContainer();
             if (ds != null) {
-                return UIUtils.getConnectionColor(ds.getConnectionConfiguration());
+                Color color = UIUtils.getConnectionColor(ds.getConnectionConfiguration());
+                if (color != null) {
+                    final DBPPreferenceStore prefStore = DBWorkbench.getPlatform().getPreferenceStore();
+                    if (element instanceof DBNDataSource || prefStore.getBoolean(NavigatorPreferences.NAVIGATOR_COLOR_ALL_NODES)) {
+                        return color;
+                    }
+                }
             }
         }
         return null;

@@ -56,9 +56,12 @@ public class JDBCCollection implements DBDCollection, DBDValueCloneable {
     private static final Log log = Log.getLog(JDBCCollection.class);
 
     private Object[] contents;
-    private final DBSDataType type;
-    private final DBDValueHandler valueHandler;
+    private DBSDataType type;
+    private DBDValueHandler valueHandler;
     private boolean modified;
+
+    public JDBCCollection() {
+    }
 
     public JDBCCollection(DBSDataType type, DBDValueHandler valueHandler, @Nullable Object[] contents) {
         this.type = type;
@@ -157,6 +160,9 @@ public class JDBCCollection implements DBDCollection, DBDValueCloneable {
     }
 
     public Array getArrayValue() throws DBCException {
+        if (contents == null) {
+            return null;
+        }
         Object[] attrs = new Object[contents.length];
         for (int i = 0; i < contents.length; i++) {
             Object attr = contents[i];
@@ -210,7 +216,7 @@ public class JDBCCollection implements DBDCollection, DBDValueCloneable {
         try {
             if (elementType == null) {
                 if (array == null) {
-                    return null;
+                    return new JDBCCollection();
                 }
                 try {
                     return makeCollectionFromResultSet(session, array, null);
@@ -252,6 +258,18 @@ public class JDBCCollection implements DBDCollection, DBDValueCloneable {
         } else if (array instanceof long[]) {
             dataKind = DBPDataKind.NUMERIC;
             elementType = dataTypeProvider.getLocalDataType(Types.BIGINT);
+        } else if (array instanceof float[]) {
+            dataKind = DBPDataKind.NUMERIC;
+            elementType = dataTypeProvider.getLocalDataType(Types.FLOAT);
+            if (elementType == null) {
+                elementType = dataTypeProvider.getLocalDataType(Types.DOUBLE);
+            }
+        } else if (array instanceof double[]) {
+            dataKind = DBPDataKind.NUMERIC;
+            elementType = dataTypeProvider.getLocalDataType(Types.DOUBLE);
+            if (elementType == null) {
+                elementType = dataTypeProvider.getLocalDataType(Types.FLOAT);
+            }
         } else if (array instanceof boolean[]) {
             dataKind = DBPDataKind.BOOLEAN;
             elementType = dataTypeProvider.getLocalDataType(Types.BOOLEAN);

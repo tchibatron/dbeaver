@@ -132,6 +132,7 @@
                     <property id="omit-catalog" label="Omit catalog(s)" description="Do not read and use catalog (aka database) information" type="boolean" required="false" defaultValue="false"/>
                     <property id="omit-single-catalog" label="Omit single catalog" description="Hide catalog (database) is there is only one catalog on server" type="boolean" required="false" defaultValue="false"/>
                     <property id="omit-single-schema" label="Omit single schema" description="Hide schema is there is only one schema on server" type="boolean" required="false" defaultValue="false"/>
+                    <property id="schema-filters-enabled" label="Use schema filters" description="Use JDBC schema filters when database doesn't support catalogs. Otherwise just read all database schemas and filter on client-side." type="boolean" required="false" defaultValue="true"/>
                     <property id="omit-type-cache" label="Omit type cache" description="Do not use data types provided by driver" type="boolean" required="false" defaultValue="false"/>
                     <property id="shutdown-url-param" label="Shutdown parameter" description="Database shutdown URL parameter" type="string" required="false" defaultValue=""/>
                     <property id="create-url-param" label="Create database parameter" description="Database create URL parameter" type="string" required="false" defaultValue=""/>
@@ -187,6 +188,7 @@
                     <parameter name="query-get-active-db" value="SELECT CURRENT_SCHEMA FROM SYSIBM.SYSDUMMY1"/>
                     <parameter name="query-set-active-db" value="SET SCHEMA ?"/>
                     <parameter name="omit-catalog" value="true"/>
+                    <parameter name="schema-filters-enabled" value="false"/>
 
                     <!-- Enable table/column descriptions -->
                     <property name="translate binary" value="true"/>
@@ -717,6 +719,7 @@
 
                     <parameter name="supports-truncate" value="false"/>
                     <parameter name="supports-references" value="false"/>
+                    <parameter name="schema-filters-enabled" value="true"/>
                 </driver>
 
                 <!-- Cloudera -->
@@ -748,7 +751,7 @@
                     class="com.amazon.redshift.jdbc41.Driver"
                     sampleURL="jdbc:redshift://{host}:{port}/{database}"
                     defaultPort="5439"
-                    description="AWS Redshift JDBC driver"
+                    description="%driver.redshift.description"
                     webURL="http://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html"
                     categories="sql,analytic,cloud">
                     <file type="jar" path="https://s3.amazonaws.com/redshift-downloads/drivers/jdbc/1.2.12.1017/1.2.15.1025/RedshiftJDBC41-1.2.15.1025.jar"/>
@@ -760,7 +763,7 @@
                     class="com.amazon.redshift.jdbc42.Driver"
                     sampleURL="jdbc:redshift://{host}:{port}/{database}"
                     defaultPort="5439"
-                    description="AWS Redshift JDBC driver"
+                    description="%driver.redshift.description"
                     webURL="http://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html"
                     categories="sql,analytic,cloud">
                     <replace provider="generic" driver="aws_redshift"/>
@@ -968,7 +971,7 @@
                         class="org.apache.ignite.IgniteJdbcThinDriver"
                         sampleURL="jdbc:ignite:thin://{host}[:{port}][;schema={database}]"
                         defaultPort=""
-                        description="Apache Ignite JDBC driver"
+                        description="%driver.apache.ignite.description"
                         webURL="https://docs.dremio.com/drivers/dremio-jdbc-driver.html"
                         categories="hadoop">
                     <file type="jar" path="maven:/org.apache.ignite:ignite-core:RELEASE"/>

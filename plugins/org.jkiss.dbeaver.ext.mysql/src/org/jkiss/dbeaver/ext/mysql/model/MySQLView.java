@@ -34,10 +34,11 @@ import org.jkiss.dbeaver.model.meta.LazyProperty;
 import org.jkiss.dbeaver.model.meta.Property;
 import org.jkiss.dbeaver.model.meta.PropertyGroup;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
-import org.jkiss.dbeaver.model.sql.SQLUtils;
+import org.jkiss.dbeaver.model.sql.format.SQLFormatUtils;
 import org.jkiss.dbeaver.model.struct.rdb.DBSTableConstraint;
 import org.jkiss.dbeaver.model.struct.rdb.DBSTableForeignKey;
 import org.jkiss.dbeaver.model.struct.rdb.DBSTableIndex;
+import org.jkiss.dbeaver.model.struct.rdb.DBSView;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -49,7 +50,7 @@ import java.util.regex.Pattern;
 /**
  * MySQLView
  */
-public class MySQLView extends MySQLTableBase
+public class MySQLView extends MySQLTableBase implements DBSView
 {
     private static final Log log = Log.getLog(MySQLView.class);
 
@@ -219,7 +220,7 @@ public class MySQLView extends MySQLTableBase
                             }
                         }
                         additionalInfo.setDefinition(
-                            SQLUtils.formatSQL(getDataSource(), definition));
+                            SQLFormatUtils.formatSQL(getDataSource(), definition));
 
                     }
                 }

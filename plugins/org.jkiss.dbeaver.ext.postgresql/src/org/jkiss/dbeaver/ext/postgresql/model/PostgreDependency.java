@@ -17,10 +17,7 @@
 package org.jkiss.dbeaver.ext.postgresql.model;
 
 import org.jkiss.dbeaver.Log;
-import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.model.DBPImageProvider;
-import org.jkiss.dbeaver.model.DBUtils;
+import org.jkiss.dbeaver.model.*;
 import org.jkiss.dbeaver.model.exec.DBCException;
 import org.jkiss.dbeaver.model.exec.jdbc.JDBCPreparedStatement;
 import org.jkiss.dbeaver.model.exec.jdbc.JDBCResultSet;
@@ -37,12 +34,13 @@ import java.util.List;
 /**
 * Dependency
 */
-public class PostgreDependency implements PostgreObject, DBPImageProvider {
+public class PostgreDependency implements PostgreObject, DBPOverloadedObject, DBPImageProvider {
 
     private static final Log log = Log.getLog(PostgreDependency.class);
 
     private final PostgreDatabase database;
     private final long objectId;
+    private String depType;
     private String name;
     private String description;
     private String objectType;
@@ -50,9 +48,10 @@ public class PostgreDependency implements PostgreObject, DBPImageProvider {
     private String schemaName;
     private PostgreObject targetObject;
 
-    public PostgreDependency(PostgreDatabase database, long objectId, String name, String description, String objectType, String tableName, String schemaName) {
+    public PostgreDependency(PostgreDatabase database, long objectId, String depType, String name, String description, String objectType, String tableName, String schemaName) {
         this.database = database;
         this.objectId = objectId;
+        this.depType = depType;
         this.name = name;
         this.description = description;
         this.objectType = objectType;
@@ -68,7 +67,7 @@ public class PostgreDependency implements PostgreObject, DBPImageProvider {
 
     @Override
     public boolean isPersisted() {
-        return false;
+        return true;
     }
 
     @Override
@@ -85,6 +84,11 @@ public class PostgreDependency implements PostgreObject, DBPImageProvider {
     @Property(viewable = true, order = 1)
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String getOverloadedName() {
+        return name + " (" + depType + ")";
     }
 
     @Property(viewable = true, order = 2)
@@ -188,23 +192,23 @@ public class PostgreDependency implements PostgreObject, DBPImageProvider {
                     "    END AS refname,\n" +
                     "    COALESCE(nsc.nspname, nso.nspname, nsp.nspname, nst.nspname, nsrw.nspname) AS nspname\n" +
                     "FROM pg_depend dep\n" +
-                    "LEFT JOIN pg_class cl ON dep.objid=cl.oid\n" +
-                    "LEFT JOIN pg_attribute att ON dep.objid=att.attrelid AND dep.objsubid=att.attnum\n" +
+                    "LEFT JOIN pg_class cl ON dep." + queryObjId + "=cl.oid\n" +
+                    "LEFT JOIN pg_attribute att ON dep." + queryObjId + "=att.attrelid AND dep.objsubid=att.attnum\n" +
                     "LEFT JOIN pg_namespace nsc ON cl.relnamespace=nsc.oid\n" +
-                    "LEFT JOIN pg_proc pr ON dep.objid=pr.oid\n" +
+                    "LEFT JOIN pg_proc pr ON dep." + queryObjId + "=pr.oid\n" +
                     "LEFT JOIN pg_namespace nsp ON pr.pronamespace=nsp.oid\n" +
-                    "LEFT JOIN pg_trigger tg ON dep.objid=tg.oid\n" +
-                    "LEFT JOIN pg_type ty ON dep.objid=ty.oid\n" +
+                    "LEFT JOIN pg_trigger tg ON dep." + queryObjId + "=tg.oid\n" +
+                    "LEFT JOIN pg_type ty ON dep." + queryObjId + "=ty.oid\n" +
                     "LEFT JOIN pg_namespace nst ON ty.typnamespace=nst.oid\n" +
-                    "LEFT JOIN pg_constraint co ON dep.objid=co.oid\n" +
+                    "LEFT JOIN pg_constraint co ON dep." + queryObjId + "=co.oid\n" +
                     "LEFT JOIN pg_class coc ON co.conrelid=coc.oid\n" +
                     "LEFT JOIN pg_namespace nso ON co.connamespace=nso.oid\n" +
-                    "LEFT JOIN pg_rewrite rw ON dep.objid=rw.oid\n" +
+                    "LEFT JOIN pg_rewrite rw ON dep." + queryObjId + "=rw.oid\n" +
                     "LEFT JOIN pg_class clrw ON clrw.oid=rw.ev_class\n" +
                     "LEFT JOIN pg_namespace nsrw ON clrw.relnamespace=nsrw.oid\n" +
-                    "LEFT JOIN pg_language la ON dep.objid=la.oid\n" +
-                    "LEFT JOIN pg_namespace ns ON dep.objid=ns.oid\n" +
-                    "LEFT JOIN pg_attrdef ad ON ad.oid=dep.objid\n" +
+                    "LEFT JOIN pg_language la ON dep." + queryObjId + "=la.oid\n" +
+                    "LEFT JOIN pg_namespace ns ON dep." + queryObjId + "=ns.oid\n" +
+                    "LEFT JOIN pg_attrdef ad ON ad.oid=dep." + queryObjId + "\n" +
                     "LEFT JOIN pg_attribute attr ON attr.attrelid=ad.adrelid and attr.attnum=ad.adnum\n" +
                     "WHERE dep." + condObjId + "=?\n" +
                     "ORDER BY type"))
@@ -224,6 +228,7 @@ public class PostgreDependency implements PostgreObject, DBPImageProvider {
                         PostgreDependency dependency = new PostgreDependency(
                             object.getDatabase(),
                             JDBCUtils.safeGetLong(dbResult, queryObjId),
+                            JDBCUtils.safeGetString(dbResult, "deptype"),
                             objName,
                             objDesc,
                             JDBCUtils.safeGetString(dbResult, "type"),

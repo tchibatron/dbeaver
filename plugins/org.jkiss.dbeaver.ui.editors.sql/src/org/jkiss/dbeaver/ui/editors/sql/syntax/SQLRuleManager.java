@@ -38,10 +38,11 @@ import org.jkiss.dbeaver.ui.editors.sql.SQLEditorBase;
 import org.jkiss.dbeaver.ui.editors.sql.SQLPreferenceConstants;
 import org.jkiss.dbeaver.ui.editors.sql.registry.SQLCommandHandlerDescriptor;
 import org.jkiss.dbeaver.ui.editors.sql.registry.SQLCommandsRegistry;
-import org.jkiss.dbeaver.ui.editors.text.parser.SQLWordDetector;
 import org.jkiss.dbeaver.ui.editors.sql.syntax.rules.*;
 import org.jkiss.dbeaver.ui.editors.sql.syntax.tokens.*;
 import org.jkiss.dbeaver.ui.editors.text.TextWhiteSpaceDetector;
+import org.jkiss.dbeaver.model.sql.parser.SQLWordDetector;
+import org.jkiss.dbeaver.utils.GeneralUtils;
 import org.jkiss.utils.ArrayUtils;
 import org.jkiss.utils.CommonUtils;
 import org.jkiss.utils.Pair;
@@ -125,10 +126,7 @@ public class SQLRuleManager extends RuleBasedScanner {
     public void refreshRules(@Nullable DBPDataSource dataSource, @Nullable IEditorInput editorInput)
     {
         SQLDialect dialect = syntaxManager.getDialect();
-        SQLRuleProvider ruleProvider = null;
-        if (dialect instanceof SQLRuleProvider) {
-            ruleProvider = (SQLRuleProvider) dialect;
-        }
+        SQLRuleProvider ruleProvider = GeneralUtils.adapt(dialect, SQLRuleProvider.class);
 
         boolean minimalRules = SQLEditorBase.isBigScript(editorInput);
 
@@ -265,7 +263,11 @@ public class SQLRuleManager extends RuleBasedScanner {
                 if (divPos != -1) {
                     String prefix = blockToggleString.substring(0, divPos);
                     String postfix = blockToggleString.substring(divPos + SQLConstants.KEYWORD_PATTERN_CHARS.length());
-                    WordPatternRule blockToggleRule = new WordPatternRule(new SQLWordDetector(), prefix, postfix, blockToggleToken);
+                    WordPatternRule blockToggleRule = new WordPatternRule(
+                        new WordDetectorAdapter(new SQLWordDetector()),
+                        prefix,
+                        postfix,
+                        blockToggleToken);
                     rules.add(blockToggleRule);
                 } else {
                     WordRule blockToggleRule = new WordRule(getWordOrSymbolDetector(blockToggleString), Token.UNDEFINED, true);
@@ -339,10 +341,28 @@ public class SQLRuleManager extends RuleBasedScanner {
 
     private static IWordDetector getWordOrSymbolDetector(String word) {
         if (Character.isLetterOrDigit(word.charAt(0))) {
-            return new SQLWordDetector();
+            return new WordDetectorAdapter(new SQLWordDetector());
         } else {
             // Default delim rule
             return new SymbolSequenceDetector(word);
+        }
+    }
+
+    private static class WordDetectorAdapter implements IWordDetector {
+        private final SQLWordDetector wordDetector;
+
+        private WordDetectorAdapter(SQLWordDetector wordDetector) {
+            this.wordDetector = wordDetector;
+        }
+
+        @Override
+        public boolean isWordStart(char c) {
+            return wordDetector.isWordStart(c);
+        }
+
+        @Override
+        public boolean isWordPart(char c) {
+            return wordDetector.isWordPart(c);
         }
     }
 

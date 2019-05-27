@@ -18,6 +18,7 @@ package org.jkiss.dbeaver.tools.transfer.stream;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.swt.dnd.Clipboard;
+import org.eclipse.swt.dnd.HTMLTransfer;
 import org.eclipse.swt.dnd.TextTransfer;
 import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.graphics.Color;
@@ -36,6 +37,7 @@ import org.jkiss.dbeaver.model.runtime.DBRProcessDescriptor;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.DBRShellCommand;
 import org.jkiss.dbeaver.model.sql.SQLDataSource;
+import org.jkiss.dbeaver.model.struct.DBSDataContainer;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.model.struct.rdb.DBSCatalog;
 import org.jkiss.dbeaver.model.struct.rdb.DBSSchema;
@@ -109,7 +111,7 @@ public class StreamTransferConsumer implements IDataTransferConsumer<StreamConsu
         }
 
         // Prepare columns
-        metaColumns = DBUtils.makeResultAttributeBindings(resultSet);
+        metaColumns = DBUtils.makeResultAttributeBindings(sourceObject instanceof DBSDataContainer ? (DBSDataContainer) sourceObject : null, resultSet);
         row = new Object[metaColumns.size()];
 
         if (!initialized) {
@@ -370,10 +372,20 @@ public class StreamTransferConsumer implements IDataTransferConsumer<StreamConsu
         if (!parameters.isBinary && settings.isOutputClipboard()) {
             if (outputBuffer != null) {
                 UIUtils.syncExec(() -> {
+
                     TextTransfer textTransfer = TextTransfer.getInstance();
-                    new Clipboard(UIUtils.getDisplay()).setContents(
-                        new Object[]{outputBuffer.toString()},
-                        new Transfer[]{textTransfer});
+                    String strContents = outputBuffer.toString();
+                    Clipboard clipboard = new Clipboard(UIUtils.getDisplay());
+                    if (parameters.isHTML) {
+                        HTMLTransfer htmlTransfer = HTMLTransfer.getInstance();
+                        clipboard.setContents(
+                            new Object[]{strContents, strContents},
+                            new Transfer[]{textTransfer, htmlTransfer});
+                    } else {
+                        clipboard.setContents(
+                            new Object[]{strContents},
+                            new Transfer[]{textTransfer});
+                    }
                 });
                 outputBuffer = null;
             }
@@ -428,6 +440,9 @@ public class StreamTransferConsumer implements IDataTransferConsumer<StreamConsu
         String fileName = translatePattern(
             settings.getOutputFilePattern(),
             null).trim();
+        if (parameters.orderNumber > 0) {
+            fileName += "_" + String.valueOf(parameters.orderNumber + 1);
+        }
         if (multiFileNumber > 0) {
             fileName += "_" + String.valueOf(multiFileNumber + 1);
         }

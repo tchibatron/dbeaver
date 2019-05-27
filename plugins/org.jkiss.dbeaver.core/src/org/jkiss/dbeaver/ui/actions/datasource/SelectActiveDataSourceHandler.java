@@ -33,14 +33,14 @@ import org.jkiss.dbeaver.model.*;
 import org.jkiss.dbeaver.model.app.DBPDataSourceRegistry;
 import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
+import org.jkiss.dbeaver.model.navigator.DBNUtils;
 import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.DBeaverIcons;
-import org.jkiss.dbeaver.ui.TextUtils;
+import org.jkiss.dbeaver.ui.UITextUtils;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.AbstractDataSourceHandler;
 import org.jkiss.dbeaver.ui.editors.EditorUtils;
-import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
 import org.jkiss.dbeaver.ui.navigator.dialogs.SelectDataSourceDialog;
 
 import java.util.*;
@@ -59,7 +59,7 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
         return null;
     }
 
-    private static void openDataSourceSelector(IWorkbenchWindow workbenchWindow, DBPDataSourceContainer dataSource) {
+    public static void openDataSourceSelector(IWorkbenchWindow workbenchWindow, DBPDataSourceContainer dataSource) {
         IProject activeProject = dataSource != null ? dataSource.getRegistry().getProject() : DBWorkbench.getPlatform().getProjectManager().getActiveProject();
 
         IEditorPart activeEditor = workbenchWindow.getActivePage().getActiveEditor();
@@ -95,11 +95,13 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
             connectionName = dataSource.getName();
             connectionIcon = dataSource.getDriver().getIcon();
         }
-        GC gc = new GC(workbenchWindow.getShell());
-        try {
-            connectionName = TextUtils.getShortText(gc, connectionName, 200);
-        } finally {
-            gc.dispose();
+        if (workbenchWindow != null) {
+            GC gc = new GC(workbenchWindow.getShell());
+            try {
+                connectionName = UITextUtils.getShortText(gc, connectionName, 200);
+            } finally {
+                gc.dispose();
+            }
         }
         element.setText(connectionName);
         element.setIcon(DBeaverIcons.getImageDescriptor(connectionIcon));
@@ -170,7 +172,7 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
 
             DBPDataSourceContainer curDataSource = getDataSourceContainer(workbenchWindow.getActivePage().getActivePart());
             for (DBPDataSourceContainer ds : connectedDataSources) {
-                DBNDatabaseNode dsNode = NavigatorUtils.getNodeByObject(ds);
+                DBNDatabaseNode dsNode = DBNUtils.getNodeByObject(ds);
                 menuItems.add(
                     new ActionContributionItem(
                         createDataSourceChangeAction((IDataSourceContainerProviderEx) activeEditor, curDataSource, ds, dsNode)));
@@ -196,7 +198,7 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
                 for (DBPDataSourceContainer ds : singleDataSources) {
                     menuItems.add(
                         new ActionContributionItem(
-                            createDataSourceChangeAction((IDataSourceContainerProviderEx) activeEditor, curDataSource, ds, NavigatorUtils.getNodeByObject(ds))));
+                            createDataSourceChangeAction((IDataSourceContainerProviderEx) activeEditor, curDataSource, ds, DBNUtils.getNodeByObject(ds))));
                 }
             }
             // Cut too long lists

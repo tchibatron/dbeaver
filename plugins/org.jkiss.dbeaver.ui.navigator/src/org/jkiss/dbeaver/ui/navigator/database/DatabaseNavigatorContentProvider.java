@@ -22,11 +22,11 @@ import org.eclipse.jface.viewers.Viewer;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
 import org.jkiss.dbeaver.model.navigator.DBNNode;
+import org.jkiss.dbeaver.model.navigator.DBNUtils;
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.navigator.NavigatorPreferences;
-import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
 import org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService;
 import org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadVisualizer;
 import org.jkiss.dbeaver.ui.navigator.database.load.TreeNodeLazyExpander;
@@ -64,10 +64,14 @@ class DatabaseNavigatorContentProvider implements IStructuredContentProvider, IT
     public Object[] getElements(Object parent)
     {
         if (parent instanceof DatabaseNavigatorContent) {
+            DBNNode rootNode = ((DatabaseNavigatorContent) parent).getRootNode();
+            if (rootNode == null) {
+                return EMPTY_CHILDREN;
+            }
             if (showRoot) {
-                return new Object[] { ((DatabaseNavigatorContent) parent).getRootNode() };
+                return new Object[] {rootNode};
             } else {
-                return getChildren(((DatabaseNavigatorContent) parent).getRootNode());
+                return getChildren(rootNode);
             }
         } else {
             return getChildren(parent);
@@ -82,7 +86,6 @@ class DatabaseNavigatorContentProvider implements IStructuredContentProvider, IT
         } else if (child instanceof TreeNodeSpecial) {
             return ((TreeNodeSpecial)child).getParent();
         } else {
-            log.warn("Unknown node type: " + child);
             return null;
         }
     }
@@ -91,11 +94,10 @@ class DatabaseNavigatorContentProvider implements IStructuredContentProvider, IT
     public Object[] getChildren(final Object parent)
     {
         if (parent instanceof TreeNodeSpecial) {
-            return null;
+            return EMPTY_CHILDREN;
         }
         if (!(parent instanceof DBNNode)) {
-            log.error("Bad parent type: " + parent);
-            return null;
+            return EMPTY_CHILDREN;
         }
         final DBNNode parentNode = (DBNNode)parent;//view.getNavigatorModel().findNode(parent);
 /*
@@ -115,7 +117,7 @@ class DatabaseNavigatorContentProvider implements IStructuredContentProvider, IT
             try {
                 // Read children with null monitor cos' it's not a lazy node
                 // and no blocking process will occur
-                DBNNode[] children = NavigatorUtils.getNodeChildrenFiltered(
+                DBNNode[] children = DBNUtils.getNodeChildrenFiltered(
                     new VoidProgressMonitor(), parentNode, true);
                 if (ArrayUtils.isEmpty(children)) {
                     return EMPTY_CHILDREN;

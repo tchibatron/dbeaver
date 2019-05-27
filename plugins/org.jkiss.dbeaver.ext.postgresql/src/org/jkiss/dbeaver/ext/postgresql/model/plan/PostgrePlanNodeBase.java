@@ -19,26 +19,26 @@ package org.jkiss.dbeaver.ext.postgresql.model.plan;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.ext.postgresql.model.PostgreDataSource;
 import org.jkiss.dbeaver.model.exec.plan.DBCPlanCostNode;
-import org.jkiss.dbeaver.model.exec.plan.DBCPlanNode;
+import org.jkiss.dbeaver.model.exec.plan.DBCPlanNodeKind;
 import org.jkiss.dbeaver.model.impl.PropertyDescriptor;
 import org.jkiss.dbeaver.model.impl.plan.AbstractExecutionPlanNode;
 import org.jkiss.dbeaver.model.meta.Property;
 import org.jkiss.dbeaver.model.preferences.DBPPropertyDescriptor;
 import org.jkiss.dbeaver.model.preferences.DBPPropertySource;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
-import org.jkiss.dbeaver.model.sql.SQLUtils;
+import org.jkiss.dbeaver.model.sql.format.SQLFormatUtils;
 import org.jkiss.utils.CommonUtils;
-import org.jkiss.utils.xml.XMLUtils;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 
 import java.util.*;
 
 /**
  * Postgre execution plan node
  */
-public abstract class PostgrePlanNodeBase<NODE extends PostgrePlanNodeBase> extends AbstractExecutionPlanNode implements DBCPlanCostNode, DBPPropertySource {
+public abstract class PostgrePlanNodeBase<NODE extends PostgrePlanNodeBase<?>> extends AbstractExecutionPlanNode implements DBCPlanCostNode, DBPPropertySource {
 
+    private static final String ATTR_JOIN_TYPE = "Join-Type";
+    private static final String ATTR_HASH_COND = "Hash-Cond";
+    public static final String ATTR_INDEX_COND = "Index-Cond";
     public static final String ATTR_NODE_TYPE = "Node-Type";
     public static final String ATTR_RELATION_NAME = "Relation-Name";
     public static final String ATTR_FUNCTION_NAME = "Function-Name";
@@ -50,6 +50,28 @@ public abstract class PostgrePlanNodeBase<NODE extends PostgrePlanNodeBase> exte
     public static final String ATTR_ACTUAL_ROWS = "Actual-Rows";
     public static final String ATTR_PLAN_ROWS = "Plan-Rows";
     public static final String ATTR_FILTER = "Filter";
+    
+    public static final String ATTR_OBJECT_NAME = "Object name";
+
+    private final static List<String> allowedKind = new ArrayList<>( 
+            Arrays.asList("result",
+                          "project",
+                          "index",
+                          "hash",
+                          "foregin",
+                          "aggregate",
+                          "modify",
+                          "inset",
+                          "update",
+                          "delete",
+                          "loop",
+                          "join",
+                          "merge",
+                          "sort",
+                          "merge",
+                          "group",
+                          "materialize",
+                          "function"));
 
     private PostgreDataSource dataSource;
     protected NODE parent;
@@ -130,15 +152,15 @@ public abstract class PostgrePlanNodeBase<NODE extends PostgrePlanNodeBase> exte
 
     @Property(order = 23, viewable = true)
     public String getNodeCondition() {
-        String cond = attributes.get("Index-Cond");
+        String cond = attributes.get(ATTR_INDEX_COND);
         if (cond == null) {
-            cond = attributes.get("Hash-Cond");
+            cond = attributes.get(ATTR_HASH_COND);
         }
         if (cond == null) {
             cond = attributes.get(ATTR_FILTER);
         }
         if (!CommonUtils.isEmpty(cond)) {
-            cond = SQLUtils.formatSQL(dataSource, cond);
+            cond = SQLFormatUtils.formatSQL(dataSource, cond);
         }
         return cond;
     }
@@ -177,6 +199,9 @@ public abstract class PostgrePlanNodeBase<NODE extends PostgrePlanNodeBase> exte
     @Override
     public Number getNodeRowCount() {
         String rows = attributes.get(ATTR_ACTUAL_ROWS);
+        if (rows == null) {
+            rows = attributes.get(ATTR_PLAN_ROWS);
+        }
         return rows == null ? null : CommonUtils.toLong(rows);
     }
 
@@ -184,7 +209,7 @@ public abstract class PostgrePlanNodeBase<NODE extends PostgrePlanNodeBase> exte
     public String toString() {
         StringBuilder title = new StringBuilder();
         title.append("Type: ").append(nodeType);
-        String joinType = attributes.get("Join-Type");
+        String joinType = attributes.get(ATTR_JOIN_TYPE);
         if (!CommonUtils.isEmpty(joinType)) {
             title.append(" (").append(joinType).append(")");
         }
@@ -196,9 +221,89 @@ public abstract class PostgrePlanNodeBase<NODE extends PostgrePlanNodeBase> exte
 
         return title.toString();
     }
+    
+    @Override
+    public DBCPlanNodeKind getNodeKind() {
+       
+        String op = nodeType.toLowerCase();
+
+        for (String kind : allowedKind) {
+            if (op.contains(kind)) {
+
+                switch (kind) {
+
+                case "result":
+                    return DBCPlanNodeKind.RESULT;
+
+                case "project":
+                    return DBCPlanNodeKind.SET;
+
+                case "filter":
+                    return DBCPlanNodeKind.FILTER;
+
+                case "collector":
+                    return DBCPlanNodeKind.AGGREGATE;
+
+                case "index":
+                    return DBCPlanNodeKind.INDEX_SCAN;
+
+                case "hash":
+                    return DBCPlanNodeKind.HASH;
+
+                case "foregin":
+                    return DBCPlanNodeKind.TABLE_SCAN;
+
+                case "aggregate":
+                    return DBCPlanNodeKind.AGGREGATE;
+
+                case "modify":
+                    return DBCPlanNodeKind.MODIFY;
+
+                case "insert":
+                    return DBCPlanNodeKind.MODIFY;
+
+                case "update":
+                    return DBCPlanNodeKind.MODIFY;
+
+                case "delete":
+                    return DBCPlanNodeKind.MODIFY;
+
+                case "loop":
+                    return DBCPlanNodeKind.JOIN;
+
+                case "join":
+                    return DBCPlanNodeKind.JOIN;
+
+                case "merge":
+                    return DBCPlanNodeKind.MERGE;
+
+                case "sort":
+                    return DBCPlanNodeKind.SORT;
+
+                case "group":
+                    return DBCPlanNodeKind.GROUP;
+
+                case "materialize":
+                    return DBCPlanNodeKind.MATERIALIZE;
+
+                case "function":
+                    return DBCPlanNodeKind.FUNCTION;
+
+                default:
+                    return DBCPlanNodeKind.DEFAULT;
+
+                }
+
+            }
+        }
+
+        
+        return DBCPlanNodeKind.DEFAULT;
+    }
 
     //////////////////////////////////////////////////////////
     // Properties
+
 
     @Override
     public Object getEditableValue() {

@@ -33,6 +33,7 @@ import org.jkiss.dbeaver.model.meta.IPropertyValueTransformer;
 import org.jkiss.dbeaver.model.meta.Property;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.sql.SQLUtils;
+import org.jkiss.dbeaver.model.sql.format.SQLFormatUtils;
 import org.jkiss.dbeaver.model.struct.DBSActionTiming;
 import org.jkiss.dbeaver.model.struct.DBSObjectState;
 import org.jkiss.dbeaver.model.struct.rdb.DBSManipulationType;
@@ -143,6 +144,10 @@ public class PostgreTrigger implements DBSTrigger, DBPQualifiedObject, PostgreOb
         this.description = JDBCUtils.safeGetString(dbResult, "description");
     }
 
+    public PostgreTrigger(DBRProgressMonitor monitor, PostgreTableReal parent) {
+        this.table = parent;
+    }
+
     @NotNull
     @Override
     @Property(viewable = true, order = 1)
@@ -150,9 +155,17 @@ public class PostgreTrigger implements DBSTrigger, DBPQualifiedObject, PostgreOb
         return name;
     }
 
-    @Property(viewable = true, order = 2)
-    public DBSActionTiming getActionTiming()
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBody()
     {
+        return body;
+    }
+
+    @Property(viewable = true, order = 2)
+    public DBSActionTiming getActionTiming() {
         return actionTiming;
     }
 
@@ -207,6 +220,16 @@ public class PostgreTrigger implements DBSTrigger, DBPQualifiedObject, PostgreOb
         return getDatabase().getProcedure(monitor, functionSchemaId, functionId);
     }
 
+    public void setFunction(PostgreProcedure function) {
+        if (function == null){
+            this.functionId = 0;
+            this.functionSchemaId = 0;
+        } else{
+            this.functionId = function.getObjectId();
+            this.functionSchemaId = function.getSchema().getObjectId();
+        }
+    }
+
     @Property(viewable = true, editable = true, updatable = true, multiline = true, order = 100)
     @Nullable
     @Override
@@ -244,12 +267,12 @@ public class PostgreTrigger implements DBSTrigger, DBPQualifiedObject, PostgreOb
         if (body == null) {
             StringBuilder ddl = new StringBuilder();
             ddl.append("-- DROP TRIGGER ").append(DBUtils.getQuotedIdentifier(this)).append(" ON ")
-                .append(DBUtils.getQuotedIdentifier(getTable())).append(";\n\n");
+                .append(getTable().getFullyQualifiedName(DBPEvaluationContext.DDL)).append(";\n\n");
 
             try (JDBCSession session = DBUtils.openMetaSession(monitor, this, "Read trigger definition")) {
                 String triggerSource = JDBCUtils.queryString(session, "SELECT pg_catalog.pg_get_triggerdef(?)", objectId);
                 if (triggerSource != null) {
-                    triggerSource = SQLUtils.formatSQL(getDataSource(), triggerSource);
+                    triggerSource = SQLFormatUtils.formatSQL(getDataSource(), triggerSource);
                     ddl.append(triggerSource).append(";");
                 }
             } catch (SQLException e) {
@@ -258,7 +281,7 @@ public class PostgreTrigger implements DBSTrigger, DBPQualifiedObject, PostgreOb
 
             if (!CommonUtils.isEmpty(getDescription()) && CommonUtils.getOption(options, PostgreConstants.OPTION_DDL_SHOW_COLUMN_COMMENTS)) {
                 ddl.append("\n").append("\nCOMMENT ON TRIGGER ").append(DBUtils.getQuotedIdentifier(this))
-                    .append(" ON ").append(DBUtils.getQuotedIdentifier(getTable()))
+                    .append(" ON ").append(getTable().getFullyQualifiedName(DBPEvaluationContext.DDL))
                     .append(" IS ")
                     .append(SQLUtils.quoteString(this, getDescription())).append(";");
             }
@@ -276,8 +299,8 @@ public class PostgreTrigger implements DBSTrigger, DBPQualifiedObject, PostgreOb
     @Override
     public String getFullyQualifiedName(DBPEvaluationContext context) {
         return DBUtils.getFullQualifiedName(getDataSource(),
-            getParentObject(),
-            this);
+                getParentObject(),
+                this);
     }
 
     @Override
@@ -312,4 +335,5 @@ public class PostgreTrigger implements DBSTrigger, DBPQualifiedObject, PostgreOb
             return value;
         }
     }
+
 }

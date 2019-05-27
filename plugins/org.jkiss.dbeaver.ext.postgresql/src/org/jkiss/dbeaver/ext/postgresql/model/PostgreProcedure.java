@@ -28,6 +28,7 @@ import org.jkiss.dbeaver.model.exec.DBCException;
 import org.jkiss.dbeaver.model.exec.jdbc.JDBCSession;
 import org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils;
 import org.jkiss.dbeaver.model.impl.struct.AbstractProcedure;
+import org.jkiss.dbeaver.model.meta.Association;
 import org.jkiss.dbeaver.model.meta.Property;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.sql.SQLUtils;
@@ -48,6 +49,7 @@ import java.util.*;
 public class PostgreProcedure extends AbstractProcedure<PostgreDataSource, PostgreSchema> implements PostgreObject, PostgreScriptObject, PostgrePrivilegeOwner, DBPUniqueObject, DBPOverloadedObject, DBPNamedObject2, DBPRefreshableObject
 {
     private static final Log log = Log.getLog(PostgreProcedure.class);
+
     private static final String CAT_FLAGS = "Flags";
     private static final String CAT_PROPS = "Properties";
     private static final String CAT_STATS = "Statistics";
@@ -495,7 +497,7 @@ public class PostgreProcedure extends AbstractProcedure<PostgreDataSource, Postg
     }
 
     @Override
-    public void setObjectDefinitionText(String sourceText) throws DBException
+    public void setObjectDefinitionText(String sourceText)
     {
         body = sourceText;
     }
@@ -655,6 +657,11 @@ public class PostgreProcedure extends AbstractProcedure<PostgreDataSource, Postg
     @Override
     public String generateChangeOwnerQuery(String owner) {
         return "ALTER " + this.getProcedureTypeName() + " " + this.getFullQualifiedSignature() + " OWNER TO " + owner;
+    }
+
+    @Association
+    public List<PostgreDependency> getDependencies(DBRProgressMonitor monitor) throws DBCException {
+        return PostgreDependency.readDependencies(monitor, this, true);
     }
 
     @Override
