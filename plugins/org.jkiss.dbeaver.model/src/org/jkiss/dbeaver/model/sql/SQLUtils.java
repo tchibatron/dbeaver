@@ -450,8 +450,10 @@ public final class SQLUtils {
                     // Most likely it is an expression so we don't want to quote it
                     attrName = binding.getMetaAttribute().getName();
                 }
-            } else {
+            } else if (cAttr != null) {
                 attrName = DBUtils.getObjectFullName(dataSource, cAttr, DBPEvaluationContext.DML);
+            } else {
+                attrName = DBUtils.getQuotedIdentifier(dataSource, constraint.getAttributeName());
             }
             query.append(attrName).append(' ').append(condition);
         }
@@ -469,11 +471,11 @@ public final class SQLUtils {
         for (DBDAttributeConstraint co : filter.getOrderConstraints()) {
             if (hasOrder) query.append(',');
             String orderString = null;
-            if (co.getAttribute() instanceof DBDAttributeBindingMeta) {
-                String orderColumn = co.getAttribute().getName();
-                if (PATTERN_SIMPLE_NAME.matcher(orderColumn).matches()) {
+            if (co.getAttribute() == null || co.getAttribute() instanceof DBDAttributeBindingMeta) {
+                String orderColumn = co.getAttributeName();
+                if (co.getAttribute() == null || PATTERN_SIMPLE_NAME.matcher(orderColumn).matches()) {
                     // It is a simple column.
-                    orderString = DBUtils.getObjectFullName(co.getAttribute(), DBPEvaluationContext.DML);
+                    orderString = co.getFullAttributeName();
                     if (conditionTable != null) {
                         orderString = conditionTable + '.' + orderString;
                     }
@@ -844,7 +846,9 @@ public final class SQLUtils {
                 }
                 script.append(scriptLine);
                 if (action.getType() != DBEPersistAction.ActionType.COMMENT) {
-                    script.append(delimiter);
+                    if (script.lastIndexOf(delimiter) != (script.length() - delimiter.length())) {
+                        script.append(delimiter);
+                    }    
                 } else {
                     script.append(lineSeparator);
                 }
