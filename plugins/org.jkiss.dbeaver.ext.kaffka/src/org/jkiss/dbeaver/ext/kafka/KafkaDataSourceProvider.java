@@ -63,19 +63,6 @@ public class KafkaDataSourceProvider implements DBPDataSourceProvider {
         return new KafkaDataSource(container);
     }
 
-    private void loadNativeLib(DBPDriver driver) throws DBException {
-        for (DBPDriverLibrary libFile : driver.getDriverLibraries()) {
-            if (libFile.matchesCurrentPlatform() && libFile.getType() == DBPDriverLibrary.FileType.lib) {
-                File localFile = libFile.getLocalFile();
-                if (localFile != null) {
-                    try {
-                        WMIService.linkNative(localFile.getAbsolutePath());
-                    } catch (UnsatisfiedLinkError e) {
-                        throw new DBException("Can't load native library '" + localFile.getAbsolutePath() + "'", e);
-                    }
-                }
-            }
-        }
-    }
+
 
 }

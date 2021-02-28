@@ -16,14 +16,22 @@
  */
 package org.jkiss.dbeaver.ext.kafka.views;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.apache.kafka.clients.producer.ProducerConfig;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.jkiss.dbeaver.ext.kafka.Activator;
@@ -33,182 +41,117 @@ import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.connection.ConnectionPageAbstract;
 import org.jkiss.utils.CommonUtils;
 
-/**
- * WMIConnectionPage
- */
-public class WMIConnectionPage extends ConnectionPageAbstract
-{
-    public static final String DEFAULT_HOST = "localhost"; //$NON-NLS-1$
-    public static final String DEFAULT_NAMESPACE = "root/cimv2"; //$NON-NLS-1$
+public class KafkaConnectionPage extends ConnectionPageAbstract {
+	public static final String DEFAULT_HOST = "localhost"; //$NON-NLS-1$
+	private Text hostText;
 
-    private Text domainText;
-    private Text hostText;
-    private Combo namespaceCombo;
-    private Combo localeCombo;
-    private Text usernameText;
-    private Text passwordText;
+	private static ImageDescriptor logoImage = Activator.getImageDescriptor("icons/kafka_big.jpg"); //$NON-NLS-1$
 
-    private static ImageDescriptor logoImage = Activator.getImageDescriptor("icons/kafka_big.jpg"); //$NON-NLS-1$
+	public KafkaConnectionPage() {
+	}
 
-    public WMIConnectionPage()
-    {
-    }
+	@Override
+	public void dispose() {
+		super.dispose();
+	}
 
-    @Override
-    public void dispose()
-    {
-        super.dispose();
-    }
+	@Override
+	public void createControl(Composite composite) {
 
-    @Override
-    public void createControl(Composite composite)
-    {
-        //Composite group = new Composite(composite, SWT.NONE);
-        //group.setLayout(new GridLayout(1, true));
-        setImageDescriptor(logoImage);
+		setImageDescriptor(logoImage);
 
-        ModifyListener textListener = new ModifyListener()
-        {
-            @Override
-            public void modifyText(ModifyEvent e)
-            {
-                evaluateURL();
-            }
-        };
+		ModifyListener textListener = new ModifyListener() {
+			@Override
+			public void modifyText(ModifyEvent e) {
+				evaluateURL();
+			}
+		};
 
-        Composite addrGroup = new Composite(composite, SWT.NONE);
-        GridLayout gl = new GridLayout(4, false);
-        gl.marginHeight = 10;
-        gl.marginWidth = 10;
-        addrGroup.setLayout(gl);
-        GridData gd = new GridData(GridData.FILL_BOTH);
-        addrGroup.setLayoutData(gd);
+		Composite addrGroup = new Composite(composite, SWT.NONE);
+		GridLayout gl = new GridLayout(4, false);
+		gl.marginHeight = 10;
+		gl.marginWidth = 10;
+		addrGroup.setLayout(gl);
+		GridData gd = new GridData(GridData.FILL_BOTH);
+		addrGroup.setLayoutData(gd);
 
-        Label hostLabel = UIUtils.createControlLabel(addrGroup, "HOST");
-        hostLabel.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
+		UIUtils.createToolButton(addrGroup, "Select properties file", new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				loadProperties();
+			}
+		});
 
-        hostText = new Text(addrGroup, SWT.BORDER);
-        gd = new GridData(GridData.FILL_HORIZONTAL);
-        gd.grabExcessHorizontalSpace = true;
-        hostText.setLayoutData(gd);
-        hostText.addModifyListener(textListener);
+		Label hostLabel = UIUtils.createControlLabel(addrGroup, "bootstrap.servers");
+		hostLabel.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
 
-        Label domainLabel = UIUtils.createControlLabel(addrGroup, "DOMAIN");
-        domainLabel.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
+		hostText = new Text(addrGroup, SWT.BORDER);
+		gd = new GridData(GridData.FILL_HORIZONTAL);
+		gd.grabExcessHorizontalSpace = true;
+		hostText.setLayoutData(gd);
+		hostText.addModifyListener(textListener);
 
-        domainText = new Text(addrGroup, SWT.BORDER);
-        gd = new GridData(GridData.FILL_HORIZONTAL);
-        gd.grabExcessHorizontalSpace = true;
-        domainText.setLayoutData(gd);
-        domainText.addModifyListener(textListener);
+		Label divLabel = new Label(addrGroup, SWT.SEPARATOR | SWT.SHADOW_OUT | SWT.HORIZONTAL);
+		gd = new GridData(GridData.FILL_HORIZONTAL);
+		gd.grabExcessHorizontalSpace = true;
+		gd.horizontalSpan = 4;
+		divLabel.setLayoutData(gd);
 
-        Label namespaceLabel = UIUtils.createControlLabel(addrGroup, "NAMESPACE");
-        namespaceLabel.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
+		setControl(addrGroup);
+	}
 
-        namespaceCombo = new Combo(addrGroup, SWT.BORDER);
-        gd = new GridData(GridData.FILL_HORIZONTAL);
-        gd.grabExcessHorizontalSpace = true;
-        gd.horizontalSpan = 3;
-        namespaceCombo.setLayoutData(gd);
-        namespaceCombo.addModifyListener(textListener);
+	private void loadProperties() {
+		FileDialog fd = new FileDialog(getShell(), SWT.OPEN);
+		fd.setText("Select kafka connection properties file");
+		fd.setFilterPath(new File(".").getAbsolutePath());
+		String[] filterExt = { "*.properties" };
+		fd.setFilterExtensions(filterExt);
+		String selected = fd.open();
+		if (selected != null) {
+			String selectedFile = fd.getFileName();
+			Properties properties = new Properties();
+			try {
+				properties.load(new FileInputStream(selectedFile));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
-        Label divLabel = new Label(addrGroup, SWT.SEPARATOR | SWT.SHADOW_OUT | SWT.HORIZONTAL);
-        gd = new GridData(GridData.FILL_HORIZONTAL);
-        gd.grabExcessHorizontalSpace = true;
-        gd.horizontalSpan = 4;
-        divLabel.setLayoutData(gd);
+	}
 
-        {
-            Label usernameLabel = UIUtils.createControlLabel(addrGroup, "userLABEL");
-            usernameLabel.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
+	@Override
+	public boolean isComplete() {
+		return hostText != null;
+	}
 
-            usernameText = new Text(addrGroup, SWT.BORDER);
-            gd = new GridData(GridData.FILL_HORIZONTAL);
-            gd.grabExcessHorizontalSpace = true;
-            usernameText.setLayoutData(gd);
-            usernameText.addModifyListener(textListener);
+	@Override
+	public void loadSettings() {
+		DBPDataSourceContainer activeDataSource = site.getActiveDataSource();
+		DBPConnectionConfiguration connectionInfo = activeDataSource.getConnectionConfiguration();
+		if (connectionInfo.getHostName() == null) {
+			connectionInfo.setHostName(DEFAULT_HOST);
+		}
 
-            UIUtils.createEmptyLabel(addrGroup, 2, 1);
+		if (hostText != null) {
+			hostText.setText(CommonUtils.notEmpty(connectionInfo.getHostName()));
+		}
 
-            Label passwordLabel = UIUtils.createControlLabel(addrGroup, "PASSWORD");
-            passwordLabel.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
+		super.loadSettings();
+	}
 
-            passwordText = new Text(addrGroup, SWT.BORDER | SWT.PASSWORD);
-            gd = new GridData(GridData.FILL_HORIZONTAL);
-            gd.grabExcessHorizontalSpace = true;
-            passwordText.setLayoutData(gd);
-            passwordText.addModifyListener(textListener);
+	@Override
+	public void saveSettings(DBPDataSourceContainer dataSource) {
+		DBPConnectionConfiguration connectionInfo = dataSource.getConnectionConfiguration();
+		if (hostText != null) {
+			connectionInfo.getProperties().put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, hostText.getText().trim());
+			connectionInfo.setHostName(hostText.getText().trim());
+		}
 
-            createSavePasswordButton(addrGroup, 2);
-        }
+		super.saveSettings(dataSource);
+	}
 
-        setControl(addrGroup);
-    }
-
-    @Override
-    public boolean isComplete()
-    {
-        return hostText != null && namespaceCombo != null &&
-            !CommonUtils.isEmpty(hostText.getText()) &&
-            !CommonUtils.isEmpty(namespaceCombo.getText());
-    }
-
-    @Override
-    public void loadSettings()
-    {
-        // Load values from new connection info
-        DBPDataSourceContainer activeDataSource = site.getActiveDataSource();
-        DBPConnectionConfiguration connectionInfo = activeDataSource.getConnectionConfiguration();
-        if (connectionInfo.getHostName() == null) {
-            connectionInfo.setHostName(DEFAULT_HOST);
-        }
-        if (connectionInfo.getDatabaseName() == null) {
-            connectionInfo.setDatabaseName(DEFAULT_NAMESPACE);
-        }
-        if (hostText != null) {
-            hostText.setText(CommonUtils.notEmpty(connectionInfo.getHostName()));
-        }
-        if (domainText != null) {
-            domainText.setText(CommonUtils.notEmpty(connectionInfo.getServerName()));
-        }
-        if (usernameText != null) {
-            usernameText.setText(CommonUtils.notEmpty(connectionInfo.getUserName()));
-        }
-        if (passwordText != null) {
-            passwordText.setText(CommonUtils.notEmpty(connectionInfo.getUserPassword()));
-        }
-        if (namespaceCombo != null) {
-            namespaceCombo.setText(CommonUtils.notEmpty(connectionInfo.getDatabaseName()));
-        }
-        super.loadSettings();
-    }
-
-    @Override
-    public void saveSettings(DBPDataSourceContainer dataSource)
-    {
-        DBPConnectionConfiguration connectionInfo = dataSource.getConnectionConfiguration();
-        if (hostText != null) {
-            connectionInfo.setHostName(hostText.getText().trim());
-        }
-        if (domainText != null) {
-            connectionInfo.setServerName(domainText.getText().trim());
-        }
-        if (namespaceCombo != null) {
-            connectionInfo.setDatabaseName(namespaceCombo.getText().trim());
-        }
-        if (usernameText != null) {
-            connectionInfo.setUserName(usernameText.getText().trim());
-        }
-        if (passwordText != null) {
-            connectionInfo.setUserPassword(passwordText.getText());
-        }
-        super.saveSettings(dataSource);
-    }
-
-    private void evaluateURL()
-    {
-        site.updateButtons();
-    }
-
+	private void evaluateURL() {
+		site.updateButtons();
+	}
 
 }

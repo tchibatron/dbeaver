@@ -16,46 +16,43 @@
  */
 package org.jkiss.dbeaver.ext.kafka.model;
 
-import org.eclipse.core.runtime.IAdaptable;
-import org.jkiss.code.NotNull;
-import org.jkiss.code.Nullable;
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.ListTopicsResult;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.model.DBPDataSource;
 import org.jkiss.dbeaver.model.DBPDataSourceContainer;
 import org.jkiss.dbeaver.model.DBPDataSourceInfo;
-import org.jkiss.dbeaver.model.connection.DBPConnectionConfiguration;
 import org.jkiss.dbeaver.model.exec.DBCExecutionContext;
 import org.jkiss.dbeaver.model.exec.DBCExecutionPurpose;
 import org.jkiss.dbeaver.model.exec.DBCSession;
 import org.jkiss.dbeaver.model.impl.AbstractExecutionContext;
-import org.jkiss.dbeaver.model.meta.Association;
-import org.jkiss.dbeaver.model.qm.QMUtils;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
-import org.jkiss.dbeaver.model.sql.SQLDataSource;
 import org.jkiss.dbeaver.model.sql.SQLDialect;
 import org.jkiss.dbeaver.model.struct.DBSInstance;
 import org.jkiss.dbeaver.model.struct.DBSObject;
-import org.jkiss.dbeaver.model.struct.DBSObjectContainer;
-import org.jkiss.wmi.service.WMIService;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
+
+import static org.apache.kafka.clients.admin.AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG;
 
 /**
  * KafkaDataSource
  */
 public class KafkaDataSource implements DBPDataSource, DBSInstance, DBCExecutionContext {
     private final DBPDataSourceContainer container;
-//    private WMINamespace rootNamespace;
+
     private final SQLDialect dialect;
     private final long id;
+    private AdminClient kafkaClient;
 
     public KafkaDataSource(DBPDataSourceContainer container) throws DBException {
         this.container = container;
         this.dialect = null;
         this.id = AbstractExecutionContext.generateContextId();
-
-        //QMUtils.getDefaultHandler().handleContextOpen(this, false);
     }
 
 
@@ -72,7 +69,15 @@ public class KafkaDataSource implements DBPDataSource, DBSInstance, DBCExecution
     }
 
     public void initialize(DBRProgressMonitor monitor) throws DBException {
-        //TODO: initialize here kafka admin
+
+        Map<String, Object> settingsMap = new HashMap<>();
+        settingsMap.put(BOOTSTRAP_SERVERS_CONFIG, "localhost");
+        kafkaClient = AdminClient.create(settingsMap);
+        ListTopicsResult topics = kafkaClient.listTopics();
+        boolean completedExceptionally = topics.names().isCompletedExceptionally();
+        if (completedExceptionally){
+            throw new DBException("Unable to get kafka topics name list.");
+        }
 
     }
 

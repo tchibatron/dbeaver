@@ -2,8 +2,10 @@ package org.jkiss.dbeaver.ext.kafka.model;
 
 import org.jkiss.dbeaver.model.DBPDataSourceInfo;
 import org.jkiss.dbeaver.model.DBPTransactionIsolation;
+import org.osgi.framework.Version;
 
 import java.util.Collection;
+import java.util.Map;
 
 public class KafkaDataSourceInfo implements DBPDataSourceInfo {
     public boolean isReadOnlyData() {
@@ -19,6 +21,11 @@ public class KafkaDataSourceInfo implements DBPDataSourceInfo {
     }
 
     public String getDatabaseProductVersion() {
+        return null;
+    }
+
+    @Override
+    public Map<String, Object> getDatabaseProductDetails() {
         return null;
     }
 
